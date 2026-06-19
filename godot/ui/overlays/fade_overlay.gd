@@ -4,8 +4,8 @@ extends ColorRect
 signal on_complete_fade_in
 signal on_complete_fade_out
 
-@export var fade_in_duration: float = 2.0
-@export var fade_out_duration: float = 1.0
+@export var fade_in_duration: float = .1
+@export var fade_out_duration: float = .1
 @export var auto_fade_in: bool = true 
 @export var minimum_opacity: float = 1.0
 

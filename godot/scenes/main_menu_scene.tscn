@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv2y18ye8j7o0"]
+[gd_scene format=3 uid="uid://dv2y18ye8j7o0"]
 
 [ext_resource type="Script" uid="uid://k5f271qgai2d" path="res://scenes/main_menu_scene.gd" id="1_1foie"]
 [ext_resource type="PackedScene" uid="uid://cik30de5gaaah" path="res://scenes/ingame_scene.tscn" id="2_nl5i6"]
@@ -10,68 +10,68 @@
 font_size = 8
 font_color = Color(1, 1, 1, 0.486275)
 
-[node name="MainMenuScene" type="Node2D"]
+[node name="MainMenuScene" type="Node2D" unique_id=1571547011]
 script = ExtResource("1_1foie")
 game_scene = ExtResource("2_nl5i6")
 settings_scene = ExtResource("3_dgs4d")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=4311548]
 
-[node name="CenterContainer" type="CenterContainer" parent="UI"]
+[node name="CenterContainer" type="CenterContainer" parent="UI" unique_id=733162777]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/CenterContainer" unique_id=812498622]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="GameLogo" parent="UI/CenterContainer/VBoxContainer" instance=ExtResource("4_fnufg")]
+[node name="GameLogo" parent="UI/CenterContainer/VBoxContainer" unique_id=554753905 instance=ExtResource("4_fnufg")]
 layout_mode = 2
 
-[node name="ContinueButton" type="Button" parent="UI/CenterContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1359838581]
 unique_name_in_owner = true
 layout_mode = 2
 text = "continue"
 
-[node name="NewGameButton" type="Button" parent="UI/CenterContainer/VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1264548474]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "new_game"
 
-[node name="SettingsButton" type="Button" parent="UI/CenterContainer/VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1116832205]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "settings"
 
-[node name="ExitButton" type="Button" parent="UI/CenterContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1700489097]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "leave_game"
 
-[node name="Credits" type="MarginContainer" parent="UI/CenterContainer/VBoxContainer"]
+[node name="Credits" type="MarginContainer" parent="UI/CenterContainer/VBoxContainer" unique_id=1666473056]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_top = 10
 
-[node name="Label" type="Label" parent="UI/CenterContainer/VBoxContainer/Credits"]
+[node name="Label" type="Label" parent="UI/CenterContainer/VBoxContainer/Credits" unique_id=2145750913]
 layout_mode = 2
 text = "credits"
 label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
 
-[node name="FadeOverlay" parent="UI" instance=ExtResource("3_kf1us")]
+[node name="FadeOverlay" parent="UI" unique_id=671513809 instance=ExtResource("3_kf1us")]
 unique_name_in_owner = true
 visible = false
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=217546377]
 autoplay = true
 bus = &"Music"
