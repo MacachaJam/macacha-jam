@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dya2dm6st0mek"
-path.s3tc="res://.godot/imported/stella_player_idle.png-e2833c03859f7c45c46e354735c6a135.s3tc.ctex"
+path="res://.godot/imported/stella_player_idle.png-e2833c03859f7c45c46e354735c6a135.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/stella_player_idle.png"
-dest_files=["res://.godot/imported/stella_player_idle.png-e2833c03859f7c45c46e354735c6a135.s3tc.ctex"]
+dest_files=["res://.godot/imported/stella_player_idle.png-e2833c03859f7c45c46e354735c6a135.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
