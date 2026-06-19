@@ -1,0 +1,42 @@
+name: "Build and Export Game"
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+
+env:
+  GODOT_VERSION: "4.7"
+  GODOT_STATUS: "stable"
+
+jobs:
+  web:
+    name: Build for web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history of commits and tags so that git describe --tags works
+          fetch-depth: 0
+
+      - name: Export web build
+        id: export
+        uses: firebelley/godot-export@v5.2.1
+        with:
+          godot_executable_download_url: "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-${{ env.GODOT_STATUS }}/Godot_v${{ env.GODOT_VERSION }}-${{ env.GODOT_STATUS }}_linux.x86_64.zip"
+          godot_export_templates_download_url: "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-${{ env.GODOT_STATUS }}/Godot_v${{ env.GODOT_VERSION }}-${{ env.GODOT_STATUS }}_export_templates.tpz"
+          relative_project_path: "./godot"
+          archive_output: false
+          cache: false
+
+      - name: Upload web artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: ${{ steps.export.outputs.build_directory }}/HTML5
