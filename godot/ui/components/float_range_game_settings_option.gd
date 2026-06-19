@@ -1,13 +1,12 @@
 extends HSlider
 
 @export var property:String = ""
-
-var initialised = false
+@export var enable_property:String = ""
 
 func _ready():
 	value = UserSettings.get_value(property)
 
 func _on_float_range_game_settings_option_value_changed(val):
-	if !initialised:
-		initialised = true
 	UserSettings.set_value(property, val)
+	if enable_property:
+		UserSettings.set_value(enable_property, val != 0)

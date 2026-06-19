@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bqwuf0d6bna5j"]
+
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="1_js3yh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_js3yh"]
+sky_material = SubResource("ProceduralSkyMaterial_jcdhy")
+
+[sub_resource type="Environment" id="Environment_3oci6"]
+background_mode = 2
+sky = SubResource("Sky_js3yh")
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0px63"]
+size = Vector2(10, 4)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
+
+[node name="Pruebaa" type="Node3D" unique_id=525460237]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
+environment = SubResource("Environment_3oci6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=461698557]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=522574642]
+mesh = SubResource("PlaneMesh_0px63")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809933325]
+shape = SubResource("WorldBoundaryShape3D_0px63")
+
+[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("1_js3yh")]
+
+[node name="Camera3D" type="Camera3D" parent="Jugadora" unique_id=1604342609]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 4, 4)

@@ -25,6 +25,8 @@ func _ready() -> void:
 	exit_button.pressed.connect(_on_exit_button_pressed)
 	overlay.on_complete_fade_out.connect(_on_fade_overlay_on_complete_fade_out)
 	
+	exit_button.visible = OS.get_name() != "Web"
+	
 	if continue_button.visible:
 		continue_button.grab_focus()
 	else:
