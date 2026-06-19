@@ -1,0 +1,68 @@
+name: "Build and Export Game"
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+
+env:
+  GODOT_VERSION: "4.7"
+  GODOT_FLAVOR: "stable"
+
+jobs:
+  web:
+    name: Build for web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history of commits and tags so that git describe --tags works
+          fetch-depth: 0
+
+      - name: Cache Godot Engine downloads
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: |
+            build/godot
+            build/._sc_
+            build/editor_data/export_templates/${{ env.GODOT_VERSION }}.${{ env.GODOT_FLAVOR }}
+          key: godot-${{ env.GODOT_VERSION }}.${{ env.GODOT_FLAVOR }}
+
+      - name: Download Godot Engine
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          set -ex
+          mkdir -p build && cd build
+          # Download Godot Engine itself
+          wget --progress=dot:giga -O Godot.zip "https://downloads.godotengine.org/?version=${GODOT_VERSION}&flavor=${GODOT_FLAVOR}&slug=linux.x86_64.zip&platform=linux.64"
+          unzip Godot.zip
+          rm Godot.zip
+          mv "Godot_v${GODOT_VERSION}-${GODOT_FLAVOR}_linux.x86_64" godot
+          # Download export templates
+          mkdir -p editor_data/export_templates
+          wget --progress=dot:giga -O export_templates.tpz "https://downloads.godotengine.org/?version=${GODOT_VERSION}&flavor=${GODOT_FLAVOR}&slug=export_templates.tpz&platform=templates"
+          unzip export_templates.tpz
+          rm export_templates.tpz
+          mv templates "editor_data/export_templates/${GODOT_VERSION}.${GODOT_FLAVOR}"
+          # Tell Godot Engine to run in "self-contained" mode so it looks for
+          # templates here instead of in ~/.local/share/godot/
+          touch ._sc_
+
+      - name: Export web build
+        run: |
+          set -ex
+          mkdir -p build/web
+          build/godot --headless --verbose --path godot --export-release "HTML5" "$GITHUB_WORKSPACE/build/web/index.html"
+
+      - name: Upload web artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: build/web
