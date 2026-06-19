@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 UserSettings="*res://settings/user_settings.gd"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [display]
 
@@ -32,6 +33,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/size/mode.web=0
 window/size/mode.editor=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [gui]
 
