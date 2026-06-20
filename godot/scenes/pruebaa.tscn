@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bqwuf0d6bna5j"]
 
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="1_js3yh"]
+[ext_resource type="Script" uid="uid://bje567kwv6fu3" path="res://scenes/pruebaa.gd" id="1_qle80"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="2_3oci6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,6 +22,7 @@ size = Vector2(10, 4)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
 
 [node name="Pruebaa" type="Node3D" unique_id=525460237]
+script = ExtResource("1_qle80")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
@@ -36,3 +39,23 @@ shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="Camera3D" type="Camera3D" parent="Jugadora" unique_id=1604342609]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 4, 4)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
+
+[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("2_3oci6")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1966906144]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+joystick_mode = 1
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+visibility_mode = 1
