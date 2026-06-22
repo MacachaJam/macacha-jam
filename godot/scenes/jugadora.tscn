@@ -125,7 +125,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6608887, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
-transform = Transform3D(2.363, 0, 0, 0, 2, 0, 0, 0, 1.877, 0, 0.44242013, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+offset = Vector2(0, 20)
 billboard = 2
 no_depth_test = true
 texture_filter = 0

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="1_js3yh"]
 [ext_resource type="Script" uid="uid://bje567kwv6fu3" path="res://scenes/pruebaa.gd" id="1_qle80"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="2_3oci6"]
+[ext_resource type="PackedScene" uid="uid://lxf5he7qt4pc" path="res://scenes/arbolito.tscn" id="3_g6u53"]
+[ext_resource type="PackedScene" uid="uid://b5wyire4re8ln" path="res://scenes/tocón.tscn" id="4_u5vau"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,6 +41,41 @@ shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="Camera3D" type="Camera3D" parent="Jugadora" unique_id=1604342609]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 4, 4)
+
+[node name="Props" type="Node3D" parent="." unique_id=798624165]
+
+[node name="Arbolito" parent="Props" unique_id=966265870 instance=ExtResource("3_g6u53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0668578, 0, 1.6034899)
+
+[node name="Arbolito2" parent="Props" unique_id=669375602 instance=ExtResource("3_g6u53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1307535, 0, -0.9534497)
+
+[node name="Arbolito3" parent="Props" unique_id=478659562 instance=ExtResource("3_g6u53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92404, 0, 3.4151878)
+
+[node name="Arbolito4" parent="Props" unique_id=387923514 instance=ExtResource("3_g6u53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.349043, 0, 4.315238)
+
+[node name="Arbolito5" parent="Props" unique_id=1599341865 instance=ExtResource("3_g6u53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8797665, -9.536743e-07, -5.542285)
+
+[node name="Tocón" parent="Props" unique_id=1868377467 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4004011, 4.7683716e-07, -1.2914481)
+
+[node name="Tocón2" parent="Props" unique_id=1827817128 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2012923, 4.7683716e-07, 1.2969179)
+
+[node name="Tocón3" parent="Props" unique_id=1147257609 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1894062, 4.7683716e-07, 3.271248)
+
+[node name="Tocón4" parent="Props" unique_id=1159465257 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1988783, 4.7683716e-07, -0.09839749)
+
+[node name="Tocón5" parent="Props" unique_id=520858882 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4212923, 4.7683716e-07, -3.4452765)
+
+[node name="Tocón6" parent="Props" unique_id=1319396586 instance=ExtResource("4_u5vau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19471312, 4.7683716e-07, -4.700472)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
