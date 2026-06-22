@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="2_3oci6"]
 [ext_resource type="PackedScene" uid="uid://lxf5he7qt4pc" path="res://scenes/arbolito.tscn" id="3_g6u53"]
 [ext_resource type="PackedScene" uid="uid://b5wyire4re8ln" path="res://scenes/tocón.tscn" id="4_u5vau"]
+[ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="6_v351l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -34,6 +35,10 @@ environment = SubResource("Environment_3oci6")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=522574642]
 mesh = SubResource("PlaneMesh_0px63")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1915596581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.500587, 0, -8.621952)
+mesh = SubResource("PlaneMesh_0px63")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809933325]
 shape = SubResource("WorldBoundaryShape3D_0px63")
 
@@ -45,37 +50,37 @@ transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 4, 4)
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
 
 [node name="Arbolito" parent="Props" unique_id=966265870 instance=ExtResource("3_g6u53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0668578, 0, 1.6034899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.335503, 0, -9.844386)
 
 [node name="Arbolito2" parent="Props" unique_id=669375602 instance=ExtResource("3_g6u53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1307535, 0, -0.9534497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.806938, 0, -12.690388)
 
 [node name="Arbolito3" parent="Props" unique_id=478659562 instance=ExtResource("3_g6u53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92404, 0, 3.4151878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.987768, 0, -11.591404)
 
 [node name="Arbolito4" parent="Props" unique_id=387923514 instance=ExtResource("3_g6u53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.349043, 0, 4.315238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.307416, 0, -1.4820032)
 
 [node name="Arbolito5" parent="Props" unique_id=1599341865 instance=ExtResource("3_g6u53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8797665, -9.536743e-07, -5.542285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.804496, -9.536743e-07, -4.559619)
 
 [node name="Tocón" parent="Props" unique_id=1868377467 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4004011, 4.7683716e-07, -1.2914481)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.732641, 4.7683716e-07, -1.7366385)
 
 [node name="Tocón2" parent="Props" unique_id=1827817128 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2012923, 4.7683716e-07, 1.2969179)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6728315, 4.7683716e-07, 0.085370064)
 
 [node name="Tocón3" parent="Props" unique_id=1147257609 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1894062, 4.7683716e-07, 3.271248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.213289, 4.7683716e-07, -5.822502)
 
 [node name="Tocón4" parent="Props" unique_id=1159465257 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1988783, 4.7683716e-07, -0.09839749)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.307907, 4.7683716e-07, -4.3540125)
 
 [node name="Tocón5" parent="Props" unique_id=520858882 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4212923, 4.7683716e-07, -3.4452765)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.033486, 4.7683716e-07, -8.044886)
 
 [node name="Tocón6" parent="Props" unique_id=1319396586 instance=ExtResource("4_u5vau")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19471312, 4.7683716e-07, -4.700472)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.124987, 4.7683716e-07, -1.1618977)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
@@ -96,3 +101,6 @@ action_right = &"move_right"
 action_up = &"move_up"
 action_down = &"move_down"
 visibility_mode = 1
+
+[node name="NPC" parent="." unique_id=174433718 instance=ExtResource("6_v351l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.456551, 0, -8.202318)
