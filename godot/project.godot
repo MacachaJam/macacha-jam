@@ -25,6 +25,10 @@ UserSettings="*res://settings/user_settings.gd"
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneSwitcher="*uid://caccvsfr0nxj8"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://scenes/balloon.tscn"
+
 [display]
 
 window/size/viewport_width=1280

@@ -30,7 +30,6 @@ shape = SubResource("CylinderShape3D_0px63")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=987345527]
 transform = Transform3D(2.149887, 0, 0, 0, 2.149887, 0, 0, 0, 1, 0, 0, 0)
 offset = Vector2(0, 72)
-billboard = 2
 no_depth_test = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_7pdm8")
