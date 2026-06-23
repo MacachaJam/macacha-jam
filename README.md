@@ -11,3 +11,4 @@ Juego para la gamejam Mujeres de la independencia
 
 - Para los diálogos usa el addon [Dialogue Manager](https://github.com/nathanhoad/godot_dialogue_manager)
 - Lo arrancamos usando la plantilla [bitbrain/godot-gamejam](https://github.com/bitbrain/godot-gamejam)
+- Se exporta a github pages automágicamente gracias a [endlessm/amalgamate-pages](https://github.com/endlessm/amalgamate-pages)
