@@ -127,8 +127,12 @@ shape = SubResource("CapsuleShape3D_0px63")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 offset = Vector2(0, 20)
+billboard = 1
+shaded = true
 no_depth_test = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_jcdhy")
-animation = &"parada"
+animation = &"atacando"
 autoplay = "parada"
+frame = 2
+frame_progress = 0.50313735
