@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c60gnoec02nr5" path="res://assets/stella_player_attack_02.png" id="2_tl2vt"]
 [ext_resource type="Texture2D" uid="uid://b7plny0exa3u4" path="res://assets/stella_player_defeated.png" id="3_hwkja"]
 [ext_resource type="Texture2D" uid="uid://dlxo8b1bhn3lj" path="res://assets/stella_player_walk.png" id="4_0tygy"]
-[ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_interactva.gd" id="5_4wlns"]
+[ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo.gd" id="5_4wlns"]
 [ext_resource type="Texture2D" uid="uid://dya2dm6st0mek" path="res://assets/stella_player_idle.png" id="5_sptji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
