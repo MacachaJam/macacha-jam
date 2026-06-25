@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_gqojs"]
 [ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="5_obgis"]
 [ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="6_obgis"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="9_00nbw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -62,9 +63,6 @@ shape = SubResource("BoxShape3D_8mre2")
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("2_usraa")]
 transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Jugadora" unique_id=1604342609]
-transform = Transform3D(0.99999994, 1.1641532e-09, -9.313226e-10, 1.2460077e-10, 0.70710677, 0.7071068, -4.656613e-10, -0.70710677, 0.7071068, 0.0017220322, 3.9092631, 3.2946348)
-
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
 
 [node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=976193366]
@@ -103,3 +101,14 @@ visibility_mode = 1
 
 [node name="NPC" parent="." unique_id=174433718 instance=ExtResource("6_obgis")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.456551, 0, -8.202318)
+
+[node name="TrípodeCámara" type="Node3D" parent="." unique_id=469122715]
+
+[node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1604342609]
+transform = Transform3D(0.9999696, -0.007351988, -0.002617127, 0.007048363, 0.7068979, 0.7072805, -0.0033498763, -0.7072774, 0.7069282, -0.014804697, 3.9100692, 3.2936454)
+
+[node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1153962477 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+script = ExtResource("9_00nbw")
+nodo_movido = NodePath("../TrípodeCámara")
+nodo_objetivo = NodePath("../Jugadora")
+metadata/_custom_type_script = "uid://cw1aiuggkncl1"
