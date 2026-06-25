@@ -1,54 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://jyv4g54adkmo"]
+[gd_scene format=3 uid="uid://jyv4g54adkmo"]
 
 [ext_resource type="Script" uid="uid://xiphbph8v88o" path="res://ui/overlays/pause_overlay.gd" id="1_q2yda"]
 [ext_resource type="PackedScene" uid="uid://nbaodrlopo7y" path="res://ui/components/game_settings.tscn" id="2_n78uc"]
 
-[node name="PauseOverlay" type="CenterContainer"]
+[node name="PauseOverlay" type="CenterContainer" unique_id=427700071]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q2yda")
+title_scene = "uid://dv2y18ye8j7o0"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=154148467]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer3"]
+[node name="Label" type="Label" parent="VBoxContainer3" unique_id=1896921507]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
 text = "game_paused"
 horizontal_alignment = 1
 
-[node name="SettingsContainer" type="VBoxContainer" parent="VBoxContainer3"]
+[node name="SettingsContainer" type="VBoxContainer" parent="VBoxContainer3" unique_id=94845222]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="GameSettings" parent="VBoxContainer3/SettingsContainer" instance=ExtResource("2_n78uc")]
+[node name="GameSettings" parent="VBoxContainer3/SettingsContainer" unique_id=1720767189 instance=ExtResource("2_n78uc")]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="VBoxContainer3/SettingsContainer"]
+[node name="BackButton" type="Button" parent="VBoxContainer3/SettingsContainer" unique_id=975612423]
 unique_name_in_owner = true
 layout_mode = 2
 text = "return_to_menu"
 
-[node name="MenuContainer" type="VBoxContainer" parent="VBoxContainer3"]
+[node name="MenuContainer" type="VBoxContainer" parent="VBoxContainer3" unique_id=968757132]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="ResumeButton" type="Button" parent="VBoxContainer3/MenuContainer"]
+[node name="ResumeButton" type="Button" parent="VBoxContainer3/MenuContainer" unique_id=1839674852]
 unique_name_in_owner = true
 layout_mode = 2
 text = "resume_game"
 
-[node name="SettingsButton" type="Button" parent="VBoxContainer3/MenuContainer"]
+[node name="SettingsButton" type="Button" parent="VBoxContainer3/MenuContainer" unique_id=1244995510]
 unique_name_in_owner = true
 layout_mode = 2
 text = "settings"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer3/MenuContainer"]
+[node name="ExitButton" type="Button" parent="VBoxContainer3/MenuContainer" unique_id=607005915]
 unique_name_in_owner = true
 layout_mode = 2
-text = "leave_game"
+text = "Salir al menú"

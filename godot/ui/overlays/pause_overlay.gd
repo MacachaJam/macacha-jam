@@ -1,6 +1,6 @@
 extends CenterContainer
 
-signal game_exited
+@export_file("*.tscn") var title_scene: String
 
 @onready var resume_button := %ResumeButton
 @onready var settings_button := %SettingsButton
@@ -29,8 +29,11 @@ func _settings() -> void:
 	back_button.grab_focus()
 	
 func _exit() -> void:
-	game_exited.emit()
-	get_tree().quit()
+	GameState.save()
+	_resume()
+	SceneSwitcher.change_to_file_with_transition(
+		title_scene, ^"", Transition.Effect.FADE, Transition.Effect.FADE
+	)
 	
 func _pause_menu() -> void:
 	settings_container.visible = false

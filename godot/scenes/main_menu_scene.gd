@@ -11,7 +11,7 @@ extends Node2D
 func _ready() -> void:
 	new_game_button.disabled = game_scene == null
 	settings_button.disabled = settings_scene == null
-	continue_button.visible = SaveGame.has_save() and SaveGame.ENABLED
+	continue_button.visible = GameState.can_restore()
 	
 	# connect signals
 	new_game_button.pressed.connect(_on_play_button_pressed)
@@ -35,9 +35,7 @@ func _on_settings_button_pressed() -> void:
 	)
 	
 func _on_play_button_pressed() -> void:
-	if SaveGame.has_save():
-		SaveGame.delete_save()
-
+	GameState.clear()
 	SceneSwitcher.change_to_packed_with_transition(
 		game_scene,
 		"",
@@ -46,12 +44,9 @@ func _on_play_button_pressed() -> void:
 	)
 	
 func _on_continue_button_pressed() -> void:
-	if SaveGame.has_save():
-		SaveGame.load_game(get_tree())
-
-	SceneSwitcher.change_to_packed_with_transition(
-		game_scene,
-		"",
+	SceneSwitcher.change_to_file_with_transition(
+		GameState.scene.path,
+		GameState.scene.spawn_point,
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,
 	)
