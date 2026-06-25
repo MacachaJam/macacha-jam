@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://k5f271qgai2d" path="res://scenes/main_menu_scene.gd" id="1_1foie"]
 [ext_resource type="PackedScene" uid="uid://bqwuf0d6bna5j" path="res://scenes/pruebaa.tscn" id="2_yj20m"]
 [ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://scenes/game_settings_scene.tscn" id="3_dgs4d"]
-[ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="3_kf1us"]
 [ext_resource type="PackedScene" uid="uid://b4blrdjthcxnn" path="res://ui/components/game_logo.tscn" id="4_fnufg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
@@ -67,10 +66,6 @@ layout_mode = 2
 text = "credits"
 label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
-
-[node name="FadeOverlay" parent="UI" unique_id=671513809 instance=ExtResource("3_kf1us")]
-unique_name_in_owner = true
-visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=217546377]
 autoplay = true

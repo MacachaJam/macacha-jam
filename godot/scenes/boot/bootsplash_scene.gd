@@ -22,15 +22,12 @@ func _ready():
 	
 func _process(_delta):
 	if interuptable and Input.is_action_just_pressed("exit"):
-		_change_scene()
+		get_tree().change_scene_to_packed(next_scene)
 	
 func _fade_out():
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.set_ease(Tween.EASE_IN)
-	tween.tween_property(instance, "modulate:a", 0.0, fade_duration)\
-	.set_delay(stay_duration)\
-	.finished.connect(_change_scene)
-
-func _change_scene():
-	get_tree().change_scene_to_packed(next_scene)
+	SceneSwitcher.change_to_packed_with_transition(
+		next_scene,
+		"",
+		Transition.Effect.FADE,
+		Transition.Effect.FADE,
+	)
