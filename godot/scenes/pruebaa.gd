@@ -3,9 +3,6 @@ extends Node3D
 @onready var pause_overlay = %PauseOverlay
 
 func _ready() -> void:
-	if SaveGame.has_save():
-		SaveGame.load_game(get_tree())
-	
 	pause_overlay.game_exited.connect(_save_game)
 
 func _input(event) -> void:

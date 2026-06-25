@@ -37,6 +37,7 @@ func _on_settings_button_pressed() -> void:
 func _on_play_button_pressed() -> void:
 	if SaveGame.has_save():
 		SaveGame.delete_save()
+
 	SceneSwitcher.change_to_packed_with_transition(
 		game_scene,
 		"",
@@ -45,7 +46,9 @@ func _on_play_button_pressed() -> void:
 	)
 	
 func _on_continue_button_pressed() -> void:
-	# TODO: Restore state.
+	if SaveGame.has_save():
+		SaveGame.load_game(get_tree())
+
 	SceneSwitcher.change_to_packed_with_transition(
 		game_scene,
 		"",
