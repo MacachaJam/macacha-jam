@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://lxf5he7qt4pc" path="res://scenes/arbolito.tscn" id="3_g6u53"]
 [ext_resource type="PackedScene" uid="uid://b5wyire4re8ln" path="res://scenes/tocón.tscn" id="4_u5vau"]
 [ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="6_v351l"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="7_5vq8b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -43,9 +44,6 @@ mesh = SubResource("PlaneMesh_0px63")
 shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("1_js3yh")]
-
-[node name="Camera3D" type="Camera3D" parent="Jugadora" unique_id=1604342609]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 4, 4)
 
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
 
@@ -104,3 +102,14 @@ visibility_mode = 1
 
 [node name="NPC" parent="." unique_id=174433718 instance=ExtResource("6_v351l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.456551, 0, -8.202318)
+
+[node name="TrípodeCámara" type="Node3D" parent="." unique_id=977982167]
+
+[node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1190443552]
+transform = Transform3D(0.9999696, -0.007351988, -0.002617127, 0.007048363, 0.7068979, 0.7072805, -0.0033498763, -0.7072774, 0.7069282, -0.014804697, 3.9100692, 3.2936454)
+
+[node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=2560752 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+script = ExtResource("7_5vq8b")
+nodo_movido = NodePath("../TrípodeCámara")
+nodo_objetivo = NodePath("../Jugadora")
+metadata/_custom_type_script = "uid://cw1aiuggkncl1"
