@@ -14,7 +14,14 @@ func _ready() -> void:
 	settings_button.pressed.connect(_settings)
 	exit_button.pressed.connect(_exit)
 	back_button.pressed.connect(_pause_menu)
-	
+
+func _input(event) -> void:
+	if event.is_action_pressed("pause") and not visible:
+		get_viewport().set_input_as_handled()
+		get_tree().paused = true
+		grab_button_focus()
+		visible = true
+
 func grab_button_focus() -> void:
 	resume_button.grab_focus()
 	
