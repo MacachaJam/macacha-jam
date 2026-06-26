@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bqwuf0d6bna5j"]
 
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="1_js3yh"]
-[ext_resource type="Script" uid="uid://bje567kwv6fu3" path="res://scenes/pruebaa.gd" id="1_qle80"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="2_3oci6"]
 [ext_resource type="PackedScene" uid="uid://lxf5he7qt4pc" path="res://scenes/arbolito.tscn" id="3_g6u53"]
 [ext_resource type="PackedScene" uid="uid://b5wyire4re8ln" path="res://scenes/tocón.tscn" id="4_u5vau"]
@@ -26,7 +25,6 @@ size = Vector2(10, 4)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
 
 [node name="Pruebaa" type="Node3D" unique_id=525460237]
-script = ExtResource("1_qle80")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
