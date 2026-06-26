@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bo4k0aec7e628"]
 
-[ext_resource type="Script" uid="uid://bje567kwv6fu3" path="res://scenes/pruebaa.gd" id="1_w6u6n"]
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_4uyhy"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_usraa"]
 [ext_resource type="Texture2D" uid="uid://v5ttyp8k2i4o" path="res://assets/Edificios/edificio test.png" id="3_00nbw"]
@@ -38,7 +37,6 @@ point_size = 96.0
 size = Vector3(2.3, 1, 1)
 
 [node name="Pruebaa" type="Node3D" unique_id=525460237]
-script = ExtResource("1_w6u6n")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
