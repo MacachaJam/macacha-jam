@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nl1cn61u3wd"]
+
+[ext_resource type="PackedScene" uid="uid://bo4ehnumovbi" path="res://ui/components/bootsplash.tscn" id="1_c5cpu"]
+
+[node name="IntroScene" type="Node2D" unique_id=562194414]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=434089998]
+
+[node name="Bootsplash" parent="CanvasLayer" unique_id=266782164 instance=ExtResource("1_c5cpu")]

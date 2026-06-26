@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Macacha Jam"
 run/main_scene="res://scenes/boot/godot/godot_bootsplash_scene.tscn"
 config/features=PackedStringArray("4.7")
-config/icon="res://icon.svg"
+config/icon="uid://deqp7f0to4vuq"
 
 [autoload]
 
@@ -29,7 +29,7 @@ GameState="*uid://cbope0t84e52k"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://scenes/balloon.tscn"
+runtime/balloon_path="res://ui/globo/globo.tscn"
 
 [display]
 
