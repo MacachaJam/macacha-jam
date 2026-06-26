@@ -82,7 +82,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.124987, 4.7683716e-07, -1.1
 
 [node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("2_3oci6")]
 unique_name_in_owner = true
-process_mode = 2
 visible = false
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1966906144]
