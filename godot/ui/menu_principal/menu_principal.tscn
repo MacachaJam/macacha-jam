@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://dv2y18ye8j7o0"]
 
-[ext_resource type="Script" uid="uid://k5f271qgai2d" path="res://scenes/main_menu_scene.gd" id="1_1foie"]
-[ext_resource type="PackedScene" uid="uid://bo4k0aec7e628" path="res://scenes/Art Playground.tscn" id="2_sb6w7"]
-[ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://scenes/game_settings_scene.tscn" id="3_dgs4d"]
-[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_sb6w7"]
+[ext_resource type="Script" uid="uid://k5f271qgai2d" path="res://ui/menu_principal/menu_principal.gd" id="1_87bjv"]
+[ext_resource type="PackedScene" uid="uid://bo4k0aec7e628" path="res://scenes/Art Playground.tscn" id="2_h4w4h"]
+[ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://ui/menu_opciones/menu_opciones.tscn" id="3_ruly6"]
+[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_i6a53"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
 font_size = 8
 font_color = Color(1, 1, 1, 0.486275)
 
 [node name="MainMenuScene" type="Node2D" unique_id=1571547011]
-script = ExtResource("1_1foie")
-game_scene = ExtResource("2_sb6w7")
-settings_scene = ExtResource("3_dgs4d")
+script = ExtResource("1_87bjv")
+game_scene = ExtResource("2_h4w4h")
+settings_scene = ExtResource("3_ruly6")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=4311548]
 
@@ -65,6 +65,7 @@ label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=217546377]
-stream = ExtResource("4_sb6w7")
+stream = ExtResource("4_i6a53")
 autoplay = true
 bus = &"Music"
+parameters/looping = true

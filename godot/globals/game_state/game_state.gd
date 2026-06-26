@@ -11,8 +11,8 @@ const SAVE_PATH := "user://saved_game.tres"
 
 ## Scenes to skip from saving.
 const TRANSIENT_SCENES := [
-	"res://scenes/main_menu_scene.tscn",
-	"res://scenes/game_settings_scene.tscn",
+	"res://ui/menu_principal/menu_principal.tscn",
+	"res://ui/menu_opciones/menu_opciones.tscn",
 ]
 
 ## The progress is persisted only if the game is run normally from the main scene.

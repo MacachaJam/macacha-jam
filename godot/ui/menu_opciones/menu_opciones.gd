@@ -8,7 +8,7 @@ func _ready():
 
 func _on_return_button_pressed():
 	SceneSwitcher.change_to_file_with_transition(
-		"res://scenes/main_menu_scene.tscn",
+		"res://ui/menu_principal/menu_principal.tscn",
 		"",
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,

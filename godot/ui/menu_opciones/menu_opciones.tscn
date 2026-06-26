@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://g4qhvbvdm62w"]
 
-[ext_resource type="Script" uid="uid://ckdn2dpa7o7ra" path="res://scenes/game_settings_scene.gd" id="1_3764u"]
+[ext_resource type="Script" uid="uid://ckdn2dpa7o7ra" path="res://ui/menu_opciones/menu_opciones.gd" id="1_3764u"]
 [ext_resource type="PackedScene" uid="uid://nbaodrlopo7y" path="res://ui/components/game_settings.tscn" id="2_qsqie"]
 [ext_resource type="Theme" uid="uid://d22mpqutkotsu" path="res://ui/theme.tres" id="3_unbh4"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_823xf"]
@@ -39,3 +39,4 @@ text = "return_to_main"
 stream = ExtResource("4_823xf")
 autoplay = true
 bus = &"Music"
+parameters/looping = true

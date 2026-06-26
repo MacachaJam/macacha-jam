@@ -29,7 +29,7 @@ GameState="*uid://cbope0t84e52k"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://scenes/balloon.tscn"
+runtime/balloon_path="res://ui/globo/globo.tscn"
 
 [display]
 
