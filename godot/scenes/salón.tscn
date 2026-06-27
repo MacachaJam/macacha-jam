@@ -40,27 +40,45 @@ script/source = "extends Node
 
 const GLOBO = preload(\"uid://d3ek7b2j51084\")
 
-var texto := \"\"
-var lista_sílabas: Array[String] = [\"ho\", \"la\", \", \", \"¿qué\", \" \", \"tal?\"]
+var silabeo_bien := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
+var silabeo_maso := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
+var silabeo_maal := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
+var resultado := \"Resulta que la Juana está engatuzando al coronel, y el idiota le contó que van a atacar con ocho cañones por el flanco norte.\"
 
+var lista_sílabas_bien := Array(silabeo_bien.split(\"-\"))
+var lista_sílabas_maso := Array(silabeo_maso.split(\"-\"))
+var lista_sílabas_maal := Array(silabeo_maal.split(\"-\"))
+
+var globo: Globo
 
 func _ready() -> void:
-	var globo: Globo = GLOBO.instantiate()
+	assert(lista_sílabas_bien.size() == lista_sílabas_maso.size())
+	assert(lista_sílabas_bien.size() == lista_sílabas_maal.size())
+	
+	globo = GLOBO.instantiate()
 	get_parent().add_child.call_deferred(globo)
 	if not globo.is_node_ready():
 		await globo.ready
 
 	globo.dialogue_label.text = \"\"
+	globo.character_label.text = \"José de la Serna\"
 	globo.show()
 	globo.balloon.show()
 
-	while lista_sílabas:
-		var s := lista_sílabas.pop_front() as String
-		texto += s
-		globo.dialogue_label.text = texto
+	globo.dialogue_label.text = \"\"
+	for i in range(lista_sílabas_bien.size()):
+		var s := lista_sílabas_bien[i] as String
+		globo.dialogue_label.text += s
+		if lista_sílabas_bien:
+			globo.dialogue_label.text += \"-\"
 		await get_tree().create_timer(0.5).timeout
+	
+	mostrar_resultado()
 
-	await get_tree().create_timer(1.0).timeout
+func mostrar_resultado() -> void:
+	globo.dialogue_label.text = \"[wave amp=50.0 freq=5.0 connected=1]\" + resultado + \"[/wave]\"
+	await get_tree().create_timer(10.0).timeout
+
 	globo.queue_free()
 "
 
