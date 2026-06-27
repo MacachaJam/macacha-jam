@@ -1,3 +1,4 @@
+class_name Globo
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
