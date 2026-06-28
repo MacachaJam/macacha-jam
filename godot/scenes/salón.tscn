@@ -104,9 +104,10 @@ nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 
-[node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=976061437 node_paths=PackedStringArray("diálogo")]
+[node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=976061437 node_paths=PackedStringArray("diálogo", "interfaz")]
 script = ExtResource("5_07buu")
 "diálogo" = NodePath("DiálogoSilabeador")
+interfaz = NodePath("CanvasLayer/InterfazSilabeador")
 
 [node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=233700963]
 script = ExtResource("6_h36bw")
