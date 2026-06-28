@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bhm2harux28fv"]
+
+[ext_resource type="Script" uid="uid://c1agv77sejhpp" path="res://scenes/puzzle_parar_la_oreja/puntito.gd" id="1_r383d"]
+[ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="2_08ar3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhnvg"]
+
+[node name="Puntito" type="Node2D" unique_id=494585480]
+script = ExtResource("1_r383d")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1637531527]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -200)
+collision_layer = 256
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=518614935]
+scale = Vector2(5, 5)
+texture = ExtResource("2_08ar3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1189891518]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_fhnvg")

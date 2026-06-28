@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="6_h36bw"]
 [ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="7_gr45f"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="7_v72nu"]
+[ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="8_574ue"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -37,6 +38,9 @@ size = Vector3(12, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pn2v2"]
 size = Vector3(6, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhnvg"]
+radius = 50.0
 
 [node name="Salón" type="Node3D" unique_id=525460237]
 
@@ -117,3 +121,23 @@ script = ExtResource("6_h36bw")
 [node name="InterfazSilabeador" type="Node2D" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1837662994]
 position = Vector2(330, 382)
 script = ExtResource("7_gr45f")
+
+[node name="Spawneador" type="Timer" parent="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador" unique_id=1998928722]
+unique_name_in_owner = true
+
+[node name="Centro" type="Area2D" parent="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador" unique_id=1996735268]
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador/Centro" unique_id=31501464]
+shape = SubResource("CircleShape2D_fhnvg")
+
+[node name="Aguja" type="Node2D" parent="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador" unique_id=1800128836]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador/Aguja" unique_id=233126027]
+position = Vector2(0, -50)
+scale = Vector2(5, 5)
+texture = ExtResource("8_574ue")
+
+[connection signal="body_entered" from="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador/Centro" to="PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador" method="_on_centro_body_entered"]
