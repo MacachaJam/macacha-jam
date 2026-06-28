@@ -2,7 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_26wvn"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_574ue"]
+[ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="5_07buu"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_oryf0"]
+[ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="6_h36bw"]
+[ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="7_gr45f"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="7_v72nu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
@@ -34,53 +37,6 @@ size = Vector3(12, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pn2v2"]
 size = Vector3(6, 1, 1)
-
-[sub_resource type="GDScript" id="GDScript_fhnvg"]
-script/source = "extends Node
-
-const GLOBO = preload(\"uid://d3ek7b2j51084\")
-
-var silabeo_bien := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
-var silabeo_maso := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
-var silabeo_maal := \"re-[b]sul[/b]-ta-que-la-[b]jua[/b]-naes-[b]táen[/b]-ga-tu-[b]zan[/b]-doal-co-ro-[b]nel[/b]-yel-i-[b]dio[/b]-ta-le-con-[b]tó[/b]-que-[b]van[/b]-aa-ta-[b]car[/b]-con-[b]o[/b]-cho-ca-[b]ño[/b]-nes-por-el-[b]flan[/b]-co-[b]nor[/b]-te\"
-var resultado := \"Resulta que la Juana está engatuzando al coronel, y el idiota le contó que van a atacar con ocho cañones por el flanco norte.\"
-
-var lista_sílabas_bien := Array(silabeo_bien.split(\"-\"))
-var lista_sílabas_maso := Array(silabeo_maso.split(\"-\"))
-var lista_sílabas_maal := Array(silabeo_maal.split(\"-\"))
-
-var globo: Globo
-
-func _ready() -> void:
-	assert(lista_sílabas_bien.size() == lista_sílabas_maso.size())
-	assert(lista_sílabas_bien.size() == lista_sílabas_maal.size())
-	
-	globo = GLOBO.instantiate()
-	get_parent().add_child.call_deferred(globo)
-	if not globo.is_node_ready():
-		await globo.ready
-
-	globo.dialogue_label.text = \"\"
-	globo.character_label.text = \"José de la Serna\"
-	globo.show()
-	globo.balloon.show()
-
-	globo.dialogue_label.text = \"\"
-	for i in range(lista_sílabas_bien.size()):
-		var s := lista_sílabas_bien[i] as String
-		globo.dialogue_label.text += s
-		if lista_sílabas_bien:
-			globo.dialogue_label.text += \"-\"
-		await get_tree().create_timer(0.5).timeout
-	
-	mostrar_resultado()
-
-func mostrar_resultado() -> void:
-	globo.dialogue_label.text = \"[wave amp=50.0 freq=5.0 connected=1]\" + resultado + \"[/wave]\"
-	await get_tree().create_timer(10.0).timeout
-
-	globo.queue_free()
-"
 
 [node name="Salón" type="Node3D" unique_id=525460237]
 
@@ -148,5 +104,15 @@ nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 
-[node name="Node" type="Node" parent="." unique_id=976061437]
-script = SubResource("GDScript_fhnvg")
+[node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=976061437 node_paths=PackedStringArray("diálogo")]
+script = ExtResource("5_07buu")
+"diálogo" = NodePath("DiálogoSilabeador")
+
+[node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=233700963]
+script = ExtResource("6_h36bw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PuzzlePararLaOreja" unique_id=220956724]
+
+[node name="InterfazSilabeador" type="Node2D" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1837662994]
+position = Vector2(330, 382)
+script = ExtResource("7_gr45f")
