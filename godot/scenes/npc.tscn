@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dlxo8b1bhn3lj" path="res://assets/stella_player_walk.png" id="4_0tygy"]
 [ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo.gd" id="5_4wlns"]
 [ext_resource type="Texture2D" uid="uid://dya2dm6st0mek" path="res://assets/stella_player_idle.png" id="5_sptji"]
+[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="6_tl2vt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.32470703
@@ -129,6 +130,7 @@ shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 offset = Vector2(0, 20)
 no_depth_test = true
 texture_filter = 0
@@ -144,3 +146,9 @@ script = ExtResource("5_4wlns")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_0px63")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=698664376]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.7798124, 0)
+billboard = 1
+texture_filter = 2
+texture = ExtResource("6_tl2vt")

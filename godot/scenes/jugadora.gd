@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_3d.play("caminando")
 
 	if not is_zero_approx(velocity.x):
-		animated_sprite_3d.flip_h = velocity.x < 0
+		animated_sprite_3d.flip_h = velocity.x > 0
 
 
 	move_and_slide()

@@ -1,22 +1,17 @@
 [gd_scene format=3 uid="uid://bo4k0aec7e628"]
 
-[ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_4uyhy"]
+[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_usraa"]
+[ext_resource type="Texture2D" uid="uid://dqnar8vx4c7wo" path="res://assets/Terrenos/Terraine Test 3.png" id="2_00nbw"]
+[ext_resource type="Texture2D" uid="uid://n1ims0rms80q" path="res://assets/Terrenos/Terraine Test 2.png" id="2_4uyhy"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_usraa"]
-[ext_resource type="Texture2D" uid="uid://v5ttyp8k2i4o" path="res://assets/Edificios/edificio test.png" id="3_00nbw"]
-[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="4_gqojs"]
+[ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="5_4uyhy"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_gqojs"]
-[ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="5_obgis"]
+[ext_resource type="Texture2D" uid="uid://35w3jfs7uc0w" path="res://assets/Props/Ceibo.png" id="6_00nbw"]
 [ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="6_obgis"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="9_00nbw"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
-sky_top_color = Color(1, 1, 1, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
 [sub_resource type="Sky" id="Sky_js3yh"]
-sky_material = SubResource("ProceduralSkyMaterial_jcdhy")
+sky_material = ExtResource("1_usraa")
 
 [sub_resource type="Environment" id="Environment_3oci6"]
 background_mode = 2
@@ -24,17 +19,69 @@ sky = SubResource("Sky_js3yh")
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0px63"]
-size = Vector2(10, 5)
+size = Vector2(8, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mre2"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 shading_mode = 0
+albedo_texture = ExtResource("2_00nbw")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_00nbw"]
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqojs"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("2_00nbw")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w6u6n"]
+size = Vector2(10, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usraa"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(0.49892896, 0.37664795, 0.72749656, 1)
 albedo_texture = ExtResource("2_4uyhy")
+uv1_scale = Vector3(2, 2, 2)
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_usraa"]
+size = Vector2(15, 13)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4uyhy"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_color = Color(0.37292078, 0.28753105, 0.44379655, 1)
+albedo_texture = ExtResource("2_4uyhy")
+uv1_scale = Vector3(5, 5, 5)
 point_size = 96.0
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mre2"]
-size = Vector3(2.3, 1, 1)
+size = Vector3(3.6979249, 1, 1)
 
 [node name="Pruebaa" type="Node3D" unique_id=525460237]
 
@@ -44,38 +91,47 @@ environment = SubResource("Environment_3oci6")
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=461698557]
 
 [node name="Terreno Prueba" type="MeshInstance3D" parent="StaticBody3D" unique_id=522574642]
+visible = false
 mesh = SubResource("PlaneMesh_0px63")
 surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1915596581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.500587, 0, -8.621952)
-mesh = SubResource("PlaneMesh_0px63")
+[node name="Terreno Prueba4" type="MeshInstance3D" parent="StaticBody3D" unique_id=1375885353]
+mesh = SubResource("PlaneMesh_00nbw")
+surface_material_override/0 = SubResource("StandardMaterial3D_gqojs")
+
+[node name="Terreno Prueba2" type="MeshInstance3D" parent="StaticBody3D" unique_id=2119847250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031650543, -0.3457415, 0.7692332)
+visible = false
+mesh = SubResource("PlaneMesh_w6u6n")
+surface_material_override/0 = SubResource("StandardMaterial3D_usraa")
+
+[node name="Terreno Prueba3" type="MeshInstance3D" parent="StaticBody3D" unique_id=390867820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031650543, -0.3536111, 2.8348851)
+visible = false
+mesh = SubResource("PlaneMesh_usraa")
+surface_material_override/0 = SubResource("StandardMaterial3D_4uyhy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809933325]
 shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=71623001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999982, 0.5, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25987, 0.5, -2.6429505)
 shape = SubResource("BoxShape3D_8mre2")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("2_usraa")]
-transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, 0, 0, 0)
+transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, 0, 0.7126994, 0)
 
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
 
-[node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=976193366]
-transform = Transform3D(2.5472882, 0, 0, 0, 1.8012047, 1.8012049, 0, -1.8012049, 1.8012047, 0, 1.6739788, -2.2650614)
-texture = ExtResource("3_00nbw")
+[node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=2135311118]
+transform = Transform3D(3, 0, 0, 0, 2.598076, 1.5, 0, -1.5, 2.598076, -2.31155, 1.3144505, -2.443766)
+texture_filter = 2
+texture = ExtResource("5_4uyhy")
 
-[node name="Sprite3D3" type="Sprite3D" parent="Props" unique_id=455889828]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.1, 0.6, 0)
-billboard = 1
-texture = ExtResource("4_gqojs")
-
-[node name="Sprite3D4" type="Sprite3D" parent="Props" unique_id=1086416640]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.1124227, 0.8, 0)
-billboard = 1
-texture = ExtResource("5_obgis")
+[node name="Sprite3D2" type="Sprite3D" parent="Props" unique_id=2051144370]
+transform = Transform3D(2.4, 0, 0, 0, 2.078461, 1.2, 0, -1.2, 2.078461, 3.4678113, 3.821527, -3.995914)
+texture_filter = 2
+texture = ExtResource("6_00nbw")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
@@ -97,15 +153,22 @@ action_down = &"move_down"
 visibility_mode = 1
 
 [node name="NPC" parent="." unique_id=174433718 instance=ExtResource("6_obgis")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.456551, 0, -8.202318)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, 0, 1.7122645)
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=469122715]
 
 [node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1604342609]
-transform = Transform3D(0.9999696, -0.007351988, -0.002617127, 0.007048363, 0.7068979, 0.7072805, -0.0033498763, -0.7072774, 0.7069282, -0.014804697, 3.9100692, 3.2936454)
+transform = Transform3D(1, 0, 0, 0, 0.83867055, 0.54463905, 0, -0.54463905, 0.83867055, -0.014804697, 5.20976, 6.2022314)
+fov = 60.0
 
 [node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1153962477 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
 script = ExtResource("9_00nbw")
 nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
+
+[node name="Luces" type="Node3D" parent="." unique_id=1526814065]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luces" unique_id=983237895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64665794, 1.4225862, 1.1903474)
+omni_range = 3.389157
