@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bgubfgpurh6sh"]
+
+[ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="1_271gi"]
+[ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="2_u8xp1"]
+
+[sub_resource type="Curve" id="Curve_pp12e"]
+_data = [Vector2(0, 0.5024154), 0.0, 0.03930939, 0, 0, Vector2(0.1, 0.5), 0.0, 0.0, 0, 0, Vector2(0.3686636, 1), 0.0, 0.0, 0, 0, Vector2(0.6, 0), 0.0, 0.0, 0, 0, Vector2(0.7949309, 0.8011364), 0.0, 0.0, 0, 0, Vector2(0.9147465, 0.25), 0.0, 0.0, 0, 0, Vector2(1, 0.8295455), 6.79791, 0.0, 1, 0]
+point_count = 7
+metadata/_snap_enabled = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhnvg"]
+radius = 50.0
+
+[node name="InterfazSilabeador" type="Node2D" unique_id=1773905554]
+script = ExtResource("1_271gi")
+curva_spawn = SubResource("Curve_pp12e")
+
+[node name="Spawneador" type="Timer" parent="." unique_id=2129988109]
+unique_name_in_owner = true
+
+[node name="Centro" type="Area2D" parent="." unique_id=1461850476]
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Centro" unique_id=1874542047]
+shape = SubResource("CircleShape2D_fhnvg")
+
+[node name="Aguja" type="Node2D" parent="." unique_id=1815908184]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Aguja" unique_id=1995480501]
+unique_name_in_owner = true
+position = Vector2(0, -50)
+scale = Vector2(1, 5)
+texture = ExtResource("2_u8xp1")
+
+[connection signal="body_entered" from="Centro" to="." method="_on_centro_body_entered"]

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://wf5br4wvj42"]
 
+[ext_resource type="Script" uid="uid://ddi4r2puh7wvo" path="res://scenes/salón.gd" id="1_574ue"]
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_26wvn"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_574ue"]
-[ext_resource type="Texture2D" uid="uid://v5ttyp8k2i4o" path="res://assets/Edificios/edificio test.png" id="4_bdi1c"]
+[ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="5_07buu"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_oryf0"]
-[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="5_s4n5n"]
-[ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="6_s4n5n"]
-[ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="6_v72nu"]
+[ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="6_h36bw"]
+[ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="7_gr45f"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="7_v72nu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
@@ -24,7 +24,7 @@ sky = SubResource("Sky_js3yh")
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0px63"]
-size = Vector2(10, 5)
+size = Vector2(9, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mre2"]
 shading_mode = 0
@@ -34,9 +34,13 @@ point_size = 96.0
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mre2"]
-size = Vector3(2.3, 1, 1)
+size = Vector3(12, 1, 1)
 
-[node name="Pruebaa" type="Node3D" unique_id=525460237]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pn2v2"]
+size = Vector3(6, 1, 1)
+
+[node name="Salón" type="Node3D" unique_id=525460237]
+script = ExtResource("1_574ue")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
@@ -47,41 +51,35 @@ environment = SubResource("Environment_3oci6")
 mesh = SubResource("PlaneMesh_0px63")
 surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1915596581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.500587, 0, -8.621952)
-mesh = SubResource("PlaneMesh_0px63")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809933325]
 shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=71623001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999982, 0.5, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000014, 0.5, -3.5)
 shape = SubResource("BoxShape3D_8mre2")
 
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1338720035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000014, 0.5, 3.5)
+shape = SubResource("BoxShape3D_8mre2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1346186693]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0.5, 0)
+shape = SubResource("BoxShape3D_pn2v2")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1421364053]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0.5, 0)
+shape = SubResource("BoxShape3D_pn2v2")
+
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("2_574ue")]
-transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, 0, 0, 0)
+process_mode = 4
+transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, -3.8413503, 0, -0.15196013)
 
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
-
-[node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=976193366]
-transform = Transform3D(2.5472882, 0, 0, 0, 1.8012047, 1.8012049, 0, -1.8012049, 1.8012047, 0, 1.6739788, -2.2650614)
-texture = ExtResource("4_bdi1c")
-
-[node name="Sprite3D3" type="Sprite3D" parent="Props" unique_id=455889828]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.1, 0.6, 0)
-billboard = 1
-texture = ExtResource("5_s4n5n")
-
-[node name="Sprite3D4" type="Sprite3D" parent="Props" unique_id=1086416640]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.1124227, 0.8, 0)
-billboard = 1
-texture = ExtResource("6_v72nu")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
 [node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("5_oryf0")]
 unique_name_in_owner = true
-process_mode = 2
 visible = false
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1966906144]
@@ -97,16 +95,29 @@ action_up = &"move_up"
 action_down = &"move_down"
 visibility_mode = 1
 
-[node name="NPC" parent="." unique_id=174433718 instance=ExtResource("6_s4n5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.456551, 0, -8.202318)
-
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=469122715]
 
 [node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1604342609]
 transform = Transform3D(0.9999696, -0.007351988, -0.002617127, 0.007048363, 0.7068979, 0.7072805, -0.0033498763, -0.7072774, 0.7069282, -0.014804697, 3.9100692, 3.2936454)
 
 [node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1153962477 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+process_mode = 4
 script = ExtResource("7_v72nu")
 nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
+
+[node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=976061437 node_paths=PackedStringArray("diálogo", "interfaz")]
+unique_name_in_owner = true
+script = ExtResource("5_07buu")
+"diálogo" = NodePath("DiálogoSilabeador")
+interfaz = NodePath("CanvasLayer/InterfazSilabeador")
+
+[node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=233700963]
+script = ExtResource("6_h36bw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PuzzlePararLaOreja" unique_id=220956724]
+
+[node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("7_gr45f")]
+visible = false
+position = Vector2(330, 382)
