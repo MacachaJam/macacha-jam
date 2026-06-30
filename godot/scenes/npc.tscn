@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="6_tl2vt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
-radius = 0.32470703
-height = 1.3217773
+radius = 0.6303711
+height = 1.651123
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cif7p"]
 atlas = ExtResource("2_tl2vt")
@@ -122,10 +122,9 @@ animations = [{
 radius = 1.0791016
 
 [node name="NPC" type="CharacterBody3D" unique_id=1548245680]
-collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6608887, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8255615, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
@@ -150,5 +149,7 @@ debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=698664376]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.7798124, 0)
 billboard = 1
+shaded = true
+alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("6_tl2vt")
