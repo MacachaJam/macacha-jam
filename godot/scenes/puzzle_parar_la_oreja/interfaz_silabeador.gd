@@ -25,7 +25,7 @@ func _draw() -> void:
 	draw_arc(Vector2.ZERO, 50, -PI*7/8, -PI/8, 20, _colores[PuzzlePararLaOreja.Precisiones.MAAL], 5)
 	draw_arc(Vector2.ZERO, 50,
 		clampf(ángulo_input - PI/2 - PI/4, -PI*7/8, -PI/8),
-		clampf(ángulo_input - PI/2 + PI/4, -PI*7/8, -PI/8,),
+		clampf(ángulo_input - PI/2 + PI/4, -PI*7/8, -PI/8),
 		20, _colores[PuzzlePararLaOreja.Precisiones.MASO]
 	, 5)
 	draw_arc(Vector2.ZERO, 50,

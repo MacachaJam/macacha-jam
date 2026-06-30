@@ -13,7 +13,7 @@ signal fin_del_puzzle(éxito: bool)
 	Precisiones.MAAL: "hm-[b]mmm[/b]-hm-mmm-hm-[b]mmm[/b]-hhmm-[b]hmmm[/b]-hm-mm-[b]hmm[/b]-mmmm-hm-hm-[b]mmm[/b]-hmm-h-[b]mmm[/b]-mm-hm-hmm-[b]mm[/b]-hmm-[b]mmm[/b]-hm-mm-[b]hmm[/b]-hmm-[b]h[/b]-hmm-mm-[b]mm[/b]-hmm-hmm-mm-[b]hhmm[/b]-mm-[b]mmm[/b]-mm",
 }
 
-@export var puntos_x_presición: Dictionary[Precisiones, float] = {
+@export var puntos_x_precisión: Dictionary[Precisiones, float] = {
 	Precisiones.BIEN: 1,
 	Precisiones.MASO: 0.8,
 	Precisiones.MAAL: -1,
@@ -62,7 +62,7 @@ func _on_diálogo_ready() -> void:
 	interfaz.iniciar(colores_x_precisión)
 
 func _on_interfaz_llegó(índice_sílaba: int, precisión: Precisiones) -> void:
-	_puntaje += puntos_x_presición[precisión]
+	_puntaje += puntos_x_precisión[precisión]
 	var s := lista_sílabas[precisión][índice_sílaba] as String
 	var última := índice_sílaba == lista_sílabas[Precisiones.BIEN].size() - 1
 	var color := colores_x_precisión[precisión]
