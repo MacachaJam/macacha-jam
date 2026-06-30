@@ -1,0 +1,26 @@
+~ start
+Contexto\: La Loreto en el salón de baile, a punto de escuchar una conversación.
+Mové las flechitas izquierda y derecha para parar la oreja.
+Juana Moro: Te escucho José.
+José de la Serna: Bueno pero te lo digo bajito...
+~ al_puzzle
+do puzzle_parar_la_oreja.iniciar()
+=> END
+
+~ exito
+Juana Moro: ¡No me digas!
+José de la Serna: Shh... que no se entere nadie.
+=> END
+
+~ reintenta_1
+Juana Moro: ¿Lo qué?
+José de la Serna: Shh... vení más cerca que te lo repito...
+=> al_puzzle
+
+~ reintenta_2
+Juana Moro: De nuevo no escuché
+José de la Serna: Shh... vení un poco más cerca, te decía que...
+=> al_puzzle
+
+~ fracaso
+José de la Serna: Uy, ¡nos escuchan! ¡Soldados! ¡A ella!
