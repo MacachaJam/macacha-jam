@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bo4k0aec7e628"]
 
 [ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_usraa"]
-[ext_resource type="Texture2D" uid="uid://dqnar8vx4c7wo" path="res://assets/Terrenos/Terraine Test 3.png" id="2_00nbw"]
+[ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="2_gqojs"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_usraa"]
 [ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="5_4uyhy"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_gqojs"]
@@ -35,9 +35,7 @@ size = Vector2(20, 15)
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("2_00nbw")
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
+albedo_texture = ExtResource("2_gqojs")
 uv1_world_triplanar = true
 texture_filter = 2
 point_size = 96.0
@@ -47,13 +45,12 @@ stencil_flags = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_gqojs"]
 size = Vector2(22, 17)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obgis"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4uyhy"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_color = Color(0.3990962, 0.28442276, 0.47938478, 1)
-albedo_texture = ExtResource("2_00nbw")
-uv1_triplanar = true
+albedo_color = Color(0.5330953, 0.4996779, 0.7148008, 1)
+albedo_texture = ExtResource("2_gqojs")
 uv1_world_triplanar = true
 texture_filter = 2
 point_size = 96.0
@@ -111,13 +108,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_gqojs")
 [node name="Terreno Prueba5" type="MeshInstance3D" parent="StaticBody3D" unique_id=400527311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08132458, -0.21635866, 0.0006341934)
 mesh = SubResource("PlaneMesh_gqojs")
-surface_material_override/0 = SubResource("StandardMaterial3D_obgis")
+surface_material_override/0 = SubResource("StandardMaterial3D_4uyhy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809933325]
 shape = SubResource("WorldBoundaryShape3D_0px63")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=71623001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25987, 0.5, -2.6429505)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.321367, 0.5, -2.5012317)
 shape = SubResource("BoxShape3D_8mre2")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("2_usraa")]
@@ -125,8 +122,7 @@ shape = SubResource("BoxShape3D_8mre2")
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
 
 [node name="Sprite3D3" type="Sprite3D" parent="Props" unique_id=1997992630]
-transform = Transform3D(-1.2215185, 0, -2.7400537, 0, 3, 0, 2.7400537, 0, -1.2215185, -1.9716226, 1.4199758, -0.020914555)
-billboard = 2
+transform = Transform3D(3.0000002, 0, 0, 0, 3, 0, 0, 0, 3.0000002, -3.3551316, 1.4199758, -2.42913)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
@@ -1097,7 +1093,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D8" type="Sprite3D" parent="Props/Clump de arbusto14" unique_id=2040306757]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.151063, 0.45042944, 0.6768739)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.5962138, 0.45042944, 0.03237009)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1115,7 +1111,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D10" type="Sprite3D" parent="Props/Clump de arbusto14" unique_id=364711007]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.5674505)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 2.526928, 0.45042944, -0.07705307)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1277,7 +1273,7 @@ texture = ExtResource("7_gqojs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013812542, 0, -4.039711)
 
 [node name="Sprite3D" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=1665682355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.17319465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9053297, 0.7995229, 0.17319465)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1286,7 +1282,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D9" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=522007875]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.25698245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7118354, 0.45042944, 0.89262486)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1313,7 +1309,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D5" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=764605465]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.4568057)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.929118, 0.45042944, 0.4568057)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1322,7 +1318,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D10" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=674134752]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.5674505)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 5.7579646, 0.45042944, 0.5674505)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1331,7 +1327,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D6" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=620718612]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 1.1396732)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.6086545, 0.45042944, 1.1396732)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1340,7 +1336,61 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D7" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=430171155]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 0.9465833)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.303633, 0.45042944, -0.30881357)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=155298171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9053297, 1.1127601, -0.05660534)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=939869587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7118354, 0.7636666, 0.6628251)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=22700226]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.929118, 0.7636666, 0.22700596)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=1367500018]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 5.7579646, 0.7636666, 0.33765078)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=950324620]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.6086545, 0.7636666, 0.9098735)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Props/Clump de arbusto5" unique_id=1903641165]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.303633, 0.7636666, -0.5386133)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1352,7 +1402,7 @@ texture = ExtResource("7_gqojs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013812542, 0, -5.419898)
 
 [node name="Sprite3D" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=678066711]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.17319465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0308695, 0.45042944, 0.3472891)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1361,7 +1411,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D9" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=239608485]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.25698245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.381789, 0.7677331, 1.5687194)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1370,7 +1420,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=224475703]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.151063, 0.45042944, 0.8105569)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.428005, 0.45042944, 2.465136)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1379,7 +1429,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D8" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=643884202]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.151063, 0.45042944, 0.6768739)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.7230835, 0.6722808, 1.6490545)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1388,7 +1438,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D5" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=2006219882]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.4568057)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.97498, 0.45042944, 0.26509142)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1397,7 +1447,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D10" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1934854141]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.5674505)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.796592, 0.45042944, 0.5674505)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1406,7 +1456,7 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D6" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1662013980]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 1.1396732)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.324001, 0.6512456, 1.5838614)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
@@ -1415,7 +1465,79 @@ texture_filter = 2
 texture = ExtResource("7_gqojs")
 
 [node name="Sprite3D7" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1206283099]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 0.9465833)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.0253706, 0.6006417, 0.9465833)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=657427969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0308695, 0.7636666, 0.11748934)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=979467949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.381789, 1.0809703, 1.3389196)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=157743338]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 8.428005, 0.7636666, 2.2353363)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=714803111]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.7230835, 0.985518, 1.4192548)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1805227870]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.97498, 0.7636666, 0.03529167)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=893292087]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.796592, 0.7636666, 0.33765078)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1989630108]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 7.324001, 0.9644828, 1.3540616)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("7_gqojs")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Props/Clump de arbusto6" unique_id=1268336108]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 6.0253706, 0.9138789, 0.7167835)
 modulate = Color(0.94, 0.75576, 0.15040003, 1)
 billboard = 1
 shaded = true
