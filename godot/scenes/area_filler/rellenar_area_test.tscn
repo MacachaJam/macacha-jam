@@ -1,0 +1,975 @@
+[gd_scene format=3 uid="uid://dr33lomttvg38"]
+
+[ext_resource type="Script" uid="uid://u11ey2t4vi6d" path="res://scenes/area_filler/area_filler.gd" id="1_e1dcl"]
+[ext_resource type="PackedScene" uid="uid://lxf5he7qt4pc" path="res://scenes/arbolito.tscn" id="2_0a6gv"]
+
+[node name="RellenarAreaTest" type="Node3D" unique_id=525460237]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=334149914]
+
+[node name="AreaFiller" type="Node" parent="Area3D" unique_id=40321725]
+script = ExtResource("1_e1dcl")
+scenes = Array[PackedScene]([ExtResource("2_0a6gv")])
+minimum_separation = 2.0
+"escala_mínima" = 0.8
+"escala_máxima" = 2.0
+metadata/_custom_type_script = "uid://u11ey2t4vi6d"
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D" unique_id=800283538]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(37.75482, 11.117035, 43.731644, 40.105453, 73.25575, 37.592182, 79.84104, 9.808418, 56.56466, -8.894737)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="Area3D" unique_id=1867737930]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(16.127598, 22.58879, 22.383377, 35.43482, 98.93232, 23.727707, 98.276764, 13.265366)
+
+[node name="Arbolito" parent="Area3D" unique_id=966265870 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.95624816, 0, 0, 0, 0.95624816, 0, 0, 0, 0.95624816, 38.97001, 0, 17.010864)
+
+[node name="Arbolito2" parent="Area3D" unique_id=1193838075 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9117023, 0, 0, 0, 1.9117023, 0, 0, 0, 1.9117023, 41.07404, 0, 19.279774)
+
+[node name="Arbolito3" parent="Area3D" unique_id=1663777730 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.88115036, 0, 0, 0, 0.88115036, 0, 0, 0, 0.88115036, 43.126625, 0, 16.711756)
+
+[node name="Arbolito4" parent="Area3D" unique_id=327215834 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.679636, 0, 0, 0, 1.679636, 0, 0, 0, 1.679636, 45.67762, 0, 13.6462555)
+
+[node name="Arbolito5" parent="Area3D" unique_id=99740190 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8796613, 0, 0, 0, 1.8796613, 0, 0, 0, 1.8796613, 40.896664, 0, 15.453318)
+
+[node name="Arbolito6" parent="Area3D" unique_id=1842994031 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1481082, 0, 0, 0, 1.1481082, 0, 0, 0, 1.1481082, 42.790184, 0, 22.838627)
+
+[node name="Arbolito7" parent="Area3D" unique_id=933852707 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7079136, 0, 0, 0, 1.7079136, 0, 0, 0, 1.7079136, 45.991753, 0, 21.742474)
+
+[node name="Arbolito8" parent="Area3D" unique_id=114143596 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.87439734, 0, 0, 0, 0.87439734, 0, 0, 0, 0.87439734, 48.34983, 0, 19.01439)
+
+[node name="Arbolito9" parent="Area3D" unique_id=559301627 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6808726, 0, 0, 0, 1.6808726, 0, 0, 0, 1.6808726, 38.93127, 0, 14.740594)
+
+[node name="Arbolito10" parent="Area3D" unique_id=2068361144 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0644681, 0, 0, 0, 1.0644681, 0, 0, 0, 1.0644681, 49.90319, 0, 21.4341)
+
+[node name="Arbolito11" parent="Area3D" unique_id=929025258 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9006348, 0, 0, 0, 0.9006348, 0, 0, 0, 0.9006348, 45.811386, 0, 19.323812)
+
+[node name="Arbolito12" parent="Area3D" unique_id=807901270 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0539384, 0, 0, 0, 1.0539384, 0, 0, 0, 1.0539384, 46.192196, 0, 16.240479)
+
+[node name="Arbolito13" parent="Area3D" unique_id=1698904596 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7792587, 0, 0, 0, 1.7792587, 0, 0, 0, 1.7792587, 51.877075, 0, 19.7217)
+
+[node name="Arbolito14" parent="Area3D" unique_id=673119825 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7170324, 0, 0, 0, 1.7170324, 0, 0, 0, 1.7170324, 48.451366, 0, 16.15874)
+
+[node name="Arbolito15" parent="Area3D" unique_id=883931226 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.093809, 0, 0, 0, 1.093809, 0, 0, 0, 1.093809, 41.31202, 0, 24.53318)
+
+[node name="Arbolito16" parent="Area3D" unique_id=1862699709 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.167013, 0, 0, 0, 1.167013, 0, 0, 0, 1.167013, 41.21613, 0, 12.975913)
+
+[node name="Arbolito17" parent="Area3D" unique_id=266907902 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.708182, 0, 0, 0, 1.708182, 0, 0, 0, 1.708182, 39.199875, 0, 20.260578)
+
+[node name="Arbolito18" parent="Area3D" unique_id=1143038629 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.86374056, 0, 0, 0, 0.86374056, 0, 0, 0, 0.86374056, 39.519608, 0, 26.316448)
+
+[node name="Arbolito19" parent="Area3D" unique_id=2062748093 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4182738, 0, 0, 0, 1.4182738, 0, 0, 0, 1.4182738, 43.79726, 0, 20.31907)
+
+[node name="Arbolito20" parent="Area3D" unique_id=1209896017 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.726745, 0, 0, 0, 1.726745, 0, 0, 0, 1.726745, 47.696827, 0, 24.312504)
+
+[node name="Arbolito21" parent="Area3D" unique_id=456510390 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.869222, 0, 0, 0, 1.869222, 0, 0, 0, 1.869222, 44.442112, 0, 25.184301)
+
+[node name="Arbolito22" parent="Area3D" unique_id=659415225 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5787431, 0, 0, 0, 1.5787431, 0, 0, 0, 1.5787431, 37.969727, 0, 24.766941)
+
+[node name="Arbolito23" parent="Area3D" unique_id=1182949038 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2516217, 0, 0, 0, 1.2516217, 0, 0, 0, 1.2516217, 42.90547, 0, 14.427123)
+
+[node name="Arbolito24" parent="Area3D" unique_id=1313652848 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9886414, 0, 0, 0, 1.9886414, 0, 0, 0, 1.9886414, 52.12014, 0, 22.845907)
+
+[node name="Arbolito25" parent="Area3D" unique_id=806266070 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.308675, 0, 0, 0, 1.308675, 0, 0, 0, 1.308675, 38.38968, 0, 11.006612)
+
+[node name="Arbolito26" parent="Area3D" unique_id=58167564 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3333544, 0, 0, 0, 1.3333544, 0, 0, 0, 1.3333544, 46.06129, 0, 10.334999)
+
+[node name="Arbolito27" parent="Area3D" unique_id=1610367624 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5530887, 0, 0, 0, 1.5530887, 0, 0, 0, 1.5530887, 51.071342, 0, 14.041623)
+
+[node name="Arbolito28" parent="Area3D" unique_id=1095707955 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5707619, 0, 0, 0, 1.5707619, 0, 0, 0, 1.5707619, 43.595837, 0, 9.808535)
+
+[node name="Arbolito29" parent="Area3D" unique_id=1160969052 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6606616, 0, 0, 0, 1.6606616, 0, 0, 0, 1.6606616, 38.030933, 0, 22.503025)
+
+[node name="Arbolito30" parent="Area3D" unique_id=1448275997 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6536523, 0, 0, 0, 1.6536523, 0, 0, 0, 1.6536523, 35.60839, 0, 25.412079)
+
+[node name="Arbolito31" parent="Area3D" unique_id=1121166040 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9990242, 0, 0, 0, 1.9990242, 0, 0, 0, 1.9990242, 49.302677, 0, 27.115831)
+
+[node name="Arbolito32" parent="Area3D" unique_id=1569612915 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6789997, 0, 0, 0, 1.6789997, 0, 0, 0, 1.6789997, 48.075485, 0, 22.323635)
+
+[node name="Arbolito33" parent="Area3D" unique_id=1474434183 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.638759, 0, 0, 0, 1.638759, 0, 0, 0, 1.638759, 41.43863, 0, 28.137583)
+
+[node name="Arbolito34" parent="Area3D" unique_id=935969699 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6658, 0, 0, 0, 1.6658, 0, 0, 0, 1.6658, 47.13226, 0, 27.5977)
+
+[node name="Arbolito35" parent="Area3D" unique_id=935719640 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0642422, 0, 0, 0, 1.0642422, 0, 0, 0, 1.0642422, 41.31787, 0, 10.710729)
+
+[node name="Arbolito36" parent="Area3D" unique_id=95927581 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7143579, 0, 0, 0, 1.7143579, 0, 0, 0, 1.7143579, 34.456974, 0, 23.29184)
+
+[node name="Arbolito37" parent="Area3D" unique_id=743954374 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8097203, 0, 0, 0, 1.8097203, 0, 0, 0, 1.8097203, 44.700905, 0, 6.7460995)
+
+[node name="Arbolito38" parent="Area3D" unique_id=1414566045 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.94939476, 0, 0, 0, 0.94939476, 0, 0, 0, 0.94939476, 45.44311, 0, 3.071577)
+
+[node name="Arbolito39" parent="Area3D" unique_id=820877729 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5901846, 0, 0, 0, 1.5901846, 0, 0, 0, 1.5901846, 37.889736, 0, 29.591566)
+
+[node name="Arbolito40" parent="Area3D" unique_id=1092358312 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0209101, 0, 0, 0, 1.0209101, 0, 0, 0, 1.0209101, 52.22182, 0, 15.722347)
+
+[node name="Arbolito41" parent="Area3D" unique_id=437206542 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9731792, 0, 0, 0, 1.9731792, 0, 0, 0, 1.9731792, 51.632782, 0, 17.65882)
+
+[node name="Arbolito42" parent="Area3D" unique_id=465481984 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.82314146, 0, 0, 0, 0.82314146, 0, 0, 0, 0.82314146, 42.049423, 0, 31.808573)
+
+[node name="Arbolito43" parent="Area3D" unique_id=37676831 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1113657, 0, 0, 0, 1.1113657, 0, 0, 0, 1.1113657, 34.452267, 0, 29.632801)
+
+[node name="Arbolito44" parent="Area3D" unique_id=1631365642 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9656157, 0, 0, 0, 1.9656157, 0, 0, 0, 1.9656157, 36.29907, 0, 28.272753)
+
+[node name="Arbolito45" parent="Area3D" unique_id=1193297006 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0003177, 0, 0, 0, 1.0003177, 0, 0, 0, 1.0003177, 39.90249, 0, 29.702309)
+
+[node name="Arbolito46" parent="Area3D" unique_id=161399382 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9853187, 0, 0, 0, 0.9853187, 0, 0, 0, 0.9853187, 50.340782, 0, 24.613068)
+
+[node name="Arbolito47" parent="Area3D" unique_id=1674978948 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.92115873, 0, 0, 0, 0.92115873, 0, 0, 0, 0.92115873, 31.324476, 0, 27.859596)
+
+[node name="Arbolito48" parent="Area3D" unique_id=1196683837 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3850771, 0, 0, 0, 1.3850771, 0, 0, 0, 1.3850771, 34.612637, 0, 27.189453)
+
+[node name="Arbolito49" parent="Area3D" unique_id=1873839136 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8464935, 0, 0, 0, 1.8464935, 0, 0, 0, 1.8464935, 42.620712, 0, 6.8604474)
+
+[node name="Arbolito50" parent="Area3D" unique_id=424430768 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6088955, 0, 0, 0, 1.6088955, 0, 0, 0, 1.6088955, 36.639603, 0, 31.915369)
+
+[node name="Arbolito51" parent="Area3D" unique_id=884631389 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7515405, 0, 0, 0, 1.7515405, 0, 0, 0, 1.7515405, 47.024315, 0, 8.554398)
+
+[node name="Arbolito52" parent="Area3D" unique_id=521436891 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1598967, 0, 0, 0, 1.1598967, 0, 0, 0, 1.1598967, 47.748295, 0, 14.160956)
+
+[node name="Arbolito53" parent="Area3D" unique_id=747405292 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.95535034, 0, 0, 0, 0.95535034, 0, 0, 0, 0.95535034, 53.89948, 0, 20.089096)
+
+[node name="Arbolito54" parent="Area3D" unique_id=367443779 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3026844, 0, 0, 0, 1.3026844, 0, 0, 0, 1.3026844, 48.773346, 0, 12.354182)
+
+[node name="Arbolito55" parent="Area3D" unique_id=1762241684 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7184585, 0, 0, 0, 1.7184585, 0, 0, 0, 1.7184585, 51.23664, 0, 9.2588825)
+
+[node name="Arbolito56" parent="Area3D" unique_id=1114429092 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7247202, 0, 0, 0, 1.7247202, 0, 0, 0, 1.7247202, 38.86979, 0, 31.49947)
+
+[node name="Arbolito57" parent="Area3D" unique_id=1360577447 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.82094, 0, 0, 0, 1.82094, 0, 0, 0, 1.82094, 31.975052, 0, 25.148514)
+
+[node name="Arbolito58" parent="Area3D" unique_id=138762526 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0239681, 0, 0, 0, 1.0239681, 0, 0, 0, 1.0239681, 47.61641, 0, 0.66935444)
+
+[node name="Arbolito59" parent="Area3D" unique_id=1137914451 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2579405, 0, 0, 0, 1.2579405, 0, 0, 0, 1.2579405, 29.03551, 0, 30.68126)
+
+[node name="Arbolito60" parent="Area3D" unique_id=1597080487 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1836004, 0, 0, 0, 1.1836004, 0, 0, 0, 1.1836004, 41.12015, 0, 21.475948)
+
+[node name="Arbolito61" parent="Area3D" unique_id=1986362819 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4214036, 0, 0, 0, 1.4214036, 0, 0, 0, 1.4214036, 44.023907, 0, 28.33056)
+
+[node name="Arbolito62" parent="Area3D" unique_id=1006936917 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3470747, 0, 0, 0, 1.3470747, 0, 0, 0, 1.3470747, 55.033165, 0, 16.631382)
+
+[node name="Arbolito63" parent="Area3D" unique_id=1096095136 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7339652, 0, 0, 0, 1.7339652, 0, 0, 0, 1.7339652, 51.865604, 0, 29.308622)
+
+[node name="Arbolito64" parent="Area3D" unique_id=1011575053 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7981654, 0, 0, 0, 1.7981654, 0, 0, 0, 1.7981654, 44.685608, 0, 30.772892)
+
+[node name="Arbolito65" parent="Area3D" unique_id=776139061 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.85051095, 0, 0, 0, 0.85051095, 0, 0, 0, 0.85051095, 28.873323, 0, 24.905727)
+
+[node name="Arbolito66" parent="Area3D" unique_id=1275114407 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7663914, 0, 0, 0, 1.7663914, 0, 0, 0, 1.7663914, 48.93834, 0, 7.915107)
+
+[node name="Arbolito67" parent="Area3D" unique_id=998046164 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.966093, 0, 0, 0, 0.966093, 0, 0, 0, 0.966093, 36.67031, 0, 21.032135)
+
+[node name="Arbolito68" parent="Area3D" unique_id=1719234563 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6381692, 0, 0, 0, 1.6381692, 0, 0, 0, 1.6381692, 47.44839, 0, 6.346595)
+
+[node name="Arbolito69" parent="Area3D" unique_id=823300455 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1649977, 0, 0, 0, 1.1649977, 0, 0, 0, 1.1649977, 40.38127, 0, 8.75309)
+
+[node name="Arbolito70" parent="Area3D" unique_id=1764816390 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6572005, 0, 0, 0, 1.6572005, 0, 0, 0, 1.6572005, 53.477234, 0, 14.005727)
+
+[node name="Arbolito71" parent="Area3D" unique_id=1732692524 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8428714, 0, 0, 0, 1.8428714, 0, 0, 0, 1.8428714, 49.2373, 0, 10.3029)
+
+[node name="Arbolito72" parent="Area3D" unique_id=1232580121 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7955899, 0, 0, 0, 1.7955899, 0, 0, 0, 1.7955899, 52.206356, 0, 11.178513)
+
+[node name="Arbolito73" parent="Area3D" unique_id=1962022591 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5439553, 0, 0, 0, 1.5439553, 0, 0, 0, 1.5439553, 31.379025, 0, 23.11089)
+
+[node name="Arbolito74" parent="Area3D" unique_id=317107858 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5301651, 0, 0, 0, 1.5301651, 0, 0, 0, 1.5301651, 55.197216, 0, 12.912171)
+
+[node name="Arbolito75" parent="Area3D" unique_id=1002315785 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3330675, 0, 0, 0, 1.3330675, 0, 0, 0, 1.3330675, 27.798899, 0, 28.886112)
+
+[node name="Arbolito76" parent="Area3D" unique_id=1347759097 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7244674, 0, 0, 0, 1.7244674, 0, 0, 0, 1.7244674, 56.93583, 0, 13.988608)
+
+[node name="Arbolito77" parent="Area3D" unique_id=235577768 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1617101, 0, 0, 0, 1.1617101, 0, 0, 0, 1.1617101, 47.59661, 0, 3.998354)
+
+[node name="Arbolito78" parent="Area3D" unique_id=1495486467 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.940291, 0, 0, 0, 1.940291, 0, 0, 0, 1.940291, 50.281048, 0, 4.276818)
+
+[node name="Arbolito79" parent="Area3D" unique_id=1266466988 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6886847, 0, 0, 0, 1.6886847, 0, 0, 0, 1.6886847, 49.12041, 0, 2.0957284)
+
+[node name="Arbolito80" parent="Area3D" unique_id=1042899033 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1661952, 0, 0, 0, 1.1661952, 0, 0, 0, 1.1661952, 52.37375, 0, 4.084176)
+
+[node name="Arbolito81" parent="Area3D" unique_id=1100130151 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8875388, 0, 0, 0, 1.8875388, 0, 0, 0, 1.8875388, 53.545887, 0, 5.9772573)
+
+[node name="Arbolito82" parent="Area3D" unique_id=1416689009 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.88885623, 0, 0, 0, 0.88885623, 0, 0, 0, 0.88885623, 43.74113, 0, 12.472846)
+
+[node name="Arbolito83" parent="Area3D" unique_id=564113636 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9507296, 0, 0, 0, 1.9507296, 0, 0, 0, 1.9507296, 26.624353, 0, 32.463207)
+
+[node name="Arbolito84" parent="Area3D" unique_id=2102923837 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8315326, 0, 0, 0, 0.8315326, 0, 0, 0, 0.8315326, 32.025307, 0, 31.316643)
+
+[node name="Arbolito85" parent="Area3D" unique_id=863622930 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2072353, 0, 0, 0, 1.2072353, 0, 0, 0, 1.2072353, 53.40607, 0, 9.263452)
+
+[node name="Arbolito86" parent="Area3D" unique_id=2144065762 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1813207, 0, 0, 0, 1.1813207, 0, 0, 0, 1.1813207, 55.993492, 0, 20.385275)
+
+[node name="Arbolito87" parent="Area3D" unique_id=650556603 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7247306, 0, 0, 0, 1.7247306, 0, 0, 0, 1.7247306, 31.08009, 0, 33.936523)
+
+[node name="Arbolito88" parent="Area3D" unique_id=1208910426 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4311786, 0, 0, 0, 1.4311786, 0, 0, 0, 1.4311786, 50.999695, 0, 7.240951)
+
+[node name="Arbolito89" parent="Area3D" unique_id=1710429059 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1362807, 0, 0, 0, 1.1362807, 0, 0, 0, 1.1362807, 45.31762, 0, 33.578175)
+
+[node name="Arbolito90" parent="Area3D" unique_id=1731506471 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.80739456, 0, 0, 0, 0.80739456, 0, 0, 0, 0.80739456, 54.833652, 0, 7.5995283)
+
+[node name="Arbolito91" parent="Area3D" unique_id=710610392 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3808095, 0, 0, 0, 1.3808095, 0, 0, 0, 1.3808095, 58.722363, 0, 15.328343)
+
+[node name="Arbolito92" parent="Area3D" unique_id=1752570430 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6620334, 0, 0, 0, 1.6620334, 0, 0, 0, 1.6620334, 34.569122, 0, 32.843945)
+
+[node name="Arbolito93" parent="Area3D" unique_id=1269429228 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2773509, 0, 0, 0, 1.2773509, 0, 0, 0, 1.2773509, 46.371788, 0, 29.522945)
+
+[node name="Arbolito94" parent="Area3D" unique_id=287110848 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3519267, 0, 0, 0, 1.3519267, 0, 0, 0, 1.3519267, 23.047178, 0, 34.012672)
+
+[node name="Arbolito95" parent="Area3D" unique_id=1104898712 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9100281, 0, 0, 0, 0.9100281, 0, 0, 0, 0.9100281, 58.420578, 0, 6.4430017)
+
+[node name="Arbolito96" parent="Area3D" unique_id=511275714 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0069697, 0, 0, 0, 1.0069697, 0, 0, 0, 1.0069697, 60.02669, 0, 4.459041)
+
+[node name="Arbolito97" parent="Area3D" unique_id=718170238 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5258443, 0, 0, 0, 1.5258443, 0, 0, 0, 1.5258443, 51.752083, 0, 27.151834)
+
+[node name="Arbolito98" parent="Area3D" unique_id=976313631 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9629534, 0, 0, 0, 0.9629534, 0, 0, 0, 0.9629534, 54.325848, 0, 28.03883)
+
+[node name="Arbolito99" parent="Area3D" unique_id=1902015790 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.423187, 0, 0, 0, 1.423187, 0, 0, 0, 1.423187, 53.1761, 0, 32.6471)
+
+[node name="Arbolito100" parent="Area3D" unique_id=159072207 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7935408, 0, 0, 0, 1.7935408, 0, 0, 0, 1.7935408, 55.429775, 0, 9.537367)
+
+[node name="Arbolito101" parent="Area3D" unique_id=1118597842 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9352955, 0, 0, 0, 1.9352955, 0, 0, 0, 1.9352955, 54.004536, 0, 30.404654)
+
+[node name="Arbolito102" parent="Area3D" unique_id=973195299 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8138775, 0, 0, 0, 1.8138775, 0, 0, 0, 1.8138775, 49.507233, 0, 30.338295)
+
+[node name="Arbolito103" parent="Area3D" unique_id=10895611 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8230246, 0, 0, 0, 0.8230246, 0, 0, 0, 0.8230246, 48.07807, 0, 32.359856)
+
+[node name="Arbolito104" parent="Area3D" unique_id=1536671788 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6337436, 0, 0, 0, 1.6337436, 0, 0, 0, 1.6337436, 54.2556, 0, 23.060682)
+
+[node name="Arbolito105" parent="Area3D" unique_id=1199287975 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8044344, 0, 0, 0, 1.8044344, 0, 0, 0, 1.8044344, 42.846367, 0, 26.420404)
+
+[node name="Arbolito106" parent="Area3D" unique_id=66773318 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9124194, 0, 0, 0, 1.9124194, 0, 0, 0, 1.9124194, 28.002565, 0, 34.451458)
+
+[node name="Arbolito107" parent="Area3D" unique_id=420005830 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0458033, 0, 0, 0, 1.0458033, 0, 0, 0, 1.0458033, 23.611364, 0, 31.993122)
+
+[node name="Arbolito108" parent="Area3D" unique_id=1431441043 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4776074, 0, 0, 0, 1.4776074, 0, 0, 0, 1.4776074, 51.309525, 0, 31.63826)
+
+[node name="Arbolito109" parent="Area3D" unique_id=959458850 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.80008286, 0, 0, 0, 0.80008286, 0, 0, 0, 0.80008286, 24.411919, 0, 29.306248)
+
+[node name="Arbolito110" parent="Area3D" unique_id=1804817580 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7098484, 0, 0, 0, 1.7098484, 0, 0, 0, 1.7098484, 56.121464, 0, 32.2119)
+
+[node name="Arbolito111" parent="Area3D" unique_id=407393135 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8849882, 0, 0, 0, 1.8849882, 0, 0, 0, 1.8849882, 21.340229, 0, 32.90437)
+
+[node name="Arbolito112" parent="Area3D" unique_id=2086942188 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0980388, 0, 0, 0, 1.0980388, 0, 0, 0, 1.0980388, 62.901196, 0, 2.946381)
+
+[node name="Arbolito113" parent="Area3D" unique_id=2049257767 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0388745, 0, 0, 0, 1.0388745, 0, 0, 0, 1.0388745, 57.521465, 0, 22.095434)
+
+[node name="Arbolito114" parent="Area3D" unique_id=101216096 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0931258, 0, 0, 0, 1.0931258, 0, 0, 0, 1.0931258, 33.1604, 0, 20.781075)
+
+[node name="Arbolito115" parent="Area3D" unique_id=160688126 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2516173, 0, 0, 0, 1.2516173, 0, 0, 0, 1.2516173, 54.15118, 0, 25.645443)
+
+[node name="Arbolito116" parent="Area3D" unique_id=553385704 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.14715, 0, 0, 0, 1.14715, 0, 0, 0, 1.14715, 60.55244, 0, 1.6943411)
+
+[node name="Arbolito117" parent="Area3D" unique_id=849870520 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3504069, 0, 0, 0, 1.3504069, 0, 0, 0, 1.3504069, 21.056532, 0, 29.304977)
+
+[node name="Arbolito118" parent="Area3D" unique_id=195901073 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9273805, 0, 0, 0, 0.9273805, 0, 0, 0, 0.9273805, 49.124863, 0, 34.581413)
+
+[node name="Arbolito119" parent="Area3D" unique_id=145002089 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6298789, 0, 0, 0, 1.6298789, 0, 0, 0, 1.6298789, 55.986732, 0, 29.7562)
+
+[node name="Arbolito120" parent="Area3D" unique_id=923163640 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0934117, 0, 0, 0, 1.0934117, 0, 0, 0, 1.0934117, 43.466026, 0, 34.84723)
+
+[node name="Arbolito121" parent="Area3D" unique_id=1297888196 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5496289, 0, 0, 0, 1.5496289, 0, 0, 0, 1.5496289, 25.56764, 0, 34.942566)
+
+[node name="Arbolito122" parent="Area3D" unique_id=156659905 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5764205, 0, 0, 0, 1.5764205, 0, 0, 0, 1.5764205, 45.95632, 0, 35.59014)
+
+[node name="Arbolito123" parent="Area3D" unique_id=615511572 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0018504, 0, 0, 0, 1.0018504, 0, 0, 0, 1.0018504, 29.60705, 0, 21.954138)
+
+[node name="Arbolito124" parent="Area3D" unique_id=246038641 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2526428, 0, 0, 0, 1.2526428, 0, 0, 0, 1.2526428, 51.646408, 0, 2.1844988)
+
+[node name="Arbolito125" parent="Area3D" unique_id=491610801 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6837835, 0, 0, 0, 1.6837835, 0, 0, 0, 1.6837835, 43.697002, 0, 37.214188)
+
+[node name="Arbolito126" parent="Area3D" unique_id=776566911 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3526405, 0, 0, 0, 1.3526405, 0, 0, 0, 1.3526405, 56.922085, 0, 4.2784147)
+
+[node name="Arbolito127" parent="Area3D" unique_id=1107387479 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0002275, 0, 0, 0, 1.0002275, 0, 0, 0, 1.0002275, 51.86026, 0, 35.713207)
+
+[node name="Arbolito128" parent="Area3D" unique_id=581889172 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3464842, 0, 0, 0, 1.3464842, 0, 0, 0, 1.3464842, 47.87356, 0, 38.134262)
+
+[node name="Arbolito129" parent="Area3D" unique_id=1243796381 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.073118, 0, 0, 0, 1.073118, 0, 0, 0, 1.073118, 44.74433, 0, 39.54549)
+
+[node name="Arbolito130" parent="Area3D" unique_id=1844031683 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6377608, 0, 0, 0, 1.6377608, 0, 0, 0, 1.6377608, 25.327396, 0, 26.854519)
+
+[node name="Arbolito131" parent="Area3D" unique_id=1440271257 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9757357, 0, 0, 0, 0.9757357, 0, 0, 0, 0.9757357, 26.18826, 0, 22.526892)
+
+[node name="Arbolito132" parent="Area3D" unique_id=670823414 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4222443, 0, 0, 0, 1.4222443, 0, 0, 0, 1.4222443, 56.953606, 0, 8.029527)
+
+[node name="Arbolito133" parent="Area3D" unique_id=669241618 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0007081, 0, 0, 0, 1.0007081, 0, 0, 0, 1.0007081, 57.611034, 0, 10.481501)
+
+[node name="Arbolito134" parent="Area3D" unique_id=2063722585 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8566834, 0, 0, 0, 1.8566834, 0, 0, 0, 1.8566834, 59.285606, 0, 18.606676)
+
+[node name="Arbolito135" parent="Area3D" unique_id=1873742956 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9591572, 0, 0, 0, 1.9591572, 0, 0, 0, 1.9591572, 56.505573, 0, 35.919544)
+
+[node name="Arbolito136" parent="Area3D" unique_id=310032992 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.121644, 0, 0, 0, 1.121644, 0, 0, 0, 1.121644, 59.3038, 0, 31.79329)
+
+[node name="Arbolito137" parent="Area3D" unique_id=480450584 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9645294, 0, 0, 0, 0.9645294, 0, 0, 0, 0.9645294, 57.253613, 0, 17.14138)
+
+[node name="Arbolito138" parent="Area3D" unique_id=1639085508 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.412869, 0, 0, 0, 1.412869, 0, 0, 0, 1.412869, 50.117916, 0, -0.18125397)
+
+[node name="Arbolito139" parent="Area3D" unique_id=2005415999 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9517465, 0, 0, 0, 1.9517465, 0, 0, 0, 1.9517465, 49.75173, 0, 38.97366)
+
+[node name="Arbolito140" parent="Area3D" unique_id=877298416 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.81771845, 0, 0, 0, 0.81771845, 0, 0, 0, 0.81771845, 60.122658, 0, 13.079924)
+
+[node name="Arbolito141" parent="Area3D" unique_id=1435995087 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1154258, 0, 0, 0, 1.1154258, 0, 0, 0, 1.1154258, 63.07825, 0, 12.313962)
+
+[node name="Arbolito142" parent="Area3D" unique_id=217377265 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1714371, 0, 0, 0, 1.1714371, 0, 0, 0, 1.1714371, 55.15893, 0, 0.80122733)
+
+[node name="Arbolito143" parent="Area3D" unique_id=1109212939 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5914214, 0, 0, 0, 1.5914214, 0, 0, 0, 1.5914214, 56.93912, 0, 27.760729)
+
+[node name="Arbolito144" parent="Area3D" unique_id=271540983 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6997191, 0, 0, 0, 1.6997191, 0, 0, 0, 1.6997191, 60.72977, 0, 15.424716)
+
+[node name="Arbolito145" parent="Area3D" unique_id=1801039516 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.003722, 0, 0, 0, 1.003722, 0, 0, 0, 1.003722, 58.57699, 0, 3.0138073)
+
+[node name="Arbolito146" parent="Area3D" unique_id=731012627 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9472839, 0, 0, 0, 1.9472839, 0, 0, 0, 1.9472839, 57.952866, 0, 25.29641)
+
+[node name="Arbolito147" parent="Area3D" unique_id=368004851 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8259915, 0, 0, 0, 1.8259915, 0, 0, 0, 1.8259915, 26.126862, 0, 24.687498)
+
+[node name="Arbolito148" parent="Area3D" unique_id=1715724218 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3783561, 0, 0, 0, 1.3783561, 0, 0, 0, 1.3783561, 66.36016, 0, 10.599117)
+
+[node name="Arbolito149" parent="Area3D" unique_id=1026534987 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2730861, 0, 0, 0, 1.2730861, 0, 0, 0, 1.2730861, 22.606815, 0, 24.69729)
+
+[node name="Arbolito150" parent="Area3D" unique_id=667914544 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3218187, 0, 0, 0, 1.3218187, 0, 0, 0, 1.3218187, 63.2576, 0, 9.110874)
+
+[node name="Arbolito151" parent="Area3D" unique_id=1601490461 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9534261, 0, 0, 0, 1.9534261, 0, 0, 0, 1.9534261, 60.244713, 0, 21.33088)
+
+[node name="Arbolito152" parent="Area3D" unique_id=707771073 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5309167, 0, 0, 0, 1.5309167, 0, 0, 0, 1.5309167, 52.94002, 0, -1.0886738)
+
+[node name="Arbolito153" parent="Area3D" unique_id=1418524653 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3055916, 0, 0, 0, 1.3055916, 0, 0, 0, 1.3055916, 57.95968, 0, -0.74338174)
+
+[node name="Arbolito154" parent="Area3D" unique_id=1966957099 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7819622, 0, 0, 0, 1.7819622, 0, 0, 0, 1.7819622, 62.923958, 0, 18.194332)
+
+[node name="Arbolito155" parent="Area3D" unique_id=184175566 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.86114293, 0, 0, 0, 0.86114293, 0, 0, 0, 0.86114293, 54.92538, 0, 4.3950324)
+
+[node name="Arbolito156" parent="Area3D" unique_id=702903625 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5845044, 0, 0, 0, 1.5845044, 0, 0, 0, 1.5845044, 54.629314, 0, 34.478844)
+
+[node name="Arbolito157" parent="Area3D" unique_id=1542003304 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3645021, 0, 0, 0, 1.3645021, 0, 0, 0, 1.3645021, 61.48549, 0, 7.8663015)
+
+[node name="Arbolito158" parent="Area3D" unique_id=2042475052 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7609946, 0, 0, 0, 1.7609946, 0, 0, 0, 1.7609946, 64.04456, 0, 6.0957103)
+
+[node name="Arbolito159" parent="Area3D" unique_id=1974791219 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2895386, 0, 0, 0, 1.2895386, 0, 0, 0, 1.2895386, 62.07553, 0, 20.069103)
+
+[node name="Arbolito160" parent="Area3D" unique_id=623254196 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8494865, 0, 0, 0, 1.8494865, 0, 0, 0, 1.8494865, 55.840538, 0, -1.9129813)
+
+[node name="Arbolito161" parent="Area3D" unique_id=488876916 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7847147, 0, 0, 0, 1.7847147, 0, 0, 0, 1.7847147, 29.2338, 0, 27.193764)
+
+[node name="Arbolito162" parent="Area3D" unique_id=460028634 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5628117, 0, 0, 0, 1.5628117, 0, 0, 0, 1.5628117, 59.292526, 0, -3.4532523)
+
+[node name="Arbolito163" parent="Area3D" unique_id=809853775 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3813635, 0, 0, 0, 1.3813635, 0, 0, 0, 1.3813635, 52.58642, 0, 38.12809)
+
+[node name="Arbolito164" parent="Area3D" unique_id=139955830 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4576335, 0, 0, 0, 1.4576335, 0, 0, 0, 1.4576335, 56.36394, 0, -4.8803525)
+
+[node name="Arbolito165" parent="Area3D" unique_id=1112975411 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6182376, 0, 0, 0, 1.6182376, 0, 0, 0, 1.6182376, 51.680443, 0, -3.300844)
+
+[node name="Arbolito166" parent="Area3D" unique_id=216030187 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3217281, 0, 0, 0, 1.3217281, 0, 0, 0, 1.3217281, 59.570023, 0, 29.1249)
+
+[node name="Arbolito167" parent="Area3D" unique_id=800112464 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0517188, 0, 0, 0, 1.0517188, 0, 0, 0, 1.0517188, 59.730007, 0, 9.758401)
+
+[node name="Arbolito168" parent="Area3D" unique_id=615017878 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.916993, 0, 0, 0, 0.916993, 0, 0, 0, 0.916993, 56.51734, 0, 2.2745492)
+
+[node name="Arbolito169" parent="Area3D" unique_id=2056182233 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7484963, 0, 0, 0, 1.7484963, 0, 0, 0, 1.7484963, 57.636093, 0, 33.71632)
+
+[node name="Arbolito170" parent="Area3D" unique_id=1593961909 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.413242, 0, 0, 0, 1.413242, 0, 0, 0, 1.413242, 22.373905, 0, 27.346615)
+
+[node name="Arbolito171" parent="Area3D" unique_id=2028643474 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.93329215, 0, 0, 0, 0.93329215, 0, 0, 0, 0.93329215, 61.76217, 0, 5.8171844)
+
+[node name="Arbolito172" parent="Area3D" unique_id=1609516301 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.719964, 0, 0, 0, 1.719964, 0, 0, 0, 1.719964, 63.62568, 0, 14.776691)
+
+[node name="Arbolito173" parent="Area3D" unique_id=1926235809 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.861463, 0, 0, 0, 1.861463, 0, 0, 0, 1.861463, 65.36364, 0, 4.3755426)
+
+[node name="Arbolito174" parent="Area3D" unique_id=207699915 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3738924, 0, 0, 0, 1.3738924, 0, 0, 0, 1.3738924, 53.68688, 0, 2.3218472)
+
+[node name="Arbolito175" parent="Area3D" unique_id=1503733463 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3439971, 0, 0, 0, 1.3439971, 0, 0, 0, 1.3439971, 53.72406, 0, -4.71639)
+
+[node name="Arbolito176" parent="Area3D" unique_id=1401069808 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8500849, 0, 0, 0, 1.8500849, 0, 0, 0, 1.8500849, 63.248318, 0, 21.944304)
+
+[node name="Arbolito177" parent="Area3D" unique_id=2042535642 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6709958, 0, 0, 0, 1.6709958, 0, 0, 0, 1.6709958, 61.664227, 0, -1.2484236)
+
+[node name="Arbolito178" parent="Area3D" unique_id=1882480787 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3749017, 0, 0, 0, 1.3749017, 0, 0, 0, 1.3749017, 61.82696, 0, 30.95627)
+
+[node name="Arbolito179" parent="Area3D" unique_id=1311750246 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5362945, 0, 0, 0, 1.5362945, 0, 0, 0, 1.5362945, 65.95327, 0, 13.992405)
+
+[node name="Arbolito180" parent="Area3D" unique_id=793265990 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2050351, 0, 0, 0, 1.2050351, 0, 0, 0, 1.2050351, 60.61329, 0, 23.644432)
+
+[node name="Arbolito181" parent="Area3D" unique_id=397085246 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0368359, 0, 0, 0, 1.0368359, 0, 0, 0, 1.0368359, 55.648674, 0, 38.19699)
+
+[node name="Arbolito182" parent="Area3D" unique_id=1431457329 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.043792, 0, 0, 0, 1.043792, 0, 0, 0, 1.043792, 56.309765, 0, 23.981083)
+
+[node name="Arbolito183" parent="Area3D" unique_id=1179104982 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5103309, 0, 0, 0, 1.5103309, 0, 0, 0, 1.5103309, 60.007298, 0, -6.059434)
+
+[node name="Arbolito184" parent="Area3D" unique_id=582819717 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2278012, 0, 0, 0, 1.2278012, 0, 0, 0, 1.2278012, 57.209427, 0, -6.903784)
+
+[node name="Arbolito185" parent="Area3D" unique_id=1642696950 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8727695, 0, 0, 0, 1.8727695, 0, 0, 0, 1.8727695, 66.613396, 0, 15.982431)
+
+[node name="Arbolito186" parent="Area3D" unique_id=2067561077 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.837685, 0, 0, 0, 1.837685, 0, 0, 0, 1.837685, 63.825825, 0, 31.088642)
+
+[node name="Arbolito187" parent="Area3D" unique_id=416371849 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9267327, 0, 0, 0, 0.9267327, 0, 0, 0, 0.9267327, 20.279179, 0, 25.403736)
+
+[node name="Arbolito188" parent="Area3D" unique_id=1050571936 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0334946, 0, 0, 0, 1.0334946, 0, 0, 0, 1.0334946, 64.56774, 0, 0.8459022)
+
+[node name="Arbolito189" parent="Area3D" unique_id=1867735960 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9755998, 0, 0, 0, 1.9755998, 0, 0, 0, 1.9755998, 66.080315, 0, 33.82679)
+
+[node name="Arbolito190" parent="Area3D" unique_id=107273888 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8714817, 0, 0, 0, 0.8714817, 0, 0, 0, 0.8714817, 66.02765, 0, 6.763348)
+
+[node name="Arbolito191" parent="Area3D" unique_id=536013691 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9486042, 0, 0, 0, 0.9486042, 0, 0, 0, 0.9486042, 65.0671, 0, 17.883976)
+
+[node name="Arbolito192" parent="Area3D" unique_id=1949656329 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8705022, 0, 0, 0, 0.8705022, 0, 0, 0, 0.8705022, 20.25008, 0, 22.745749)
+
+[node name="Arbolito193" parent="Area3D" unique_id=730305685 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4343022, 0, 0, 0, 1.4343022, 0, 0, 0, 1.4343022, 23.81217, 0, 22.265203)
+
+[node name="Arbolito194" parent="Area3D" unique_id=1479435440 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3406998, 0, 0, 0, 1.3406998, 0, 0, 0, 1.3406998, 60.236076, 0, 26.500212)
+
+[node name="Arbolito195" parent="Area3D" unique_id=44545910 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5197428, 0, 0, 0, 1.5197428, 0, 0, 0, 1.5197428, 18.696249, 0, 27.705122)
+
+[node name="Arbolito196" parent="Area3D" unique_id=483421047 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0956748, 0, 0, 0, 1.0956748, 0, 0, 0, 1.0956748, 50.27637, 0, 36.967808)
+
+[node name="Arbolito197" parent="Area3D" unique_id=88543093 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9495279, 0, 0, 0, 1.9495279, 0, 0, 0, 1.9495279, 65.15627, 0, 21.296799)
+
+[node name="Arbolito198" parent="Area3D" unique_id=913044526 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9512969, 0, 0, 0, 0.9512969, 0, 0, 0, 0.9512969, 67.51664, 0, 18.33413)
+
+[node name="Arbolito199" parent="Area3D" unique_id=1469654403 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.408548, 0, 0, 0, 1.408548, 0, 0, 0, 1.408548, 60.598988, 0, 34.69667)
+
+[node name="Arbolito200" parent="Area3D" unique_id=597415194 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.924713, 0, 0, 0, 1.924713, 0, 0, 0, 1.924713, 54.077465, 0, 36.495945)
+
+[node name="Arbolito201" parent="Area3D" unique_id=1217379742 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4313655, 0, 0, 0, 1.4313655, 0, 0, 0, 1.4313655, 65.70587, 0, 29.462551)
+
+[node name="Arbolito202" parent="Area3D" unique_id=280753737 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.619756, 0, 0, 0, 1.619756, 0, 0, 0, 1.619756, 67.42943, 0, 20.836521)
+
+[node name="Arbolito203" parent="Area3D" unique_id=59092769 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0891111, 0, 0, 0, 1.0891111, 0, 0, 0, 1.0891111, 64.78609, 0, 25.265524)
+
+[node name="Arbolito204" parent="Area3D" unique_id=653053660 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0720241, 0, 0, 0, 1.0720241, 0, 0, 0, 1.0720241, 63.257496, 0, 28.870602)
+
+[node name="Arbolito205" parent="Area3D" unique_id=1476732257 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.971209, 0, 0, 0, 1.971209, 0, 0, 0, 1.971209, 70.15988, 0, 21.248043)
+
+[node name="Arbolito206" parent="Area3D" unique_id=1196771762 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0877932, 0, 0, 0, 1.0877932, 0, 0, 0, 1.0877932, 58.898388, 0, 38.550034)
+
+[node name="Arbolito207" parent="Area3D" unique_id=600293561 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1796645, 0, 0, 0, 1.1796645, 0, 0, 0, 1.1796645, 59.17176, 0, 36.18159)
+
+[node name="Arbolito208" parent="Area3D" unique_id=304907206 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8430667, 0, 0, 0, 0.8430667, 0, 0, 0, 0.8430667, 67.191895, 0, 24.45395)
+
+[node name="Arbolito209" parent="Area3D" unique_id=1834451385 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.009149, 0, 0, 0, 1.009149, 0, 0, 0, 1.009149, 68.319534, 0, 5.7995806)
+
+[node name="Arbolito210" parent="Area3D" unique_id=1350643959 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9846923, 0, 0, 0, 1.9846923, 0, 0, 0, 1.9846923, 70.6048, 0, 25.149246)
+
+[node name="Arbolito211" parent="Area3D" unique_id=1947881820 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.072623, 0, 0, 0, 1.072623, 0, 0, 0, 1.072623, 65.575775, 0, 23.268074)
+
+[node name="Arbolito212" parent="Area3D" unique_id=1181976479 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.487954, 0, 0, 0, 1.487954, 0, 0, 0, 1.487954, 63.824215, 0, -2.6872947)
+
+[node name="Arbolito213" parent="Area3D" unique_id=823158284 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.800045, 0, 0, 0, 1.800045, 0, 0, 0, 1.800045, 63.115982, 0, 34.281044)
+
+[node name="Arbolito214" parent="Area3D" unique_id=1196275792 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6257056, 0, 0, 0, 1.6257056, 0, 0, 0, 1.6257056, 68.731804, 0, 3.1413708)
+
+[node name="Arbolito215" parent="Area3D" unique_id=1022438320 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8672262, 0, 0, 0, 1.8672262, 0, 0, 0, 1.8672262, 69.13675, 0, 23.568626)
+
+[node name="Arbolito216" parent="Area3D" unique_id=887098115 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8199869, 0, 0, 0, 1.8199869, 0, 0, 0, 1.8199869, 68.06552, 0, 8.679381)
+
+[node name="Arbolito217" parent="Area3D" unique_id=1729758843 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9273601, 0, 0, 0, 0.9273601, 0, 0, 0, 0.9273601, 18.321, 0, 24.333738)
+
+[node name="Arbolito218" parent="Area3D" unique_id=586582263 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4554305, 0, 0, 0, 1.4554305, 0, 0, 0, 1.4554305, 61.557568, 0, 36.798485)
+
+[node name="Arbolito219" parent="Area3D" unique_id=929425126 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.8462627, 0, 0, 0, 0.8462627, 0, 0, 0, 0.8462627, 61.835106, 0, -4.601674)
+
+[node name="Arbolito220" parent="Area3D" unique_id=267869553 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8365506, 0, 0, 0, 1.8365506, 0, 0, 0, 1.8365506, 55.20099, 0, -7.2749605)
+
+[node name="Arbolito221" parent="Area3D" unique_id=1700378363 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5215564, 0, 0, 0, 1.5215564, 0, 0, 0, 1.5215564, 65.92147, 0, -1.33916)
+
+[node name="Arbolito222" parent="Area3D" unique_id=1749491880 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9083191, 0, 0, 0, 0.9083191, 0, 0, 0, 0.9083191, 69.71533, 0, 15.049302)
+
+[node name="Arbolito223" parent="Area3D" unique_id=121091716 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8592359, 0, 0, 0, 1.8592359, 0, 0, 0, 1.8592359, 67.501854, 0, 0.42649305)
+
+[node name="Arbolito224" parent="Area3D" unique_id=2043181647 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9830768, 0, 0, 0, 0.9830768, 0, 0, 0, 0.9830768, 17.533484, 0, 22.453142)
+
+[node name="Arbolito225" parent="Area3D" unique_id=1972732370 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.04949, 0, 0, 0, 1.04949, 0, 0, 0, 1.04949, 69.55149, 0, 29.603567)
+
+[node name="Arbolito226" parent="Area3D" unique_id=1160109218 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2863057, 0, 0, 0, 1.2863057, 0, 0, 0, 1.2863057, 62.7296, 0, 24.976315)
+
+[node name="Arbolito227" parent="Area3D" unique_id=744114157 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8106576, 0, 0, 0, 1.8106576, 0, 0, 0, 1.8106576, 70.677536, 0, 6.0423117)
+
+[node name="Arbolito228" parent="Area3D" unique_id=491927239 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9048144, 0, 0, 0, 1.9048144, 0, 0, 0, 1.9048144, 71.99203, 0, 7.859708)
+
+[node name="Arbolito229" parent="Area3D" unique_id=1739835053 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6551437, 0, 0, 0, 1.6551437, 0, 0, 0, 1.6551437, 67.31212, 0, 26.826935)
+
+[node name="Arbolito230" parent="Area3D" unique_id=1487667988 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5527442, 0, 0, 0, 1.5527442, 0, 0, 0, 1.5527442, 71.64311, 0, 22.98045)
+
+[node name="Arbolito231" parent="Area3D" unique_id=1085588296 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2540656, 0, 0, 0, 1.2540656, 0, 0, 0, 1.2540656, 62.472008, 0, 0.6451299)
+
+[node name="Arbolito232" parent="Area3D" unique_id=58573150 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6781168, 0, 0, 0, 1.6781168, 0, 0, 0, 1.6781168, 70.05098, 0, 10.6109705)
+
+[node name="Arbolito233" parent="Area3D" unique_id=117283279 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.96223366, 0, 0, 0, 0.96223366, 0, 0, 0, 0.96223366, 65.15354, 0, 36.07657)
+
+[node name="Arbolito234" parent="Area3D" unique_id=1849779886 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.96256, 0, 0, 0, 1.96256, 0, 0, 0, 1.96256, 72.761856, 0, 5.3446074)
+
+[node name="Arbolito235" parent="Area3D" unique_id=1466753025 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2844381, 0, 0, 0, 1.2844381, 0, 0, 0, 1.2844381, 75.25961, 0, 21.68827)
+
+[node name="Arbolito236" parent="Area3D" unique_id=270711188 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6840197, 0, 0, 0, 1.6840197, 0, 0, 0, 1.6840197, 68.752975, 0, 36.71697)
+
+[node name="Arbolito237" parent="Area3D" unique_id=977441825 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4684575, 0, 0, 0, 1.4684575, 0, 0, 0, 1.4684575, 66.77286, 0, 37.9241)
+
+[node name="Arbolito238" parent="Area3D" unique_id=1131654706 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.94196343, 0, 0, 0, 0.94196343, 0, 0, 0, 0.94196343, 62.938873, 0, 38.285995)
+
+[node name="Arbolito239" parent="Area3D" unique_id=143864895 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7217104, 0, 0, 0, 1.7217104, 0, 0, 0, 1.7217104, 69.96294, 0, 17.490643)
+
+[node name="Arbolito240" parent="Area3D" unique_id=27599171 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2116137, 0, 0, 0, 1.2116137, 0, 0, 0, 1.2116137, 71.840546, 0, 29.06396)
+
+[node name="Arbolito241" parent="Area3D" unique_id=400126636 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.070748, 0, 0, 0, 1.070748, 0, 0, 0, 1.070748, 71.3124, 0, 3.3007932)
+
+[node name="Arbolito242" parent="Area3D" unique_id=542103518 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0234692, 0, 0, 0, 1.0234692, 0, 0, 0, 1.0234692, 73.43892, 0, 26.016537)
+
+[node name="Arbolito243" parent="Area3D" unique_id=1235081602 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9630145, 0, 0, 0, 0.9630145, 0, 0, 0, 0.9630145, 75.05841, 0, 10.08084)
+
+[node name="Arbolito244" parent="Area3D" unique_id=281018194 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9412577, 0, 0, 0, 0.9412577, 0, 0, 0, 0.9412577, 72.44704, 0, 18.879324)
+
+[node name="Arbolito245" parent="Area3D" unique_id=973789331 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8530577, 0, 0, 0, 1.8530577, 0, 0, 0, 1.8530577, 74.62793, 0, 6.3037715)
+
+[node name="Arbolito246" parent="Area3D" unique_id=191151819 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.96930265, 0, 0, 0, 0.96930265, 0, 0, 0, 0.96930265, 78.79362, 0, 10.668718)
+
+[node name="Arbolito247" parent="Area3D" unique_id=121764595 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8900329, 0, 0, 0, 1.8900329, 0, 0, 0, 1.8900329, 68.10711, 0, 34.551064)
+
+[node name="Arbolito248" parent="Area3D" unique_id=1547203592 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4379408, 0, 0, 0, 1.4379408, 0, 0, 0, 1.4379408, 71.49568, 0, 36.078354)
+
+[node name="Arbolito249" parent="Area3D" unique_id=703200130 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9445579, 0, 0, 0, 0.9445579, 0, 0, 0, 0.9445579, 67.58088, 0, 12.461314)
+
+[node name="Arbolito250" parent="Area3D" unique_id=2144858351 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9988271, 0, 0, 0, 1.9988271, 0, 0, 0, 1.9988271, 71.21098, 0, 13.603076)
+
+[node name="Arbolito251" parent="Area3D" unique_id=798036441 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9930269, 0, 0, 0, 0.9930269, 0, 0, 0, 0.9930269, 72.34931, 0, 10.301937)
+
+[node name="Arbolito252" parent="Area3D" unique_id=1291093436 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3372915, 0, 0, 0, 1.3372915, 0, 0, 0, 1.3372915, 69.8134, 0, 32.64018)
+
+[node name="Arbolito253" parent="Area3D" unique_id=118178504 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7471616, 0, 0, 0, 1.7471616, 0, 0, 0, 1.7471616, 70.15516, 0, 27.354794)
+
+[node name="Arbolito254" parent="Area3D" unique_id=2081106688 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5254508, 0, 0, 0, 1.5254508, 0, 0, 0, 1.5254508, 78.98076, 0, 12.961798)
+
+[node name="Arbolito255" parent="Area3D" unique_id=561202439 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6071088, 0, 0, 0, 1.6071088, 0, 0, 0, 1.6071088, 66.39679, 0, 2.346328)
+
+[node name="Arbolito256" parent="Area3D" unique_id=558435963 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2343848, 0, 0, 0, 1.2343848, 0, 0, 0, 1.2343848, 72.760826, 0, 32.475876)
+
+[node name="Arbolito257" parent="Area3D" unique_id=1422851134 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.301297, 0, 0, 0, 1.301297, 0, 0, 0, 1.301297, 67.626495, 0, 31.005331)
+
+[node name="Arbolito258" parent="Area3D" unique_id=1667901813 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5505679, 0, 0, 0, 1.5505679, 0, 0, 0, 1.5505679, 74.427284, 0, 15.312482)
+
+[node name="Arbolito259" parent="Area3D" unique_id=1599118929 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9038788, 0, 0, 0, 1.9038788, 0, 0, 0, 1.9038788, 76.09299, 0, 26.204336)
+
+[node name="Arbolito260" parent="Area3D" unique_id=253420841 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4376357, 0, 0, 0, 1.4376357, 0, 0, 0, 1.4376357, 71.28798, 0, 31.087902)
+
+[node name="Arbolito261" parent="Area3D" unique_id=1910665679 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2498878, 0, 0, 0, 1.2498878, 0, 0, 0, 1.2498878, 64.6756, 0, 27.453386)
+
+[node name="Arbolito262" parent="Area3D" unique_id=2138414656 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3772933, 0, 0, 0, 1.3772933, 0, 0, 0, 1.3772933, 73.47961, 0, 34.65726)
+
+[node name="Arbolito263" parent="Area3D" unique_id=2038589876 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6737889, 0, 0, 0, 1.6737889, 0, 0, 0, 1.6737889, 76.096924, 0, 8.208419)
+
+[node name="Arbolito264" parent="Area3D" unique_id=2131539296 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9892101, 0, 0, 0, 1.9892101, 0, 0, 0, 1.9892101, 74.6807, 0, 28.523409)
+
+[node name="Arbolito265" parent="Area3D" unique_id=872604671 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6744432, 0, 0, 0, 1.6744432, 0, 0, 0, 1.6744432, 75.49262, 0, 12.539342)
+
+[node name="Arbolito266" parent="Area3D" unique_id=78658517 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8854415, 0, 0, 0, 1.8854415, 0, 0, 0, 1.8854415, 75.96408, 0, 19.27522)
+
+[node name="Arbolito267" parent="Area3D" unique_id=231131550 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3811138, 0, 0, 0, 1.3811138, 0, 0, 0, 1.3811138, 72.125725, 0, 16.538036)
+
+[node name="Arbolito268" parent="Area3D" unique_id=1607246375 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.81808376, 0, 0, 0, 0.81808376, 0, 0, 0, 0.81808376, 78.52633, 0, 23.23485)
+
+[node name="Arbolito269" parent="Area3D" unique_id=1796756229 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1646017, 0, 0, 0, 1.1646017, 0, 0, 0, 1.1646017, 76.27461, 0, 24.060312)
+
+[node name="Arbolito270" parent="Area3D" unique_id=483853679 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2555255, 0, 0, 0, 1.2555255, 0, 0, 0, 1.2555255, 78.04516, 0, 20.64215)
+
+[node name="Arbolito271" parent="Area3D" unique_id=2004273583 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3707942, 0, 0, 0, 1.3707942, 0, 0, 0, 1.3707942, 73.2154, 0, 21.368074)
+
+[node name="Arbolito272" parent="Area3D" unique_id=1289200023 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4604547, 0, 0, 0, 1.4604547, 0, 0, 0, 1.4604547, 74.72852, 0, 31.098772)
+
+[node name="Arbolito273" parent="Area3D" unique_id=528194912 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9075551, 0, 0, 0, 1.9075551, 0, 0, 0, 1.9075551, 73.97142, 0, 17.444534)
+
+[node name="Arbolito274" parent="Area3D" unique_id=1416912172 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7135885, 0, 0, 0, 1.7135885, 0, 0, 0, 1.7135885, 74.056946, 0, 23.306374)
+
+[node name="Arbolito275" parent="Area3D" unique_id=1171735938 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9525847, 0, 0, 0, 1.9525847, 0, 0, 0, 1.9525847, 78.50448, 0, 16.224476)
+
+[node name="Arbolito276" parent="Area3D" unique_id=679972485 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2215049, 0, 0, 0, 1.2215049, 0, 0, 0, 1.2215049, 73.34737, 0, 13.53861)
+
+[node name="Arbolito277" parent="Area3D" unique_id=2040093939 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9142822, 0, 0, 0, 1.9142822, 0, 0, 0, 1.9142822, 76.48092, 0, 17.02601)
+
+[node name="Arbolito278" parent="Area3D" unique_id=1680851554 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4275789, 0, 0, 0, 1.4275789, 0, 0, 0, 1.4275789, 81.13207, 0, 15.441482)
+
+[node name="Arbolito279" parent="Area3D" unique_id=1079101836 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8089453, 0, 0, 0, 1.8089453, 0, 0, 0, 1.8089453, 82.03117, 0, 19.233042)
+
+[node name="Arbolito280" parent="Area3D" unique_id=1494927531 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4717232, 0, 0, 0, 1.4717232, 0, 0, 0, 1.4717232, 71.318275, 0, 33.99147)
+
+[node name="Arbolito281" parent="Area3D" unique_id=477158458 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2069013, 0, 0, 0, 1.2069013, 0, 0, 0, 1.2069013, 80.25146, 0, 18.191946)
+
+[node name="Arbolito282" parent="Area3D" unique_id=1599241961 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.90088266, 0, 0, 0, 0.90088266, 0, 0, 0, 0.90088266, 76.85218, 0, 14.989463)
+
+[node name="Arbolito283" parent="Area3D" unique_id=862724816 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9386601, 0, 0, 0, 1.9386601, 0, 0, 0, 1.9386601, 81.64825, 0, 21.627415)
+
+[node name="Arbolito284" parent="Area3D" unique_id=1744508153 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3520468, 0, 0, 0, 1.3520468, 0, 0, 0, 1.3520468, 81.106514, 0, 23.78758)
+
+[node name="Arbolito285" parent="Area3D" unique_id=1054641743 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1428564, 0, 0, 0, 1.1428564, 0, 0, 0, 1.1428564, 84.65792, 0, 21.946352)
+
+[node name="Arbolito286" parent="Area3D" unique_id=1933708175 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.870834, 0, 0, 0, 0.870834, 0, 0, 0, 0.870834, 85.677635, 0, 18.637049)
+
+[node name="Arbolito287" parent="Area3D" unique_id=2088813727 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.84238946, 0, 0, 0, 0.84238946, 0, 0, 0, 0.84238946, 82.55492, 0, 16.920633)
+
+[node name="Arbolito288" parent="Area3D" unique_id=894622645 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0607712, 0, 0, 0, 1.0607712, 0, 0, 0, 1.0607712, 73.26266, 0, 37.03523)
+
+[node name="Arbolito289" parent="Area3D" unique_id=1747590763 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8527471, 0, 0, 0, 1.8527471, 0, 0, 0, 1.8527471, 78.624596, 0, 25.26551)
+
+[node name="Arbolito290" parent="Area3D" unique_id=1532779041 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8482591, 0, 0, 0, 1.8482591, 0, 0, 0, 1.8482591, 88.670815, 0, 19.375849)
+
+[node name="Arbolito291" parent="Area3D" unique_id=1689013063 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9268159, 0, 0, 0, 1.9268159, 0, 0, 0, 1.9268159, 84.314804, 0, 24.46265)
+
+[node name="Arbolito292" parent="Area3D" unique_id=2061658019 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2849534, 0, 0, 0, 1.2849534, 0, 0, 0, 1.2849534, 87.3477, 0, 22.257946)
+
+[node name="Arbolito293" parent="Area3D" unique_id=1259577981 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5392017, 0, 0, 0, 1.5392017, 0, 0, 0, 1.5392017, 83.45521, 0, 14.95863)
+
+[node name="Arbolito294" parent="Area3D" unique_id=1990240386 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.488852, 0, 0, 0, 1.488852, 0, 0, 0, 1.488852, 81.7756, 0, 26.047485)
+
+[node name="Arbolito295" parent="Area3D" unique_id=1439850238 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4085613, 0, 0, 0, 1.4085613, 0, 0, 0, 1.4085613, 89.25134, 0, 17.405123)
+
+[node name="Arbolito296" parent="Area3D" unique_id=1471351613 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3594776, 0, 0, 0, 1.3594776, 0, 0, 0, 1.3594776, 86.66007, 0, 15.418137)
+
+[node name="Arbolito297" parent="Area3D" unique_id=1752049127 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4866147, 0, 0, 0, 1.4866147, 0, 0, 0, 1.4866147, 87.51097, 0, 24.41779)
+
+[node name="Arbolito298" parent="Area3D" unique_id=1104289830 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7681363, 0, 0, 0, 1.7681363, 0, 0, 0, 1.7681363, 91.87149, 0, 16.864021)
+
+[node name="Arbolito299" parent="Area3D" unique_id=965154534 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2130328, 0, 0, 0, 1.2130328, 0, 0, 0, 1.2130328, 93.62017, 0, 14.124527)
+
+[node name="Arbolito300" parent="Area3D" unique_id=301602369 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4126083, 0, 0, 0, 1.4126083, 0, 0, 0, 1.4126083, 90.66552, 0, 21.653625)
+
+[node name="Arbolito301" parent="Area3D" unique_id=1799892579 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9934099, 0, 0, 0, 1.9934099, 0, 0, 0, 1.9934099, 90.769325, 0, 18.814125)
+
+[node name="Arbolito302" parent="Area3D" unique_id=510205404 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.97325706, 0, 0, 0, 0.97325706, 0, 0, 0, 0.97325706, 90.3646, 0, 24.289076)
+
+[node name="Arbolito303" parent="Area3D" unique_id=771591420 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4661788, 0, 0, 0, 1.4661788, 0, 0, 0, 1.4661788, 88.84177, 0, 14.834519)
+
+[node name="Arbolito304" parent="Area3D" unique_id=1282795836 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.6440661, 0, 0, 0, 1.6440661, 0, 0, 0, 1.6440661, 94.96187, 0, 16.00968)
+
+[node name="Arbolito305" parent="Area3D" unique_id=1477975119 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.2698243, 0, 0, 0, 1.2698243, 0, 0, 0, 1.2698243, 97.45813, 0, 14.033759)
+
+[node name="Arbolito306" parent="Area3D" unique_id=728917810 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.3671613, 0, 0, 0, 1.3671613, 0, 0, 0, 1.3671613, 98.25957, 0, 16.035522)
+
+[node name="Arbolito307" parent="Area3D" unique_id=961456826 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.5659004, 0, 0, 0, 1.5659004, 0, 0, 0, 1.5659004, 91.57694, 0, 14.606298)
+
+[node name="Arbolito308" parent="Area3D" unique_id=1554551613 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.8389984, 0, 0, 0, 1.8389984, 0, 0, 0, 1.8389984, 92.916145, 0, 21.799784)
+
+[node name="Arbolito309" parent="Area3D" unique_id=1449081877 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.97233576, 0, 0, 0, 0.97233576, 0, 0, 0, 0.97233576, 94.79306, 0, 18.03998)
+
+[node name="Arbolito310" parent="Area3D" unique_id=1914022846 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9202886, 0, 0, 0, 1.9202886, 0, 0, 0, 1.9202886, 93.60471, 0, 23.836142)
+
+[node name="Arbolito311" parent="Area3D" unique_id=478893996 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.7316765, 0, 0, 0, 1.7316765, 0, 0, 0, 1.7316765, 94.37817, 0, 20.394236)
+
+[node name="Arbolito312" parent="Area3D" unique_id=2132586558 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.957466, 0, 0, 0, 1.957466, 0, 0, 0, 1.957466, 92.79821, 0, 18.805826)
+
+[node name="Arbolito313" parent="Area3D" unique_id=722653343 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.4175822, 0, 0, 0, 1.4175822, 0, 0, 0, 1.4175822, 96.05537, 0, 23.46908)
+
+[node name="Arbolito314" parent="Area3D" unique_id=1286027592 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(0.9106233, 0, 0, 0, 0.9106233, 0, 0, 0, 0.9106233, 96.48722, 0, 19.31505)
+
+[node name="Arbolito315" parent="Area3D" unique_id=1143405078 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.0542693, 0, 0, 0, 1.0542693, 0, 0, 0, 1.0542693, 98.55242, 0, 19.154356)
+
+[node name="Arbolito316" parent="Area3D" unique_id=211392704 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.1712108, 0, 0, 0, 1.1712108, 0, 0, 0, 1.1712108, 97.95282, 0, 21.27705)
+
+[node name="Arbolito317" parent="Area3D" unique_id=886760769 instance=ExtResource("2_0a6gv")]
+transform = Transform3D(1.9625636, 0, 0, 0, 1.9625636, 0, 0, 0, 1.9625636, 98.0581, 0, 23.50168)
