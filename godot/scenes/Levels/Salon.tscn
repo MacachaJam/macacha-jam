@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://b0lo1108ijp4q"]
+
+[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_yglj4"]
+[ext_resource type="Texture2D" uid="uid://g4m58bm3s7c8" path="res://assets/Terrenos/Salon Floor.png" id="2_dqdth"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_dqdth"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_j8ckk"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_vub8g"]
+
+[sub_resource type="Sky" id="Sky_js3yh"]
+sky_material = ExtResource("1_yglj4")
+
+[sub_resource type="Environment" id="Environment_eornw"]
+background_mode = 2
+sky = SubResource("Sky_js3yh")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
+fog_density = 0.5367
+fog_aerial_perspective = 0.435
+fog_height = 1.0
+fog_height_density = 0.4192
+fog_depth_curve = 0.35355443
+fog_depth_begin = 12.0
+fog_depth_end = 40.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_suvrd"]
+size = Vector2(15, 7.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77mci"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_dqdth")
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gk4tr"]
+
+[sub_resource type="Gradient" id="Gradient_bma5i"]
+colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kfifa"]
+noise_type = 3
+frequency = 0.005
+fractal_octaves = 9
+fractal_lacunarity = 1.65
+fractal_gain = 1.62
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_8mre2"]
+noise = SubResource("FastNoiseLite_kfifa")
+color_ramp = SubResource("Gradient_bma5i")
+seamless = true
+seamless_blend_skirt = 0.418
+
+[sub_resource type="FogMaterial" id="FogMaterial_r30nc"]
+density = 2.0105
+albedo = Color(0.20852223, 0.10930041, 0.25575763, 1)
+emission = Color(0.11232258, 0.1303319, 0.19216797, 1)
+height_falloff = 0.35119954
+edge_fade = 0.1274557
+density_texture = SubResource("NoiseTexture3D_8mre2")
+
+[node name="Salon" type="Node3D" unique_id=1065385907]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=617828403]
+environment = SubResource("Environment_eornw")
+
+[node name="Terreno" type="StaticBody3D" parent="." unique_id=607019565]
+
+[node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=1276825332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09928477, 0, 0.0007915497)
+mesh = SubResource("PlaneMesh_suvrd")
+surface_material_override/0 = SubResource("StandardMaterial3D_77mci")
+
+[node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=734847313]
+shape = SubResource("WorldBoundaryShape3D_gk4tr")
+
+[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_dqdth")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=116716274]
+
+[node name="PauseOverlay" parent="UI" unique_id=427700071 instance=ExtResource("4_j8ckk")]
+unique_name_in_owner = true
+visible = false
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=295023138]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+joystick_mode = 1
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+visibility_mode = 1
+
+[node name="TrípodeCámara" type="Node3D" parent="." unique_id=1495047479]
+
+[node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=2139320636]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, 0.54463905, 0, -0.54463905, 0.83867055, -0.014804697, 6.233371, 7.3576384)
+fov = 60.0
+
+[node name="FogVolume2" type="FogVolume" parent="TrípodeCámara/Camera3D" unique_id=1280332588]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, -0.54463905, 0, 0.54463905, 0.83867055, 2.2285497, 4.981301, -15.550938)
+visible = false
+size = Vector3(51.0979, 40.705353, 7.5673485)
+material = SubResource("FogMaterial_r30nc")
+
+[node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=513587449 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+script = ExtResource("5_vub8g")
+nodo_movido = NodePath("../TrípodeCámara")
+nodo_objetivo = NodePath("../Jugadora")
+metadata/_custom_type_script = "uid://cw1aiuggkncl1"

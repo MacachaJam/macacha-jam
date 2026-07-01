@@ -1,0 +1,410 @@
+[gd_scene format=3 uid="uid://bo4k0aec7e628"]
+
+[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_5mrw7"]
+[ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="2_k24i6"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_hllly"]
+[ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="4_b2dhh"]
+[ext_resource type="Texture2D" uid="uid://cmnq3m6afgnpm" path="res://assets/Props/Bush.png" id="5_u8rsy"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="6_l7aih"]
+[ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="7_ne5nm"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="8_30kc6"]
+
+[sub_resource type="Sky" id="Sky_s0xiu"]
+sky_material = ExtResource("1_5mrw7")
+
+[sub_resource type="Environment" id="Environment_3oci6"]
+background_mode = 2
+sky = SubResource("Sky_s0xiu")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
+fog_density = 0.5367
+fog_aerial_perspective = 0.435
+fog_height = 1.0
+fog_height_density = 0.4192
+fog_depth_curve = 0.35355443
+fog_depth_begin = 12.0
+fog_depth_end = 40.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_00nbw"]
+size = Vector2(20, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqojs"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_k24i6")
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gqojs"]
+size = Vector2(22, 17)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4uyhy"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.5330953, 0.4996779, 0.7148008, 1)
+albedo_texture = ExtResource("2_k24i6")
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mre2"]
+size = Vector3(3.6979249, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_00nbw"]
+colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_u83ym"]
+noise_type = 3
+frequency = 0.005
+fractal_octaves = 9
+fractal_lacunarity = 1.65
+fractal_gain = 1.62
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_00jy6"]
+noise = SubResource("FastNoiseLite_u83ym")
+color_ramp = SubResource("Gradient_00nbw")
+seamless = true
+seamless_blend_skirt = 0.418
+
+[sub_resource type="FogMaterial" id="FogMaterial_00nbw"]
+density = 2.0105
+albedo = Color(0.20852223, 0.10930041, 0.25575763, 1)
+emission = Color(0.11232258, 0.1303319, 0.19216797, 1)
+height_falloff = 0.35119954
+edge_fade = 0.1274557
+density_texture = SubResource("NoiseTexture3D_00jy6")
+
+[sub_resource type="Gradient" id="Gradient_bma5i"]
+colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kfifa"]
+noise_type = 3
+frequency = 0.005
+fractal_octaves = 9
+fractal_lacunarity = 1.65
+fractal_gain = 1.62
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_8mre2"]
+noise = SubResource("FastNoiseLite_kfifa")
+color_ramp = SubResource("Gradient_bma5i")
+seamless = true
+seamless_blend_skirt = 0.418
+
+[sub_resource type="FogMaterial" id="FogMaterial_wdupl"]
+albedo = Color(0.20852223, 0.10930041, 0.25575763, 1)
+emission = Color(0.11232258, 0.1303319, 0.19216797, 1)
+height_falloff = 0.37640607
+edge_fade = 0.42870873
+density_texture = SubResource("NoiseTexture3D_8mre2")
+
+[node name="Campamento" type="Node3D" unique_id=525460237]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
+environment = SubResource("Environment_3oci6")
+
+[node name="Terreno" type="StaticBody3D" parent="." unique_id=461698557]
+
+[node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=1375885353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09928477, 0, 0.0007915497)
+mesh = SubResource("PlaneMesh_00nbw")
+surface_material_override/0 = SubResource("StandardMaterial3D_gqojs")
+
+[node name="Terreno Inf" type="MeshInstance3D" parent="Terreno" unique_id=400527311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08132458, -0.21635866, 0.0006341934)
+mesh = SubResource("PlaneMesh_gqojs")
+surface_material_override/0 = SubResource("StandardMaterial3D_4uyhy")
+
+[node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=1809933325]
+shape = SubResource("WorldBoundaryShape3D_0px63")
+
+[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_hllly")]
+
+[node name="Props" type="Node3D" parent="." unique_id=798624165]
+
+[node name="Tent" type="StaticBody3D" parent="Props" unique_id=779850588]
+
+[node name="Tent Col" type="CollisionShape3D" parent="Props/Tent" unique_id=71623001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3213673, 0.50000006, -2.5012317)
+shape = SubResource("BoxShape3D_8mre2")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/Tent" unique_id=1997992630]
+transform = Transform3D(3.0000002, 0, 0, 0, 3, 0, 0, 0, 3.0000002, -3.3551316, 1.4199758, -2.42913)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("4_b2dhh")
+
+[node name="Clump de arbusto" type="Node3D" parent="Props" unique_id=1012892024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6744413, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=257313068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.17319465)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1959456301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15517616, 0.45042944, 0.25698245)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=465438552]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.151063, 0.45042944, 0.8105569)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=694266352]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.151063, 0.45042944, 0.6768739)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1507670051]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.4568057)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1223811942]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.77965117, 0.45042944, 0.5674505)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1795009587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53202534, 0.45042944, -2.3614123)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=131184588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53202534, 0.45042944, -2.2776246)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=504759921]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.5279121, 0.45042944, -1.857733)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1466322412]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.402802, 0.45042944, -2.0778012)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=600364739]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.402802, 0.45042944, -1.9671564)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1440995978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53202534, 0.45042944, -4.700102)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=752654235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53202534, 0.45042944, -4.6163144)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1704001022]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.5279121, 0.45042944, -4.1964226)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1652153786]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.402802, 0.45042944, -4.416491)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1354909575]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.402802, 0.45042944, -4.305846)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=430368767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8949485, 0.45042944, -4.700102)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D20" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1061566189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8949485, 0.45042944, -4.6163144)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D21" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1301403048]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.8990617, 0.45042944, -4.1964226)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D22" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=32461879]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 2.8297758, 0.45042944, -4.416491)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D23" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1621933700]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 2.8297758, 0.45042944, -4.305846)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=144086785]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 1.1396732)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Props/Clump de arbusto" unique_id=1601651980]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.03086567, 0.45042944, 0.9465833)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_u8rsy")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
+
+[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("6_l7aih")]
+unique_name_in_owner = true
+visible = false
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1966906144]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+joystick_mode = 1
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+visibility_mode = 1
+
+[node name="NPC" parent="." unique_id=174433718 instance=ExtResource("7_ne5nm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, 0, 1.7122645)
+
+[node name="TrípodeCámara" type="Node3D" parent="." unique_id=469122715]
+
+[node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1604342609]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, 0.54463905, 0, -0.54463905, 0.83867055, -0.014804697, 6.233371, 7.3576384)
+fov = 60.0
+
+[node name="FogVolume2" type="FogVolume" parent="TrípodeCámara/Camera3D" unique_id=1503757257]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, -0.54463905, 0, 0.54463905, 0.83867055, 2.2285497, 4.981301, -15.550938)
+size = Vector3(51.0979, 40.705353, 7.5673485)
+material = SubResource("FogMaterial_00nbw")
+
+[node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1153962477 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+script = ExtResource("8_30kc6")
+nodo_movido = NodePath("../TrípodeCámara")
+nodo_objetivo = NodePath("../Jugadora")
+metadata/_custom_type_script = "uid://cw1aiuggkncl1"
+
+[node name="Luces" type="Node3D" parent="." unique_id=1526814065]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luces" unique_id=983237895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0081387, 9.767649, 0.9635062)
+light_color = Color(1, 0.62900007, 0.47000003, 1)
+shadow_enabled = true
+omni_range = 12.850524
+omni_attenuation = -0.808
+
+[node name="FogVolume" type="FogVolume" parent="." unique_id=1373999269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8394401, 0)
+size = Vector3(26, 2.9193115, 22)
+material = SubResource("FogMaterial_wdupl")

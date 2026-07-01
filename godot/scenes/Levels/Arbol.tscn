@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://c2rnuxdijckpd"]
+
+[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_vsatm"]
+[ext_resource type="Texture2D" uid="uid://7hvhq1onopw" path="res://assets/Terrenos/Arbol Floor.png" id="2_2r1cw"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_xasd7"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_4xfpo"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_ol2b1"]
+[ext_resource type="Texture2D" uid="uid://35w3jfs7uc0w" path="res://assets/Props/Ceibo.png" id="6_xasd7"]
+
+[sub_resource type="Sky" id="Sky_8i2jy"]
+sky_material = ExtResource("1_vsatm")
+
+[sub_resource type="Environment" id="Environment_wvr15"]
+background_mode = 2
+sky = SubResource("Sky_8i2jy")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
+fog_density = 0.5367
+fog_aerial_perspective = 0.435
+fog_height = 1.0
+fog_height_density = 0.4192
+fog_depth_curve = 0.35355443
+fog_depth_begin = 12.0
+fog_depth_end = 40.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n8lmo"]
+size = Vector2(20, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv5mj"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_2r1cw")
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2an85"]
+size = Vector2(22, 17)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awpir"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.5330953, 0.4996779, 0.7148008, 1)
+albedo_texture = ExtResource("2_2r1cw")
+uv1_world_triplanar = true
+texture_filter = 2
+point_size = 96.0
+distance_fade_max_distance = 7.0
+stencil_flags = 2
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_63gek"]
+
+[sub_resource type="Gradient" id="Gradient_bpmym"]
+colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iuonk"]
+noise_type = 3
+frequency = 0.005
+fractal_octaves = 9
+fractal_lacunarity = 1.65
+fractal_gain = 1.62
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_4ub2o"]
+noise = SubResource("FastNoiseLite_iuonk")
+color_ramp = SubResource("Gradient_bpmym")
+seamless = true
+seamless_blend_skirt = 0.418
+
+[sub_resource type="FogMaterial" id="FogMaterial_3s8a1"]
+density = 2.0105
+albedo = Color(0.20852223, 0.10930041, 0.25575763, 1)
+emission = Color(0.11232258, 0.1303319, 0.19216797, 1)
+height_falloff = 0.35119954
+edge_fade = 0.1274557
+density_texture = SubResource("NoiseTexture3D_4ub2o")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2r1cw"]
+size = Vector3(1.5639648, 1.6, 0.5977173)
+
+[node name="Arbol" type="Node3D" unique_id=2040948958]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2056608297]
+environment = SubResource("Environment_wvr15")
+
+[node name="Terreno" type="StaticBody3D" parent="." unique_id=1168005724]
+
+[node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=1305059253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09928477, 0, 0.0007915497)
+mesh = SubResource("PlaneMesh_n8lmo")
+surface_material_override/0 = SubResource("StandardMaterial3D_yv5mj")
+
+[node name="Terreno Inf" type="MeshInstance3D" parent="Terreno" unique_id=1686361969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08132458, -0.21635866, 0.0006341934)
+mesh = SubResource("PlaneMesh_2an85")
+surface_material_override/0 = SubResource("StandardMaterial3D_awpir")
+
+[node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=619585262]
+shape = SubResource("WorldBoundaryShape3D_63gek")
+
+[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_xasd7")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1632876904]
+
+[node name="PauseOverlay" parent="UI" unique_id=427700071 instance=ExtResource("4_4xfpo")]
+unique_name_in_owner = true
+visible = false
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=928052704]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+joystick_mode = 1
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+visibility_mode = 1
+
+[node name="TrípodeCámara" type="Node3D" parent="." unique_id=245600505]
+
+[node name="Camera3D" type="Camera3D" parent="TrípodeCámara" unique_id=1268084601]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, 0.54463905, 0, -0.54463905, 0.83867055, -0.014804697, 6.233371, 7.3576384)
+fov = 60.0
+
+[node name="FogVolume2" type="FogVolume" parent="TrípodeCámara/Camera3D" unique_id=2040884580]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, -0.54463905, 0, 0.54463905, 0.83867055, 2.2285497, 4.981301, -15.550938)
+size = Vector3(51.0979, 40.705353, 7.5673485)
+material = SubResource("FogMaterial_3s8a1")
+
+[node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1345294128 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
+script = ExtResource("5_ol2b1")
+nodo_movido = NodePath("../TrípodeCámara")
+nodo_objetivo = NodePath("../Jugadora")
+metadata/_custom_type_script = "uid://cw1aiuggkncl1"
+
+[node name="Props" type="Node3D" parent="." unique_id=1652969486]
+
+[node name="Arbol" type="StaticBody3D" parent="Props" unique_id=1181667319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72311, 3, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Arbol" unique_id=656570702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68661785, -2.1000001, 0.26598948)
+shape = SubResource("BoxShape3D_2r1cw")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Arbol" unique_id=456930591]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.37922382, 0.72866964, 0.28869534)
+texture = ExtResource("6_xasd7")
