@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dv2y18ye8j7o0"]
 
 [ext_resource type="Script" uid="uid://k5f271qgai2d" path="res://ui/menu_principal/menu_principal.gd" id="1_87bjv"]
-[ext_resource type="PackedScene" uid="uid://bo4k0aec7e628" path="res://scenes/Art Playground.tscn" id="2_h4w4h"]
+[ext_resource type="PackedScene" uid="uid://bo4k0aec7e628" path="res://scenes/Levels/Campamento.tscn" id="2_h4w4h"]
 [ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://ui/menu_opciones/menu_opciones.tscn" id="3_ruly6"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_i6a53"]
 
