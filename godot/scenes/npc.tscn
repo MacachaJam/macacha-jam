@@ -147,7 +147,7 @@ shape = SubResource("CylinderShape3D_0px63")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=698664376]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.7798124, 0)
+transform = Transform3D(2.5299644, 0, 0, 0, 2.5299644, 0, 0, 0, 2.5299644, 0, 0.9798124, 0)
 billboard = 1
 shaded = true
 alpha_cut = 1

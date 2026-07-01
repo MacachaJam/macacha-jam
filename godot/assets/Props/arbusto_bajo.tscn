@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://nv5htlworha8"]
+
+[ext_resource type="Texture2D" uid="uid://cmnq3m6afgnpm" path="res://assets/Props/Bush.png" id="1_aa1hs"]
+
+[node name="Arbusto Bajo" type="Node3D" unique_id=2055832729]
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1035640444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=102177892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.1713109)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1709540909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42088014, 0.6, -0.41766953)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1557597272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42088014, 0.6, -0.58898044)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D6" type="Sprite3D" parent="." unique_id=1989128818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44435632, 0.6, -0.2008028)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D7" type="Sprite3D" parent="." unique_id=1021898300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44435632, 0.6, -0.3721137)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D8" type="Sprite3D" parent="." unique_id=1627194357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61792886, 0.6, 0.27828908)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D9" type="Sprite3D" parent="." unique_id=580744090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61792886, 0.6, 0.10697818)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D10" type="Sprite3D" parent="." unique_id=852702400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85500854, 0.6, 0.12716806)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D11" type="Sprite3D" parent="." unique_id=987971685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85500854, 0.6, -0.044142842)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D12" type="Sprite3D" parent="." unique_id=540256048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522672, 0.6, 0.6155522)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D13" type="Sprite3D" parent="." unique_id=1403235035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522672, 0.6, 0.4442413)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D14" type="Sprite3D" parent="." unique_id=1908484923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.084005356, 0.6, 0.6155522)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")
+
+[node name="Sprite3D15" type="Sprite3D" parent="." unique_id=860755745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.084005356, 0.6, 0.4442413)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_aa1hs")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blyvok0pm0140"]
+
+[ext_resource type="Texture2D" uid="uid://c4c41cu8ecxes" path="res://assets/Props/Pastos/Pasto 2.png" id="1_ww83b"]
+
+[node name="Pasto 2" type="Node3D" unique_id=168376696]
+
+[node name="Pasto" type="Sprite3D" parent="." unique_id=441188840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15673506, 0)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_ww83b")
