@@ -7,6 +7,17 @@
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_c602l"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_ytbsj"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_ppftp"]
+[ext_resource type="Texture2D" uid="uid://b17l2mijcp4p" path="res://assets/Edificios/Regimiento.png" id="8_c2heg"]
+[ext_resource type="Script" uid="uid://u11ey2t4vi6d" path="res://scenes/area_filler/area_filler.gd" id="9_ybm7l"]
+[ext_resource type="PackedScene" uid="uid://nv5htlworha8" path="res://assets/Props/arbusto_bajo.tscn" id="10_52ba6"]
+[ext_resource type="PackedScene" uid="uid://bxv7kkbsojpnm" path="res://assets/Props/arbusto_alto.tscn" id="11_f6v1x"]
+[ext_resource type="PackedScene" uid="uid://mpn6esgi1iem" path="res://assets/Props/pasto_1.tscn" id="12_dhd7o"]
+[ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="13_kkabb"]
+[ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="14_p8cny"]
+[ext_resource type="Texture2D" uid="uid://be3d3l4ubvppg" path="res://assets/Props/Caja.png" id="15_u40b5"]
+[ext_resource type="Texture2D" uid="uid://v65oe0pcwy4h" path="res://assets/Props/Barricada.png" id="16_ybm7l"]
+[ext_resource type="Texture2D" uid="uid://c8ohoqi4gmpr2" path="res://assets/Props/BarricadaTirante.png" id="17_52ba6"]
+[ext_resource type="Texture2D" uid="uid://dm6rfvkx18nm0" path="res://assets/Props/ParedBarraca.png" id="18_f6v1x"]
 
 [sub_resource type="Sky" id="Sky_skhqw"]
 sky_material = ExtResource("1_i0cyr")
@@ -85,6 +96,20 @@ density_texture = SubResource("NoiseTexture3D_dhd7o")
 [sub_resource type="BoxShape3D" id="BoxShape3D_arn0i"]
 size = Vector3(2, 2, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_wdupl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mre2"]
+albedo_texture = ExtResource("15_u40b5")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5ga4i"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6v1x"]
+size = Vector3(2.1212158, 1, 2.0117188)
+
 [node name="Barracas" type="Node3D" unique_id=293645083]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=95201576]
@@ -93,7 +118,7 @@ environment = SubResource("Environment_t17se")
 [node name="Terreno" type="StaticBody3D" parent="." unique_id=1182348149]
 
 [node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=958080595]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.09928477, 0, 0.0007915497)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.10571349, -0.009309292, 0.007505417)
 mesh = SubResource("PlaneMesh_edkoh")
 surface_material_override/0 = SubResource("StandardMaterial3D_oo22j")
 
@@ -162,3 +187,943 @@ exit_transition = 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=1676841276]
 shape = SubResource("BoxShape3D_arn0i")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
+
+[node name="Edificios" type="Node3D" parent="." unique_id=1567500630]
+
+[node name="Sprite3D" type="Sprite3D" parent="Edificios" unique_id=2036832250]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.9877586, 1.7429397, -8.888939)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("8_c2heg")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Edificios" unique_id=1739590897]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.9877586, 1.7429397, -9.088939)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("8_c2heg")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Edificios" unique_id=793543769]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.9877586, 1.7429397, -9.2889385)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("8_c2heg")
+
+[node name="Props" type="Node3D" parent="." unique_id=1334729366]
+
+[node name="Bushes2" type="Area3D" parent="Props" unique_id=88112927]
+
+[node name="AreaFiller" type="Node" parent="Props/Bushes2" unique_id=1003986623]
+script = ExtResource("9_ybm7l")
+scenes = Array[PackedScene]([ExtResource("10_52ba6"), ExtResource("11_f6v1x")])
+minimum_separation = 3.0
+"escala_máxima" = 1.1
+metadata/_custom_type_script = "uid://u11ey2t4vi6d"
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Props/Bushes2" unique_id=601889509]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(11.930744, -7.1917086, 10.292572, -6.6229887, 8.068407, -8.681785, 5.6754966, -9.2692995, -3.7924984, -9.606163, -12.70989, -9.273477, -12.058517, -11.407557, 2.363265, -12.256652, 10.48524, -11.429632)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="Props/Bushes2" unique_id=1030696707]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(12.102336, -3.7796752, 9.241064, -3.815373, 9.680278, 0.9826567, 8.427859, 3.9155474, 9.908761, 9.247385, 7.809328, 9.866953, 1.454689, 9.883583, 0.7236366, 12.012798, 11.809409, 12.367727)
+
+[node name="CollisionPolygon3D3" type="CollisionPolygon3D" parent="Props/Bushes2" unique_id=529864807]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(-8.909488, 11.759972, -7.129576, 10.503147, -10.88258, 6.8924565, -13.022232, 8.823988, -12.619804, 12.209345)
+
+[node name="Arbusto Alto" parent="Props/Bushes2" unique_id=2055832729 instance=ExtResource("11_f6v1x")]
+transform = Transform3D(1.0848966, 0, 0, 0, 1.0848966, 0, 0, 0, 1.0848966, 6.272855, 0, -10.618837)
+
+[node name="Arbusto Bajo" parent="Props/Bushes2" unique_id=2130239662 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0509284, 0, 0, 0, 1.0509284, 0, 0, 0, 1.0509284, 2.358213, 0, -10.822335)
+
+[node name="Arbusto Bajo2" parent="Props/Bushes2" unique_id=122669940 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0720829, 0, 0, 0, 1.0720829, 0, 0, 0, 1.0720829, 9.728561, 0, -8.8158045)
+
+[node name="Arbusto Alto2" parent="Props/Bushes2" unique_id=1409859563 instance=ExtResource("11_f6v1x")]
+transform = Transform3D(1.042796, 0, 0, 0, 1.042796, 0, 0, 0, 1.042796, 0.17155606, 0, -9.941007)
+
+[node name="Arbusto Bajo3" parent="Props/Bushes2" unique_id=1989575736 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0131655, 0, 0, 0, 1.0131655, 0, 0, 0, 1.0131655, -11.85387, 0, -10.010498)
+
+[node name="Arbusto Alto4" parent="Props/Bushes2" unique_id=2118077409 instance=ExtResource("11_f6v1x")]
+transform = Transform3D(1.0840539, 0, 0, 0, 1.0840539, 0, 0, 0, 1.0840539, 9.394478, 0, -2.1394634)
+
+[node name="Arbusto Bajo4" parent="Props/Bushes2" unique_id=927646625 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0804442, 0, 0, 0, 1.0804442, 0, 0, 0, 1.0804442, 10.899589, 0, 2.58071)
+
+[node name="Arbusto Bajo5" parent="Props/Bushes2" unique_id=323780955 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0555016, 0, 0, 0, 1.0555016, 0, 0, 0, 1.0555016, 9.24306, 0, 3.1448784)
+
+[node name="Arbusto Alto5" parent="Props/Bushes2" unique_id=674030456 instance=ExtResource("11_f6v1x")]
+transform = Transform3D(1.0408274, 0, 0, 0, 1.0408274, 0, 0, 0, 1.0408274, 11.413133, 0, 6.3776526)
+
+[node name="Arbusto Bajo6" parent="Props/Bushes2" unique_id=68596393 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.079193, 0, 0, 0, 1.079193, 0, 0, 0, 1.079193, 11.136547, 0, 9.366468)
+
+[node name="Arbusto Bajo7" parent="Props/Bushes2" unique_id=1272855124 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0947601, 0, 0, 0, 1.0947601, 0, 0, 0, 1.0947601, 8.168467, 0, 10.408598)
+
+[node name="Arbusto Bajo8" parent="Props/Bushes2" unique_id=1499145353 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0208879, 0, 0, 0, 1.0208879, 0, 0, 0, 1.0208879, 4.3896313, 0, 11.084516)
+
+[node name="Arbusto Bajo9" parent="Props/Bushes2" unique_id=684677989 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0652505, 0, 0, 0, 1.0652505, 0, 0, 0, 1.0652505, 1.2655764, 0, 11.234838)
+
+[node name="Arbusto Alto6" parent="Props/Bushes2" unique_id=496650909 instance=ExtResource("11_f6v1x")]
+transform = Transform3D(1.0717711, 0, 0, 0, 1.0717711, 0, 0, 0, 1.0717711, -7.3092165, 0, 10.414566)
+
+[node name="Arbusto Bajo10" parent="Props/Bushes2" unique_id=1143984458 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0183084, 0, 0, 0, 1.0183084, 0, 0, 0, 1.0183084, -8.117372, 0, 9.183559)
+
+[node name="Arbusto Bajo11" parent="Props/Bushes2" unique_id=312105473 instance=ExtResource("10_52ba6")]
+transform = Transform3D(1.0611296, 0, 0, 0, 1.0611296, 0, 0, 0, 1.0611296, -8.168873, 4.7683716e-07, 7.5672717)
+
+[node name="Pasto" type="Area3D" parent="Props" unique_id=531476441]
+
+[node name="AreaFiller" type="Node" parent="Props/Pasto" unique_id=678151981]
+script = ExtResource("9_ybm7l")
+scenes = Array[PackedScene]([ExtResource("12_dhd7o"), ExtResource("13_kkabb"), ExtResource("14_p8cny")])
+minimum_separation = 1.2000000000000002
+"escala_máxima" = 1.5
+metadata/_custom_type_script = "uid://u11ey2t4vi6d"
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Props/Pasto" unique_id=1347430854]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(-12.09122, -11.301537, -11.952093, -6.8693347, -9.447799, -6.591079, -7.2018843, -8.121481, -5.631731, -7.306592, -2.551052, -7.2668414, -2.252922, -8.717741, 3.848812, -9.095373, 10.0697975, -6.9289603, 12.037458, -6.909085, 11.639952, -11.321413, 7.3468723, -10.824529, 4.146942, -11.798421)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="Props/Pasto" unique_id=1804500373]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(-11.510835, 11.573836, -11.769215, 6.5851216, -9.22517, 6.883252, -8.390405, 8.433531, -6.40287, 9.029792, -6.1444902, 11.47446)
+
+[node name="CollisionPolygon3D3" type="CollisionPolygon3D" parent="Props/Pasto" unique_id=1740079993]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+polygon = PackedVector2Array(0.9486704, 11.4937315, 1.9821892, 8.671432, 5.162245, 7.4590344, 7.0901537, 8.452803, 8.461554, 8.492554, 8.580807, 4.9149895, 7.547288, 4.2988534, 7.6466637, 2.0728142, 9.137316, 1.3970525, 8.64043, -0.29235262, 9.4928055, -4.1554117, 12.016975, -4.056035, 11.952083, 11.310957, 9.328535, 11.609088, 7.0031204, 11.410334, 5.989477, 12.066221)
+
+[node name="Pasto 3" parent="Props/Pasto" unique_id=168376696 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.3237181, 0, 0, 0, 1.3237181, 0, 0, 0, 1.3237181, 10.696936, 0, -6.9226255)
+
+[node name="Pasto 2" parent="Props/Pasto" unique_id=212434596 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.4862244, 0, 0, 0, 1.4862244, 0, 0, 0, 1.4862244, 11.752285, 0, -7.7752967)
+
+[node name="Pasto 4" parent="Props/Pasto" unique_id=848928341 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1781263, 0, 0, 0, 1.1781263, 0, 0, 0, 1.1781263, 11.592591, 0, -10.089969)
+
+[node name="Pasto 5" parent="Props/Pasto" unique_id=334333626 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0756927, 0, 0, 0, 1.0756927, 0, 0, 0, 1.0756927, 10.7677355, 0, -11.090342)
+
+[node name="Pasto 6" parent="Props/Pasto" unique_id=129592269 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.4476982, 0, 0, 0, 1.4476982, 0, 0, 0, 1.4476982, 10.309345, 0, -9.444417)
+
+[node name="Pasto 7" parent="Props/Pasto" unique_id=2097124796 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2300265, 0, 0, 0, 1.2300265, 0, 0, 0, 1.2300265, 9.0458145, 0, -10.116734)
+
+[node name="Pasto 1" parent="Props/Pasto" unique_id=1699878712 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4699378, 0, 0, 0, 1.4699378, 0, 0, 0, 1.4699378, 9.877478, 0, -8.003419)
+
+[node name="Pasto 8" parent="Props/Pasto" unique_id=80266995 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1407622, 0, 0, 0, 1.1407622, 0, 0, 0, 1.1407622, 8.087206, 0, -8.702528)
+
+[node name="Pasto 9" parent="Props/Pasto" unique_id=1564951164 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1671214, 0, 0, 0, 1.1671214, 0, 0, 0, 1.1671214, 7.654767, 0, -10.205582)
+
+[node name="Pasto 10" parent="Props/Pasto" unique_id=580523587 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.2900501, 0, 0, 0, 1.2900501, 0, 0, 0, 1.2900501, 6.079997, 0, -9.767008)
+
+[node name="Pasto 11" parent="Props/Pasto" unique_id=41964177 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1667814, 0, 0, 0, 1.1667814, 0, 0, 0, 1.1667814, 4.7620087, 0, -10.184294)
+
+[node name="Pasto 12" parent="Props/Pasto" unique_id=231642815 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2001991, 0, 0, 0, 1.2001991, 0, 0, 0, 1.2001991, 4.965105, 0, -8.793537)
+
+[node name="Pasto 13" parent="Props/Pasto" unique_id=1440961392 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.022477, 0, 0, 0, 1.022477, 0, 0, 0, 1.022477, 6.499379, 0, -11.053364)
+
+[node name="Pasto 14" parent="Props/Pasto" unique_id=687905288 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4654266, 0, 0, 0, 1.4654266, 0, 0, 0, 1.4654266, 3.604084, 0, -10.975167)
+
+[node name="Pasto 15" parent="Props/Pasto" unique_id=1907780426 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4006141, 0, 0, 0, 1.4006141, 0, 0, 0, 1.4006141, 3.1863353, 0, -9.831292)
+
+[node name="Pasto 16" parent="Props/Pasto" unique_id=1614870167 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.215754, 0, 0, 0, 1.215754, 0, 0, 0, 1.215754, 4.6792636, 0, -11.619602)
+
+[node name="Pasto 17" parent="Props/Pasto" unique_id=2035308310 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0719798, 0, 0, 0, 1.0719798, 0, 0, 0, 1.0719798, 1.6888806, 0, -11.208309)
+
+[node name="Pasto 18" parent="Props/Pasto" unique_id=195545523 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2760005, 0, 0, 0, 1.2760005, 0, 0, 0, 1.2760005, 0.47261846, 0, -9.541665)
+
+[node name="Pasto 19" parent="Props/Pasto" unique_id=444137994 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4453762, 0, 0, 0, 1.4453762, 0, 0, 0, 1.4453762, -0.9153358, 0, -11.4359045)
+
+[node name="Pasto 20" parent="Props/Pasto" unique_id=1809514692 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0924582, 0, 0, 0, 1.0924582, 0, 0, 0, 1.0924582, 2.1894186, 0, -9.033555)
+
+[node name="Pasto 21" parent="Props/Pasto" unique_id=1202600604 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0948967, 0, 0, 0, 1.0948967, 0, 0, 0, 1.0948967, 7.0090914, -0.009309292, -8.143508)
+
+[node name="Pasto 22" parent="Props/Pasto" unique_id=1168085081 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4250696, 0, 0, 0, 1.4250696, 0, 0, 0, 1.4250696, -1.22109, 0, -10.17055)
+
+[node name="Pasto 23" parent="Props/Pasto" unique_id=1144369197 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2144558, 0, 0, 0, 1.2144558, 0, 0, 0, 1.2144558, -0.84727657, 0, -8.981885)
+
+[node name="Pasto 24" parent="Props/Pasto" unique_id=231587063 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.339918, 0, 0, 0, 1.339918, 0, 0, 0, 1.339918, -2.9944434, 0, -9.713339)
+
+[node name="Pasto 25" parent="Props/Pasto" unique_id=1609606315 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.1471723, 0, 0, 0, 1.1471723, 0, 0, 0, 1.1471723, -3.8520389, 0, -8.714354)
+
+[node name="Pasto 26" parent="Props/Pasto" unique_id=1272331458 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.3204763, 0, 0, 0, 1.3204763, 0, 0, 0, 1.3204763, -6.10539, 0, -9.395017)
+
+[node name="Pasto 27" parent="Props/Pasto" unique_id=2063853445 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3331338, 0, 0, 0, 1.3331338, 0, 0, 0, 1.3331338, -4.689273, 0, -7.598063)
+
+[node name="Pasto 28" parent="Props/Pasto" unique_id=1125607657 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1320473, 0, 0, 0, 1.1320473, 0, 0, 0, 1.1320473, -6.6044927, 0, -11.079579)
+
+[node name="Pasto 29" parent="Props/Pasto" unique_id=324225941 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4551915, 0, 0, 0, 1.4551915, 0, 0, 0, 1.4551915, -4.8316555, 0, -10.369713)
+
+[node name="Pasto 30" parent="Props/Pasto" unique_id=1408237585 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.039382, 0, 0, 0, 1.039382, 0, 0, 0, 1.039382, -3.0878046, 0, -7.7256117)
+
+[node name="Pasto 31" parent="Props/Pasto" unique_id=1227514166 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4608421, 0, 0, 0, 1.4608421, 0, 0, 0, 1.4608421, -5.9266796, 0, -7.8555503)
+
+[node name="Pasto 32" parent="Props/Pasto" unique_id=69955587 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4550972, 0, 0, 0, 1.4550972, 0, 0, 0, 1.4550972, -7.9571934, 0, -8.583817)
+
+[node name="Pasto 33" parent="Props/Pasto" unique_id=871698437 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.394576, 0, 0, 0, 1.394576, 0, 0, 0, 1.394576, -7.426632, 0, -9.675277)
+
+[node name="Pasto 34" parent="Props/Pasto" unique_id=632884845 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1735001, 0, 0, 0, 1.1735001, 0, 0, 0, 1.1735001, 0.09894633, 0, -10.687218)
+
+[node name="Pasto 35" parent="Props/Pasto" unique_id=791096351 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2338432, 0, 0, 0, 1.2338432, 0, 0, 0, 1.2338432, -8.456708, 0, -10.598624)
+
+[node name="Pasto 36" parent="Props/Pasto" unique_id=1656908702 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.3471509, 0, 0, 0, 1.3471509, 0, 0, 0, 1.3471509, -9.0102005, 0, -9.239296)
+
+[node name="Pasto 37" parent="Props/Pasto" unique_id=1737144049 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.1962702, 0, 0, 0, 1.1962702, 0, 0, 0, 1.1962702, -2.0643365, 0, -8.925344)
+
+[node name="Pasto 38" parent="Props/Pasto" unique_id=773888187 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1905681, 0, 0, 0, 1.1905681, 0, 0, 0, 1.1905681, -9.229371, 0, -7.884594)
+
+[node name="Pasto 39" parent="Props/Pasto" unique_id=944715204 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0370352, 0, 0, 0, 1.0370352, 0, 0, 0, 1.0370352, -10.317023, 0, -10.294929)
+
+[node name="Pasto 40" parent="Props/Pasto" unique_id=1794449120 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0436177, 0, 0, 0, 1.0436177, 0, 0, 0, 1.0436177, -12.063014, 0, -10.458706)
+
+[node name="Pasto 41" parent="Props/Pasto" unique_id=710527991 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1703953, 0, 0, 0, 1.1703953, 0, 0, 0, 1.1703953, -10.786856, 0, -7.9921703)
+
+[node name="Pasto 42" parent="Props/Pasto" unique_id=1379114269 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1124543, 0, 0, 0, 1.1124543, 0, 0, 0, 1.1124543, -2.884929, 0, -11.231845)
+
+[node name="Pasto 43" parent="Props/Pasto" unique_id=2118748031 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.1053541, 0, 0, 0, 1.1053541, 0, 0, 0, 1.1053541, -11.521646, 0, -9.094352)
+
+[node name="Pasto 44" parent="Props/Pasto" unique_id=1434103491 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.106482, 0, 0, 0, 1.106482, 0, 0, 0, 1.106482, -11.585566, 0, -6.9501324)
+
+[node name="Pasto 45" parent="Props/Pasto" unique_id=697959997 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1760485, 0, 0, 0, 1.1760485, 0, 0, 0, 1.1760485, -8.39735, 0, 8.420631)
+
+[node name="Pasto 46" parent="Props/Pasto" unique_id=2136164829 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4547774, 0, 0, 0, 1.4547774, 0, 0, 0, 1.4547774, -9.872558, 0, 9.370984)
+
+[node name="Pasto 47" parent="Props/Pasto" unique_id=1931042793 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1792634, 0, 0, 0, 1.1792634, 0, 0, 0, 1.1792634, -10.948629, 0, 7.302704)
+
+[node name="Pasto 48" parent="Props/Pasto" unique_id=436179197 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0462021, 0, 0, 0, 1.0462021, 0, 0, 0, 1.0462021, -11.079422, 0, 8.99718)
+
+[node name="Pasto 49" parent="Props/Pasto" unique_id=535025889 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.162569, 0, 0, 0, 1.162569, 0, 0, 0, 1.162569, -10.22238, 0, 11.165137)
+
+[node name="Pasto 50" parent="Props/Pasto" unique_id=509271098 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.2916651, 0, 0, 0, 1.2916651, 0, 0, 0, 1.2916651, -8.063968, 0, 10.396462)
+
+[node name="Pasto 51" parent="Props/Pasto" unique_id=1761625448 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2277349, 0, 0, 0, 1.2277349, 0, 0, 0, 1.2277349, -11.460837, 0, 10.852849)
+
+[node name="Pasto 52" parent="Props/Pasto" unique_id=1483750691 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0647613, 0, 0, 0, 1.0647613, 0, 0, 0, 1.0647613, -9.37365, 0, 7.6945453)
+
+[node name="Pasto 53" parent="Props/Pasto" unique_id=2028589742 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.4257392, 0, 0, 0, 1.4257392, 0, 0, 0, 1.4257392, -6.4672594, 0, 9.109566)
+
+[node name="Pasto 54" parent="Props/Pasto" unique_id=1237618103 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.485395, 0, 0, 0, 1.485395, 0, 0, 0, 1.485395, -6.306293, 0, 10.952686)
+
+[node name="Pasto 55" parent="Props/Pasto" unique_id=1130611629 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4568546, 0, 0, 0, 1.4568546, 0, 0, 0, 1.4568546, -8.897962, 0, 11.48343)
+
+[node name="Pasto 56" parent="Props/Pasto" unique_id=2116390669 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3195755, 0, 0, 0, 1.3195755, 0, 0, 0, 1.3195755, 7.583936, 0, 3.477922)
+
+[node name="Pasto 57" parent="Props/Pasto" unique_id=1460215442 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0993414, 0, 0, 0, 1.0993414, 0, 0, 0, 1.0993414, 8.862406, 0, 1.6597774)
+
+[node name="Pasto 58" parent="Props/Pasto" unique_id=563882107 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.3200423, 0, 0, 0, 1.3200423, 0, 0, 0, 1.3200423, 9.15453, 0, 3.11974)
+
+[node name="Pasto 59" parent="Props/Pasto" unique_id=1818866287 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.207549, 0, 0, 0, 1.207549, 0, 0, 0, 1.207549, 8.890924, 0, 5.154416)
+
+[node name="Pasto 60" parent="Props/Pasto" unique_id=409192088 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.1660762, 0, 0, 0, 1.1660762, 0, 0, 0, 1.1660762, 10.726292, 0, 1.8468677)
+
+[node name="Pasto 61" parent="Props/Pasto" unique_id=732626027 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.3213856, 0, 0, 0, 1.3213856, 0, 0, 0, 1.3213856, 11.3422985, 0, 0.3945403)
+
+[node name="Pasto 62" parent="Props/Pasto" unique_id=63837745 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.2272257, 0, 0, 0, 1.2272257, 0, 0, 0, 1.2272257, 8.708902, 0, 7.0301433)
+
+[node name="Pasto 63" parent="Props/Pasto" unique_id=1509922190 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0868721, 0, 0, 0, 1.0868721, 0, 0, 0, 1.0868721, 9.100695, 0, -0.591475)
+
+[node name="Pasto 64" parent="Props/Pasto" unique_id=1898093998 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0138539, 0, 0, 0, 1.0138539, 0, 0, 0, 1.0138539, 8.127075, 0, 9.011661)
+
+[node name="Pasto 65" parent="Props/Pasto" unique_id=1681996751 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.2344073, 0, 0, 0, 1.2344073, 0, 0, 0, 1.2344073, 9.562575, 0, 7.8992443)
+
+[node name="Pasto 66" parent="Props/Pasto" unique_id=906904694 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4330642, 0, 0, 0, 1.4330642, 0, 0, 0, 1.4330642, 11.110189, 0, 4.3359566)
+
+[node name="Pasto 67" parent="Props/Pasto" unique_id=1519337527 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0933602, 0, 0, 0, 1.0933602, 0, 0, 0, 1.0933602, 11.848445, 0, 2.5758982)
+
+[node name="Pasto 68" parent="Props/Pasto" unique_id=1718454109 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.0641519, 0, 0, 0, 1.0641519, 0, 0, 0, 1.0641519, 10.136654, 0, 5.920613)
+
+[node name="Pasto 69" parent="Props/Pasto" unique_id=30137699 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3738859, 0, 0, 0, 1.3738859, 0, 0, 0, 1.3738859, 11.663097, 0, 5.903905)
+
+[node name="Pasto 70" parent="Props/Pasto" unique_id=474822197 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3937527, 0, 0, 0, 1.3937527, 0, 0, 0, 1.3937527, 9.947216, 0, -1.4777522)
+
+[node name="Pasto 71" parent="Props/Pasto" unique_id=121032646 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0009018, 0, 0, 0, 1.0009018, 0, 0, 0, 1.0009018, 10.715672, 0, 7.3306403)
+
+[node name="Pasto 72" parent="Props/Pasto" unique_id=1922533242 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3578265, 0, 0, 0, 1.3578265, 0, 0, 0, 1.3578265, 10.124751, 0, 0.63059616)
+
+[node name="Pasto 73" parent="Props/Pasto" unique_id=1109543046 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4369476, 0, 0, 0, 1.4369476, 0, 0, 0, 1.4369476, 11.812158, 0, 8.489056)
+
+[node name="Pasto 74" parent="Props/Pasto" unique_id=126977124 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.2467818, 0, 0, 0, 1.2467818, 0, 0, 0, 1.2467818, 10.774775, 0, 9.186886)
+
+[node name="Pasto 75" parent="Props/Pasto" unique_id=1250310900 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0934479, 0, 0, 0, 1.0934479, 0, 0, 0, 1.0934479, 6.1743836, 0, 8.366542)
+
+[node name="Pasto 76" parent="Props/Pasto" unique_id=331720872 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1394601, 0, 0, 0, 1.1394601, 0, 0, 0, 1.1394601, 6.908876, 0, 9.86768)
+
+[node name="Pasto 77" parent="Props/Pasto" unique_id=2018045603 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.2526965, 0, 0, 0, 1.2526965, 0, 0, 0, 1.2526965, 9.840496, 0, 4.1330895)
+
+[node name="Pasto 78" parent="Props/Pasto" unique_id=2074945079 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0608368, 0, 0, 0, 1.0608368, 0, 0, 0, 1.0608368, 9.784857, 0, 9.975174)
+
+[node name="Pasto 79" parent="Props/Pasto" unique_id=1333124778 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.0936494, 0, 0, 0, 1.0936494, 0, 0, 0, 1.0936494, 11.638223, 0, -1.9852338)
+
+[node name="Pasto 80" parent="Props/Pasto" unique_id=211565865 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4704555, 0, 0, 0, 1.4704555, 0, 0, 0, 1.4704555, 11.070805, 0, 11.202061)
+
+[node name="Pasto 81" parent="Props/Pasto" unique_id=1786016032 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4067582, 0, 0, 0, 1.4067582, 0, 0, 0, 1.4067582, 4.7824802, 0, 9.205064)
+
+[node name="Pasto 82" parent="Props/Pasto" unique_id=1795514439 instance=ExtResource("14_p8cny")]
+transform = Transform3D(1.4531686, 0, 0, 0, 1.4531686, 0, 0, 0, 1.4531686, 9.212785, 0, 11.243788)
+
+[node name="Pasto 83" parent="Props/Pasto" unique_id=2013326081 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.089743, 0, 0, 0, 1.089743, 0, 0, 0, 1.089743, 5.632916, 0, 11.270323)
+
+[node name="Pasto 84" parent="Props/Pasto" unique_id=1034527303 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0461249, 0, 0, 0, 1.0461249, 0, 0, 0, 1.0461249, 10.945707, 0, -0.7414684)
+
+[node name="Pasto 85" parent="Props/Pasto" unique_id=647774182 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.2771956, 0, 0, 0, 1.2771956, 0, 0, 0, 1.2771956, 4.2958703, 0, 11.4056835)
+
+[node name="Pasto 86" parent="Props/Pasto" unique_id=2004685468 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.2625772, 0, 0, 0, 1.2625772, 0, 0, 0, 1.2625772, 7.7871895, 0, 10.95344)
+
+[node name="Pasto 87" parent="Props/Pasto" unique_id=1086502312 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.1870433, 0, 0, 0, 1.1870433, 0, 0, 0, 1.1870433, 10.202732, 0, -2.8947423)
+
+[node name="Pasto 88" parent="Props/Pasto" unique_id=55271193 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.2223649, 0, 0, 0, 1.2223649, 0, 0, 0, 1.2223649, 3.9202087, 0, 10.101143)
+
+[node name="Pasto 89" parent="Props/Pasto" unique_id=1553522740 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.3245597, 0, 0, 0, 1.3245597, 0, 0, 0, 1.3245597, 11.82478, 0, -4.001894)
+
+[node name="Pasto 90" parent="Props/Pasto" unique_id=1494300233 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.207323, 0, 0, 0, 1.207323, 0, 0, 0, 1.207323, 11.759393, 0, 9.923962)
+
+[node name="Pasto 91" parent="Props/Pasto" unique_id=1897843120 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.3049165, 0, 0, 0, 1.3049165, 0, 0, 0, 1.3049165, 3.121227, 0, 8.484023)
+
+[node name="Pasto 92" parent="Props/Pasto" unique_id=1563498623 instance=ExtResource("13_kkabb")]
+transform = Transform3D(1.051133, 0, 0, 0, 1.051133, 0, 0, 0, 1.051133, 4.6315527, 0, 7.751025)
+
+[node name="Pasto 93" parent="Props/Pasto" unique_id=1490363347 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.4471358, 0, 0, 0, 1.4471358, 0, 0, 0, 1.4471358, 1.7762656, 0, 9.654151)
+
+[node name="Pasto 94" parent="Props/Pasto" unique_id=291804757 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0254482, 0, 0, 0, 1.0254482, 0, 0, 0, 1.0254482, 2.5264287, 0, 11.298336)
+
+[node name="Pasto 95" parent="Props/Pasto" unique_id=699160857 instance=ExtResource("12_dhd7o")]
+transform = Transform3D(1.0219668, 0, 0, 0, 1.0219668, 0, 0, 0, 1.0219668, 1.0592823, 0, 11.408927)
+
+[node name="Caja" type="StaticBody3D" parent="Props" unique_id=1402091253]
+transform = Transform3D(0.9729135, 0, 0.2311695, 0, 1, 0, -0.2311695, 0, 0.9729135, 6.178691, 0.5, -7.3443456)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja" unique_id=1818740850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja" unique_id=1754150955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja2" type="StaticBody3D" parent="Props" unique_id=1449645230]
+transform = Transform3D(0.9729135, 0, 0.2311695, 0, 1, 0, -0.2311695, 0, 0.9729135, 7.1606884, 0.5, -7.8700595)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja2" unique_id=320182135]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja2" unique_id=1715361853]
+transform = Transform3D(0.9989532, 0, -0.04574518, 0, 1, 0, 0.04574518, 0, 0.9989532, 0.0022001266, -2.3841858e-07, -0.0222435)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja3" type="StaticBody3D" parent="Props" unique_id=139737926]
+transform = Transform3D(0.9729135, 0, 0.2311695, 0, 1, 0, -0.2311695, 0, 0.9729135, 7.1123595, 0.5, -6.368873)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja3" unique_id=1347701968]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja3" unique_id=1012548699]
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja4" type="StaticBody3D" parent="Props" unique_id=814832078]
+transform = Transform3D(0.764081, 0, 0.6451204, 0, 1, 0, -0.6451204, 0, 0.764081, 6.719714, 1.5, -7.0944657)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja4" unique_id=863353313]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="Caja5" type="StaticBody3D" parent="Props" unique_id=415119843]
+transform = Transform3D(0.99330425, 0, -0.11552772, 0, 1, 0, 0.11552772, 0, 0.99330425, 8.603464, 0.5, 6.662973)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja5" unique_id=1205470596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja5" unique_id=975562955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja8" type="StaticBody3D" parent="Props" unique_id=1002554977]
+transform = Transform3D(0.59670204, 0, 0.8024629, 0, 1, 0, -0.8024629, 0, 0.59670204, 9.801574, 0.5, 7.2566476)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja8" unique_id=1980185814]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja8" unique_id=1434032329]
+transform = Transform3D(0.9989532, 0, -0.04574518, 0, 1, 0, 0.04574518, 0, 0.9989532, 0.0022001266, -2.3841858e-07, -0.0222435)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja11" type="StaticBody3D" parent="Props" unique_id=392259388]
+transform = Transform3D(0.99330425, 0, -0.11552772, 0, 1, 0, 0.11552772, 0, 0.99330425, 8.45636, 0.5, 8.005226)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja11" unique_id=2111267585]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja11" unique_id=1582396831]
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja9" type="StaticBody3D" parent="Props" unique_id=54550611]
+transform = Transform3D(0.82419753, 0, 0.5663025, 0, 1, 0, -0.5663025, 0, 0.82419753, -8.949987, 0.5, 1.8407973)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja9" unique_id=2136820725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja9" unique_id=1259682638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja10" type="StaticBody3D" parent="Props" unique_id=113171620]
+transform = Transform3D(0.82419753, 0, 0.5663025, 0, 1, 0, -0.5663025, 0, 0.82419753, -8.22348, 0.5, 0.9964741)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja10" unique_id=1208558227]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja10" unique_id=247517240]
+transform = Transform3D(0.9989532, 0, -0.045745105, 0, 1, 0, 0.045745105, 0, 0.9989532, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja12" type="StaticBody3D" parent="Props" unique_id=1564022819]
+transform = Transform3D(0.48019978, 0, 0.8771592, 0, 1, 0, -0.8771592, 0, 0.48019978, -8.355264, 1.5, 1.8788782)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja12" unique_id=2064769699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37885475, 2.3841858e-07, -0.38450336)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="Caja13" type="StaticBody3D" parent="Props" unique_id=909170980]
+transform = Transform3D(0.6949142, 0, -0.7190926, 0, 1, 0, 0.7190926, 0, 0.6949142, -8.246184, 0.5, -3.4289129)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja13" unique_id=694858960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja13" unique_id=1561056374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0064287186, -0.009309292, 0.006713867)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja14" type="StaticBody3D" parent="Props" unique_id=1452594815]
+transform = Transform3D(0.6949142, 0, -0.7190926, 0, 1, 0, 0.7190926, 0, 0.6949142, -7.293254, 0.5, -2.8521817)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja14" unique_id=2141266005]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja14" unique_id=1185031428]
+transform = Transform3D(0.9989531, 0, -0.045745134, 0, 1, 0, 0.045745134, 0, 0.9989531, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja15" type="StaticBody3D" parent="Props" unique_id=874428660]
+transform = Transform3D(0.6949142, 0, -0.7190926, 0, 1, 0, 0.7190926, 0, 0.6949142, -8.6093025, 0.5, -2.1283631)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja15" unique_id=1661512922]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja15" unique_id=1503793915]
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja16" type="StaticBody3D" parent="Props" unique_id=1874828338]
+transform = Transform3D(0.9445436, 0, -0.3283862, 0, 1, 0, 0.3283862, 0, 0.9445436, -8.1853, 1.5, -2.8360896)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja16" unique_id=2101267644]
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="Caja6" type="StaticBody3D" parent="Props" unique_id=1046129348]
+transform = Transform3D(0.9729135, 0, 0.2311695, 0, 1, 0, -0.2311695, 0, 0.9729135, 8.285995, 0.5, -3.6785934)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja6" unique_id=1317232463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023516655, 0, 0.09897351)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja6" unique_id=1904247065]
+transform = Transform3D(0.9989532, 0, -0.04574518, 0, 1, 0, 0.04574518, 0, 0.9989532, -0.017505646, -4.7683716e-07, 0.0793246)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Caja7" type="StaticBody3D" parent="Props" unique_id=2129718582]
+transform = Transform3D(0.9729135, 0, 0.2311695, 0, 1, 0, -0.2311695, 0, 0.9729135, 8.003525, 0.5, -2.5244582)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Caja7" unique_id=573002418]
+transform = Transform3D(0.75901055, 0, -0.65107834, 0, 1, 0, 0.65107834, 0, 0.75901055, -0.6469374, 0, -0.3234415)
+mesh = SubResource("BoxMesh_wdupl")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8mre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Caja7" unique_id=1347815855]
+transform = Transform3D(0.7660443, 0, -0.64278764, 0, 1, 0, 0.64278764, 0, 0.7660443, -0.6715274, 0.0440526, -0.3335371)
+shape = SubResource("ConcavePolygonShape3D_5ga4i")
+
+[node name="Barricada" type="StaticBody3D" parent="Props" unique_id=366520088]
+transform = Transform3D(0.9905306, 0, 0.13729206, 0, 1, 0, -0.13729206, 0, 0.9905306, -1.063123, 0.5917549, -6.102401)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada" unique_id=1559813558]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada" unique_id=1785332030]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada" unique_id=106795188]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada" unique_id=472788183]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada" unique_id=711115333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada" unique_id=288400762]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada3" type="StaticBody3D" parent="Props" unique_id=302194411]
+transform = Transform3D(0.9905306, 0, 0.13729206, 0, 1, 0, -0.13729206, 0, 0.9905306, -7.926049, 0.5917549, 5.7303305)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada3" unique_id=1709814758]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada3" unique_id=1647262717]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada3" unique_id=1171292812]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada3" unique_id=1230034949]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada3" unique_id=2128339367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada3" unique_id=1162790959]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada4" type="StaticBody3D" parent="Props" unique_id=78695198]
+transform = Transform3D(0.9190223, 0, -0.3942055, 0, 1, 0, 0.3942055, 0, 0.9190223, -7.8293524, 0.5917549, -4.6214695)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada4" unique_id=2021959663]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada4" unique_id=1885718368]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada4" unique_id=786465431]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada4" unique_id=2089964553]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada4" unique_id=626551913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada4" unique_id=1914817513]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada5" type="StaticBody3D" parent="Props" unique_id=103706764]
+transform = Transform3D(0.9756322, 0, -0.21941257, 0, 1, 0, 0.21941257, 0, 0.9756322, -5.1528225, 0.59175444, 10.272355)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada5" unique_id=230006570]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada5" unique_id=223633380]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada5" unique_id=270012348]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada5" unique_id=475728946]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada5" unique_id=1596024650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada5" unique_id=1191831639]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada6" type="StaticBody3D" parent="Props" unique_id=1988448500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6094506, 0.59175444, 10.246239)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada6" unique_id=579248363]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada6" unique_id=600102069]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada6" unique_id=1278656658]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada6" unique_id=1462783502]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada6" unique_id=538238150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada6" unique_id=838493442]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada7" type="StaticBody3D" parent="Props" unique_id=40284670]
+transform = Transform3D(0.99695504, 0, 0.077978335, 0, 1, 0, -0.077978335, 0, 0.99695504, -0.28144383, 0.59175444, 10.062439)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada7" unique_id=1345076877]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada7" unique_id=2132106254]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada7" unique_id=1362053217]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada7" unique_id=1547988476]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada7" unique_id=877354820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada7" unique_id=1690726039]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="Barricada2" type="StaticBody3D" parent="Props" unique_id=108224678]
+transform = Transform3D(0.9388312, 0, -0.3443776, 0, 1, 0, 0.3443776, 0, 0.9388312, 1.9026453, 0.5917549, -6.7313094)
+
+[node name="Barricada" type="Sprite3D" parent="Props/Barricada2" unique_id=2145337167]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada2" type="Sprite3D" parent="Props/Barricada2" unique_id=547074407]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -0.49788046)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada3" type="Sprite3D" parent="Props/Barricada2" unique_id=1951598192]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.1482573)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="Barricada4" type="Sprite3D" parent="Props/Barricada2" unique_id=1302509314]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.39999998, -1.8369837)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("16_ybm7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Barricada2" unique_id=564516118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032043576, 0, -0.91796875)
+shape = SubResource("BoxShape3D_f6v1x")
+
+[node name="Tirante" type="Sprite3D" parent="Props/Barricada2" unique_id=1372129180]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 0, 0.39999998, -1)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_52ba6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Props" unique_id=1661040983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/StaticBody3D" unique_id=1240931146]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.8, 2.2226472, -11.565244)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props/StaticBody3D" unique_id=168174853]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 3.3000002, 2.2226472, -11.565244)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/StaticBody3D" unique_id=2117990625]
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, -13.35, 2.2226472, 5.1847563)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props/StaticBody3D" unique_id=1970444522]
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, -13.35, 2.2226472, -5.915244)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Props/StaticBody3D" unique_id=1657463238]
+transform = Transform3D(-2.4041265e-07, 0, 4, 0, 4, 0, -5.5, 0, -1.7484555e-07, 8.85, 2.2226472, 3.5847561)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Props/StaticBody3D" unique_id=829715849]
+transform = Transform3D(-6.556708e-08, 0, 4, 0, 4, 0, -1.5, 0, -1.7484555e-07, 8.85, 2.2226472, -9.456491)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("18_f6v1x")
