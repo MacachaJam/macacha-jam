@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_dqdth"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_j8ckk"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_vub8g"]
+[ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_nb8hv"]
+[ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_dqdth"]
 
 [sub_resource type="Sky" id="Sky_js3yh"]
 sky_material = ExtResource("1_yglj4")
@@ -65,6 +67,9 @@ height_falloff = 0.35119954
 edge_fade = 0.1274557
 density_texture = SubResource("NoiseTexture3D_8mre2")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8ckk"]
+size = Vector3(2, 2, 1)
+
 [node name="Salon" type="Node3D" unique_id=1065385907]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=617828403]
@@ -118,3 +123,23 @@ script = ExtResource("5_vub8g")
 nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
+
+[node name="SpawnPoints" type="Node3D" parent="." unique_id=1716263134]
+
+[node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=248170975 groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.554162, 4.7683716e-07, 2.735766)
+script = ExtResource("6_nb8hv")
+metadata/_custom_type_script = "uid://db5cfg6do7bnk"
+
+[node name="Teleporters" type="Node3D" parent="." unique_id=288352073]
+
+[node name="AlCentro" parent="Teleporters" unique_id=766874005 instance=ExtResource("7_dqdth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.577238, 1, 4.5577545)
+next_scene = "uid://dw8jh5txr51br"
+spawn_point_path = NodePath("SpawnPoints/DesdeElSalón")
+enter_transition = 4
+exit_transition = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=178507071]
+shape = SubResource("BoxShape3D_j8ckk")
+debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)

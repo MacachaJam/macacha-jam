@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://nv5htlworha8" path="res://assets/Props/arbusto_bajo.tscn" id="9_wvr15"]
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="10_yv5mj"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="11_2an85"]
+[ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="12_n8lmo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xfpo"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -177,7 +178,7 @@ texture = ExtResource("6_xasd7")
 [node name="AreaFiller" type="Node" parent="Props/Arbustos" unique_id=572457082]
 script = ExtResource("7_ol2b1")
 scenes = Array[PackedScene]([ExtResource("8_8i2jy"), ExtResource("9_wvr15")])
-minimum_separation = 1.4000000000000001
+minimum_separation = 1.4
 "escala_mínima" = 0.8
 metadata/_custom_type_script = "uid://u11ey2t4vi6d"
 
@@ -475,3 +476,10 @@ shadow_normal_bias = 2.872
 shadow_blur = 2.0
 omni_range = 9.504476
 omni_attenuation = -0.596
+
+[node name="SpawnPoints" type="Node3D" parent="." unique_id=243863098]
+
+[node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=534237449 groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.379833, 4.7683716e-07, -6.0613074)
+script = ExtResource("12_n8lmo")
+metadata/_custom_type_script = "uid://db5cfg6do7bnk"
