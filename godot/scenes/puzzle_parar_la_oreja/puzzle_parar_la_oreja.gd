@@ -29,19 +29,21 @@ signal fin_del_puzzle(éxito: bool)
 @export var interfaz: InterfazSilabeador
 
 
-var lista_sílabas: Dictionary[Precisiones, Array] = {
-	Precisiones.BIEN: Array(silabeos[Precisiones.BIEN].split("-")),
-	Precisiones.MASO: Array(silabeos[Precisiones.MASO].split("-")),
-	Precisiones.MAAL: Array(silabeos[Precisiones.MAAL].split("-")),
-}
-
-var cantidad_de_sílabas := lista_sílabas[Precisiones.BIEN].size()
+var lista_sílabas: Dictionary[Precisiones, Array]
+var cantidad_de_sílabas: int
 
 
 var _puntaje: float
 
 
 func _ready() -> void:
+	lista_sílabas = {
+		Precisiones.BIEN: Array(silabeos[Precisiones.BIEN].split("-")),
+		Precisiones.MASO: Array(silabeos[Precisiones.MASO].split("-")),
+		Precisiones.MAAL: Array(silabeos[Precisiones.MAAL].split("-")),
+	}
+	cantidad_de_sílabas = lista_sílabas[Precisiones.BIEN].size()
+	# prints(cantidad_de_sílabas, lista_sílabas[Precisiones.MASO].size(), lista_sílabas[Precisiones.MAAL].size())
 	assert(lista_sílabas[Precisiones.MASO].size() == cantidad_de_sílabas)
 	assert(lista_sílabas[Precisiones.MAAL].size() == cantidad_de_sílabas)
 
