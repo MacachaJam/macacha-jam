@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cnnlshf7do2sl"]
+
+[ext_resource type="Script" uid="uid://dvpuwmf6p4of" path="res://globals/scene_switcher/scene_link.gd" id="1_c4d1e"]
+[ext_resource type="Script" uid="uid://btx83tx8exmvj" path="res://scenes/teleporter/teleporter_logic.gd" id="2_yrdbo"]
+
+[node name="Teleporter" type="Area3D" unique_id=766874005]
+collision_layer = 4
+script = ExtResource("1_c4d1e")
+
+[node name="TeleporterLogic" type="Node" parent="." unique_id=921963633 node_paths=PackedStringArray("teleport_area", "scene_link")]
+script = ExtResource("2_yrdbo")
+teleport_area = NodePath("..")
+scene_link = NodePath("..")
