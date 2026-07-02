@@ -112,9 +112,9 @@ unique_name_in_owner = true
 script = ExtResource("5_07buu")
 frase = " Pues que he de partir de Salta este sábado por una semana."
 silabeos = Dictionary[int, String]({
-0: "Pues[b]que[/b]he[b]de[/b]partir[b]de[/b]Salta[b]por[/b]-doaluna[b]semana",
-1: "Pos[b]que[/b]fe[b]de[/b]repartir[b]de[/b]Palta[b]sor[/b]uña[b]alimaña",
-2: "hm-[b]mmm[/b]-hm-mmm-hm-[b]mmm[/b]-hhmm-[b]hmmm[/b]-hm-mm-[b]hmm[/b]mmhh"
+0: "pues-que-he-de-partir-de-salta-este-sábado-por-una-semana",
+1: "pos-que-fe-de-repartir-de-palta-peste-zapato-sor-uña-alimaña",
+2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hm-mmmm-hm-mm-mmhh"
 })
 "diálogo" = NodePath("DiálogoSilabeador")
 interfaz = NodePath("CanvasLayer/InterfazSilabeador")

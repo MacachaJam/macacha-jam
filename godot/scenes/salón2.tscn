@@ -112,9 +112,9 @@ unique_name_in_owner = true
 script = ExtResource("6_3l6sx")
 frase = "Al menos dos batallones. Y todo para sofocar un grupo de esos gauchos maltrechos."
 silabeos = Dictionary[int, String]({
-0: "Al[b]menos[/b]dos[b]batallones[/b]Y[b]todo[/b]para[b]sofocar[/b]un[b]grupo[/b]de[b]esos[/b]gauchos[b]maltrechos ",
-1: "Al[b]lemos[/b]tos[b]canelones[/b]Y[b]toldo[/b]sara[b]provocar[/b]un[b]grumo[/b]de[b]pesos[/b]tachos[b]malpechos",
-2: "hm-[b]mmm[/b]-hm-mmm-hm-[b]mmm[/b]-hhmm-[b]hmmm[/b]-hm-mm-[b]hmm[/b]-mmmm-hm-hm-[b]mmm[/b]-hmm-h-[b]mmm[/b]mmh"
+0: "al-menos-dos-batallones-y-todo-para-sofocar-un-grupo-de-esos-gauchos-maltrechos",
+1: "al-lemos-tos-canelones-y-toldo-sara-provocar-un-grumo-de-pesos-tachos-malpechos",
+2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hmmm-hm-mm-hmm-mmmm-hm-hm"
 })
 "diálogo" = NodePath("DiálogoSilabeador")
 interfaz = NodePath("CanvasLayer/InterfazSilabeador")
