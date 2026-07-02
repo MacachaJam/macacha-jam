@@ -26,5 +26,6 @@ func _ready() -> void:
 func move_player_to_self_position() -> void:
 	var player: Node3D = get_tree().get_first_node_in_group("player")
 	if not player:
-		player.global_position = global_position
-		player_teleported.emit()
+		return
+	player.global_position = global_position
+	player_teleported.emit()

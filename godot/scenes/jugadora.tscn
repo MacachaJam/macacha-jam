@@ -146,7 +146,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Jugadora" type="CharacterBody3D" unique_id=1548245680]
+[node name="Jugadora" type="CharacterBody3D" unique_id=1548245680 groups=["player"]]
 script = ExtResource("1_ufn4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]

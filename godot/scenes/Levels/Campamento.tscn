@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="9_ne5nm"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="10_30kc6"]
 [ext_resource type="PackedScene" uid="uid://dqw1xctn1tsax" path="res://assets/Props/Fuego/Fuego.tscn" id="14_ne5nm"]
+[ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="15_30kc6"]
+[ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
 
 [sub_resource type="Sky" id="Sky_s0xiu"]
 sky_material = ExtResource("1_5mrw7")
@@ -117,6 +119,9 @@ density_texture = SubResource("NoiseTexture3D_8mre2")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wdupl"]
 radius = 0.7
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhnvg"]
+size = Vector3(2, 2, 1)
 
 [node name="Campamento" type="Node3D" unique_id=525460237]
 
@@ -977,3 +982,23 @@ omni_attenuation = 1.745
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1589354264]
 shape = SubResource("SphereShape3D_wdupl")
+
+[node name="SpawnPoints" type="Node3D" parent="." unique_id=927025057]
+
+[node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=1600279275 groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6187525, 0, 7.360165)
+script = ExtResource("15_30kc6")
+metadata/_custom_type_script = "uid://db5cfg6do7bnk"
+
+[node name="Teleporters" type="Node3D" parent="." unique_id=1472668562]
+
+[node name="AlCentro" parent="Teleporters" unique_id=766874005 instance=ExtResource("16_s0xiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6857244, 1, 8.826064)
+next_scene = "uid://dw8jh5txr51br"
+spawn_point_path = NodePath("SpawnPoints/DesdeElCampamento")
+enter_transition = 4
+exit_transition = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=1470489845]
+shape = SubResource("BoxShape3D_fhnvg")
+debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
