@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dhd3siofjcoer"
+path="res://.godot/imported/condición_cuartel.dialogue-bc3f19b9d47bfe680436015698d85f43.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/condición_cuartel.dialogue"
+dest_files=["res://.godot/imported/condición_cuartel.dialogue-bc3f19b9d47bfe680436015698d85f43.tres"]
+
+[params]
+
+defaults=true

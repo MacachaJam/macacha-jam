@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://vs08lh6v52av"
+path="res://.godot/imported/condición_salón.dialogue-807964bb677470e1ff70a55e35e1113a.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/condición_salón.dialogue"
+dest_files=["res://.godot/imported/condición_salón.dialogue-807964bb677470e1ff70a55e35e1113a.tres"]
+
+[params]
+
+defaults=true

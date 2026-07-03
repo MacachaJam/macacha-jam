@@ -1,6 +1,6 @@
+class_name AreaInteractivaDiálogo
 extends Area3D
 ## Área que cuando se interactúa muestra un diálogo.
-## Muestra un indicador cuando se puede interactuar.
 
 signal fin_interactuar
 

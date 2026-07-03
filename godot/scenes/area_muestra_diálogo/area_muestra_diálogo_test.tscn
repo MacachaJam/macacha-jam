@@ -68,12 +68,12 @@ alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_2c7oo")
 
-[node name="Area3D" type="Area3D" parent="Macacha" unique_id=708160515]
+[node name="AreaMuestraDiálogo" type="Area3D" parent="Macacha" unique_id=708160515]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("4_2c7oo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/Area3D" unique_id=1615394597]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/AreaMuestraDiálogo" unique_id=1615394597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_73brc")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)

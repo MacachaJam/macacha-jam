@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_xasd7"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_4xfpo"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_ol2b1"]
+[ext_resource type="Script" uid="uid://cuufbwxgjxwjd" path="res://scenes/area_interactiva_diálogo/area_interactiva_diálogo.gd" id="6_2an85"]
 [ext_resource type="Texture2D" uid="uid://35w3jfs7uc0w" path="res://assets/Props/Ceibo.png" id="6_xasd7"]
+[ext_resource type="Resource" uid="uid://5sq4oxhnuegu" path="res://assets/Diálogos/árbol.dialogue" id="7_2an85"]
 [ext_resource type="Script" uid="uid://u11ey2t4vi6d" path="res://scenes/area_filler/area_filler.gd" id="7_ol2b1"]
 [ext_resource type="PackedScene" uid="uid://bxv7kkbsojpnm" path="res://assets/Props/arbusto_alto.tscn" id="8_8i2jy"]
 [ext_resource type="PackedScene" uid="uid://mpn6esgi1iem" path="res://assets/Props/pasto_1.tscn" id="9_n8lmo"]
@@ -100,6 +102,9 @@ density_texture = SubResource("NoiseTexture3D_4ub2o")
 [sub_resource type="BoxShape3D" id="BoxShape3D_2r1cw"]
 size = Vector3(1.5639648, 1.6, 0.5977173)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_63gek"]
+radius = 1.637207
+
 [node name="Arbol" type="Node3D" unique_id=2040948958]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2056608297]
@@ -172,6 +177,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.37922382, 0.49325323, 0.28
 shaded = true
 alpha_cut = 1
 texture = ExtResource("6_xasd7")
+
+[node name="AreaInteractiva" type="Area3D" parent="Props/Arbol" unique_id=633188596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9149561, -3.6824632, -0.23275638)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("6_2an85")
+"diálogo" = ExtResource("7_2an85")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Arbol/AreaInteractiva" unique_id=2080502495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_63gek")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
 
 [node name="Arbustos" type="Area3D" parent="Props" unique_id=208933070]
 

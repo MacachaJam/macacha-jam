@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5sq4oxhnuegu"
+path="res://.godot/imported/árbol.dialogue-9b50cb1938aee2d9220c4483e3855b7b.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/árbol.dialogue"
+dest_files=["res://.godot/imported/árbol.dialogue-9b50cb1938aee2d9220c4483e3855b7b.tres"]
+
+[params]
+
+defaults=true
