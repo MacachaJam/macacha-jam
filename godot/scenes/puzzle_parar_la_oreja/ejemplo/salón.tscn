@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wf5br4wvj42"]
 
-[ext_resource type="Script" uid="uid://ddi4r2puh7wvo" path="res://scenes/salón.gd" id="1_574ue"]
+[ext_resource type="Script" uid="uid://ddi4r2puh7wvo" path="res://scenes/puzzle_parar_la_oreja/ejemplo/salón.gd" id="1_574ue"]
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_26wvn"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_574ue"]
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="5_07buu"]
