@@ -1,3 +1,22 @@
 ~ start
-Juana: Listo, ya dejé el mensaje.
+if GameState.global.dia_actual == 1
+	=> dia_1
+elif GameState.global.dia_actual == 2
+	=> dia_2
+elif GameState.global.dia_actual == 3
+	=> dia_3
+~ dia_1
+María: Mañana volveré a hablar con Macacha para hablar sobre el baile.
+do GameState.global.dia_actual = 2
+do SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
+=> END
+~ dia_2
+María: Mañana volveré a hablar con Macacha para hablar sobre ir al cuartel.
+do GameState.global.dia_actual = 3
+do SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
+=> END
+~ dia_3
+María: Hemos hecho nuestro aporte para liberar a Salta. Ahora solo queda esperar a nuestros Infernales.
+do GameState.clear()
+do SceneSwitcher.change_to_file_with_transition("uid://dv2y18ye8j7o0", "", Transition.Effect.FADE, Transition.Effect.FADE)
 => END

@@ -1,4 +1,47 @@
 ~ start
-Macacha: Te encomiendo una misión.
-Macacha: Bla bla bla.
+if GameState.global.dia_actual == 1
+	=> dia_1
+elif GameState.global.dia_actual == 2
+	=> dia_2
+elif GameState.global.dia_actual == 3
+	=> dia_3
+~ dia_1
+Macacha: María, debemos liberar nuestra Salta de los maturrangos. Tenemos un plan con mi hermano. 
+María: Pues estaré encantada de ayudar, Macacha. 
+Macacha: Los realistas celebrarán un baile en el cual se conversarán cuestiones importantes para planificar nuestro asedio. 
+María: ¿Cuándo y dónde se celebrará? 
+Macacha: Estamos a la espera de un informante que confirme esas cuestiones. 
+Macacha: Debes esperarlo en nuestro puesto de venta, se presentará pidiendo una comida con carne seca. 
+Macacha: Cuando lo identifiques. Ófrecele alguna comida con humita. Esa persona entenderá el mensaje. 
+María: No hay más que discutir, me dispongo a partir en cuanto haga falta.
+Macacha: Nuestras criadas lo han dispuesto todo en la plaza. Te están esperando.
+=> END
+~ dia_2
+Macacha: Buen trabajo ayer. Gracias a ello, podemos saber el lugar y hora del baile. 
+María: Soy toda oídos, Macacha. 
+Macacha: Debes ir al salón que se encuentra junto a la plaza al atardecer. Allí estará presente De La Serna. 
+María: Ese general que ha llenado poblado nuestra tierra de maturrangos. 
+Macacha: Sí. Nuestra compañera Juana estará acompañándole. Ha procurado hacer buenas migas para averiguar algo. 
+María: ¿No sería mejor que ella misma venga luego a brindarte lo que sepa?
+Macacha: Sería mucha exposición para ella. No queremos que su vida vuelva a correr riesgo como cuando casi fue emparedada.
+María: Tienes razón. Podría sentarme cerca de ellos para escuchar y luego transcribirlo en un papel que pueda dejar en el ceibo. 
+Macacha: Bien pensado. Solamente sé disimulada. Utiliza tu abanico para pasar desapercibida y poder escuchar con atención hasta que Juana señale que tienes que dejar de escuchar. 
+=> END
+~ dia_3
+Macacha: Bien hecho, María. Gracias a la información que tú y Juana han conseguido, sabemos que este sábado es el momento propicio para iniciar el asedio. 
+Macacha: Ahora solo resta pasar lista a las tropas para ver quiénes estarán presentes ese día. 
+María: Debo ver la manera de entrar al cuartel. 
+Macacha: Nuestras criadas te darán ropas y utensilios de trabajo. . 
+María: ¿Y un vez adentro del cuartel?
+Macacha: Una vez adentro emplearás los granos de maíz para contar los presentes y ausentes
+Macacha: Entiendo, me pondré en marcha ahora mismo. 
+Macacha: Perfecto. Con ese conteo, mi hermano sabrá cuánto gauchaje traer consigo para asediar Salta. "
+=> END
+~ mision_incompleta
+%2 Macacha: ¿Pero qué haces aquí? ¡Necesitamos esa información!
+% Macacha: ¿Otra vez acá? ¿Aca no quieres ver a Salta libre de nuevo?
+% Macacha: Ni los maturrangos corrieron tan rápido con los Infernales como tú.
+% Macacha: María, necesitamos saber eso. Es esencial para nuestra libertad. 
+% Macacha: ¡Vuelve! No tenemos todo el día.
+% Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión!
 => END
