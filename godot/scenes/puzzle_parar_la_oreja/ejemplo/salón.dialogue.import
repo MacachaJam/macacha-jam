@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ck20iunbbp7o1"
+path="res://.godot/imported/salón.dialogue-9cc8e650b6e1cba0dac1cd607369b17e.tres"
+
+[deps]
+
+source_file="res://scenes/puzzle_parar_la_oreja/ejemplo/salón.dialogue"
+dest_files=["res://.godot/imported/salón.dialogue-9cc8e650b6e1cba0dac1cd607369b17e.tres"]
+
+[params]
+
+defaults=true
