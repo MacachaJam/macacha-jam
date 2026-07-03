@@ -1,3 +1,4 @@
 ~ start
-Macacha: Hmm no puedo entrar al cuartel así... [next=auto]
+if GameState.global.atuendo_actual != Jugadora.Atuendos.CRIADA:
+	Macacha: Hmm no puedo entrar al cuartel así... [next=auto]
 => END

@@ -1,3 +1,4 @@
 ~ start
-Macacha: Hmm no puedo entrar al salón así de crota... [next=auto]
+if GameState.global.atuendo_actual != Jugadora.Atuendos.VESTIDO:
+	Macacha: Hmm no puedo entrar al salón así de crota... [next=auto]
 => END

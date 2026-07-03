@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_44d2x"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_agf16"]
 [ext_resource type="Texture2D" uid="uid://drhixx4l7kt3p" path="res://assets/Edificios/Cabildo.png" id="8_adkwo"]
+[ext_resource type="Script" uid="uid://bpo7vonn8vwui" path="res://scenes/activar_por_atuendo/activar_por_atuendo.gd" id="8_xt0tm"]
 [ext_resource type="Texture2D" uid="uid://cogk72i14f55a" path="res://assets/Edificios/Salon.png" id="9_vmbll"]
 [ext_resource type="Texture2D" uid="uid://c3nulll6hj32q" path="res://assets/Edificios/Garita.png" id="10_2fjbg"]
 [ext_resource type="Texture2D" uid="uid://bp2nuyoii2l82" path="res://assets/Edificios/Casa Misc 2.png" id="10_a47ot"]
@@ -199,6 +200,11 @@ exit_transition = 5
 shape = SubResource("BoxShape3D_adkwo")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
+[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlCampamento" unique_id=1294453245 node_paths=PackedStringArray("area")]
+script = ExtResource("8_xt0tm")
+area = NodePath("../../AlSalón")
+atuendo = 2
+
 [node name="AlSalón" parent="Teleporters" unique_id=354516081 instance=ExtResource("7_agf16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0800753, 1, -2.7153602)
 next_scene = "uid://b0lo1108ijp4q"
@@ -210,6 +216,10 @@ exit_transition = 5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0749803, 0, -0.3431797)
 shape = SubResource("BoxShape3D_adkwo")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
+
+[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlSalón" unique_id=819870917 node_paths=PackedStringArray("area")]
+script = ExtResource("8_xt0tm")
+area = NodePath("..")
 
 [node name="AlLasBarracas" parent="Teleporters" unique_id=1990847618 instance=ExtResource("7_agf16")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.536836, 1, 1.4467077)
