@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cf37hqituw4s6"
+path="res://.godot/imported/macacha.dialogue-e6185411691e84335d1e78c212f81a57.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/macacha.dialogue"
+dest_files=["res://.godot/imported/macacha.dialogue-e6185411691e84335d1e78c212f81a57.tres"]
+
+[params]
+
+defaults=true

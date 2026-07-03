@@ -79,13 +79,13 @@ alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_53aen")
 
-[node name="Area3D" type="Area3D" parent="Macacha" unique_id=708160515]
+[node name="AreaInteractiva" type="Area3D" parent="Macacha" unique_id=708160515]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hgn8d")
 "diálogo" = ExtResource("5_1gbdf")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/Area3D" unique_id=1615394597]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/AreaInteractiva" unique_id=1615394597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_73brc")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
@@ -104,13 +104,13 @@ shaded = true
 alpha_cut = 1
 texture = ExtResource("6_0djho")
 
-[node name="Area3D" type="Area3D" parent="Árbol" unique_id=1971071476]
+[node name="AreaInteractiva" type="Area3D" parent="Árbol" unique_id=1971071476]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_hgn8d")
 "diálogo" = ExtResource("7_fg2ks")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Árbol/Area3D" unique_id=188915147]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Árbol/AreaInteractiva" unique_id=188915147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_af1ro")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)

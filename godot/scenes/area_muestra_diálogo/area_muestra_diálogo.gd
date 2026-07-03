@@ -1,3 +1,4 @@
+class_name AreaMuestraDiálogo
 extends Area3D
 ## Área que cuando se entra muestra un diálogo.
 ## El diálogo se tendría que pasar automáticamente, por ejemplo agregando

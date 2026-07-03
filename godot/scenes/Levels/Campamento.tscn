@@ -4,15 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="2_k24i6"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_hllly"]
 [ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="4_b2dhh"]
+[ext_resource type="Resource" uid="uid://bfe4nfykx1utr" path="res://assets/Diálogos/carpa.dialogue" id="6_kfifa"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="6_l7aih"]
 [ext_resource type="PackedScene" uid="uid://bxv7kkbsojpnm" path="res://assets/Props/arbusto_alto.tscn" id="7_hllly"]
-[ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="7_ne5nm"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="8_30kc6"]
 [ext_resource type="Script" uid="uid://u11ey2t4vi6d" path="res://scenes/area_filler/area_filler.gd" id="8_k24i6"]
 [ext_resource type="PackedScene" uid="uid://mpn6esgi1iem" path="res://assets/Props/pasto_1.tscn" id="8_l7aih"]
 [ext_resource type="PackedScene" uid="uid://nv5htlworha8" path="res://assets/Props/arbusto_bajo.tscn" id="9_hllly"]
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="9_ne5nm"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="10_30kc6"]
+[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="12_s0xiu"]
+[ext_resource type="Script" uid="uid://cuufbwxgjxwjd" path="res://scenes/area_interactiva_diálogo/area_interactiva_diálogo.gd" id="13_bma5i"]
+[ext_resource type="Resource" uid="uid://cf37hqituw4s6" path="res://assets/Diálogos/macacha.dialogue" id="14_bma5i"]
 [ext_resource type="PackedScene" uid="uid://dqw1xctn1tsax" path="res://assets/Props/Fuego/Fuego.tscn" id="14_ne5nm"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="15_30kc6"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
@@ -69,6 +72,16 @@ stencil_flags = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mre2"]
 size = Vector3(3.6979249, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bma5i"]
+radius = 1.637207
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nh2m4"]
+height = 2.0092773
+radius = 0.53027344
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_caf8k"]
+radius = 1.637207
 
 [sub_resource type="Gradient" id="Gradient_00nbw"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
@@ -160,6 +173,18 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("4_b2dhh")
+
+[node name="AreaInteractiva" type="Area3D" parent="Props/Tent" unique_id=1218476291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4203134, 0, -2.5053294)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("13_bma5i")
+"diálogo" = ExtResource("6_kfifa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Tent/AreaInteractiva" unique_id=1186804635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_bma5i")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
 
 [node name="Bushes2" type="Area3D" parent="Props" unique_id=1726966387]
 
@@ -929,8 +954,31 @@ action_up = &"move_up"
 action_down = &"move_down"
 visibility_mode = 1
 
-[node name="NPC" parent="." unique_id=174433718 instance=ExtResource("7_ne5nm")]
+[node name="Macacha" type="CharacterBody3D" parent="." unique_id=174433718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, -0.023894668, -0.38966608)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha" unique_id=2007151796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_nh2m4")
+
+[node name="Sprite3D" type="Sprite3D" parent="Macacha" unique_id=698664376]
+transform = Transform3D(2.5299644, 0, 0, 0, 2.5299644, 0, 0, 0, 2.5299644, 0, 0.9798124, 0)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("12_s0xiu")
+
+[node name="AreaInteractiva" type="Area3D" parent="Macacha" unique_id=50376492]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("13_bma5i")
+"diálogo" = ExtResource("14_bma5i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/AreaInteractiva" unique_id=1903295626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_caf8k")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=469122715]
 
