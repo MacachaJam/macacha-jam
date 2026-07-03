@@ -1,121 +1,10 @@
 [gd_scene format=3 uid="uid://dh4gy66orxkuj"]
 
-[ext_resource type="Texture2D" uid="uid://c60gnoec02nr5" path="res://assets/Placeholders/stella_player_attack_02.png" id="2_tl2vt"]
-[ext_resource type="Texture2D" uid="uid://b7plny0exa3u4" path="res://assets/Placeholders/stella_player_defeated.png" id="3_hwkja"]
-[ext_resource type="Texture2D" uid="uid://dlxo8b1bhn3lj" path="res://assets/Placeholders/stella_player_walk.png" id="4_0tygy"]
-[ext_resource type="Texture2D" uid="uid://dya2dm6st0mek" path="res://assets/Placeholders/stella_player_idle.png" id="5_sptji"]
 [ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="6_tl2vt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.6303711
 height = 1.651123
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cif7p"]
-atlas = ExtResource("2_tl2vt")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0xd6j"]
-atlas = ExtResource("2_tl2vt")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_unckj"]
-atlas = ExtResource("2_tl2vt")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6p4cf"]
-atlas = ExtResource("2_tl2vt")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_17vrq"]
-atlas = ExtResource("3_hwkja")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulkcy"]
-atlas = ExtResource("3_hwkja")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u5vau"]
-atlas = ExtResource("4_0tygy")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v351l"]
-atlas = ExtResource("4_0tygy")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5vq8b"]
-atlas = ExtResource("4_0tygy")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3oci6"]
-atlas = ExtResource("5_sptji")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qle80"]
-atlas = ExtResource("5_sptji")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g6u53"]
-atlas = ExtResource("5_sptji")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jcdhy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cif7p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0xd6j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_unckj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6p4cf")
-}],
-"loop": 1,
-"name": &"atacando",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_17vrq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ulkcy")
-}],
-"loop": 1,
-"name": &"atrapada",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u5vau")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v351l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5vq8b")
-}],
-"loop": 1,
-"name": &"caminando",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3oci6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qle80")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g6u53")
-}],
-"loop": 1,
-"name": &"parada",
-"speed": 10.0
-}]
 
 [node name="NPC" type="CharacterBody3D" unique_id=1548245680]
 collision_layer = 0
@@ -123,16 +12,6 @@ collision_layer = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8255615, 0)
 shape = SubResource("CapsuleShape3D_0px63")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
-visible = false
-offset = Vector2(0, 20)
-no_depth_test = true
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_jcdhy")
-animation = &"parada"
-autoplay = "parada"
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=698664376]
 transform = Transform3D(2.5299644, 0, 0, 0, 2.5299644, 0, 0, 0, 2.5299644, 0, 0.9798124, 0)
