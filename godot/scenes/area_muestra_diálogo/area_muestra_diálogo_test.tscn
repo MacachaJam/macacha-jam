@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_mutls"]
 [ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="3_2c7oo"]
-[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_qpd75"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_qpd75"]
 [ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo/area_muestra_diálogo.gd" id="4_2c7oo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]

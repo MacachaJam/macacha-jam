@@ -5,9 +5,35 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+enum Atuendos { VESTIDO, VENDEDORA, CRIADA }
+
+@export var atuendo: Atuendos:
+	set = _set_atuendo
+
 @onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
 
+var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
+	Atuendos.VESTIDO: preload("uid://b4e0qc27oqlte"),
+	Atuendos.VENDEDORA: preload("uid://dl6i2sypsjbev"),
+	Atuendos.CRIADA: preload("uid://5qddwg2qyvb3"),
+}
+
+
 var _detenida: bool
+
+func _set_atuendo(nuevo_atuendo: Atuendos) -> void:
+	atuendo = nuevo_atuendo
+	if not is_node_ready():
+		return
+	animated_sprite_3d.sprite_frames = sprite_frames_x_atuendo[atuendo]
+
+func _ready() -> void:
+	if atuendo != GameState.global.atuendo_actual:
+		_on_gamestate_cambió_atuendo()
+	GameState.global.cambió_atuendo.connect(_on_gamestate_cambió_atuendo)
+
+func _on_gamestate_cambió_atuendo() -> void:
+	atuendo = GameState.global.atuendo_actual
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
