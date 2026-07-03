@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5wlgv8sq4yiq"]
 
-[ext_resource type="Script" uid="uid://caq54dc80k7mm" path="res://scenes/jugadora.gd" id="1_ufn4x"]
+[ext_resource type="Script" uid="uid://caq54dc80k7mm" path="res://scenes/jugadora/jugadora.gd" id="1_ufn4x"]
 [ext_resource type="Texture2D" uid="uid://bqe2i5e2qr008" path="res://assets/Personajes/Loreto/Loreto Walk Cyle Resized.png" id="3_hxyug"]
 [ext_resource type="Texture2D" uid="uid://b54dep70kb25r" path="res://assets/Personajes/Loreto/Loreto Idle Resize.png" id="4_cif7p"]
 [ext_resource type="Script" uid="uid://drgn2ghjbomwu" path="res://scenes/area_interactuar/area_interactuar.gd" id="4_hxyug"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2rnuxdijckpd"]
 
 [ext_resource type="Texture2D" uid="uid://7hvhq1onopw" path="res://assets/Terrenos/Arbol Floor.png" id="2_2r1cw"]
-[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_xasd7"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_xasd7"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_4xfpo"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_ol2b1"]
 [ext_resource type="Script" uid="uid://cuufbwxgjxwjd" path="res://scenes/area_interactiva_diálogo/area_interactiva_diálogo.gd" id="6_2an85"]

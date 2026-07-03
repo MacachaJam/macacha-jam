@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr63xhlpckwof"]
 
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="1_ujarv"]
-[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_s0s46"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="2_s0s46"]
 [ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="3_53aen"]
 [ext_resource type="Script" uid="uid://cuufbwxgjxwjd" path="res://scenes/area_interactiva_diálogo/area_interactiva_diálogo.gd" id="4_hgn8d"]
 [ext_resource type="Resource" uid="uid://be70nudt1d6tj" path="res://scenes/area_interactiva_diálogo/cosas_test/macacha_ejemplo.dialogue" id="5_1gbdf"]
