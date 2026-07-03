@@ -1,4 +1,10 @@
 ~ start
+if GameState.global.dia_actual == 1
+	=> dia_1
+elif GameState.global.dia_actual == 2
+	=> dia_2
+elif GameState.global.dia_actual == 3
+	=> dia_3
 ~ dia_1
 Macacha: María, debemos liberar nuestra Salta de los maturrangos. Tenemos un plan con mi hermano. 
 María: Pues estaré encantada de ayudar, Macacha. 
