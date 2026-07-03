@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b0lo1108ijp4q"]
 
+[ext_resource type="Script" uid="uid://d07fgxbjbscqo" path="res://scenes/Levels/salon.gd" id="1_77mci"]
 [ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_yglj4"]
 [ext_resource type="Texture2D" uid="uid://g4m58bm3s7c8" path="res://assets/Terrenos/Salon Floor.png" id="2_dqdth"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_dqdth"]
@@ -7,6 +8,10 @@
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_vub8g"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_nb8hv"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_dqdth"]
+[ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="9_77mci"]
+[ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="9_suvrd"]
+[ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="10_77mci"]
+[ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
 
 [sub_resource type="Sky" id="Sky_js3yh"]
 sky_material = ExtResource("1_yglj4")
@@ -70,7 +75,13 @@ density_texture = SubResource("NoiseTexture3D_8mre2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_j8ckk"]
 size = Vector3(2, 2, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_fhnvg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_suvrd"]
+radius = 1.637207
+
 [node name="Salon" type="Node3D" unique_id=1065385907]
+script = ExtResource("1_77mci")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=617828403]
 environment = SubResource("Environment_eornw")
@@ -143,3 +154,55 @@ exit_transition = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=178507071]
 shape = SubResource("BoxShape3D_j8ckk")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=972976146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.573534, 1, 1.0462368)
+mesh = SubResource("BoxMesh_fhnvg")
+
+[node name="AreaInteractiva" type="Area3D" parent="MeshInstance3D" unique_id=1017370224]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("9_77mci")
+metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/AreaInteractiva" unique_id=872217934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_suvrd")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=1204213719 node_paths=PackedStringArray("diálogo", "interfaz")]
+unique_name_in_owner = true
+script = ExtResource("9_suvrd")
+frase = " Pues que he de partir de Salta este sábado por una semana."
+silabeos = Dictionary[int, String]({
+0: "pues-que-he-de-partir-de-salta-este-sábado-por-una-semana",
+1: "pos-que-fe-de-repartir-de-palta-peste-zapato-sor-uña-alimaña",
+2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hm-mmmm-hm-mm-mmhh"
+})
+"diálogo" = NodePath("DiálogoSilabeador")
+interfaz = NodePath("CanvasLayer/InterfazSilabeador")
+
+[node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=414779755]
+script = ExtResource("10_77mci")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PuzzlePararLaOreja" unique_id=1428729698]
+
+[node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
+visible = false
+position = Vector2(330, 382)
+
+[node name="PuzzlePararLaOreja2" type="Node" parent="." unique_id=1182041325 node_paths=PackedStringArray("diálogo", "interfaz")]
+unique_name_in_owner = true
+script = ExtResource("9_suvrd")
+frase = "Al menos dos batallones. Y todo para sofocar un grupo de esos gauchos maltrechos."
+silabeos = Dictionary[int, String]({
+0: "al-menos-dos-batallones-y-todo-para-sofocar-un-grupo-de-esos-gauchos-maltrechos",
+1: "al-lemos-tos-canelones-y-toldo-sara-provocar-un-grumo-de-pesos-tachos-malpechos",
+2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hmmm-hm-mm-hmm-mmmm-hm-hm"
+})
+"diálogo" = NodePath("../PuzzlePararLaOreja/DiálogoSilabeador")
+interfaz = NodePath("../PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador")
+
+[connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
