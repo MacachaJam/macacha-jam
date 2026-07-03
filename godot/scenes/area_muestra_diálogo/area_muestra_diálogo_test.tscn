@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c5ldo6xo1itt6"]
 
 [ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_mutls"]
+[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="3_2c7oo"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_qpd75"]
 [ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo/area_muestra_diálogo.gd" id="4_2c7oo"]
-[ext_resource type="PackedScene" uid="uid://dh4gy66orxkuj" path="res://scenes/npc.tscn" id="7_j33kr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -29,8 +29,12 @@ point_size = 96.0
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2c7oo"]
+height = 2.0092773
+radius = 0.53027344
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_73brc"]
-radius = 1.0791016
+radius = 1.6000977
 
 [node name="AreaMuestraDiálogoTest" type="Node3D" unique_id=525460237]
 
@@ -49,14 +53,27 @@ shape = SubResource("WorldBoundaryShape3D_0px63")
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_qpd75")]
 transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, -3.0051727, 4.7683716e-07, 2.0750928)
 
-[node name="NPC" parent="." unique_id=2038993736 instance=ExtResource("7_j33kr")]
+[node name="Macacha" type="StaticBody3D" parent="." unique_id=1656522962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3453386, 0, -2.3598459)
 
-[node name="Area3D" type="Area3D" parent="NPC" unique_id=708160515]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha" unique_id=2007151796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8255615, 0)
+shape = SubResource("CylinderShape3D_2c7oo")
+
+[node name="Sprite3D" type="Sprite3D" parent="Macacha" unique_id=698664376]
+transform = Transform3D(2.5299644, 0, 0, 0, 2.5299644, 0, 0, 0, 2.5299644, 0, 0.9798124, 0)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_2c7oo")
+
+[node name="Area3D" type="Area3D" parent="Macacha" unique_id=708160515]
 collision_layer = 0
+collision_mask = 2
 script = ExtResource("4_2c7oo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC/Area3D" unique_id=1615394597]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/Area3D" unique_id=1615394597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_73brc")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)

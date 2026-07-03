@@ -5,17 +5,22 @@ extends Area3D
 
 @export var diálogo: DialogueResource = preload("uid://dethlbsdqk344")
 
-var mostrando_diálogo := false
+var _globo_diálogo: Globo
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(_body: Node3D) -> void:
-	if mostrando_diálogo:
+	if _globo_diálogo:
 		return
-	var nodo := DialogueManager.show_dialogue_balloon(diálogo)
-	mostrando_diálogo = true
-	nodo.tree_exited.connect(_on_fin_diálogo)
+	_globo_diálogo = DialogueManager.show_dialogue_balloon(diálogo)
+	_globo_diálogo.tree_exited.connect(_on_fin_diálogo)
+
+func _on_body_exited(_body: Node3D) -> void:
+	if not _globo_diálogo:
+		return
+	_globo_diálogo.queue_free()
 
 func _on_fin_diálogo() -> void:
-	mostrando_diálogo = false
+	_globo_diálogo = null
