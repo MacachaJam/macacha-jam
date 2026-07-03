@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxv7kkbsojpnm" path="res://assets/Props/arbusto_alto.tscn" id="2_0a6gv"]
 [ext_resource type="PackedScene" uid="uid://nv5htlworha8" path="res://assets/Props/arbusto_bajo.tscn" id="3_7iqf6"]
 
-[node name="RellenarAreaTest" type="Node3D" unique_id=525460237]
+[node name="AreaFillerTest" type="Node3D" unique_id=525460237]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=334149914]
 

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dethlbsdqk344"
+path="res://.godot/imported/hola.dialogue-cf307c3bc32662ea45230589b488c842.tres"
+
+[deps]
+
+source_file="res://scenes/area_muestra_diálogo/hola.dialogue"
+dest_files=["res://.godot/imported/hola.dialogue-cf307c3bc32662ea45230589b488c842.tres"]
+
+[params]
+
+defaults=true
