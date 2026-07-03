@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://mpn6esgi1iem" path="res://assets/Props/pasto_1.tscn" id="16_1mqds"]
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="17_itb5f"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="18_2fjbg"]
+[ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo/area_muestra_diálogo.gd" id="21_wklx2"]
+[ext_resource type="Resource" uid="uid://vs08lh6v52av" path="res://assets/Diálogos/condición_salón.dialogue" id="22_s0ia0"]
+[ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 
 [sub_resource type="Sky" id="Sky_yrlf6"]
 sky_material = ExtResource("1_bknb0")
@@ -100,6 +103,12 @@ size = Vector3(1.0653076, 2, 0.3798828)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_agf16"]
 size = Vector3(2, 2, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s0ia0"]
+radius = 1.6000977
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wklx2"]
+radius = 1.6000977
 
 [node name="Centro" type="Node3D" unique_id=1012514493]
 
@@ -1528,3 +1537,27 @@ transform = Transform3D(1.3787583, 0, 0, 0, 1.3787583, 0, 0, 0, 1.3787583, 1.391
 
 [node name="Pasto 298" parent="Prop/Pasto" unique_id=616199414 instance=ExtResource("16_1mqds")]
 transform = Transform3D(1.1144553, 0, 0, 0, 1.1144553, 0, 0, 0, 1.1144553, 7.70897, 0, 4.8046346)
+
+[node name="AreaCondiciónSalón" type="Area3D" parent="." unique_id=1554680214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.004183, -0.4748404, -1.4939888)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21_wklx2")
+"diálogo" = ExtResource("22_s0ia0")
+metadata/_custom_type_script = "uid://dtmxsc3jfr2ka"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCondiciónSalón" unique_id=585756723]
+shape = SubResource("CylinderShape3D_s0ia0")
+debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
+
+[node name="AreaCondiciónCuartel" type="Area3D" parent="." unique_id=641723683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.484474, 0, 1.2065446)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21_wklx2")
+"diálogo" = ExtResource("23_ctv0l")
+metadata/_custom_type_script = "uid://dtmxsc3jfr2ka"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCondiciónCuartel" unique_id=1593853567]
+shape = SubResource("CylinderShape3D_wklx2")
+debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
