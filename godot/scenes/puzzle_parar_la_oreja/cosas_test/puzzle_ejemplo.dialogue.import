@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ck20iunbbp7o1"
+path="res://.godot/imported/puzzle_ejemplo.dialogue-c79152f47b0e98ca1b006eb58a2f546c.tres"
+
+[deps]
+
+source_file="res://scenes/puzzle_parar_la_oreja/cosas_test/puzzle_ejemplo.dialogue"
+dest_files=["res://.godot/imported/puzzle_ejemplo.dialogue-c79152f47b0e98ca1b006eb58a2f546c.tres"]
+
+[params]
+
+defaults=true

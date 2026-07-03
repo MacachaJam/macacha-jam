@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://wf5br4wvj42"]
+[gd_scene format=3 uid="uid://di2vq7ai6oyo5"]
 
-[ext_resource type="Script" uid="uid://ddi4r2puh7wvo" path="res://scenes/puzzle_parar_la_oreja/ejemplo/salón.gd" id="1_574ue"]
-[ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_26wvn"]
-[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="2_574ue"]
-[ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="5_07buu"]
-[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="5_oryf0"]
-[ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="6_h36bw"]
-[ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="7_gr45f"]
-[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="7_v72nu"]
+[ext_resource type="Script" uid="uid://ddi4r2puh7wvo" path="res://scenes/puzzle_parar_la_oreja/cosas_test/salón.gd" id="1_a3hpo"]
+[ext_resource type="Texture2D" uid="uid://cdoh537dyvod7" path="res://assets/Terrenos/Terreno Prueba.png" id="2_neh1k"]
+[ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora.tscn" id="3_2yg1m"]
+[ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_7t776"]
+[ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_wcn3o"]
+[ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="6_3l6sx"]
+[ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="7_c5570"]
+[ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="8_kgriv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -28,7 +28,7 @@ size = Vector2(9, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mre2"]
 shading_mode = 0
-albedo_texture = ExtResource("2_26wvn")
+albedo_texture = ExtResource("2_neh1k")
 point_size = 96.0
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0px63"]
@@ -40,7 +40,7 @@ size = Vector3(12, 1, 1)
 size = Vector3(6, 1, 1)
 
 [node name="Salón" type="Node3D" unique_id=525460237]
-script = ExtResource("1_574ue")
+script = ExtResource("1_a3hpo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
@@ -70,7 +70,7 @@ shape = SubResource("BoxShape3D_pn2v2")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0.5, 0)
 shape = SubResource("BoxShape3D_pn2v2")
 
-[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("2_574ue")]
+[node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_2yg1m")]
 process_mode = 4
 transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99997514, 0.00027052287, -0.0033498758, -0.0002469369, 0.9999944, -3.8413503, 0, -0.15196013)
 
@@ -78,7 +78,7 @@ transform = Transform3D(0.9999696, -0.007049229, 0.0033480537, 0.007048363, 0.99
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
-[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("5_oryf0")]
+[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("4_7t776")]
 unique_name_in_owner = true
 visible = false
 
@@ -102,28 +102,28 @@ transform = Transform3D(0.9999696, -0.007351988, -0.002617127, 0.007048363, 0.70
 
 [node name="ControlaPosiciónSuave" type="Node" parent="." unique_id=1153962477 node_paths=PackedStringArray("nodo_movido", "nodo_objetivo")]
 process_mode = 4
-script = ExtResource("7_v72nu")
+script = ExtResource("5_wcn3o")
 nodo_movido = NodePath("../TrípodeCámara")
 nodo_objetivo = NodePath("../Jugadora")
 metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 
 [node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=976061437 node_paths=PackedStringArray("diálogo", "interfaz")]
 unique_name_in_owner = true
-script = ExtResource("5_07buu")
-frase = " Pues que he de partir de Salta este sábado por una semana."
+script = ExtResource("6_3l6sx")
+frase = "Al menos dos batallones. Y todo para sofocar un grupo de esos gauchos maltrechos."
 silabeos = Dictionary[int, String]({
-0: "pues-que-he-de-partir-de-salta-este-sábado-por-una-semana",
-1: "pos-que-fe-de-repartir-de-palta-peste-zapato-sor-uña-alimaña",
-2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hm-mmmm-hm-mm-mmhh"
+0: "al-menos-dos-batallones-y-todo-para-sofocar-un-grupo-de-esos-gauchos-maltrechos",
+1: "al-lemos-tos-canelones-y-toldo-sara-provocar-un-grumo-de-pesos-tachos-malpechos",
+2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hmmm-hm-mm-hmm-mmmm-hm-hm"
 })
 "diálogo" = NodePath("DiálogoSilabeador")
 interfaz = NodePath("CanvasLayer/InterfazSilabeador")
 
 [node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=233700963]
-script = ExtResource("6_h36bw")
+script = ExtResource("7_c5570")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PuzzlePararLaOreja" unique_id=220956724]
 
-[node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("7_gr45f")]
+[node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("8_kgriv")]
 visible = false
 position = Vector2(330, 382)
