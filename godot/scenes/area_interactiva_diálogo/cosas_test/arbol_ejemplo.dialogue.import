@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://iw65spvs04cf"
+path="res://.godot/imported/arbol_ejemplo.dialogue-432dfe21df4ce625e5b5f673c125026e.tres"
+
+[deps]
+
+source_file="res://scenes/area_interactiva_diálogo/cosas_test/arbol_ejemplo.dialogue"
+dest_files=["res://.godot/imported/arbol_ejemplo.dialogue-432dfe21df4ce625e5b5f673c125026e.tres"]
+
+[params]
+
+defaults=true

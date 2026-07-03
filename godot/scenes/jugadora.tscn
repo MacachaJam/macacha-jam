@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://caq54dc80k7mm" path="res://scenes/jugadora.gd" id="1_ufn4x"]
 [ext_resource type="Texture2D" uid="uid://bqe2i5e2qr008" path="res://assets/Personajes/Loreto/Loreto Walk Cyle Resized.png" id="3_hxyug"]
 [ext_resource type="Texture2D" uid="uid://b54dep70kb25r" path="res://assets/Personajes/Loreto/Loreto Idle Resize.png" id="4_cif7p"]
+[ext_resource type="Script" uid="uid://drgn2ghjbomwu" path="res://scenes/area_interactuar/area_interactuar.gd" id="4_hxyug"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.64160156
@@ -126,7 +127,11 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fhnvg"]
+radius = 1.6884766
+
 [node name="Jugadora" type="CharacterBody3D" unique_id=1548245680 groups=["player"]]
+collision_layer = 3
 script = ExtResource("1_ufn4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
@@ -143,3 +148,13 @@ texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_jcdhy")
 animation = &"caminando"
 autoplay = "parada"
+
+[node name="AreaInteractuar" type="Area3D" parent="." unique_id=569591523]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("4_hxyug")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaInteractuar" unique_id=1558046286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_fhnvg")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)

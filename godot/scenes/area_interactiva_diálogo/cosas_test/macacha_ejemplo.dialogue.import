@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://be70nudt1d6tj"
+path="res://.godot/imported/macacha_ejemplo.dialogue-13c921e530a136efa11aeeefe0de0995.tres"
+
+[deps]
+
+source_file="res://scenes/area_interactiva_diálogo/cosas_test/macacha_ejemplo.dialogue"
+dest_files=["res://.godot/imported/macacha_ejemplo.dialogue-13c921e530a136efa11aeeefe0de0995.tres"]
+
+[params]
+
+defaults=true
