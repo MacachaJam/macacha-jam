@@ -6,6 +6,8 @@ extends Resource
 ##
 ## This state is replaced whenever the game changes scene.
 
+signal jugadora_teletrasportada
+
 ## The path to the current scene.
 @export var path: String
 
