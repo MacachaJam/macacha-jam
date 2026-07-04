@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://caq54dc80k7mm" path="res://scenes/jugadora/jugadora.gd" id="1_ufn4x"]
 [ext_resource type="SpriteFrames" uid="uid://b4e0qc27oqlte" path="res://scenes/jugadora/vestido_sprite_frames.tres" id="2_7spe5"]
+[ext_resource type="Texture2D" uid="uid://c78xfohu7cdne" path="res://assets/UI/kenney_input-prompts-pixel-1-bit/tilemap_white.png" id="4_cxd1r"]
 [ext_resource type="Script" uid="uid://drgn2ghjbomwu" path="res://scenes/area_interactuar/area_interactuar.gd" id="4_hxyug"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
@@ -10,6 +11,10 @@ height = 2.130066
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fhnvg"]
 radius = 1.6884766
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhnvg"]
+atlas = ExtResource("4_cxd1r")
+region = Rect2(442, 289, 16, 16)
 
 [node name="Jugadora" type="CharacterBody3D" unique_id=1548245680 groups=["player"]]
 collision_layer = 3
@@ -39,3 +44,16 @@ script = ExtResource("4_hxyug")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_fhnvg")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="Flechita" type="Node3D" parent="AreaInteractuar" unique_id=2081919600]
+unique_name_in_owner = true
+top_level = true
+
+[node name="Sprite3D" type="Sprite3D" parent="AreaInteractuar/Flechita" unique_id=342461991]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3, 0)
+flip_v = true
+billboard = 1
+no_depth_test = true
+alpha_cut = 1
+texture_filter = 2
+texture = SubResource("AtlasTexture_fhnvg")
