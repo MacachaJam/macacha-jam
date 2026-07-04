@@ -1,33 +1,33 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dl6i2sypsjbev"]
 
-[ext_resource type="Texture2D" uid="uid://bqe2i5e2qr008" path="res://assets/Personajes/Loreto/Loreto Walk Cyle Resized.png" id="1_amewq"]
+[ext_resource type="Texture2D" uid="uid://b0jxjcp10q65v" path="res://assets/Personajes/Loreto/Loreto Vendedora Walk Resized.png" id="1_amewq"]
 [ext_resource type="Texture2D" uid="uid://odjx1mk0sldi" path="res://assets/Personajes/Loreto/Loreto Vendedora Idle Resize.png" id="2_amewq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0xd6j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfo22"]
 atlas = ExtResource("1_amewq")
 region = Rect2(0, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_unckj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8i8s"]
 atlas = ExtResource("1_amewq")
 region = Rect2(111, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6p4cf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycs2t"]
 atlas = ExtResource("1_amewq")
 region = Rect2(222, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6tuj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cia6"]
 atlas = ExtResource("1_amewq")
 region = Rect2(333, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_slkco"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh0bl"]
 atlas = ExtResource("1_amewq")
 region = Rect2(444, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ikby3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bow7a"]
 atlas = ExtResource("1_amewq")
 region = Rect2(555, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5h4ft"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmvmj"]
 atlas = ExtResource("1_amewq")
 region = Rect2(666, 0, 111, 111)
 
@@ -67,25 +67,25 @@ region = Rect2(777, 0, 111, 111)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0xd6j")
+"texture": SubResource("AtlasTexture_sfo22")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unckj")
+"texture": SubResource("AtlasTexture_j8i8s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6p4cf")
+"texture": SubResource("AtlasTexture_ycs2t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i6tuj")
+"texture": SubResource("AtlasTexture_4cia6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_slkco")
+"texture": SubResource("AtlasTexture_fh0bl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ikby3")
+"texture": SubResource("AtlasTexture_bow7a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5h4ft")
+"texture": SubResource("AtlasTexture_fmvmj")
 }],
 "loop": 1,
 "name": &"caminando",
