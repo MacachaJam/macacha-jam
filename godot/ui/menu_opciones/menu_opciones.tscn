@@ -35,7 +35,7 @@ layout_mode = 2
 theme = ExtResource("3_unbh4")
 text = "return_to_main"
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1776106307]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1776106307]
 stream = ExtResource("4_823xf")
 autoplay = true
 bus = &"Music"

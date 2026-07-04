@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="9_suvrd"]
 [ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="10_77mci"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
+[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="13_kubcc"]
 
 [sub_resource type="Sky" id="Sky_js3yh"]
 sky_material = ExtResource("1_yglj4")
@@ -204,5 +205,13 @@ script = ExtResource("10_77mci")
 [node name="InterfazSilabeador" parent="CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
 visible = false
 position = Vector2(330, 382)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1696642110]
+stream = ExtResource("13_kubcc")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=937243148]
 
 [connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
