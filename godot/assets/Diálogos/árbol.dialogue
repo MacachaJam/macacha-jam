@@ -18,12 +18,12 @@ elif GameState.global.dia_actual == 3
 María: Todavía no tengo la información...
 => END
 ~ fin_dia_1
-María: Mañana volveré a hablar con Macacha para hablar sobre el baile.
+María: Mañana volveré para hablar con Macacha acerca del baile.
 do GameState.global.pasar_de_dia()
 do SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
 => END
 ~ fin_dia_2
-María: Mañana volveré a hablar con Macacha para hablar sobre ir al cuartel.
+María: Mañana volveré para hablar con Macacha sobre ir al cuartel.
 do GameState.global.pasar_de_dia()
 do SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
 => END
