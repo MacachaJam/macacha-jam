@@ -45,13 +45,13 @@ else:
 
 ~ reintenta_1
 Juana Moro: ¿Lo qué?
-José de la Serna: Shh... vení más cerca que te lo repito...
+José de la Serna: Shh... ven más cerca que te lo repito...
 => al_puzzle
 
 ~ reintenta_2
 Juana Moro: De nuevo no escuché
-José de la Serna: Shh... vení un poco más cerca, te decía que...
+José de la Serna: ¡Shhh! ¡Acércate, mujer! Te decía que...
 => al_puzzle
 
 ~ fracaso
-José de la Serna: Uy, ¡nos escuchan! ¡Soldados! ¡A ella!
+José de la Serna: ¡Nos están escuchando! ¡Soldados! ¡A por ella!
