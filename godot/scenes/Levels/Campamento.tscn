@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dqw1xctn1tsax" path="res://assets/Props/Fuego/Fuego.tscn" id="14_ne5nm"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="15_30kc6"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
+[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="20_caf8k"]
 
 [sub_resource type="Sky" id="Sky_s0xiu"]
 sky_material = ExtResource("1_5mrw7")
@@ -1050,3 +1051,11 @@ exit_transition = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=1470489845]
 shape = SubResource("BoxShape3D_fhnvg")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=182488938]
+stream = ExtResource("20_caf8k")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=360923623]

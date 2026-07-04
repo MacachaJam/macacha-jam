@@ -64,7 +64,7 @@ text = "credits"
 label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=217546377]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=217546377]
 stream = ExtResource("4_i6a53")
 autoplay = true
 bus = &"Music"
