@@ -47,12 +47,12 @@ func _ready() -> void:
 	assert(lista_sílabas[Precisiones.MASO].size() == cantidad_de_sílabas)
 	assert(lista_sílabas[Precisiones.MAAL].size() == cantidad_de_sílabas)
 
-	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
 
 func iniciar() -> void:
+	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
 	interfaz.visible = true
 	if not diálogo.is_node_ready():
-		diálogo.ready.connect(_on_diálogo_ready)
+		diálogo.ready.connect(_on_diálogo_ready, CONNECT_ONE_SHOT)
 	else:
 		_on_diálogo_ready()
 
@@ -75,7 +75,12 @@ func _on_interfaz_llegó(índice_sílaba: int, precisión: Precisiones) -> void:
 		await get_tree().create_timer(0.5).timeout
 		if porcentaje_puntos >= 80:
 			await diálogo.revelar_frase(frase)
-			fin_del_puzzle.emit(true)
+			_terminar(true)
 		else:
 			await diálogo.no_entendí()
-			fin_del_puzzle.emit(false)
+			_terminar(false)
+
+func _terminar(éxito: bool) -> void:
+	interfaz.visible = false
+	interfaz.llegó.disconnect(_on_interfaz_llegó)
+	fin_del_puzzle.emit(éxito)

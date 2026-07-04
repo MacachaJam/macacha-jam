@@ -200,11 +200,6 @@ exit_transition = 5
 shape = SubResource("BoxShape3D_adkwo")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
-[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlCampamento" unique_id=1294453245 node_paths=PackedStringArray("area")]
-script = ExtResource("8_xt0tm")
-area = NodePath("../../AlSalón")
-atuendo = 2
-
 [node name="AlSalón" parent="Teleporters" unique_id=354516081 instance=ExtResource("7_agf16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0800753, 1, -2.7153602)
 next_scene = "uid://b0lo1108ijp4q"
@@ -231,6 +226,11 @@ exit_transition = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlLasBarracas" unique_id=1818094021]
 shape = SubResource("BoxShape3D_agf16")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
+
+[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlLasBarracas" unique_id=1294453245 node_paths=PackedStringArray("area")]
+script = ExtResource("8_xt0tm")
+area = NodePath("..")
+atuendo = 2
 
 [node name="AlÁrbol" parent="Teleporters" unique_id=1557741059 instance=ExtResource("7_agf16")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.558232, 1, 1.810142)

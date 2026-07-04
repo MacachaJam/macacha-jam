@@ -181,17 +181,8 @@ silabeos = Dictionary[int, String]({
 1: "pos-que-fe-de-repartir-de-palta-peste-zapato-sor-uña-alimaña",
 2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hm-mmmm-hm-mm-mmhh"
 })
-"diálogo" = NodePath("DiálogoSilabeador")
-interfaz = NodePath("CanvasLayer/InterfazSilabeador")
-
-[node name="DiálogoSilabeador" type="Node" parent="PuzzlePararLaOreja" unique_id=414779755]
-script = ExtResource("10_77mci")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="PuzzlePararLaOreja" unique_id=1428729698]
-
-[node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
-visible = false
-position = Vector2(330, 382)
+"diálogo" = NodePath("../DiálogoSilabeador")
+interfaz = NodePath("../CanvasLayer/InterfazSilabeador")
 
 [node name="PuzzlePararLaOreja2" type="Node" parent="." unique_id=1182041325 node_paths=PackedStringArray("diálogo", "interfaz")]
 unique_name_in_owner = true
@@ -202,7 +193,16 @@ silabeos = Dictionary[int, String]({
 1: "al-lemos-tos-canelones-y-toldo-sara-provocar-un-grumo-de-pesos-tachos-malpechos",
 2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hmmm-hm-mm-hmm-mmmm-hm-hm"
 })
-"diálogo" = NodePath("../PuzzlePararLaOreja/DiálogoSilabeador")
-interfaz = NodePath("../PuzzlePararLaOreja/CanvasLayer/InterfazSilabeador")
+"diálogo" = NodePath("../DiálogoSilabeador")
+interfaz = NodePath("../CanvasLayer/InterfazSilabeador")
+
+[node name="DiálogoSilabeador" type="Node" parent="." unique_id=414779755]
+script = ExtResource("10_77mci")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1428729698]
+
+[node name="InterfazSilabeador" parent="CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
+visible = false
+position = Vector2(330, 382)
 
 [connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]

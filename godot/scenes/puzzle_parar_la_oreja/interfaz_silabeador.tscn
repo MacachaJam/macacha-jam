@@ -34,4 +34,5 @@ position = Vector2(0, -50)
 scale = Vector2(1, 5)
 texture = ExtResource("2_u8xp1")
 
+[connection signal="timeout" from="Spawneador" to="." method="_on_spawneador_timeout"]
 [connection signal="body_entered" from="Centro" to="." method="_on_centro_body_entered"]

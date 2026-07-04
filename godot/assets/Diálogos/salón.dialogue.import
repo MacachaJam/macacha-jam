@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dxbq8ut0rgvof"
+path="res://.godot/imported/salón.dialogue-f4ff221207d39629cb54e100bf8741f8.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/salón.dialogue"
+dest_files=["res://.godot/imported/salón.dialogue-f4ff221207d39629cb54e100bf8741f8.tres"]
+
+[params]
+
+defaults=true
