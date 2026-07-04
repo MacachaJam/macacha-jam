@@ -42,16 +42,16 @@ func _physics_process(delta: float) -> void:
 	aguja.rotation = ángulo_input
 	queue_redraw()
 
-
 func iniciar(colores: Dictionary[PuzzlePararLaOreja.Precisiones, Color]) -> void:
 	_colores = colores
 	sprite_2d.modulate = _colores[PuzzlePararLaOreja.Precisiones.BIEN]
 	queue_redraw()
 	índice_sílaba = 0
-	spawneador.timeout.connect(_on_spawneador_timeout)
 	spawneador.start()
 
 func _on_spawneador_timeout() -> void:
+	if índice_sílaba + 1 > cantidad_de_sílabas:
+		return
 	var p: PuntitoInterfazSilabeador = PUNTITO.instantiate()
 	p.altura_inicial = 200
 	p.índice_sílaba = índice_sílaba

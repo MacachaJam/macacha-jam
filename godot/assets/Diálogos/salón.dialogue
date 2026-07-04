@@ -1,0 +1,57 @@
+~ start
+~ primer_round
+Juana Moro: ¿Vendrás a verme pronto?
+José de la Serna: Lo veo difícil, querida. He de enfrentar días movidos.
+Juana Moro: ¿Qué ocurre?
+José de la Serna: Nada, mujer. Que estoy ocupado.
+Juana Moro: Sabes que puedes aliviar tus preocupaciones conmigo.
+José de la Serna: Es que debo dejar esta ciudad en unos días. 
+Juana Moro: ¿Y por qué?
+José de la Serna: Órdenes de arriba.
+Juana Moro: ¿Cómo de arriba?
+José de la Serna: ¡Pues de mis superiores!
+Juana Moro: Calma. Sabes que como mujer entiendo poco y nada de esas cuestiones.
+José de la Serna: ¿Entonces, por qué te insmicuyes?
+Juana Moro: Porque me interesas tú y tu trabajo.
+José de la Serna: No es necesario que lo hagas.
+Juana Moro: Pero quiero, hacerlo. Cuéntame, ¿qué te preocupa?
+José de la Serna: Cómo bien has dicho, son asuntos que no incumben a las mujeres.
+Juana Moro: Si es algo que te aqueja, es de mi incumbencia. ¿Qué es lo que más te preocupa?
+# José de la Serna: Pues que he de partir de Salta este sábado por una semana.
+=> al_puzzle
+
+~ segundo_round
+José de la Serna: Si bien se encuentra próximo el paraje a donde debo dirigirme, lo escarpado de este terreno dificulta el viaje.
+Juana Moro: ¿Qué es lo que más te preocupa?
+José de la Serna: Pues que me voy lejos y encima con muchos de mis hombres?
+Juana Moro: ¿Muchos de tus hombres?
+# José de la Serna: Al menos dos batallones. Y todo para sofocar un grupo de esos gauchos maltrechos.
+=> al_puzzle
+
+~ exito
+Juana Moro: Si es necesario, pues has de ir.
+José de la Serna: ¿Pero quién ha de cuidar esta ciudad?
+Juana Moro: Los vecinos de bien, leales al Virrey y a Su Majestad, cuidarán esta ciudad.
+Juana Moro: Y ahora que sabes eso, puedes irte en paz.
+set GameState.global.hechos_del_dia.conseguiste_la_info = true
+=> END
+
+~ al_puzzle
+if ronda == 1:
+	do puzzle_parar_la_oreja.iniciar()
+else:
+	do puzzle_parar_la_oreja_2.iniciar()
+=> END
+
+~ reintenta_1
+Juana Moro: ¿Lo qué?
+José de la Serna: Shh... vení más cerca que te lo repito...
+=> al_puzzle
+
+~ reintenta_2
+Juana Moro: De nuevo no escuché
+José de la Serna: Shh... vení un poco más cerca, te decía que...
+=> al_puzzle
+
+~ fracaso
+José de la Serna: Uy, ¡nos escuchan! ¡Soldados! ¡A ella!

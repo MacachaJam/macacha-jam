@@ -10,13 +10,14 @@ signal cambió_atuendo
 @export var atuendo_actual: Jugadora.Atuendos = Jugadora.Atuendos.VESTIDO:
 	set = _set_atuendo_actual
 
+## Los hechos del día.
+@export var hechos_del_dia: Dictionary[String, Variant]
+
+func pasar_de_dia() -> void:
+	dia_actual += 1
+	hechos_del_dia = {}
+
+
 func _set_atuendo_actual(nuevo_atuendo: Jugadora.Atuendos) -> void:
 	atuendo_actual = nuevo_atuendo
 	cambió_atuendo.emit()
-
-## Generic game state facts. For quests, use [member QuestState.facts] instead.
-@export var facts: Dictionary[String, Variant]
-
-## Global player state. During a quest, [member QuestState.player] should be
-## used instead. [GameState.player] always points to the correct instance.
-@export var player: PlayerState = PlayerState.new()

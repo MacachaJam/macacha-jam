@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6pmivs0pdb8q"]
 
 [ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_i0cyr"]
+[ext_resource type="Script" uid="uid://1iaorswblo7d" path="res://scenes/Levels/barracas.gd" id="1_kkabb"]
 [ext_resource type="Texture2D" uid="uid://dol0y4yw6m8tn" path="res://assets/Terrenos/Barracas Floor.png" id="2_i0cyr"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_ppftp"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_arn0i"]
@@ -18,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://v65oe0pcwy4h" path="res://assets/Props/Barricada.png" id="16_ybm7l"]
 [ext_resource type="Texture2D" uid="uid://c8ohoqi4gmpr2" path="res://assets/Props/BarricadaTirante.png" id="17_52ba6"]
 [ext_resource type="Texture2D" uid="uid://dm6rfvkx18nm0" path="res://assets/Props/ParedBarraca.png" id="18_f6v1x"]
+[ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="19_dhd7o"]
 
 [sub_resource type="Sky" id="Sky_skhqw"]
 sky_material = ExtResource("1_i0cyr")
@@ -110,7 +112,13 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6v1x"]
 size = Vector3(2.1212158, 1, 2.0117188)
 
+[sub_resource type="BoxMesh" id="BoxMesh_kkabb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p8cny"]
+radius = 1.637207
+
 [node name="Barracas" type="Node3D" unique_id=293645083]
+script = ExtResource("1_kkabb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=95201576]
 environment = SubResource("Environment_t17se")
@@ -1127,3 +1135,22 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("18_f6v1x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1588988618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0086756, 1, 3.4572427)
+mesh = SubResource("BoxMesh_kkabb")
+
+[node name="AreaInteractiva" type="Area3D" parent="MeshInstance3D" unique_id=948301766]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("19_dhd7o")
+metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/AreaInteractiva" unique_id=1271557935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_p8cny")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
