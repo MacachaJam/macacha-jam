@@ -30,6 +30,9 @@ func _on_teleport_area_body_entered(_body: Node3D) -> void:
 	if not scene_link.next_scene:
 		# We didn't change scene - re-enable the teleporter
 		_connect()
+	else:
+		# cambiamos la escena, avisemos
+		GameState.scene.jugadora_teletrasportada.emit()
 
 
 func _ready() -> void:
