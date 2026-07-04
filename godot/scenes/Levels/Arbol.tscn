@@ -512,8 +512,8 @@ metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -9.750983, 1, -7.593296)
 next_scene = "uid://dw8jh5txr51br"
 spawn_point_path = NodePath("SpawnPoints/DesdeElÁrbol")
-enter_transition = 4
-exit_transition = 5
+enter_transition = 1
+exit_transition = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=747204322]
 shape = SubResource("BoxShape3D_63gek")
