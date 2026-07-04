@@ -187,6 +187,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3786, 0, 1.4747543)
 script = ExtResource("6_44d2x")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
+[node name="DesdeElÁrbol" type="Marker3D" parent="SpawnPoints" unique_id=1796153893 groups=["spawn_point"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.028524, 0, 1.7321372)
+script = ExtResource("6_44d2x")
+metadata/_custom_type_script = "uid://db5cfg6do7bnk"
+
 [node name="Teleporters" type="Node3D" parent="." unique_id=1255310879]
 
 [node name="AlCampamento" parent="Teleporters" unique_id=766874005 instance=ExtResource("7_agf16")]

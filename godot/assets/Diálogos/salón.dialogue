@@ -32,7 +32,8 @@ Juana Moro: ¿Muchos de tus hombres?
 Juana Moro: Si es necesario, pues has de ir.
 José de la Serna: ¿Pero quién ha de cuidar esta ciudad?
 Juana Moro: Los vecinos de bien, leales al Virrey y a Su Majestad, cuidarán esta ciudad.
-Juana Moro: Y ahora que sabes eso, puedes irte en paz. 
+Juana Moro: Y ahora que sabes eso, puedes irte en paz.
+set GameState.global.hechos_del_dia.conseguiste_la_info = true
 => END
 
 ~ al_puzzle
