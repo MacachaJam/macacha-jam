@@ -1,8 +1,32 @@
 [gd_scene format=3 uid="uid://nv5htlworha8"]
 
 [ext_resource type="Texture2D" uid="uid://cmnq3m6afgnpm" path="res://assets/Props/Bush.png" id="1_aa1hs"]
+[ext_resource type="Script" uid="uid://bivv2q8nbt1r5" path="res://scenes/efecto_squash_stretch/efecto_squash_stretch.gd" id="2_3sswt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3sswt"]
 
 [node name="Arbusto Bajo" type="Node3D" unique_id=2055832729]
+
+[node name="EfectoTodo" type="Node" parent="." unique_id=755943253 node_paths=PackedStringArray("nodos")]
+script = ExtResource("2_3sswt")
+nodos = [NodePath("..")]
+metadata/_custom_type_script = "uid://bivv2q8nbt1r5"
+
+[node name="EfectoHojas" type="Node" parent="." unique_id=1364971182 node_paths=PackedStringArray("nodos")]
+script = ExtResource("2_3sswt")
+nodos = [NodePath("../Sprite3D2"), NodePath("../Sprite3D3"), NodePath("../Sprite3D4"), NodePath("../Sprite3D5"), NodePath("../Sprite3D6"), NodePath("../Sprite3D7"), NodePath("../Sprite3D8"), NodePath("../Sprite3D9"), NodePath("../Sprite3D10"), NodePath("../Sprite3D11"), NodePath("../Sprite3D12"), NodePath("../Sprite3D13"), NodePath("../Sprite3D14"), NodePath("../Sprite3D15")]
+minimum_damp = 1.0
+maximum_damp = 5.0
+metadata/_custom_type_script = "uid://bivv2q8nbt1r5"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=741809116]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=604512714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_3sswt")
+debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1035640444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
@@ -129,3 +153,6 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("1_aa1hs")
+
+[connection signal="body_entered" from="Area3D" to="EfectoHojas" method="squash_stretch" unbinds=1]
+[connection signal="body_entered" from="Area3D" to="EfectoTodo" method="squash_stretch" unbinds=1]
