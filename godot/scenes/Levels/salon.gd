@@ -11,7 +11,7 @@ var ronda: int
 var intentos: int
 
 func _ready() -> void:
-	if GameState.global.dia_actual != 2 or "conseguiste_la_info" in GameState.global.hechos_del_dia:
+	if GameState.global.dia_actual != 2 or GameState.global.hechos_del_dia.get("conseguiste_la_info"):
 		_desactivar_area()
 
 func _desactivar_area() -> void:
