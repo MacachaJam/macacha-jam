@@ -77,6 +77,24 @@ stencil_flags = 2
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_63gek"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdupl"]
+size = Vector3(10.241333, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bpmym"]
+size = Vector3(8.546936, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iuonk"]
+size = Vector3(12.179138, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ub2o"]
+size = Vector3(14.299408, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3s8a1"]
+size = Vector3(6.629196, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bgaww"]
+size = Vector3(4.8395004, 1, 1)
+
 [sub_resource type="Gradient" id="Gradient_bpmym"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
 
@@ -129,6 +147,30 @@ surface_material_override/0 = SubResource("StandardMaterial3D_awpir")
 
 [node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=619585262]
 shape = SubResource("WorldBoundaryShape3D_63gek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terreno" unique_id=2065369364]
+transform = Transform3D(0.95238316, 0, -0.30490372, 0, 1, 0, 0.30490372, 0, 0.95238316, -2.9614482, 0.9146271, -5.9212894)
+shape = SubResource("BoxShape3D_wdupl")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Terreno" unique_id=1708432662]
+transform = Transform3D(0.99951327, 0, -0.031200558, 0, 1, 0, 0.031200558, 0, 0.99951327, 5.970173, 0.9146271, -4.37273)
+shape = SubResource("BoxShape3D_bpmym")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Terreno" unique_id=914657766]
+transform = Transform3D(0.32470366, 0, -0.94581586, 0, 1, 0, 0.94581586, 0, 0.32470366, -7.7893033, 0.9146271, 0.93971074)
+shape = SubResource("BoxShape3D_iuonk")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Terreno" unique_id=217024630]
+transform = Transform3D(0.99672395, 0, 0.080879286, 0, 1, 0, -0.080879286, 0, 0.99672395, 1.2845247, 0.9146271, 6.1232142)
+shape = SubResource("BoxShape3D_4ub2o")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Terreno" unique_id=646998107]
+transform = Transform3D(0.31068182, 0, 0.95051396, 0, 1, 0, -0.95051396, 0, 0.31068182, 9.203981, 0.9146266, 2.8504634)
+shape = SubResource("BoxShape3D_3s8a1")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Terreno" unique_id=1801063786]
+transform = Transform3D(-0.06161326, 0, 0.9981001, 0, 1, 0, -0.9981001, 0, -0.06161326, 9.898942, 0.9146266, -1.9632854)
+shape = SubResource("BoxShape3D_bgaww")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_xasd7")]
 
@@ -502,7 +544,7 @@ omni_attenuation = -0.596
 [node name="SpawnPoints" type="Node3D" parent="." unique_id=243863098]
 
 [node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=534237449 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.379833, 4.7683716e-07, -6.0613074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2665334, 4.7683716e-07, -4.1579432)
 script = ExtResource("12_n8lmo")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
@@ -516,6 +558,7 @@ enter_transition = 1
 exit_transition = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCentro" unique_id=747204322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2722726, 0, 1.9348469)
 shape = SubResource("BoxShape3D_63gek")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
