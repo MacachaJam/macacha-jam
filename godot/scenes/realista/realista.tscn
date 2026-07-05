@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8g2e1jr8vrb" path="res://assets/Personajes/Realistas/Realista Idle.png" id="1_blxll"]
 [ext_resource type="Texture2D" uid="uid://dwjvxhco0gxd8" path="res://assets/Personajes/Realistas/Realista Alert.png" id="1_qfk7r"]
 [ext_resource type="Texture2D" uid="uid://c5mxtkbsdtmi4" path="res://assets/Personajes/Realistas/Realista Walk.png" id="2_41vqv"]
+[ext_resource type="Script" uid="uid://buuefw3a22rjy" path="res://scenes/frame_random/frame_random.gd" id="4_4xweg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.4453125
@@ -183,3 +184,9 @@ texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_blxll")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="FrameRandom" type="Node3D" parent="AnimatedSprite3D" unique_id=820722459 node_paths=PackedStringArray("sprite")]
+transform = Transform3D(0.16666667, 0, 0, 0, 0.16666667, 0, 0, 0, 0.16666667, 0, 0, 0)
+script = ExtResource("4_4xweg")
+sprite = NodePath("..")
+metadata/_custom_type_script = "uid://buuefw3a22rjy"
