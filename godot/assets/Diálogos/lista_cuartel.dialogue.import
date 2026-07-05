@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dfrwgissysnsy"
+path="res://.godot/imported/lista_cuartel.dialogue-e6108e12619b8ae6d71954a21524d64b.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/lista_cuartel.dialogue"
+dest_files=["res://.godot/imported/lista_cuartel.dialogue-e6108e12619b8ae6d71954a21524d64b.tres"]
+
+[params]
+
+defaults=true
