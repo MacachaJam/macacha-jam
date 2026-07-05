@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b0lo1108ijp4q"]
 
 [ext_resource type="Script" uid="uid://d07fgxbjbscqo" path="res://scenes/Levels/salon.gd" id="1_77mci"]
-[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_yglj4"]
 [ext_resource type="Texture2D" uid="uid://g4m58bm3s7c8" path="res://assets/Terrenos/Salon Floor.png" id="2_dqdth"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_dqdth"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_j8ckk"]
@@ -16,16 +15,27 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="9_77mci"]
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="9_suvrd"]
 [ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="10_77mci"]
+[ext_resource type="Texture2D" uid="uid://0r58i6t38fpl" path="res://assets/Personajes/Evil Twink/Serna.png" id="11_3njmf"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
+[ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="13_kubcc"]
 
-[sub_resource type="Sky" id="Sky_js3yh"]
-sky_material = ExtResource("1_yglj4")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
+sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
+sky_curve = 0.049481597
+ground_bottom_color = Color(0.06047999, 0.031199997, 0.08, 1)
+ground_horizon_color = Color(0.2755899, 0.28154263, 0.29346034, 1)
+ground_curve = 0.029984852
 
-[sub_resource type="Environment" id="Environment_eornw"]
+[sub_resource type="Sky" id="Sky_3njmf"]
+sky_material = SubResource("ProceduralSkyMaterial_xitv8")
+
+[sub_resource type="Environment" id="Environment_7dnsd"]
 background_mode = 2
-sky = SubResource("Sky_js3yh")
-fog_enabled = true
+sky = SubResource("Sky_3njmf")
+ambient_light_source = 2
+ambient_light_color = Color(0.8039668, 0.67420906, 0.539601, 1)
+ambient_light_energy = 1.2
 fog_mode = 1
 fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
 fog_density = 0.5367
@@ -35,7 +45,6 @@ fog_height_density = 0.4192
 fog_depth_curve = 0.35355443
 fog_depth_begin = 12.0
 fog_depth_end = 40.0
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_suvrd"]
@@ -53,6 +62,15 @@ distance_fade_max_distance = 7.0
 stencil_flags = 2
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gk4tr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3njmf"]
+size = Vector3(1, 1, 6.5742493)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dnsd"]
+size = Vector3(17.876953, 1, 0.6767731)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vfiry"]
+size = Vector3(12.408691, 1, 0.6767731)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_suvrd"]
 radius = 1.637207
@@ -88,12 +106,12 @@ size = Vector3(2, 2, 1)
 script = ExtResource("1_77mci")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=617828403]
-environment = SubResource("Environment_eornw")
+environment = SubResource("Environment_7dnsd")
 
 [node name="Terreno" type="StaticBody3D" parent="." unique_id=607019565]
 
 [node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=1276825332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05743394, 0, -0.47340536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05743394, 0, -0.60643816)
 mesh = SubResource("PlaneMesh_suvrd")
 surface_material_override/0 = SubResource("StandardMaterial3D_77mci")
 
@@ -130,64 +148,80 @@ alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("4_r30nc")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terreno" unique_id=1376980212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.722325, 0, -0.59121704)
+shape = SubResource("BoxShape3D_3njmf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Terreno" unique_id=1299708669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.746842, 0, -0.59121704)
+shape = SubResource("BoxShape3D_3njmf")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Terreno" unique_id=1250741613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30836582, 0, -3.6371078)
+shape = SubResource("BoxShape3D_7dnsd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Terreno" unique_id=1024588372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.425765, 0, 2.6809702)
+shape = SubResource("BoxShape3D_vfiry")
+
 [node name="Props" type="Node3D" parent="." unique_id=1068907117]
 
 [node name="Silla" parent="Props" unique_id=586239224 instance=ExtResource("6_xitv8")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -1.905292, 0, -2.877237)
+transform = Transform3D(2.9922917, 0, -0.21492045, 0, 3, 0, 0.21492045, 0, 2.9922917, -1.3643129, 0, -2.7002118)
 
 [node name="Silla2" parent="Props" unique_id=949565289 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.5, 0, 3.059797e-07, 0, 3.5, 0, -3.059797e-07, 0, -3.5, -3.3661664, 0, -2.711284)
+transform = Transform3D(-2.9922917, 0, 0.21492076, 0, 3, 0, -0.21492076, 0, -2.9922917, -2.8333225, 0, -2.6393423)
+
+[node name="Silla18" parent="Props" unique_id=1026672942 instance=ExtResource("6_xitv8")]
+transform = Transform3D(3.4995766, 0, 0.05447422, 0, 3.5000005, 0, -0.05447422, 0, 3.4995766, -4.9394813, -0.18538266, -2.2834494)
+
+[node name="Silla19" parent="Props" unique_id=2037858432 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.4995766, 0, -0.05447392, 0, 3.5000005, 0, 0.05447392, 0, -3.4995766, -7.738943, -0.18538314, -2.1661627)
 
 [node name="Silla5" parent="Props" unique_id=13335073 instance=ExtResource("6_xitv8")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -5.814694, 0, 1.4379652)
+transform = Transform3D(2.9296494, 0, -0.645875, 0, 3, 0, 0.645875, 0, 2.9296494, -5.0308156, 4.7683716e-07, 0.68079245)
 
 [node name="Silla6" parent="Props" unique_id=2053447205 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.5, 0, 3.059797e-07, 0, 3.5, 0, -3.059797e-07, 0, -3.5, -7.275568, 0, 1.6039183)
+transform = Transform3D(-2.9895191, 0, 0.25055516, 0, 3.0000005, 0, -0.25055516, 0, -2.9895191, -6.222069, 4.7683716e-07, 0.70959973)
 
 [node name="Silla7" parent="Props" unique_id=521998782 instance=ExtResource("6_xitv8")]
-transform = Transform3D(0.3050453, 0, -3.4866815, 0, 3.5, 0, 3.4866815, 0, 0.3050453, 7.645203, 0, 1.8868225)
-
-[node name="Silla8" parent="Props" unique_id=453492159 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-0.305045, 0, 3.4866815, 0, 3.5, 0, -3.4866815, 0, -0.305045, -6.6914535, 0, 0.8005159)
-
-[node name="Silla9" parent="Props" unique_id=1569592512 instance=ExtResource("6_xitv8")]
-transform = Transform3D(0.3050453, 0, -3.4866815, 0, 3.5, 0, 3.4866815, 0, 0.3050453, -6.398808, 0, 2.241367)
+transform = Transform3D(0.2614674, 0, -2.988584, 0, 3, 0, 2.988584, 0, 0.2614674, 7.1724696, 0, 2.1566308)
 
 [node name="Silla10" parent="Props" unique_id=1631780398 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-0.305045, 0, 3.4866815, 0, 3.5, 0, -3.4866815, 0, -0.305045, 7.3525577, 0, 0.44597125)
+transform = Transform3D(-0.26146695, 0, 2.988584, 0, 3, 0, -2.988584, 0, -0.26146695, 6.879824, 0, 0.71577954)
 
 [node name="Silla11" parent="Props" unique_id=614152732 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-0.3105679, 0, -3.4861944, 0, 3.5000005, 0, 3.4861944, 0, -0.3105679, 1.7101353, 0, 2.4225194)
+transform = Transform3D(-0.26620105, 0, -2.988166, 0, 3, 0, 2.988166, 0, -0.26620105, 1.3298875, 2.3841858e-07, 2.2472615)
 
 [node name="Silla12" parent="Props" unique_id=1124260787 instance=ExtResource("6_xitv8")]
-transform = Transform3D(0.31056818, 0, 3.4861944, 0, 3.5000005, 0, -3.4861944, 0, 0.31056818, 1.6744653, 0, 0.95268226)
+transform = Transform3D(0.26620114, 0, 2.988166, 0, 3, 0, -2.988166, 0, 0.26620114, 1.3700593, 2.3841858e-07, 0.9164432)
 
 [node name="Silla13" parent="Props" unique_id=2092624659 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.499354, 0, 0.067295715, 0, 3.500001, 0, -0.067295715, 0, -3.499354, 0.9604029, 0, 1.7565179)
+transform = Transform3D(-2.9994454, 0, 0.057682276, 0, 3, 0, -0.057682276, 0, -2.9994454, 0.8040041, 2.3841858e-07, 1.7064278)
 
 [node name="Silla17" parent="Props" unique_id=1630440829 instance=ExtResource("6_xitv8")]
-transform = Transform3D(0.5812738, 0, 3.4513948, 0, 3.500001, 0, -3.4513948, 0, 0.5812738, -2.744308, 0, -0.47234344)
+transform = Transform3D(1.6700982, 0, 2.4921417, 0, 3, 0, -2.4921417, 0, 1.6700982, -1.5929927, 2.3841858e-07, -0.4803088)
 
 [node name="Silla16" parent="Props" unique_id=1843389107 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.3083768, 0, -1.1422124, 0, 3.500001, 0, 1.1422124, 0, -3.3083768, -3.2902625, 0, 0.80562735)
+transform = Transform3D(-2.9875548, 0, 0.27298266, 0, 3, 0, -0.27298266, 0, -2.9875548, -2.4716287, 2.3841858e-07, 0.20314705)
 
 [node name="Silla14" parent="Props" unique_id=663457712 instance=ExtResource("6_xitv8")]
-transform = Transform3D(3.4993534, 0, -0.06729601, 0, 3.5000005, 0, 0.06729601, 0, 3.4993534, 2.4241977, 0, 1.6186838)
+transform = Transform3D(2.9994454, 0, -0.05768229, 0, 3, 0, 0.05768229, 0, 2.9994454, 1.9177794, 2.3841858e-07, 1.6560521)
 
 [node name="Silla3" parent="Props" unique_id=1564858097 instance=ExtResource("6_xitv8")]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 5.200286, 0.0062217712, 0.09677982)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.1097264, 0.0062208176, -0.5494108)
 
 [node name="Silla15" parent="Props" unique_id=949732084 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.4517288, 0, -0.5792819, 0, 3.5, 0, 0.5792819, 0, -3.4517288, 1.1310209, 0.0062217712, -2.5366535)
+transform = Transform3D(-2.9586248, 0, -0.49652737, 0, 3, 0, 0.49652737, 0, -2.9586248, 1.1310209, 0.0062217712, -2.5366535)
 
 [node name="Silla4" parent="Props" unique_id=231896117 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-3.4183335, 0, 0.7516624, 0, 3.5, 0, -0.7516624, 0, -3.4183335, 3.7394116, 0.0062217712, 0.08685732)
+transform = Transform3D(-2.93, 0, 0.64428204, 0, 3, 0, -0.64428204, 0, -2.93, 3.648852, 0.0062208176, -0.5593333)
 
 [node name="Barra" parent="Props" unique_id=1493162876 instance=ExtResource("6_s6fd5")]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 5.733318, 0, -2.1)
 
 [node name="Mesa Moro" parent="Props" unique_id=649280144 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -6.504708, -0.17939198, -1.5170546)
+transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -6.4589443, -0.17939198, -2.4431121)
 
 [node name="AreaInteractiva" type="Area3D" parent="Props/Mesa Moro" unique_id=1017370224]
 unique_name_in_owner = true
@@ -203,27 +237,46 @@ shape = SubResource("CylinderShape3D_suvrd")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
 
 [node name="Mesa" parent="Props" unique_id=1944919795 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -6.504708, -0.17939198, 1.4829454)
+transform = Transform3D(0.015199244, 0, 2.4999537, 0, 2.4999998, 0, -2.4999537, 0, 0.015199244, -5.5531487, -0.1793915, 0.56546164)
 
 [node name="Mesa2" parent="Props" unique_id=1402644708 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -2.6047077, -0.17939198, -2.9170547)
+transform = Transform3D(0.16202119, 0, 2.9956217, 0, 3, 0, -2.9956217, 0, 0.16202119, -2.059079, -0.17939198, -2.7900333)
 
 [node name="Mesa3" parent="Props" unique_id=1654353232 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 7.4745913, -0.17939198, 1.1905899)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.0018578, -0.17939198, 1.4603982)
 
 [node name="Mesa5" parent="Props" unique_id=1720399506 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 4.468622, -0.17939198, -0.09040022)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.3780627, -0.17939293, -0.73659086)
 
 [node name="Mesa6" parent="Props" unique_id=1160708927 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 1.6853306, -0.1793915, 1.5354731)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 1.3809246, -0.17939126, 1.4992341)
 
 [node name="Mesa7" parent="Props" unique_id=590592747 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 1.8311329, -0.1793915, -2.6304471)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.8311329, -0.1793915, -2.6304471)
 
 [node name="Mesa4" parent="Props" unique_id=1174039047 instance=ExtResource("6_cy4hc")]
-transform = Transform3D(2.8942401, 0, 0.789541, 0, 3.000001, 0, -0.789541, 0, 2.8942401, -2.673202, -0.17939198, 0.46249914)
+transform = Transform3D(2.271626, 0, -0.36016083, 0, 2.3000002, 0, 0.36016083, 0, 2.271626, -1.7680686, -0.17939174, 0.14395487)
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_dqdth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0703311, 0)
+
+[node name="NPCS" type="Node3D" parent="." unique_id=1166018190]
+
+[node name="Sprite3D" type="Sprite3D" parent="NPCS" unique_id=499335895]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -7.5058694, 0.90000004, -2.454454)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("11_3njmf")
+
+[node name="Sprite3D2" type="Sprite3D" parent="NPCS" unique_id=545291289]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -5.3975654, 0.8493745, -2.5193496)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("12_7dnsd")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=116716274]
 
@@ -265,11 +318,12 @@ metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 [node name="SpawnPoints" type="Node3D" parent="." unique_id=1716263134]
 
 [node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=248170975 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.554162, 4.7683716e-07, 2.735766)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.298474, 9.536743e-07, 1.1709732)
 script = ExtResource("6_nb8hv")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
 [node name="Teleporters" type="Node3D" parent="." unique_id=288352073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.109912395, 0, -1.6302805)
 
 [node name="AlCentro" parent="Teleporters" unique_id=766874005 instance=ExtResource("7_dqdth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.577238, 1, 4.5577545)
