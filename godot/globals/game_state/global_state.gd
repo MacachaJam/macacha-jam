@@ -6,16 +6,23 @@ extends Resource
 
 signal cambió_atuendo
 
+var hechos_inicial: Dictionary[String, Variant] = {
+	"hablaste_con_macacha": false,
+	"conseguiste_la_info": false,
+	"te_descubrieron": false,
+}
+
+
 @export var dia_actual: int = 1
 @export var atuendo_actual: Jugadora.Atuendos = Jugadora.Atuendos.VESTIDO:
 	set = _set_atuendo_actual
 
 ## Los hechos del día.
-@export var hechos_del_dia: Dictionary[String, Variant]
+@export var hechos_del_dia: Dictionary[String, Variant] = hechos_inicial
 
 func pasar_de_dia() -> void:
 	dia_actual += 1
-	hechos_del_dia = {}
+	hechos_del_dia = hechos_inicial
 
 
 func _set_atuendo_actual(nuevo_atuendo: Jugadora.Atuendos) -> void:

@@ -3,7 +3,7 @@ extends Node3D
 @onready var area_interactiva: AreaInteractiva = %AreaInteractiva
 
 func _ready() -> void:
-	if GameState.global.dia_actual != 3 or "conseguiste_la_info" in GameState.global.hechos_del_dia:
+	if GameState.global.dia_actual != 3 or GameState.global.hechos_del_dia.get("conseguiste_la_info"):
 		_desactivar_area()
 
 func _desactivar_area() -> void:
