@@ -53,6 +53,7 @@ enabled=PackedStringArray("res://addons/DampedOscillator/plugin.cfg", "res://add
 [global_group]
 
 player=""
+realista=""
 
 [gui]
 
