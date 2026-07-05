@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://b6lowx8725ueu"]
+
+[ext_resource type="Script" uid="uid://bivv2q8nbt1r5" path="res://scenes/efecto_squash_stretch/efecto_squash_stretch.gd" id="1_2e76s"]
+[ext_resource type="Script" uid="uid://3cvjyufkoe8y" path="res://scenes/efecto_squash_stretch/efecto_squash_stretch_test.gd" id="1_vbpi2"]
+[ext_resource type="Texture2D" uid="uid://cmnq3m6afgnpm" path="res://assets/Props/Bush.png" id="2_vbpi2"]
+
+[node name="EfectoSquashStretchTest" type="Node3D" unique_id=2055832729]
+script = ExtResource("1_vbpi2")
+
+[node name="EfectoTodo" type="Node" parent="." unique_id=831293299 node_paths=PackedStringArray("nodos")]
+unique_name_in_owner = true
+script = ExtResource("1_2e76s")
+nodos = [NodePath("../Arbusto")]
+metadata/_custom_type_script = "uid://bivv2q8nbt1r5"
+
+[node name="EfectoHojas" type="Node" parent="." unique_id=874100099 node_paths=PackedStringArray("nodos")]
+unique_name_in_owner = true
+script = ExtResource("1_2e76s")
+nodos = [NodePath("../Arbusto/Sprite3D2"), NodePath("../Arbusto/Sprite3D3"), NodePath("../Arbusto/Sprite3D4"), NodePath("../Arbusto/Sprite3D5"), NodePath("../Arbusto/Sprite3D16"), NodePath("../Arbusto/Sprite3D17"), NodePath("../Arbusto/Sprite3D18"), NodePath("../Arbusto/Sprite3D19"), NodePath("../Arbusto/Sprite3D6"), NodePath("../Arbusto/Sprite3D7"), NodePath("../Arbusto/Sprite3D8"), NodePath("../Arbusto/Sprite3D9"), NodePath("../Arbusto/Sprite3D10"), NodePath("../Arbusto/Sprite3D11"), NodePath("../Arbusto/Sprite3D12"), NodePath("../Arbusto/Sprite3D13"), NodePath("../Arbusto/Sprite3D14"), NodePath("../Arbusto/Sprite3D15")]
+minimum_damp = 1.0
+maximum_damp = 5.0
+metadata/_custom_type_script = "uid://bivv2q8nbt1r5"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=639116116]
+transform = Transform3D(1, 0, 0, 0, 0.83867055, 0.54463905, 0, -0.54463905, 0.83867055, -0.014804697, 3.2333708, 3.3576384)
+fov = 60.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=186271640]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1345475578]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 177.0
+offset_top = 314.0
+offset_right = 217.0
+offset_bottom = 354.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control" unique_id=862969871]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer" unique_id=1794486577]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=1272841336]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Efecto squash stretch"
+horizontal_alignment = 1
+
+[node name="ProbarTodo" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=847337986]
+layout_mode = 2
+text = "Probar todo!"
+
+[node name="ProbarHojas" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=81094767]
+layout_mode = 2
+text = "Probar hojas!"
+
+[node name="ProbarTodoMasHojas" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=1886736090]
+layout_mode = 2
+text = "Probar todo + hojas!"
+
+[node name="Arbusto" type="Node3D" parent="." unique_id=1793159940]
+
+[node name="Sprite3D2" type="Sprite3D" parent="Arbusto" unique_id=1035640444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5035774, 0)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Arbusto" unique_id=102177892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1818175, -0.1713109)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Arbusto" unique_id=1709540909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5356914, 1.0982993, -0.41766953)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Arbusto" unique_id=1557597272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63125837, 0.91153646, -0.58898044)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Arbusto" unique_id=1790736012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5356914, 0.7931353, -0.4967953)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Arbusto" unique_id=1321883701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63125837, 0.6063725, -0.6681062)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Arbusto" unique_id=685586704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46430862, 0.7931353, -0.4967953)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Arbusto" unique_id=1345014145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36874163, 0.6063725, -0.6681062)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Arbusto" unique_id=1989128818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378906, 1.0062809, -0.2008028)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Arbusto" unique_id=1021898300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3472942, 1.1384262, -0.3721137)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Arbusto" unique_id=1627194357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5977371, 0.6, 0.27828908)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Arbusto" unique_id=580744090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47047675, 0.7398803, 0.10697818)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Arbusto" unique_id=852702400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6973655, 0.6, 0.12716806)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Arbusto" unique_id=987971685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6973655, 0.6, -0.044142842)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Arbusto" unique_id=540256048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40165347, 0.6, 0.6155522)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Arbusto" unique_id=1403235035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40165347, 0.6, 0.4442413)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Arbusto" unique_id=1908484923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2425763, 0.6, 0.6155522)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Arbusto" unique_id=860755745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2425763, 0.6, 0.4442413)
+modulate = Color(0.94, 0.75576, 0.15040003, 1)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_vbpi2")
+
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/ProbarTodo" to="EfectoTodo" method="squash_stretch"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/ProbarHojas" to="EfectoHojas" method="squash_stretch"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/ProbarTodoMasHojas" to="EfectoTodo" method="squash_stretch"]
+[connection signal="pressed" from="CanvasLayer/Control/CenterContainer/VBoxContainer/ProbarTodoMasHojas" to="EfectoHojas" method="squash_stretch"]
