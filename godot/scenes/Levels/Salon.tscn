@@ -5,8 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://g4m58bm3s7c8" path="res://assets/Terrenos/Salon Floor.png" id="2_dqdth"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_dqdth"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_j8ckk"]
+[ext_resource type="Texture2D" uid="uid://cgmhde0rqfl4c" path="res://assets/Props/Pared Salon Top.png" id="4_r30nc"]
+[ext_resource type="Texture2D" uid="uid://dg8iw52gxrlrl" path="res://assets/Props/Pared Salon Side.png" id="5_s6fd5"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_vub8g"]
+[ext_resource type="PackedScene" uid="uid://0b5d8bv34thn" path="res://assets/Props/Mesa.tscn" id="6_cy4hc"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_nb8hv"]
+[ext_resource type="PackedScene" uid="uid://dqwr0a7lnkw1f" path="res://assets/Props/Barra.tscn" id="6_s6fd5"]
+[ext_resource type="PackedScene" uid="uid://cfd4jkq3xbycl" path="res://assets/Props/Silla.tscn" id="6_xitv8"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_dqdth"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="9_77mci"]
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="9_suvrd"]
@@ -34,7 +39,7 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_suvrd"]
-size = Vector2(15, 7.5)
+size = Vector2(16.65, 6.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77mci"]
 transparency = 2
@@ -48,6 +53,9 @@ distance_fade_max_distance = 7.0
 stencil_flags = 2
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gk4tr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_suvrd"]
+radius = 1.637207
 
 [sub_resource type="Gradient" id="Gradient_bma5i"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
@@ -76,11 +84,6 @@ density_texture = SubResource("NoiseTexture3D_8mre2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_j8ckk"]
 size = Vector3(2, 2, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_fhnvg"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_suvrd"]
-radius = 1.637207
-
 [node name="Salon" type="Node3D" unique_id=1065385907]
 script = ExtResource("1_77mci")
 
@@ -90,12 +93,135 @@ environment = SubResource("Environment_eornw")
 [node name="Terreno" type="StaticBody3D" parent="." unique_id=607019565]
 
 [node name="Terreno Sup" type="MeshInstance3D" parent="Terreno" unique_id=1276825332]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09928477, 0, 0.0007915497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05743394, 0, -0.47340536)
 mesh = SubResource("PlaneMesh_suvrd")
 surface_material_override/0 = SubResource("StandardMaterial3D_77mci")
 
 [node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=734847313]
 shape = SubResource("WorldBoundaryShape3D_gk4tr")
+
+[node name="Pared Detras" type="Sprite3D" parent="Terreno" unique_id=154310923]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.2030807, 1.6622071, -3.7063239)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("4_r30nc")
+
+[node name="Pared Der" type="Sprite3D" parent="Terreno" unique_id=1044476365]
+transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, 8.350151, 1.6622071, -0.50632375)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_s6fd5")
+
+[node name="Pared Izq" type="Sprite3D" parent="Terreno" unique_id=2094272488]
+transform = Transform3D(-1.3113416e-07, 0, 3, 0, 3, 0, -3, 0, -1.3113416e-07, -8.252494, 1.6622071, -0.50632375)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("5_s6fd5")
+
+[node name="Pared Detras2" type="Sprite3D" parent="Terreno" unique_id=582817367]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.1203575, 1.6622076, -3.7039626)
+flip_h = true
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("4_r30nc")
+
+[node name="Props" type="Node3D" parent="." unique_id=1068907117]
+
+[node name="Silla" parent="Props" unique_id=586239224 instance=ExtResource("6_xitv8")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -1.905292, 0, -2.877237)
+
+[node name="Silla2" parent="Props" unique_id=949565289 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.5, 0, 3.059797e-07, 0, 3.5, 0, -3.059797e-07, 0, -3.5, -3.3661664, 0, -2.711284)
+
+[node name="Silla5" parent="Props" unique_id=13335073 instance=ExtResource("6_xitv8")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -5.814694, 0, 1.4379652)
+
+[node name="Silla6" parent="Props" unique_id=2053447205 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.5, 0, 3.059797e-07, 0, 3.5, 0, -3.059797e-07, 0, -3.5, -7.275568, 0, 1.6039183)
+
+[node name="Silla7" parent="Props" unique_id=521998782 instance=ExtResource("6_xitv8")]
+transform = Transform3D(0.3050453, 0, -3.4866815, 0, 3.5, 0, 3.4866815, 0, 0.3050453, 7.645203, 0, 1.8868225)
+
+[node name="Silla8" parent="Props" unique_id=453492159 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-0.305045, 0, 3.4866815, 0, 3.5, 0, -3.4866815, 0, -0.305045, -6.6914535, 0, 0.8005159)
+
+[node name="Silla9" parent="Props" unique_id=1569592512 instance=ExtResource("6_xitv8")]
+transform = Transform3D(0.3050453, 0, -3.4866815, 0, 3.5, 0, 3.4866815, 0, 0.3050453, -6.398808, 0, 2.241367)
+
+[node name="Silla10" parent="Props" unique_id=1631780398 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-0.305045, 0, 3.4866815, 0, 3.5, 0, -3.4866815, 0, -0.305045, 7.3525577, 0, 0.44597125)
+
+[node name="Silla11" parent="Props" unique_id=614152732 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-0.3105679, 0, -3.4861944, 0, 3.5000005, 0, 3.4861944, 0, -0.3105679, 1.7101353, 0, 2.4225194)
+
+[node name="Silla12" parent="Props" unique_id=1124260787 instance=ExtResource("6_xitv8")]
+transform = Transform3D(0.31056818, 0, 3.4861944, 0, 3.5000005, 0, -3.4861944, 0, 0.31056818, 1.6744653, 0, 0.95268226)
+
+[node name="Silla13" parent="Props" unique_id=2092624659 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.499354, 0, 0.067295715, 0, 3.500001, 0, -0.067295715, 0, -3.499354, 0.9604029, 0, 1.7565179)
+
+[node name="Silla17" parent="Props" unique_id=1630440829 instance=ExtResource("6_xitv8")]
+transform = Transform3D(0.5812738, 0, 3.4513948, 0, 3.500001, 0, -3.4513948, 0, 0.5812738, -2.744308, 0, -0.47234344)
+
+[node name="Silla16" parent="Props" unique_id=1843389107 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.3083768, 0, -1.1422124, 0, 3.500001, 0, 1.1422124, 0, -3.3083768, -3.2902625, 0, 0.80562735)
+
+[node name="Silla14" parent="Props" unique_id=663457712 instance=ExtResource("6_xitv8")]
+transform = Transform3D(3.4993534, 0, -0.06729601, 0, 3.5000005, 0, 0.06729601, 0, 3.4993534, 2.4241977, 0, 1.6186838)
+
+[node name="Silla3" parent="Props" unique_id=1564858097 instance=ExtResource("6_xitv8")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 5.200286, 0.0062217712, 0.09677982)
+
+[node name="Silla15" parent="Props" unique_id=949732084 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.4517288, 0, -0.5792819, 0, 3.5, 0, 0.5792819, 0, -3.4517288, 1.1310209, 0.0062217712, -2.5366535)
+
+[node name="Silla4" parent="Props" unique_id=231896117 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-3.4183335, 0, 0.7516624, 0, 3.5, 0, -0.7516624, 0, -3.4183335, 3.7394116, 0.0062217712, 0.08685732)
+
+[node name="Barra" parent="Props" unique_id=1493162876 instance=ExtResource("6_s6fd5")]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 5.733318, 0, -2.1)
+
+[node name="Mesa Moro" parent="Props" unique_id=649280144 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -6.504708, -0.17939198, -1.5170546)
+
+[node name="AreaInteractiva" type="Area3D" parent="Props/Mesa Moro" unique_id=1017370224]
+unique_name_in_owner = true
+transform = Transform3D(-0.0058891103, 0, -0.33328128, 0, 0.33333346, 0, 0.33328128, 0, -0.0058891103, 0.0027026366, 0.05979735, 0.0032646656)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("9_77mci")
+metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Mesa Moro/AreaInteractiva" unique_id=872217934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_suvrd")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="Mesa" parent="Props" unique_id=1944919795 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -6.504708, -0.17939198, 1.4829454)
+
+[node name="Mesa2" parent="Props" unique_id=1402644708 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(-0.053002, 0, 2.999532, 0, 3.0000005, 0, -2.999532, 0, -0.053002, -2.6047077, -0.17939198, -2.9170547)
+
+[node name="Mesa3" parent="Props" unique_id=1654353232 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 7.4745913, -0.17939198, 1.1905899)
+
+[node name="Mesa5" parent="Props" unique_id=1720399506 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 4.468622, -0.17939198, -0.09040022)
+
+[node name="Mesa6" parent="Props" unique_id=1160708927 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 1.6853306, -0.1793915, 1.5354731)
+
+[node name="Mesa7" parent="Props" unique_id=590592747 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(3, 0, 0, 0, 3.0000005, 0, 0, 0, 3, 1.8311329, -0.1793915, -2.6304471)
+
+[node name="Mesa4" parent="Props" unique_id=1174039047 instance=ExtResource("6_cy4hc")]
+transform = Transform3D(2.8942401, 0, 0.789541, 0, 3.000001, 0, -0.789541, 0, 2.8942401, -2.673202, -0.17939198, 0.46249914)
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_dqdth")]
 
@@ -156,23 +282,6 @@ exit_transition = 5
 shape = SubResource("BoxShape3D_j8ckk")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=972976146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.573534, 1, 1.0462368)
-mesh = SubResource("BoxMesh_fhnvg")
-
-[node name="AreaInteractiva" type="Area3D" parent="MeshInstance3D" unique_id=1017370224]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-collision_layer = 4
-collision_mask = 0
-script = ExtResource("9_77mci")
-metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/AreaInteractiva" unique_id=872217934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CylinderShape3D_suvrd")
-debug_color = Color(0, 1, 0.34509805, 0.41960785)
-
 [node name="PuzzlePararLaOreja" type="Node" parent="." unique_id=1204213719 node_paths=PackedStringArray("diálogo", "interfaz")]
 unique_name_in_owner = true
 script = ExtResource("9_suvrd")
@@ -214,4 +323,4 @@ parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=937243148]
 
-[connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
+[connection signal="inicio_interactuar" from="Props/Mesa Moro/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
