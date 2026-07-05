@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dw8jh5txr51br"]
 
 [ext_resource type="Script" uid="uid://boful5iiyi3ve" path="res://scenes/Levels/centro.gd" id="1_66xkd"]
-[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_bknb0"]
 [ext_resource type="Texture2D" uid="uid://dmnnnpmwioqff" path="res://assets/Terrenos/Centro Floor.png" id="2_agf16"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_agf16"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_adkwo"]
@@ -28,23 +27,34 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="27_kikkf"]
 
-[sub_resource type="Sky" id="Sky_yrlf6"]
-sky_material = ExtResource("1_bknb0")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
+sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
+sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
+sky_curve = 0.049481597
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.7294118, 0.2901961, 0, 1)
+ground_curve = 0.011762723
+energy_multiplier = 1.4
 
-[sub_resource type="Environment" id="Environment_6vndn"]
+[sub_resource type="Sky" id="Sky_kikkf"]
+sky_material = SubResource("ProceduralSkyMaterial_foxfy")
+
+[sub_resource type="Environment" id="Environment_a7fpr"]
 background_mode = 2
-sky = SubResource("Sky_yrlf6")
+sky = SubResource("Sky_kikkf")
+ambient_light_source = 1
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
-fog_density = 0.5367
-fog_aerial_perspective = 0.435
-fog_height = 1.0
-fog_height_density = 0.4192
-fog_depth_curve = 0.35355443
-fog_depth_begin = 12.0
-fog_depth_end = 40.0
-volumetric_fog_enabled = true
+fog_light_color = Color(0.34567913, 0.18460587, 0.23095927, 1)
+fog_light_energy = 0.8
+fog_density = 0.2
+fog_aerial_perspective = 0.418
+fog_sky_affect = 0.379
+fog_height = 0.7
+fog_height_density = 0.6
+fog_depth_curve = 0.87055266
+fog_depth_begin = 8.0
+fog_depth_end = 50.0
 volumetric_fog_density = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hlag1"]
@@ -138,6 +148,9 @@ height_falloff = 0.35119954
 edge_fade = 0.1274557
 density_texture = SubResource("NoiseTexture3D_2fjbg")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_foxfy"]
+size = Vector3(3.3232489, 2, 0.3798828)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_adkwo"]
 size = Vector3(1.0166283, 2, 0.3798828)
 
@@ -159,7 +172,7 @@ radius = 1.637207
 script = ExtResource("1_66xkd")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=34542276]
-environment = SubResource("Environment_6vndn")
+environment = SubResource("Environment_a7fpr")
 
 [node name="Terreno" type="StaticBody3D" parent="." unique_id=201713871]
 
@@ -237,6 +250,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 shape = SubResource("BoxShape3D_04hrh")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_agf16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.051190257, 0)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=880815437]
 
@@ -278,22 +292,22 @@ metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 [node name="SpawnPoints" type="Node3D" parent="." unique_id=257887258]
 
 [node name="DesdeElCampamento" type="Marker3D" parent="SpawnPoints" unique_id=1111419294 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3475614, 0, -12.141946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.648495, 0, -12.631844)
 script = ExtResource("6_44d2x")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
 [node name="DesdeElSalón" type="Marker3D" parent="SpawnPoints" unique_id=1893901208 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.001627, 0, -0.64913654)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80926466, 0, -1.4615843)
 script = ExtResource("6_44d2x")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
 [node name="DesdeLasBarracas" type="Marker3D" parent="SpawnPoints" unique_id=464806806 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3786, 0, 1.4747543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4889617, 0, 1.4747543)
 script = ExtResource("6_44d2x")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
 [node name="DesdeElÁrbol" type="Marker3D" parent="SpawnPoints" unique_id=1796153893 groups=["spawn_point"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.028524, 0, 1.7321372)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6194763, 0, 1.7321372)
 script = ExtResource("6_44d2x")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"
 
@@ -307,8 +321,8 @@ enter_transition = 4
 exit_transition = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlCampamento" unique_id=433959382]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6288619, 0, 1.1267338)
-shape = SubResource("BoxShape3D_adkwo")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7821789, 0, 1.1267338)
+shape = SubResource("BoxShape3D_foxfy")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
 [node name="AlSalón" parent="Teleporters" unique_id=354516081 instance=ExtResource("7_agf16")]
@@ -335,6 +349,7 @@ enter_transition = 1
 exit_transition = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlLasBarracas" unique_id=1818094021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.64012814)
 shape = SubResource("BoxShape3D_agf16")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
@@ -351,6 +366,7 @@ enter_transition = 2
 exit_transition = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleporters/AlÁrbol" unique_id=1641623895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7401686)
 shape = SubResource("BoxShape3D_agf16")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
@@ -1707,5 +1723,21 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=806886328]
+
+[node name="Luces" type="Node3D" parent="." unique_id=1904985429]
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Luces" unique_id=142448941]
+transform = Transform3D(1, 0, 0, 0, 0.07759796, 0.9969847, 0, -0.9969847, 0.07759796, -2.9842606, 19.348858, 13.385182)
+light_color = Color(0.72081923, 0.5208137, 0.3583114, 1)
+light_energy = 8.543
+light_specular = 0.381
+light_bake_mode = 0
+shadow_enabled = true
+shadow_normal_bias = 1.552
+shadow_opacity = 0.8
+shadow_blur = 4.094
+area_range = 40.0
+area_attenuation = -0.1
+area_size = Vector2(0.13695145, 4.743324)
 
 [connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
