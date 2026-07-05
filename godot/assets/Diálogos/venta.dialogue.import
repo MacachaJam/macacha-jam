@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvyyx442twn7n"
+path="res://.godot/imported/venta.dialogue-01ca48f2aebbe3d4941f3635552dfd96.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/venta.dialogue"
+dest_files=["res://.godot/imported/venta.dialogue-01ca48f2aebbe3d4941f3635552dfd96.tres"]
+
+[params]
+
+defaults=true

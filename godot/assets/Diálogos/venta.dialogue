@@ -1,0 +1,11 @@
+~ start
+María: Vamo a vender.
+- Perdiste => fracaso
+- Ganaste => exito
+~ exito
+María: Soy una genia, me voy pal árbol.
+set GameState.global.hechos_del_dia.conseguiste_la_info = true
+=> END
+~ fracaso
+María: La pucha, me persiguen, a correeer!!
+=> END
