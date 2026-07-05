@@ -1,12 +1,12 @@
 ~ start
 María: Me voy a cambiar de atuendo...
-- Vestido criada [if GameState.global.atuendo_actual != Jugadora.Atuendos.CRIADA]
+- Ropas criada [if GameState.global.atuendo_actual != Jugadora.Atuendos.CRIADA]
 	do GameState.global.atuendo_actual = Jugadora.Atuendos.CRIADA
-	María: Lista para infiltrarme en la barraca.
-- Disfraz de vendedora [if GameState.global.atuendo_actual != Jugadora.Atuendos.VENDEDORA]
+	María: Lista para infiltrarme en el cuartel.
+- Atuendo de vendedora [if GameState.global.atuendo_actual != Jugadora.Atuendos.VENDEDORA]
 	do GameState.global.atuendo_actual = Jugadora.Atuendos.VENDEDORA
 	María: Lista para salir a vender.
-- Vestido deluxe [if GameState.global.atuendo_actual != Jugadora.Atuendos.VESTIDO]
+- Vestido elegante [if GameState.global.atuendo_actual != Jugadora.Atuendos.VESTIDO]
 	do GameState.global.atuendo_actual = Jugadora.Atuendos.VESTIDO
 	María: Lista para infiltrarme en la fiesta.
 => END
