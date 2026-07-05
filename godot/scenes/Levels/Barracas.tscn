@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://6pmivs0pdb8q"]
 
-[ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_i0cyr"]
 [ext_resource type="Script" uid="uid://1iaorswblo7d" path="res://scenes/Levels/barracas.gd" id="1_kkabb"]
 [ext_resource type="Texture2D" uid="uid://dol0y4yw6m8tn" path="res://assets/Terrenos/Barracas Floor.png" id="2_i0cyr"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_ppftp"]
@@ -22,22 +21,34 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="19_dhd7o"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="21_p8cny"]
 
-[sub_resource type="Sky" id="Sky_skhqw"]
-sky_material = ExtResource("1_i0cyr")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
+sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
+sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
+sky_curve = 0.049481597
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.7294118, 0.2901961, 0, 1)
+ground_curve = 0.0020085606
+energy_multiplier = 1.4
 
-[sub_resource type="Environment" id="Environment_t17se"]
+[sub_resource type="Sky" id="Sky_p8cny"]
+sky_material = SubResource("ProceduralSkyMaterial_kkabb")
+
+[sub_resource type="Environment" id="Environment_u40b5"]
 background_mode = 2
-sky = SubResource("Sky_skhqw")
+sky = SubResource("Sky_p8cny")
+ambient_light_source = 1
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.19071761, 0.25569507, 0.56799793, 1)
-fog_density = 0.5367
-fog_aerial_perspective = 0.435
-fog_height = 1.0
-fog_height_density = 0.4192
-fog_depth_curve = 0.35355443
-fog_depth_begin = 12.0
-fog_depth_end = 40.0
+fog_light_color = Color(0.19865882, 0.2756152, 0.40045026, 1)
+fog_light_energy = 0.62
+fog_density = 0.2
+fog_aerial_perspective = 0.418
+fog_sky_affect = 0.379
+fog_height = 0.7
+fog_height_density = 0.6
+fog_depth_curve = 0.87055266
+fog_depth_begin = 8.0
+fog_depth_end = 50.0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 
@@ -134,7 +145,7 @@ radius = 1.637207
 script = ExtResource("1_kkabb")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=95201576]
-environment = SubResource("Environment_t17se")
+environment = SubResource("Environment_u40b5")
 
 [node name="Terreno" type="StaticBody3D" parent="." unique_id=1182348149]
 
@@ -1202,5 +1213,21 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=399837207]
+
+[node name="Luces" type="Node3D" parent="." unique_id=1487027521]
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Luces" unique_id=848658928]
+transform = Transform3D(1, 0, 0, 0, 0.07759796, 0.9969847, 0, -0.9969847, 0.07759796, 0.37540436, 19.961931, 2.3883238)
+light_color = Color(0.72081923, 0.5208137, 0.3583114, 1)
+light_energy = 8.543
+light_specular = 0.381
+light_bake_mode = 0
+shadow_enabled = true
+shadow_normal_bias = 1.552
+shadow_opacity = 0.8
+shadow_blur = 4.094
+area_range = 30.0
+area_attenuation = 0.1
+area_size = Vector2(0.13695145, 4.743324)
 
 [connection signal="inicio_interactuar" from="MeshInstance3D/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
