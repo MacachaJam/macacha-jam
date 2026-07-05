@@ -153,6 +153,7 @@ locale/fallback="es"
 3d_physics/layer_1="obstáculos"
 3d_physics/layer_2="jugadora"
 3d_physics/layer_3="interactiva"
+3d_physics/layer_4="realista"
 
 [rendering]
 

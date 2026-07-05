@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8g2e1jr8vrb" path="res://assets/Personajes/Realistas/Realista Idle.png" id="1_blxll"]
 [ext_resource type="Texture2D" uid="uid://dwjvxhco0gxd8" path="res://assets/Personajes/Realistas/Realista Alert.png" id="1_qfk7r"]
+[ext_resource type="Script" uid="uid://bsnwo3lwni4t8" path="res://scenes/realista/realista.gd" id="1_sa2th"]
 [ext_resource type="Texture2D" uid="uid://c5mxtkbsdtmi4" path="res://assets/Personajes/Realistas/Realista Walk.png" id="2_41vqv"]
 [ext_resource type="Script" uid="uid://buuefw3a22rjy" path="res://scenes/frame_random/frame_random.gd" id="4_4xweg"]
 
@@ -168,7 +169,8 @@ animations = [{
 }]
 
 [node name="Realista" type="CharacterBody3D" unique_id=1548245680 groups=["realista"]]
-collision_layer = 3
+collision_layer = 9
+script = ExtResource("1_sa2th")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022007346, 1.0634553, 0)
@@ -190,3 +192,7 @@ transform = Transform3D(0.16666667, 0, 0, 0, 0.16666667, 0, 0, 0, 0.16666667, 0,
 script = ExtResource("4_4xweg")
 sprite = NodePath("..")
 metadata/_custom_type_script = "uid://buuefw3a22rjy"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=938428938]
+unique_name_in_owner = true
+debug_enabled = true
