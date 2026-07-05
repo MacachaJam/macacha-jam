@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://drgn2ghjbomwu" path="res://scenes/area_interactuar/area_interactuar.gd" id="4_hxyug"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
-radius = 0.64160156
+radius = 0.4453125
 height = 2.130066
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fhnvg"]
@@ -21,7 +21,7 @@ collision_layer = 3
 script = ExtResource("1_ufn4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0634553, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022007346, 1.0634553, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
