@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dqwr0a7lnkw1f"]
+
+[ext_resource type="Texture2D" uid="uid://doembmijfebl" path="res://assets/Props/Barra Top Salon.png" id="1_dd5rv"]
+[ext_resource type="Texture2D" uid="uid://chmmeucjqt71o" path="res://assets/Props/Barra Bottom Salon.png" id="2_y87ue"]
+
+[node name="Node3D" type="StaticBody3D" unique_id=1493162876]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1059930019]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1815225366]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.30784398, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_dd5rv")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=986569523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15581405, 0.057389833)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_y87ue")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=650085669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15581405, 0.027687974)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_y87ue")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1853370705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15581405, -0.010792382)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_y87ue")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1867460297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15581405, -0.06660134)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_y87ue")

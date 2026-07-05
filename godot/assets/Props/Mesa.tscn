@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://0b5d8bv34thn"]
+
+[ext_resource type="Texture2D" uid="uid://bhul4jbxg5mkl" path="res://assets/Props/Mesa Top Salon.png" id="1_t5ng8"]
+[ext_resource type="Texture2D" uid="uid://owwrdqeuphvu" path="res://assets/Props/Mesa Pie Salon.png" id="2_xgqmy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdupl"]
+size = Vector3(0.49809074, 0.2652588, 0.48794556)
+
+[node name="Node3D" type="StaticBody3D" unique_id=586239224]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=598777529]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.30735773, 0)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_t5ng8")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1217328101]
+transform = Transform3D(1, 0, 0, 0, 0.6317499, 0, 0, 0, 1, 0.1828072, 0.15568656, -0.18600036)
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_xgqmy")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=461794323]
+transform = Transform3D(1, 0, 0, 0, 0.6317499, 0, 0, 0, 1, 0.1828072, 0.15568656, 0.1920002)
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_xgqmy")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=586437441]
+transform = Transform3D(1, 0, 0, 0, 0.6317499, 0, 0, 0, 1, -0.18319064, 0.15568656, -0.18600036)
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_xgqmy")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1119396654]
+transform = Transform3D(1, 0, 0, 0, 0.6317499, 0, 0, 0, 1, -0.18319064, 0.15568656, 0.1920002)
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_xgqmy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=336092594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00493145, 0.13116455, -0.0025787354)
+shape = SubResource("BoxShape3D_wdupl")
