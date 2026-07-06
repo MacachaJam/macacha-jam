@@ -10,4 +10,4 @@ func interactuar() -> void:
 	DialogueManager.show_dialogue_balloon(diálogo)
 
 func _on_dialogue_ended(_resource: DialogueResource):
-	fin_interactuar.emit()
+	terminar_interacción()

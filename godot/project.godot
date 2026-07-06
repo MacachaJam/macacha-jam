@@ -56,6 +56,7 @@ enabled=PackedStringArray("res://addons/DampedOscillator/plugin.cfg", "res://add
 
 player=""
 realista=""
+navigation_mesh_source_group=""
 
 [gui]
 

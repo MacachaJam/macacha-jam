@@ -1,5 +1,7 @@
 ~ start
-if GameState.global.dia_actual == 1
+if GameState.global.hechos_del_dia.te_descubrieron
+	=> mision_incompleta
+elif GameState.global.dia_actual == 1
 	if GameState.global.hechos_del_dia.hablaste_con_macacha
 		=> dia_1_reitera
 	else
@@ -65,4 +67,6 @@ Macacha: Infíltrate en el cuartel. Una vez adentro emplearás los granos de ma�
 % Macacha: María, necesitamos saber eso. Es esencial para nuestra libertad. 
 % Macacha: ¡Vuelve! No tenemos todo el día.
 % Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión!
+set GameState.global.hechos_del_dia.te_descubrieron = false
+set GameState.global.hechos_del_dia.te_atraparon = false
 => END
