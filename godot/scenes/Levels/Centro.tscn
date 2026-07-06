@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="17_itb5f"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="18_2fjbg"]
 [ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo/area_muestra_diálogo.gd" id="21_wklx2"]
-[ext_resource type="PackedScene" uid="uid://csccjfi3qf7lb" path="res://assets/Props/Puesto de Venta.tscn" id="22_kikkf"]
+[ext_resource type="PackedScene" uid="uid://cbvnhshei73hb" path="res://assets/Props/Puesto de Venta.tscn" id="22_kikkf"]
 [ext_resource type="Resource" uid="uid://vs08lh6v52av" path="res://assets/Diálogos/condición_salón.dialogue" id="22_s0ia0"]
 [ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
@@ -1679,8 +1679,8 @@ transform = Transform3D(1.3787583, 0, 0, 0, 1.3787583, 0, 0, 0, 1.3787583, 1.391
 [node name="Pasto 298" parent="Prop/Pasto" unique_id=616199414 instance=ExtResource("16_1mqds")]
 transform = Transform3D(1.1144553, 0, 0, 0, 1.1144553, 0, 0, 0, 1.1144553, 7.70897, 0, 4.8046346)
 
-[node name="Puesto de Venta" parent="Prop" unique_id=586239224 instance=ExtResource("22_kikkf")]
-transform = Transform3D(2.9715512, 0, 0, 0, 2.9715512, 0, 0, 0, 2.9715512, -3.0069475, 0, -3.316971)
+[node name="Node3D" parent="Prop" unique_id=586239224 instance=ExtResource("22_kikkf")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.707079, -0.2758937, -3.2505152)
 
 [node name="AreaCondiciónSalón" type="Area3D" parent="." unique_id=1554680214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.004183, -0.4748404, -3.1169136)

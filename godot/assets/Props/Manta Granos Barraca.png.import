@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj0yvurdjo2mg"
-path="res://.godot/imported/Moro Hablando Resized.png-19252f0877a57084afa68bfbb876019a.ctex"
+uid="uid://x0hym8j1lxlu"
+path="res://.godot/imported/Manta Granos Barraca.png-9f40e7a7413b78f92920ce6b87054bfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personajes/Moro/Moro Hablando Resized.png"
-dest_files=["res://.godot/imported/Moro Hablando Resized.png-19252f0877a57084afa68bfbb876019a.ctex"]
+source_file="res://assets/Props/Manta Granos Barraca.png"
+dest_files=["res://.godot/imported/Manta Granos Barraca.png-9f40e7a7413b78f92920ce6b87054bfc.ctex"]
 
 [params]
 
