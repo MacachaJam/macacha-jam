@@ -1,0 +1,25 @@
+[gd_resource type="AudioStreamInteractive" format=3 uid="uid://cfgr7ka1wn777"]
+
+[ext_resource type="AudioStream" uid="uid://cnkqgqciq11yy" path="res://Audio/Music/chaca acompGameplay_MIfrigio_BPM160_3x4.ogg" id="1_yhril"]
+[ext_resource type="AudioStream" uid="uid://dqu5uhkhfeiho" path="res://Audio/Music/Macacha-1-Vidal_acompGameplay_MIfrigio_BPM160_3x4.ogg" id="2_sj8ta"]
+[ext_resource type="AudioStream" uid="uid://de177i5i0vabv" path="res://Audio/Music/Macacha-1-zamb-bombGameplay_MIfrigio_BPM160_3x4.ogg" id="3_thaja"]
+
+[resource]
+clip_count = 3
+clip_0/name = &"chacarera"
+clip_0/stream = ExtResource("1_yhril")
+clip_0/auto_advance = 0
+clip_1/name = &"vidala"
+clip_1/stream = ExtResource("2_sj8ta")
+clip_1/auto_advance = 0
+clip_2/name = &"zamba"
+clip_2/stream = ExtResource("3_thaja")
+clip_2/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 0.8,
+"fade_mode": 3,
+"from_time": 2,
+"to_time": 0
+}
+}

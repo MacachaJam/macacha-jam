@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://0r58i6t38fpl" path="res://assets/Personajes/Evil Twink/Serna.png" id="11_3njmf"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
 [ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
-[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="13_kubcc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
 sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
@@ -368,12 +367,6 @@ script = ExtResource("10_77mci")
 [node name="InterfazSilabeador" parent="CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
 visible = false
 position = Vector2(330, 382)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1696642110]
-stream = ExtResource("13_kubcc")
-autoplay = true
-bus = &"Music"
-parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=937243148]
 

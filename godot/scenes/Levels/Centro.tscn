@@ -26,7 +26,6 @@
 [ext_resource type="Resource" uid="uid://vs08lh6v52av" path="res://assets/Diálogos/condición_salón.dialogue" id="22_s0ia0"]
 [ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
-[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="27_kikkf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -1719,12 +1718,6 @@ metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_a7fpr")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=698603871]
-stream = ExtResource("27_kikkf")
-autoplay = true
-bus = &"Music"
-parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=806886328]
 
