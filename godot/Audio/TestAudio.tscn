@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwha8bqbo50wm"]
+
+[ext_resource type="Script" uid="uid://c8w5uy601o12q" path="res://Audio/test_audio.gd" id="1_iaeji"]
+
+[node name="TestAudio" type="Node" unique_id=14645167]
+script = ExtResource("1_iaeji")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1354960604]

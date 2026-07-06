@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmusuh8f7mlvk"
+path="res://.godot/imported/bombo chacareraGameplay_MIfrigio_BPM160_3x4.ogg-c91a74294bf10b6be6f4d3a2f2685a0c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/bombo chacareraGameplay_MIfrigio_BPM160_3x4.ogg"
+dest_files=["res://.godot/imported/bombo chacareraGameplay_MIfrigio_BPM160_3x4.ogg-c91a74294bf10b6be6f4d3a2f2685a0c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=160.0
+beat_count=96
+bar_beats=3

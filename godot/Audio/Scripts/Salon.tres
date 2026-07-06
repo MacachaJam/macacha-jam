@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MusicSceneConfig" format=3 uid="uid://17qwjd6y140s"]
+
+[ext_resource type="AudioStream" uid="uid://cfgr7ka1wn777" path="res://Audio/Music/Acompanamiento.tres" id="1_rljw3"]
+[ext_resource type="Script" uid="uid://fru8gjony1tq" path="res://Audio/Scripts/MusicSceneConfig.gd" id="1_ugqfd"]
+[ext_resource type="AudioStream" uid="uid://bab2gyji1lv6n" path="res://Audio/Music/Bombo.tres" id="2_j8w6o"]
+[ext_resource type="AudioStream" uid="uid://cyrjmx052tu2i" path="res://Audio/Music/Macacha-MelodiaGameplay_MIfrigio_BPM160_3x4.ogg" id="3_0cdbl"]
+[ext_resource type="AudioStream" uid="uid://bu14jf22w7bhk" path="res://Audio/Music/TensionGameplay_MIfrigio_BPM160_3x4.ogg" id="5_60vgt"]
+
+[resource]
+script = ExtResource("1_ugqfd")
+melodia = ExtResource("3_0cdbl")
+tension = ExtResource("5_60vgt")
+bombo = ExtResource("2_j8w6o")
+bombo_clip_names = Array[StringName]([&"chacarera", &"vidala", &"zamba"])
+acompanamiento = ExtResource("1_rljw3")
+acompanamiento_clip_names = Array[StringName]([&"chacarera", &"vidala", &"zamba"])
+intensidad_inicial = 1
+metadata/_custom_type_script = "uid://fru8gjony1tq"
