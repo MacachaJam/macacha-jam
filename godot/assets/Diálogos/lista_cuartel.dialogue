@@ -32,3 +32,16 @@ Soldado realista: ¡Ausente, mi general!
 De La Serna: Zuñiguez Pérez, José.
 Soldado realista: ¡Presente, mi general!
 => END
+~ prueba
+María: Vamos a contar...
+- Ganaste => exito
+- Perdiste => fracaso
+~ exito
+María: Listo. Esto es la información que debo depositar en el árbol.
+set GameState.global.hechos_del_dia.conseguiste_la_info = true
+=> END
+~ fracaso
+María: ¡Debo volver al campamento!
+do GameState.scene.jugadora_descubierta.emit()
+set GameState.global.hechos_del_dia.te_descubrieron = true
+=> END

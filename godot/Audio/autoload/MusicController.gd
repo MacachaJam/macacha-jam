@@ -23,7 +23,7 @@ const CONFIGS := {
 	"res://scenes/Levels/Campamento.tscn": "res://Audio/Scripts/campamento.tres",
 	"res://scenes/Levels/Centro.tscn": "res://Audio/Scripts/centro.tres",
 	"res://scenes/Levels/Salon.tscn": "res://Audio/Scripts/Salon.tres",
-	"res://scenes/Levels/Barracas.tscn": "res://scenes/Levels/barracas.tscn",
+	"res://scenes/Levels/Barracas.tscn": "res://Audio/Scripts/barracas.tres",
 	
 }
 
