@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://c8ohoqi4gmpr2" path="res://assets/Props/BarricadaTirante.png" id="17_52ba6"]
 [ext_resource type="Texture2D" uid="uid://dm6rfvkx18nm0" path="res://assets/Props/ParedBarraca.png" id="18_f6v1x"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="19_dhd7o"]
-[ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="21_p8cny"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -1205,12 +1204,6 @@ metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_p8cny")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=940629962]
-stream = ExtResource("21_p8cny")
-autoplay = true
-bus = &"Music"
-parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=399837207]
 
