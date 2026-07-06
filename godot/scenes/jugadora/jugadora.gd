@@ -31,10 +31,14 @@ func _ready() -> void:
 	if atuendo != GameState.global.atuendo_actual:
 		_on_gamestate_cambió_atuendo()
 	GameState.global.cambió_atuendo.connect(_on_gamestate_cambió_atuendo)
+	GameState.global.atrapada.connect(_on_gamestate_atrapada)
 
 func _on_gamestate_cambió_atuendo() -> void:
 	atuendo = GameState.global.atuendo_actual
 
+func _on_gamestate_atrapada() -> void:
+	cambiar_detenida(true)
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
