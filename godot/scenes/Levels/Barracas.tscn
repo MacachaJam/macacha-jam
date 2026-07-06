@@ -1245,6 +1245,18 @@ spot_range = 4.73951
 spot_angle = 62.580288
 spot_angle_attenuation = 1.6604439
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="Luces" unique_id=1254240544]
+transform = Transform3D(0.95099884, 0.09844806, -0.29310286, -1.7616424e-09, 0.947956, 0.3184016, 0.30919462, -0.30279952, 0.901505, -3.5902615, 2.9345179, 13.991469)
+light_color = Color(0.9033728, 0.75145155, 0.37316376, 1)
+light_energy = 1.8
+light_specular = 2.968
+shadow_enabled = true
+shadow_opacity = 0.85
+shadow_blur = 7.998
+spot_range = 8.004
+spot_angle = 54.38336
+spot_angle_attenuation = 1.6604439
+
 [node name="Realistas" type="Node3D" parent="." unique_id=1787272432]
 
 [node name="Realista" parent="Realistas" unique_id=576043244 instance=ExtResource("20_kkabb")]
