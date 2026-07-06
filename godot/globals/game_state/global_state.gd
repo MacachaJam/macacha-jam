@@ -20,11 +20,11 @@ var hechos_inicial: Dictionary[String, Variant] = {
 	set = _set_atuendo_actual
 
 ## Los hechos del día.
-@export var hechos_del_dia: Dictionary[String, Variant] = hechos_inicial
+@export var hechos_del_dia: Dictionary[String, Variant] = hechos_inicial.duplicate()
 
 func pasar_de_dia() -> void:
 	dia_actual += 1
-	hechos_del_dia = hechos_inicial
+	hechos_del_dia = hechos_inicial.duplicate()
 
 func te_atraparon() -> void:
 	if not hechos_del_dia.get("te_atraparon"):
