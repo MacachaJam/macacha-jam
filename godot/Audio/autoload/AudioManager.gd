@@ -41,6 +41,7 @@ func _ready() -> void:
 		player.name = "Layer%d" % i
 		player.process_mode = Node.PROCESS_MODE_ALWAYS
 		player.volume_db = -80.0
+		player.bus = "Gameplay"
 		add_child(player)
 		_players.append(player)
 		_target_volume_db.append(0.0)

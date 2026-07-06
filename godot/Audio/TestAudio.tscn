@@ -6,3 +6,4 @@
 script = ExtResource("1_iaeji")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1354960604]
+bus = &"Music"

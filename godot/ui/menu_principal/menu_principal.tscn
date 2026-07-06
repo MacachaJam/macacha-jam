@@ -66,5 +66,6 @@ horizontal_alignment = 1
 
 [node name="AudioManager" type="AudioStreamPlayer" parent="." unique_id=1612587210]
 stream = ExtResource("4_i6a53")
-volume_db = -12.458
+volume_db = -4.875
 autoplay = true
+bus = &"Music"

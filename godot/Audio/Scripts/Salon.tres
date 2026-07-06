@@ -14,5 +14,6 @@ bombo = ExtResource("2_j8w6o")
 bombo_clip_names = Array[StringName]([&"chacarera", &"vidala", &"zamba"])
 acompanamiento = ExtResource("1_rljw3")
 acompanamiento_clip_names = Array[StringName]([&"chacarera", &"vidala", &"zamba"])
+fade_time = 0.18
 intensidad_inicial = 1
 metadata/_custom_type_script = "uid://fru8gjony1tq"
