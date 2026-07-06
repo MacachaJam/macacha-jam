@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj0yvurdjo2mg"
-path="res://.godot/imported/Moro Hablando Resized.png-19252f0877a57084afa68bfbb876019a.ctex"
+uid="uid://jj0eyi8emher"
+path="res://.godot/imported/Extra Varon 1 Walk.png-d2c76ceb9a3c8a622ea73e29d83452e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personajes/Moro/Moro Hablando Resized.png"
-dest_files=["res://.godot/imported/Moro Hablando Resized.png-19252f0877a57084afa68bfbb876019a.ctex"]
+source_file="res://assets/Personajes/Civiles/1/Extra Varon 1 Walk.png"
+dest_files=["res://.godot/imported/Extra Varon 1 Walk.png-d2c76ceb9a3c8a622ea73e29d83452e8.ctex"]
 
 [params]
 
