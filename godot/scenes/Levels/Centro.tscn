@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="27_kikkf"]
+[ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_a7fpr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -171,6 +172,56 @@ geometry_source_geometry_mode = 1
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a7fpr"]
 radius = 1.637207
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ga4i"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8purw"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6yt5"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4wot"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(333, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hn302"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(444, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4kh2"]
+atlas = ExtResource("28_a7fpr")
+region = Rect2(555, 0, 111, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68u2b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ga4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8purw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6yt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4wot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hn302")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4kh2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Centro" type="Node3D" unique_id=1012514493]
 script = ExtResource("1_66xkd")
@@ -1031,9 +1082,6 @@ transform = Transform3D(1.0513172, 0, 0, 0, 1.0513172, 0, 0, 0, 1.0513172, 2.422
 [node name="Pasto 82" parent="Prop/Pasto" unique_id=2062331140 instance=ExtResource("16_1mqds")]
 transform = Transform3D(1.4991152, 0, 0, 0, 1.4991152, 0, 0, 0, 1.4991152, -1.0855186, 0, -6.418795)
 
-[node name="Pasto 83" parent="Prop/Pasto" unique_id=925941268 instance=ExtResource("17_itb5f")]
-transform = Transform3D(1.092512, 0, 0, 0, 1.092512, 0, 0, 0, 1.092512, -1.09164, 0, -3.2442937)
-
 [node name="Pasto 84" parent="Prop/Pasto" unique_id=1913684830 instance=ExtResource("17_itb5f")]
 transform = Transform3D(1.4875729, 0, 0, 0, 1.4875729, 0, 0, 0, 1.4875729, -1.3738883, 0, -5.450073)
 
@@ -1049,17 +1097,8 @@ transform = Transform3D(1.4563643, 0, 0, 0, 1.4563643, 0, 0, 0, 1.4563643, -2.15
 [node name="Pasto 88" parent="Prop/Pasto" unique_id=859190389 instance=ExtResource("18_2fjbg")]
 transform = Transform3D(1.3111804, 0, 0, 0, 1.3111804, 0, 0, 0, 1.3111804, -0.8338745, 0, -4.2817154)
 
-[node name="Pasto 89" parent="Prop/Pasto" unique_id=1790581514 instance=ExtResource("17_itb5f")]
-transform = Transform3D(1.1884449, 0, 0, 0, 1.1884449, 0, 0, 0, 1.1884449, -1.9755642, 0, -3.324894)
-
-[node name="Pasto 90" parent="Prop/Pasto" unique_id=312138198 instance=ExtResource("16_1mqds")]
-transform = Transform3D(1.4845985, 0, 0, 0, 1.4845985, 0, 0, 0, 1.4845985, -1.9021358, 0, -4.3658204)
-
 [node name="Pasto 91" parent="Prop/Pasto" unique_id=1282383994 instance=ExtResource("16_1mqds")]
 transform = Transform3D(1.3640652, 0, 0, 0, 1.3640652, 0, 0, 0, 1.3640652, -3.381289, 0, -6.407797)
-
-[node name="Pasto 92" parent="Prop/Pasto" unique_id=2083217775 instance=ExtResource("18_2fjbg")]
-transform = Transform3D(1.1965321, 0, 0, 0, 1.1965321, 0, 0, 0, 1.1965321, -2.87014, 0, -3.9460022)
 
 [node name="Pasto 93" parent="Prop/Pasto" unique_id=1546053378 instance=ExtResource("17_itb5f")]
 transform = Transform3D(1.4065882, 0, 0, 0, 1.4065882, 0, 0, 0, 1.4065882, -2.3792796, 0, -5.4849234)
@@ -1078,12 +1117,6 @@ transform = Transform3D(1.2683624, 0, 0, 0, 1.2683624, 0, 0, 0, 1.2683624, -3.82
 
 [node name="Pasto 98" parent="Prop/Pasto" unique_id=293998802 instance=ExtResource("16_1mqds")]
 transform = Transform3D(1.4136281, 0, 0, 0, 1.4136281, 0, 0, 0, 1.4136281, -4.6527753, 0, -5.7776704)
-
-[node name="Pasto 99" parent="Prop/Pasto" unique_id=1097504279 instance=ExtResource("17_itb5f")]
-transform = Transform3D(1.2034853, 0, 0, 0, 1.2034853, 0, 0, 0, 1.2034853, -3.976763, 0, -3.682724)
-
-[node name="Pasto 100" parent="Prop/Pasto" unique_id=553527399 instance=ExtResource("17_itb5f")]
-transform = Transform3D(1.0919348, 0, 0, 0, 1.0919348, 0, 0, 0, 1.0919348, -3.2111845, 0, -2.8405633)
 
 [node name="Pasto 101" parent="Prop/Pasto" unique_id=305545254 instance=ExtResource("17_itb5f")]
 transform = Transform3D(1.1029631, 0, 0, 0, 1.1029631, 0, 0, 0, 1.1029631, -3.6890278, 0, -5.496395)
@@ -1754,5 +1787,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3640094, 2.3841858e-07, 8.9
 
 [node name="Realista4" parent="Realistas" unique_id=2109433342 instance=ExtResource("27_kikkf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7240467, 2.3841858e-07, 8.397661)
+
+[node name="PlayerMinigame" type="AnimatedSprite3D" parent="." unique_id=564813269]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.4629805, 0.9111999, -4.5125446)
+visible = false
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_68u2b")
 
 [connection signal="inicio_interactuar" from="AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]

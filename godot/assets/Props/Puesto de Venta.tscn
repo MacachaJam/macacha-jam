@@ -23,35 +23,35 @@ texture_filter = 2
 texture = ExtResource("1_avxof")
 
 [node name="Sprite3D9" type="Sprite3D" parent="." unique_id=80176200]
-transform = Transform3D(1.2284087, 0.29998687, -1.3112842e-08, 0, -5.527339e-08, -1.2645078, -0.29998687, 1.2284087, -5.3695448e-08, 0.18301916, 0.16369034, -0.40428272)
+transform = Transform3D(0.9170115, 0.22394128, -9.788784e-09, 0, -4.1261785e-08, -0.9439596, -0.22394128, 0.9170115, -4.0083844e-08, 0.18307519, 0.14452823, -0.40344134)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("2_snv61")
 
 [node name="Sprite3D10" type="Sprite3D" parent="." unique_id=872340421]
-transform = Transform3D(1.2284087, 0, 0.29998687, 0, 1.2645078, 0, -0.29998687, 0, 1.2284087, 0.16392437, 0.06920122, -0.48247343)
+transform = Transform3D(0.9170115, 0, 0.22394128, 0, 0.9439596, 0, -0.22394128, 0, 0.9170115, 0.16882086, 0.07399175, -0.46181098)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_flynv")
 
 [node name="Sprite3D11" type="Sprite3D" parent="." unique_id=301355262]
-transform = Transform3D(1.2284087, 0, 0.29998687, 0, 1.2645078, 0, -0.29998687, 0, 1.2284087, 0.20485207, 0.06920122, -0.31487963)
+transform = Transform3D(0.9170115, 0, 0.22394128, 0, 0.9439596, 0, -0.22394128, 0, 0.9170115, 0.19937354, 0.07399175, -0.3367016)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_flynv")
 
 [node name="Sprite3D12" type="Sprite3D" parent="." unique_id=524302449]
-transform = Transform3D(-0.29998693, 0, 1.2284087, 0, 1.2645078, 0, -1.2284087, 0, -0.29998693, 0.0873128, 0.06920122, -0.37841827)
+transform = Transform3D(-0.22394133, 0, 0.9170115, 0, 0.9439596, 0, -0.9170115, 0, -0.22394133, 0.11163005, 0.07399175, -0.38413343)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_flynv")
 
 [node name="Sprite3D13" type="Sprite3D" parent="." unique_id=387635907]
-transform = Transform3D(-0.29998693, 0, 1.2284087, 0, 1.2645078, 0, -1.2284087, 0, -0.29998693, 0.27709264, 0.06920122, -0.42476398)
+transform = Transform3D(-0.22394133, 0, 0.9170115, 0, 0.9439596, 0, -0.9170115, 0, -0.22394133, 0.25330138, 0.07399175, -0.41873068)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
