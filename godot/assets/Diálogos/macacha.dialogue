@@ -68,5 +68,4 @@ Macacha: Infíltrate en el cuartel. Una vez adentro emplearás los granos de ma�
 % Macacha: ¡Vuelve! No tenemos todo el día.
 % Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión!
 set GameState.global.hechos_del_dia.te_descubrieron = false
-set GameState.global.hechos_del_dia.te_atraparon = false
 => END

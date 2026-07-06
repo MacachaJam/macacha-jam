@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: MPL-2.0
 extends Node
 
+signal atrapada
+
 const SAVE_PATH := "user://saved_game.tres"
 
 
@@ -89,3 +91,9 @@ func save() -> void:
 	var e := ResourceSaver.save(_saved_game, SAVE_PATH)
 	if e != OK:
 		push_error("Failed to save state to %s: %d %s" % [SAVE_PATH, e, error_string(e)])
+
+func te_atraparon() -> void:
+	if not scene.ya_te_atraparon:
+		scene.ya_te_atraparon = true
+		atrapada.emit()
+		SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)

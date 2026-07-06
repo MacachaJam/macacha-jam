@@ -55,3 +55,5 @@ José de la Serna: ¡Shhh! ¡Acércate, mujer! Te decía que...
 
 ~ fracaso
 José de la Serna: ¡Nos están escuchando! ¡Soldados! ¡A por ella!
+do GameState.scene.jugadora_descubierta.emit()
+set GameState.global.hechos_del_dia.te_descubrieron = true

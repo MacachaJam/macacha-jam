@@ -18,8 +18,11 @@ signal jugadora_descubierta
 @export var spawn_point: NodePath:
 	set = set_spawn_point
 
-## Set when any introductory dialogue has been played for the current scene.
-@export var intro_dialogue_shown: bool
+@export var debug_descubierta: bool:
+	set = _set_debug_descubierta
+
+
+@export var ya_te_atraparon: bool = false
 
 
 func _init(scene_path: String = "") -> void:
@@ -29,3 +32,9 @@ func _init(scene_path: String = "") -> void:
 func set_spawn_point(new_value: NodePath) -> void:
 	spawn_point = new_value
 	emit_changed()
+
+func _set_debug_descubierta(b: bool) -> void:
+	debug_descubierta = b
+	if debug_descubierta:
+		jugadora_descubierta.emit()
+	
