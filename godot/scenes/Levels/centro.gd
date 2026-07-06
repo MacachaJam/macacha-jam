@@ -13,8 +13,13 @@ func _desactivar_area() -> void:
 	area_interactiva.set_deferred("monitorable", false)
 
 func _on_area_interactiva_inicio_interactuar() -> void:
-	# TODO: falta el minijuego, por ahora te regalo la info
-	DialogueManager.show_dialogue_balloon(diálogo)
-	await DialogueManager.dialogue_ended
-	_desactivar_area()
-	area_interactiva.terminar_interacción()
+	if GameState.global.atuendo_actual != Jugadora.Atuendos.VENDEDORA:
+		DialogueManager.show_dialogue_balloon(diálogo, "atuendo_incorrecto")
+		await DialogueManager.dialogue_ended
+		area_interactiva.terminar_interacción()
+	else:
+		# TODO: falta el minijuego, por ahora te regalo la info
+		DialogueManager.show_dialogue_balloon(diálogo)
+		await DialogueManager.dialogue_ended
+		_desactivar_area()
+		area_interactiva.terminar_interacción()

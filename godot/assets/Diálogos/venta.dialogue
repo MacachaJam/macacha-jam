@@ -22,15 +22,20 @@ Comprador 3: Buenas. ¿Tiene tamales de carne?
 Comprador 4: Buen día. ¿Tendría usted tamales con charqui?
 - María: No tengo. ¿Le puedo ofrecer unas empanadas de humita?
 	Comprador 4: No hace falta. Aquí tiene la información que pidió Macacha.
+    => exito
 - María: Aquí tiene.
 	Comprador 4: ¿Pero es que no me reconoce?
 
-- Perdiste => fracaso
-- Ganaste => exito
+=> fracaso
 ~ exito
 María: Listo. Esto es la información que debo depositar en el árbol.
 set GameState.global.hechos_del_dia.conseguiste_la_info = true
 => END
 ~ fracaso
 María: ¡Debo volver al campamento!
+do GameState.scene.jugadora_descubierta.emit()
+set GameState.global.hechos_del_dia.te_descubrieron = true
+=> END
+~ atuendo_incorrecto
+María: ¡No me puedo poner a vender con esta ropa!
 => END
