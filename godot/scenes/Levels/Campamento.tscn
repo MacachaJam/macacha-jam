@@ -96,7 +96,7 @@ height = 2.0092773
 radius = 0.53027344
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_caf8k"]
-radius = 1.637207
+radius = 2.3510742
 
 [sub_resource type="Gradient" id="Gradient_00nbw"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
@@ -1015,7 +1015,7 @@ script = ExtResource("13_bma5i")
 "diálogo" = ExtResource("14_bma5i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Macacha/AreaInteractiva" unique_id=1903295626]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1027832, 1, 0.97001386)
 shape = SubResource("CylinderShape3D_caf8k")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
 

@@ -1,36 +1,36 @@
 ~ start
-De La Serna ¡Soldado! Procedo a pasar lista. 
-Soldado realista: ¡General! ¡Sí, mi general!
+De La Serna: ¡Soldado! Procedo a pasar lista. [next=auto]
+Soldado realista: ¡General! ¡Sí, mi general! [next=auto]
 
-De La Serna Alonso del Campo, Miguel.
-Soldado realista: ¡Presente mi general!
+De La Serna: Alonso del Campo, Miguel. [next=auto]
+Soldado realista: ¡Presente mi general! [next=auto]
 
-De La Serna Calero Rodríguez, Juan.
-Soldado realista: ¡Ausente, mi general!
+De La Serna: Calero Rodríguez, Juan. [next=auto]
+Soldado realista: ¡Ausente, mi general! [next=auto]
 
-De La Serna Díaz Herrero, Joaquín.
-Soldado realista: ¡Ausente, mi general!
+De La Serna: Díaz Herrero, Joaquín. [next=auto]
+Soldado realista: ¡Ausente, mi general! [next=auto]
 
-De La Serna: Escudero Pérez, Manuel,
-Soldado realista: ¡Presente, mi general!
+De La Serna: Escudero Pérez, Manuel, [next=auto]
+Soldado realista: ¡Presente, mi general! [next=auto]
 
-De La Serna: Gutiérrez Lozoya, Santiago.
-Soldado realista: ¡Presente, mi general!
+De La Serna: Gutiérrez Lozoya, Santiago. [next=auto]
+Soldado realista: ¡Presente, mi general! [next=auto]
 
-De La Serna: Navarro Valdéz, Mariano. 
-Soldado realista: ¡Ausente, mi general!
+De La Serna: Navarro Valdéz, Mariano.  [next=auto]
+Soldado realista: ¡Ausente, mi general! [next=auto]
 
-De La Serna: Plasencia Moreno, Lorenzo.
-Soldado realista: ¡Presente, mi general!
+De La Serna: Plasencia Moreno, Lorenzo. [next=auto]
+Soldado realista: ¡Presente, mi general! [next=auto]
 
-De La Serna: Palacios Ovejero, Francisco.
-Soldado realista: ¡Presente, mi general!
+De La Serna: Palacios Ovejero, Francisco. [next=auto]
+Soldado realista: ¡Presente, mi general! [next=auto]
 
-De La Serna: Ruiz Mansilla, Antonio.
-Soldado realista: ¡Ausente, mi general!
+De La Serna: Ruiz Mansilla, Antonio. [next=auto]
+Soldado realista: ¡Ausente, mi general! [next=auto]
 
-De La Serna: Zuñiguez Pérez, José.
-Soldado realista: ¡Presente, mi general!
+De La Serna: Zuñiguez Pérez, José. [next=auto]
+Soldado realista: ¡Presente, mi general! [next=auto]
 => END
 ~ prueba
 María: Vamos a contar...

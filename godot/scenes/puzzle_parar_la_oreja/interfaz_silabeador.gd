@@ -11,6 +11,8 @@ signal llegó(índice_sílaba: int, precisión: PuzzlePararLaOreja.Precisiones)
 @export var cantidad_de_sílabas: int
 @export var curva_spawn: Curve
 
+@export var autocentrar: bool = false
+
 var índice_sílaba: int
 var eje_input: float
 var ángulo_input: float
@@ -93,8 +95,9 @@ func mostrar_sílaba(texto: String, color: Color) -> void:
 	_puntito_actual.transformar_en_sílaba(texto, color)
 
 func _ready() -> void:
-	center_in_viewport()
-	get_tree().root.size_changed.connect(center_in_viewport)
+	if autocentrar:
+		center_in_viewport()
+		get_tree().root.size_changed.connect(center_in_viewport)
 
 func center_in_viewport() -> void:
 	global_position = get_viewport_rect().size / 2

@@ -158,8 +158,8 @@ size = Vector3(1.0166283, 2, 0.3798828)
 [sub_resource type="BoxShape3D" id="BoxShape3D_agf16"]
 size = Vector3(2, 2, 1)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_s0ia0"]
-radius = 1.6000977
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilp8s"]
+size = Vector3(1.4462891, 1, 0.7032471)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wklx2"]
 radius = 1.6000977
@@ -1683,7 +1683,7 @@ transform = Transform3D(1.1144553, 0, 0, 0, 1.1144553, 0, 0, 0, 1.1144553, 7.708
 transform = Transform3D(2.9715512, 0, 0, 0, 2.9715512, 0, 0, 0, 2.9715512, -3.0069475, 0, -3.316971)
 
 [node name="AreaCondiciónSalón" type="Area3D" parent="." unique_id=1554680214]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.004183, -0.4748404, -1.4939888)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.004183, -0.4748404, -3.1169136)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("21_wklx2")
@@ -1691,7 +1691,8 @@ script = ExtResource("21_wklx2")
 metadata/_custom_type_script = "uid://dtmxsc3jfr2ka"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCondiciónSalón" unique_id=585756723]
-shape = SubResource("CylinderShape3D_s0ia0")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.13992238)
+shape = SubResource("BoxShape3D_ilp8s")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
 
 [node name="AreaCondiciónCuartel" type="Area3D" parent="." unique_id=641723683]
