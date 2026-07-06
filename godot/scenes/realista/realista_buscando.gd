@@ -2,10 +2,16 @@ extends Node
 
 @onready var realista: Realista = $".."
 @onready var agent: NavigationAgent3D = %NavigationAgent3D
+@onready var detecta_jugadora: Area3D = %DetectaJugadora
+@onready var atrapa_jugadora: Area3D = %AtrapaJugadora
 
 func _notification(what: int) -> void:
 	match what:
 		NOTIFICATION_ENABLED:
+			atrapa_jugadora.set_deferred("monitoring", true)
+			atrapa_jugadora.set_deferred("monitorable", true)
+			detecta_jugadora.set_deferred("monitoring", true)
+			detecta_jugadora.set_deferred("monitorable", true)
 			agent.target_reached.connect(_on_target_reached)
 			agent.navigation_finished.connect(_on_navigation_finished)
 			_actualizar_target()
@@ -43,9 +49,7 @@ func _physics_process(delta: float) -> void:
 	realista.move_and_slide()
 
 func _on_target_reached() -> void:
-	# prints("reached")
 	_actualizar_target()
 
 func _on_navigation_finished() -> void:
-	# prints("finished")
 	_actualizar_target()

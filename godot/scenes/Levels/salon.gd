@@ -30,8 +30,8 @@ func _on_puzzle_parar_la_oreja_fin_del_puzzle(éxito: bool) -> void:
 	if éxito:
 		if ronda == 1:
 			ronda += 1
-			# TODO: reiniciar intentos para el segundo round?
-			# intentos = 0
+			# Reiniciar intentos para el segundo round.
+			intentos = 0
 			DialogueManager.show_dialogue_balloon(diálogo, "segundo_round")
 		else:
 			DialogueManager.show_dialogue_balloon(diálogo, "exito")
@@ -44,7 +44,6 @@ func _on_puzzle_parar_la_oreja_fin_del_puzzle(éxito: bool) -> void:
 		DialogueManager.show_dialogue_balloon(diálogo, "reintenta_2")
 	else:
 		DialogueManager.show_dialogue_balloon(diálogo, "fracaso")
-		# TODO: arranca persecuta
 		await DialogueManager.dialogue_ended
 		_desactivar_area()
 		area_interactiva.terminar_interacción()

@@ -1741,11 +1741,11 @@ area_size = Vector2(0.13695145, 4.743324)
 [node name="Realistas" type="Node3D" parent="." unique_id=465192177]
 
 [node name="Realista" parent="Realistas" unique_id=1338607120 instance=ExtResource("27_kikkf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8521962, 0, -10.456713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.554542, 0, -10.456713)
 flip_sprite = true
 
 [node name="Realista2" parent="Realistas" unique_id=1252500894 instance=ExtResource("27_kikkf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6727805, 2.3841858e-07, -10.243091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.733958, 2.3841858e-07, -10.243091)
 flip_sprite = true
 
 [node name="Realista3" parent="Realistas" unique_id=235197138 instance=ExtResource("27_kikkf")]

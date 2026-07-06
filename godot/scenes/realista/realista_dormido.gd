@@ -7,15 +7,10 @@ extends Node
 func _notification(what: int) -> void:
 	match what:
 		NOTIFICATION_ENABLED:
-			atrapa_jugadora.monitoring = false
-			atrapa_jugadora.monitorable = false
-			detecta_jugadora.monitoring = false
-			detecta_jugadora.monitorable = false
-		NOTIFICATION_DISABLED:
-			atrapa_jugadora.monitoring = true
-			atrapa_jugadora.monitorable = true
-			detecta_jugadora.monitoring = true
-			detecta_jugadora.monitorable = true
+			atrapa_jugadora.set_deferred("monitoring", false)
+			atrapa_jugadora.set_deferred("monitorable", false)
+			detecta_jugadora.set_deferred("monitoring", false)
+			detecta_jugadora.set_deferred("monitorable", false)
 
 func _physics_process(delta: float) -> void:
 	realista.velocity.x = move_toward(realista.velocity.x, 0, realista.velocidad_detenerse * delta)

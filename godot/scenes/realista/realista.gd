@@ -67,11 +67,11 @@ func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	_set_flip_sprite(flip_sprite)
+	GameState.scene.jugadora_descubierta.connect(_on_jugadora_descubierta)
 	if GameState.global.hechos_del_dia.get("te_descubrieron"):
 		# modo = Modos.BUSCANDO
 		modo = Modos.YENDO
 	else:
-		GameState.scene.jugadora_descubierta.connect(_on_jugadora_descubierta)
 		_set_modo(modo)
 
 func _on_jugadora_descubierta() -> void:
@@ -93,11 +93,11 @@ func _process(_delta: float) -> void:
 
 
 func _on_atrapa_jugadora_body_entered(_body: Node3D) -> void:
-	GameState.global.te_atraparon()
+	GameState.te_atraparon()
 	modo = Modos.DORMIDO
 
 
-func _on_detecta_jugadora_body_entered(body: Node3D) -> void:
+func _on_detecta_jugadora_body_entered(_body: Node3D) -> void:
 	if modo == Modos.BUSCANDO:
 		GameState.scene.jugadora_descubierta.emit()
 		GameState.global.hechos_del_dia.te_descubrieron = true
