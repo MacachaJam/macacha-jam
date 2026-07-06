@@ -5,11 +5,13 @@ class_name GlobalState
 extends Resource
 
 signal cambió_atuendo
+signal atrapada
 
 var hechos_inicial: Dictionary[String, Variant] = {
 	"hablaste_con_macacha": false,
 	"conseguiste_la_info": false,
 	"te_descubrieron": false,
+	"te_atraparon": false,
 }
 
 
@@ -24,6 +26,11 @@ func pasar_de_dia() -> void:
 	dia_actual += 1
 	hechos_del_dia = hechos_inicial
 
+func te_atraparon() -> void:
+	if not hechos_del_dia.get("te_atraparon"):
+		hechos_del_dia.te_atraparon = true
+		atrapada.emit()
+		SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
 
 func _set_atuendo_actual(nuevo_atuendo: Jugadora.Atuendos) -> void:
 	atuendo_actual = nuevo_atuendo

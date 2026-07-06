@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://bsnwo3lwni4t8" path="res://scenes/realista/realista.gd" id="1_sa2th"]
 [ext_resource type="Texture2D" uid="uid://c5mxtkbsdtmi4" path="res://assets/Personajes/Realistas/Realista Walk.png" id="2_41vqv"]
 [ext_resource type="Script" uid="uid://buuefw3a22rjy" path="res://scenes/frame_random/frame_random.gd" id="4_4xweg"]
+[ext_resource type="Script" uid="uid://ckbbvnrecpjl1" path="res://scenes/realista/realista_dormido.gd" id="6_g4syu"]
+[ext_resource type="Script" uid="uid://06bxcex22svo" path="res://scenes/realista/realista_yendo.gd" id="7_v50q3"]
+[ext_resource type="Script" uid="uid://c3uvh4xn2i0iw" path="res://scenes/realista/realista_buscando.gd" id="8_61h3s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.4453125
@@ -111,7 +114,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_76hnm")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"alert",
 "speed": 10.0
 }, {
@@ -168,15 +171,24 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fhnvg"]
+radius = 3.8320313
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4syu"]
+radius = 1.0693359
+
 [node name="Realista" type="CharacterBody3D" unique_id=1548245680 groups=["realista"]]
 collision_layer = 9
+collision_mask = 0
 script = ExtResource("1_sa2th")
+velocidad_correr = 250.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2007151796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022007346, 1.0634553, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
+unique_name_in_owner = true
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 offset = Vector2(0, 24)
 billboard = 1
@@ -196,3 +208,40 @@ metadata/_custom_type_script = "uid://buuefw3a22rjy"
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=938428938]
 unique_name_in_owner = true
 debug_enabled = true
+
+[node name="RealistaDormido" type="Node" parent="." unique_id=1774180944]
+unique_name_in_owner = true
+script = ExtResource("6_g4syu")
+
+[node name="RealistaYendo" type="Node" parent="." unique_id=427723392]
+unique_name_in_owner = true
+script = ExtResource("7_v50q3")
+
+[node name="RealistaBuscando" type="Node" parent="." unique_id=1636628166]
+unique_name_in_owner = true
+script = ExtResource("8_61h3s")
+
+[node name="DetectaJugadora" type="Area3D" parent="." unique_id=1607790974]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectaJugadora" unique_id=1365846592]
+shape = SubResource("CylinderShape3D_fhnvg")
+debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="AtrapaJugadora" type="Area3D" parent="." unique_id=83760830]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AtrapaJugadora" unique_id=792321023]
+shape = SubResource("CylinderShape3D_g4syu")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[connection signal="body_entered" from="DetectaJugadora" to="." method="_on_detecta_jugadora_body_entered"]
+[connection signal="body_entered" from="AtrapaJugadora" to="." method="_on_atrapa_jugadora_body_entered"]
