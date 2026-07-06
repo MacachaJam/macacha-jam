@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgubfgpurh6sh"]
 
 [ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="1_271gi"]
+[ext_resource type="Texture2D" uid="uid://dm5bq2wqd4nux" path="res://assets/Props/Oreja Minigame.png" id="2_54b4n"]
 [ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="2_u8xp1"]
 
 [sub_resource type="Curve" id="Curve_pp12e"]
@@ -11,6 +12,17 @@ metadata/_snap_enabled = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhnvg"]
 radius = 50.0
 
+[sub_resource type="Gradient" id="Gradient_u8xp1"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.107361965, 0.34662578, 0.4969325, 0.5552147, 0.5981595, 0.63496935, 0.68404907, 0.74233127)
+colors = PackedColorArray(1, 1, 1, 1, 0.16964841, 0.35019854, 0.30212364, 1, 0.25565878, 0.25565878, 0.25565878, 1, 0.17, 0.17, 0.17, 0.7058824, 0, 0, 0, 0, 0.085398085, 0.085398085, 0.085398085, 0.058061033, 0.76, 1, 0.76, 1, -0.024786303, -0.024786303, -0.024786303, -0.07495472)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u8xp1"]
+gradient = SubResource("Gradient_u8xp1")
+fill = 1
+fill_from = Vector2(0.50427353, 0.52136755)
+fill_to = Vector2(1, 1)
+
 [node name="InterfazSilabeador" type="Node2D" unique_id=1773905554]
 script = ExtResource("1_271gi")
 curva_spawn = SubResource("Curve_pp12e")
@@ -19,11 +31,25 @@ curva_spawn = SubResource("Curve_pp12e")
 unique_name_in_owner = true
 
 [node name="Centro" type="Area2D" parent="." unique_id=1461850476]
+position = Vector2(0, 2)
 collision_layer = 0
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Centro" unique_id=1874542047]
 shape = SubResource("CircleShape2D_fhnvg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Centro" unique_id=1230203484]
+modulate = Color(0.41, 0.41, 0.41, 1)
+self_modulate = Color(0.69860804, 0.69860804, 0.69860804, 1)
+position = Vector2(20, -49.000004)
+scale = Vector2(5.692303, 5.692303)
+texture = SubResource("GradientTexture2D_u8xp1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Centro" unique_id=1639457993]
+modulate = Color(1, 1, 1, 0.7411765)
+position = Vector2(20, -49.000004)
+scale = Vector2(2.6009676, 2.6009676)
+texture = ExtResource("2_54b4n")
 
 [node name="Aguja" type="Node2D" parent="." unique_id=1815908184]
 unique_name_in_owner = true
