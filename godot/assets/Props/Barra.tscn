@@ -3,9 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://doembmijfebl" path="res://assets/Props/Barra Top Salon.png" id="1_dd5rv"]
 [ext_resource type="Texture2D" uid="uid://chmmeucjqt71o" path="res://assets/Props/Barra Bottom Salon.png" id="2_y87ue"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_maq12"]
+size = Vector3(1.4829102, 0.21240234, 0.42404175)
+
 [node name="Node3D" type="StaticBody3D" unique_id=1493162876]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1059930019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0056152344, 0.12670898, -0.053390503)
+shape = SubResource("BoxShape3D_maq12")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1815225366]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.30784398, 0)

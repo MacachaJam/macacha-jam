@@ -21,7 +21,7 @@ var _colores: Dictionary[PuzzlePararLaOreja.Precisiones, Color]
 var _puntito_actual: PuntitoInterfazSilabeador
 
 func _draw() -> void:
-	draw_circle(Vector2.ZERO, 200, Color(0.0, 0.0, 0.0, 0.486))
+	#draw_circle(Vector2.ZERO, 200, Color(0.0, 0.0, 0.0, 0.486))
 	if not _colores:
 		return
 	draw_arc(Vector2.ZERO, 50, -PI*7/8, -PI/8, 20, _colores[PuzzlePararLaOreja.Precisiones.MAAL], 5)

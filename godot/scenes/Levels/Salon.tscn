@@ -378,7 +378,7 @@ script = ExtResource("10_77mci")
 
 [node name="InterfazSilabeador" parent="CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
 visible = false
-position = Vector2(330, 382)
+position = Vector2(916.00006, 334)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=937243148]
 navigation_mesh = SubResource("NavigationMesh_cy4hc")
