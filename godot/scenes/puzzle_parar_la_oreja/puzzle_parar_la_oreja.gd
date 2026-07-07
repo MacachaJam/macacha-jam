@@ -35,12 +35,6 @@ var cantidad_de_sílabas: int
 
 var _puntaje: float
 
-@onready var sfx_bien: AudioStreamPlayer = $"../PuzzleSFX/BienSFX"
-@onready var sfx_maso: AudioStreamPlayer = $"../PuzzleSFX/MasoSFX"
-@onready var sfx_mal: AudioStreamPlayer = $"../PuzzleSFX/MalSFX"
-
-var sfx_por_calidad: Dictionary[Precisiones, AudioStreamPlayer]
-
 func _ready() -> void:
 	lista_sílabas = {
 		Precisiones.BIEN: Array(silabeos[Precisiones.BIEN].split("-")),
@@ -51,12 +45,6 @@ func _ready() -> void:
 	# prints(cantidad_de_sílabas, lista_sílabas[Precisiones.MASO].size(), lista_sílabas[Precisiones.MAAL].size())
 	assert(lista_sílabas[Precisiones.MASO].size() == cantidad_de_sílabas)
 	assert(lista_sílabas[Precisiones.MAAL].size() == cantidad_de_sílabas)
-	sfx_por_calidad = {
-		Precisiones.BIEN: sfx_bien,
-		Precisiones.MASO: sfx_maso,
-		Precisiones.MAAL: sfx_mal,
-	}
-
 
 func iniciar() -> void:
 	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
@@ -74,7 +62,6 @@ func _on_diálogo_ready() -> void:
 	interfaz.iniciar(colores_x_precisión)
 
 func _on_interfaz_llegó(índice_sílaba: int, precisión: Precisiones) -> void:
-	sfx_por_calidad[precisión].play()
 	_puntaje += puntos_x_precisión[precisión]
 	var s := lista_sílabas[precisión][índice_sílaba] as String
 	var última := índice_sílaba == lista_sílabas[Precisiones.BIEN].size() - 1

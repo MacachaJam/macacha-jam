@@ -7,6 +7,11 @@ const PUNTITO = preload("uid://bhm2harux28fv")
 @onready var aguja: Node2D = %Aguja
 @onready var sprite_2d: Sprite2D = %Sprite2D
 
+@onready var bien_sfx: AudioStreamPlayer = %BienSFX
+@onready var maso_sfx: AudioStreamPlayer = %MasoSFX
+@onready var mal_sfx: AudioStreamPlayer = %MalSFX
+
+
 signal llegó(índice_sílaba: int, precisión: PuzzlePararLaOreja.Precisiones)
 @export var cantidad_de_sílabas: int
 @export var curva_spawn: Curve
@@ -18,6 +23,7 @@ var eje_input: float
 var ángulo_input: float
 
 var _colores: Dictionary[PuzzlePararLaOreja.Precisiones, Color]
+var _sfxs: Dictionary[PuzzlePararLaOreja.Precisiones, AudioStreamPlayer]
 var _puntito_actual: PuntitoInterfazSilabeador
 
 func _draw() -> void:
@@ -88,6 +94,7 @@ func _on_centro_body_entered(body: Node2D) -> void:
 	# Debug: prioridades bien o maso random:
 	# var p := [PuzzlePararLaOreja.Precisiones.BIEN, PuzzlePararLaOreja.Precisiones.MASO].pick_random() as PuzzlePararLaOreja.Precisiones
 	_puntito_actual = puntito
+	_sfxs[p].play()
 	llegó.emit(puntito.índice_sílaba, p)
 
 
@@ -95,6 +102,11 @@ func mostrar_sílaba(texto: String, color: Color) -> void:
 	_puntito_actual.transformar_en_sílaba(texto, color)
 
 func _ready() -> void:
+	_sfxs = {
+		PuzzlePararLaOreja.Precisiones.BIEN: bien_sfx,
+		PuzzlePararLaOreja.Precisiones.MASO: maso_sfx,
+		PuzzlePararLaOreja.Precisiones.MAAL: mal_sfx,
+	}
 	if autocentrar:
 		center_in_viewport()
 		get_tree().root.size_changed.connect(center_in_viewport)
