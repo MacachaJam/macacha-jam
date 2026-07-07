@@ -3,6 +3,7 @@ extends Node3D
 const diálogo = preload("uid://dfrwgissysnsy")
 
 @onready var area_interactiva: AreaInteractiva = %AreaInteractiva
+@onready var player_minigame: AnimatedSprite3D = %PlayerMinigame
 
 func _ready() -> void:
 	if GameState.global.dia_actual != 3 or GameState.global.hechos_del_dia.get("conseguiste_la_info"):
@@ -13,8 +14,12 @@ func _desactivar_area() -> void:
 	area_interactiva.set_deferred("monitorable", false)
 
 func _on_area_interactiva_inicio_interactuar() -> void:
-	# TODO: falta el minijuego, por ahora te regalo la info
-	GameState.global.hechos_del_dia.conseguiste_la_info = true
+	var player: Node3D = get_tree().get_first_node_in_group("player")
+	player.visible = false
+	player_minigame.visible = true
 	DialogueManager.show_dialogue_balloon(diálogo, "prueba")
+	await DialogueManager.dialogue_ended
+	player.visible = true
+	player_minigame.visible = false
 	_desactivar_area()
 	area_interactiva.terminar_interacción()
