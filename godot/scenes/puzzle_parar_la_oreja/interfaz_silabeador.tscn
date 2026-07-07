@@ -31,6 +31,7 @@ curva_spawn = SubResource("Curve_pp12e")
 unique_name_in_owner = true
 
 [node name="Centro" type="Area2D" parent="." unique_id=1461850476]
+show_behind_parent = true
 position = Vector2(0, 2)
 collision_layer = 0
 collision_mask = 256
