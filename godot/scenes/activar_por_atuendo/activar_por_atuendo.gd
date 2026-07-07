@@ -10,7 +10,7 @@ func _ready() -> void:
 	GameState.global.cambió_atuendo.connect(_on_gamestate_cambió_atuendo)
 
 func _on_gamestate_cambió_atuendo() -> void:
-	var activar := atuendo == GameState.global.atuendo_actual
+	var activar: bool = atuendo == GameState.global.atuendo_actual
 	if negado:
 		activar = not activar
 	if nodo is Area3D:
