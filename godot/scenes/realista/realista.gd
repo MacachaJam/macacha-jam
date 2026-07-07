@@ -3,6 +3,7 @@ class_name Realista
 extends CharacterBody3D
 
 enum Modos { DORMIDO, YENDO, BUSCANDO }
+@onready var signo_alerta: GPUParticles3D = %"Signo Alerta"
 
 @onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
 @onready var atrapa_jugadora: Area3D = %AtrapaJugadora
