@@ -29,3 +29,4 @@ func move_player_to_self_position() -> void:
 		return
 	player.global_position = global_position
 	player_teleported.emit()
+	GameState.scene.jugadora_teletrasportada.emit()

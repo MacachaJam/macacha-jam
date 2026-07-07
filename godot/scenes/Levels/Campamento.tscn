@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bo4k0aec7e628"]
 
 [ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_5mrw7"]
+[ext_resource type="Script" uid="uid://bhsu242pagcat" path="res://scenes/Levels/campamento.gd" id="1_caf8k"]
 [ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="2_k24i6"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_hllly"]
 [ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="4_b2dhh"]
@@ -152,6 +153,7 @@ radius = 0.7
 size = Vector3(3.8762207, 2, 1)
 
 [node name="Campamento" type="Node3D" unique_id=525460237]
+script = ExtResource("1_caf8k")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
