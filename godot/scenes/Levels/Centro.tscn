@@ -27,7 +27,7 @@
 [ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="27_kikkf"]
-[ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_a7fpr"]
+[ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_68u2b"]
 [ext_resource type="AudioStream" uid="uid://s2gxwiw5yhwn" path="res://Audio/SFX Lobitos/Ambiente/Ambiente dia.ogg" id="28_a7fpr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
@@ -177,54 +177,54 @@ geometry_source_geometry_mode = 1
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a7fpr"]
 radius = 1.637207
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ga4i"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m3qn"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(0, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8purw"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfsp6"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(111, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q6yt5"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggm70"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(222, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4wot"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu0mt"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(333, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hn302"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8go"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(444, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f4kh2"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bia62"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(555, 0, 111, 111)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_68u2b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ga4i")
+"texture": SubResource("AtlasTexture_4m3qn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8purw")
+"texture": SubResource("AtlasTexture_lfsp6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q6yt5")
+"texture": SubResource("AtlasTexture_ggm70")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4wot")
+"texture": SubResource("AtlasTexture_iu0mt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hn302")
+"texture": SubResource("AtlasTexture_de8go")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f4kh2")
+"texture": SubResource("AtlasTexture_bia62")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Centro" type="Node3D" unique_id=1012514493]
@@ -1814,6 +1814,9 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_68u2b")
+autoplay = "default"
+frame = 2
+frame_progress = 0.13444059
 
 [node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=495006768]
 stream = ExtResource("28_a7fpr")

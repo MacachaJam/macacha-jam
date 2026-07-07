@@ -21,8 +21,8 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="19_dhd7o"]
 [ext_resource type="PackedScene" uid="uid://csccjfi3qf7lb" path="res://assets/Props/Puesto de Granos.tscn" id="19_p8cny"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="20_kkabb"]
-[ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="21_p8cny"]
+[ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -191,7 +191,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_p8cny"]
@@ -1315,6 +1315,9 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_wdupl")
+autoplay = "default"
+frame = 5
+frame_progress = 0.7328171
 
 [node name="AreaInteractiva" type="Area3D" parent="." unique_id=948301766]
 unique_name_in_owner = true
