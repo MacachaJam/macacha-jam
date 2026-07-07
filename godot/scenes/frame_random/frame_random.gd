@@ -9,12 +9,20 @@ extends BaseSpriteBehavior
 
 
 func _ready() -> void:
+	sprite.animation_changed.connect(_on_animation_changed)
+	randomizar()
+
+func randomizar() -> void:
 	var frames_length: int = sprite.sprite_frames.get_frame_count(sprite.animation)
 	# TODO: weight the choice of frame by the relative lengths of frames.
 	# i.e. if an animation has one frame lasting 800ms, and four frames lasting 100ms each,
 	# we should be 8× more likely to pick the 800ms frame than each of the other 4.
 	sprite.set_frame_and_progress(randi_range(0, frames_length), randf())
 
+func _on_animation_changed() -> void:
+	if sprite.animation == "idle":
+		randomizar()
+	
 
 func _notification(what: int) -> void:
 	match what:
