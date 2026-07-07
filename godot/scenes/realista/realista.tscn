@@ -279,8 +279,8 @@ sprite = NodePath("..")
 metadata/_custom_type_script = "uid://buuefw3a22rjy"
 
 [node name="Signo Alerta" type="GPUParticles3D" parent="AnimatedSprite3D" unique_id=724470074]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038939744, 0.4495017, 0.021570405)
-visible = false
 emitting = false
 amount = 1
 one_shot = true
@@ -288,8 +288,9 @@ process_material = SubResource("ParticleProcessMaterial_wdupl")
 draw_pass_1 = SubResource("QuadMesh_8mre2")
 
 [node name="Signo Buscando" type="GPUParticles3D" parent="AnimatedSprite3D" unique_id=1618817041]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3623174, 0.066553734)
-visible = false
+emitting = false
 amount = 3
 lifetime = 1.3
 process_material = SubResource("ParticleProcessMaterial_8mre2")
