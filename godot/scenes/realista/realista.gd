@@ -14,6 +14,9 @@ enum Modos { DORMIDO, YENDO, BUSCANDO }
 
 @onready var _comportamientos: Array[Node] = [realista_dormido, realista_yendo, realista_buscando]
 
+@onready var TedetectaronSFX: AudioStreamPlayer = $TeDetectaronSFX
+@onready var LosperdisteSFX: AudioStreamPlayer = $LosperdisteSFX
+
 @export var flip_sprite: bool:
 	set = _set_flip_sprite
 @export var modo: Modos = Modos.DORMIDO:
@@ -59,9 +62,11 @@ func _set_modo(nuevo_modo: Modos) -> void:
 			_desactivar_todos_los_comportamientos()
 			await _animar_alert()
 			_activar_comportamiento(realista_yendo)
+			TedetectaronSFX.play()
 		Modos.BUSCANDO:
 			_desactivar_todos_los_comportamientos()
 			await _animar_alert()
+			LosperdisteSFX.play()
 			_activar_comportamiento(realista_buscando)
 
 func _ready() -> void:
