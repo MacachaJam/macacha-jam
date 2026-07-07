@@ -269,7 +269,7 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_blxll")
-animation = &"alert"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="FrameRandom" type="Node3D" parent="AnimatedSprite3D" unique_id=820722459 node_paths=PackedStringArray("sprite")]
