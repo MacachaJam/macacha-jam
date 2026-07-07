@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://s2gxwiw5yhwn"
+path="res://.godot/imported/Ambiente dia.ogg-b6d717a3d58fe00fdd66b8b9ac837662.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX Lobitos/Ambiente/Ambiente dia.ogg"
+dest_files=["res://.godot/imported/Ambiente dia.ogg-b6d717a3d58fe00fdd66b8b9ac837662.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

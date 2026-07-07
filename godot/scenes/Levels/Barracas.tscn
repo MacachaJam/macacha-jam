@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://csccjfi3qf7lb" path="res://assets/Props/Puesto de Granos.tscn" id="19_p8cny"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="20_kkabb"]
 [ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
+[ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="21_p8cny"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -1327,5 +1328,11 @@ metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_p8cny")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=1223368899]
+stream = ExtResource("21_p8cny")
+volume_db = -6.435
+autoplay = true
+bus = &"Sound"
 
 [connection signal="inicio_interactuar" from="AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
