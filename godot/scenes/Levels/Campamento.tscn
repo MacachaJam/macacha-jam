@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bo4k0aec7e628"]
 
 [ext_resource type="Material" uid="uid://33a2cna6vndr" path="res://assets/Environments/Test_procedural_sky_material.tres" id="1_5mrw7"]
+[ext_resource type="Script" uid="uid://bhsu242pagcat" path="res://scenes/Levels/campamento.gd" id="1_caf8k"]
 [ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="2_k24i6"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_hllly"]
 [ext_resource type="Texture2D" uid="uid://emmtnbcwqldk" path="res://assets/Props/Carpa.png" id="4_b2dhh"]
@@ -152,6 +153,7 @@ radius = 0.7
 size = Vector3(3.8762207, 2, 1)
 
 [node name="Campamento" type="Node3D" unique_id=525460237]
+script = ExtResource("1_caf8k")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2126069875]
 environment = SubResource("Environment_3oci6")
@@ -196,6 +198,7 @@ transform = Transform3D(-0.0393975, 0, -0.9992237, 0, 1, 0, 0.9992237, 0, -0.039
 shape = SubResource("BoxShape3D_dkyj2")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_hllly")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0621557, -0.10603082, 0)
 
 [node name="Props" type="Node3D" parent="." unique_id=798624165]
@@ -993,6 +996,29 @@ action_up = &"move_up"
 action_down = &"move_down"
 visibility_mode = 1
 
+[node name="OverlayDia" type="Control" parent="UI" unique_id=1582452952]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/OverlayDia" unique_id=1281757262]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelDia" type="Label" parent="UI/OverlayDia/CenterContainer" unique_id=146489526]
+layout_mode = 2
+theme_override_font_sizes/font_size = 251
+text = "DÍA X"
+
 [node name="Macacha" type="CharacterBody3D" parent="." unique_id=174433718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, -0.023894668, -0.38966608)
 
@@ -1073,6 +1099,7 @@ shape = SubResource("SphereShape3D_wdupl")
 [node name="SpawnPoints" type="Node3D" parent="." unique_id=927025057]
 
 [node name="DesdeElCentro" type="Marker3D" parent="SpawnPoints" unique_id=1600279275 groups=["spawn_point"]]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6187525, 0, 4.3468823)
 script = ExtResource("15_30kc6")
 metadata/_custom_type_script = "uid://db5cfg6do7bnk"

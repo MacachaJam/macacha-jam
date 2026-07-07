@@ -13,7 +13,10 @@ func _set_nodo_objetivo(nuevo_nodo_objetivo: Node3D) -> void:
 	nodo_objetivo = nuevo_nodo_objetivo
 	if not is_node_ready():
 		return
+
+func _ready() -> void:
 	if nodo_objetivo is Jugadora:
+		_on_jugadora_teletrasportada()
 		GameState.scene.jugadora_teletrasportada.connect(_on_jugadora_teletrasportada)
 
 func _on_jugadora_teletrasportada() -> void:

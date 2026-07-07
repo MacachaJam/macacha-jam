@@ -1,7 +1,5 @@
 ~ start
-if GameState.global.hechos_del_dia.te_descubrieron
-	=> mision_incompleta
-elif GameState.global.dia_actual == 1
+if GameState.global.dia_actual == 1
 	if GameState.global.hechos_del_dia.hablaste_con_macacha
 		=> dia_1_reitera
 	else
@@ -61,11 +59,11 @@ set GameState.global.hechos_del_dia.hablaste_con_macacha = true
 Macacha: Infíltrate en el cuartel. Una vez adentro emplearás los granos de maíz para contar los presentes y ausentes
 => END
 ~ mision_incompleta
-%2 Macacha: ¿Pero qué haces aquí? ¡Necesitamos esa información!
-% Macacha: ¿Otra vez acá? ¿Aca no quieres ver a Salta libre de nuevo?
-% Macacha: Ni los maturrangos corrieron tan rápido con los Infernales como tú.
-% Macacha: María, necesitamos saber eso. Es esencial para nuestra libertad. 
-% Macacha: ¡Vuelve! No tenemos todo el día.
-% Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión!
+%2 Macacha: ¿Pero qué haces aquí? ¡Necesitamos esa información! [next=auto]
+% Macacha: ¿Otra vez acá? ¿Aca no quieres ver a Salta libre de nuevo? [next=auto]
+% Macacha: Ni los maturrangos corrieron tan rápido con los Infernales como tú. [next=auto]
+% Macacha: María, necesitamos saber eso. Es esencial para nuestra libertad. [next=auto]
+% Macacha: ¡Vuelve! No tenemos todo el día. [next=auto]
+% Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión! [next=auto]
 set GameState.global.hechos_del_dia.te_descubrieron = false
 => END
