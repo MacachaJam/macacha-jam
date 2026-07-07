@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
+[ext_resource type="AudioStream" uid="uid://bgug0sil0gjau" path="res://Audio/SFX/Bien hecho.wav" id="20_vfiry"]
+[ext_resource type="AudioStream" uid="uid://cx8a23qh72p2q" path="res://Audio/SFX/maso menos.wav" id="21_6ipsq"]
+[ext_resource type="AudioStream" uid="uid://b3ei345ki73vs" path="res://Audio/SFX/mal.wav" id="22_7leql"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
 sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
@@ -394,5 +397,17 @@ flip_sprite = true
 stream = ExtResource("20_3njmf")
 volume_db = -4.875
 autoplay = true
+
+[node name="PuzzleSFX" type="Node" parent="." unique_id=329197095]
+
+[node name="BienSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=2072497405]
+stream = ExtResource("20_vfiry")
+volume_db = -3.792
+
+[node name="MasoSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=1597302691]
+stream = ExtResource("21_6ipsq")
+
+[node name="MalSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=9107849]
+stream = ExtResource("22_7leql")
 
 [connection signal="inicio_interactuar" from="Props/Mesa Moro/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
