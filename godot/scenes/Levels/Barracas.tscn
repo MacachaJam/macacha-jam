@@ -191,7 +191,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_p8cny"]

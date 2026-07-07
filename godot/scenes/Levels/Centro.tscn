@@ -224,7 +224,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [node name="Centro" type="Node3D" unique_id=1012514493]
