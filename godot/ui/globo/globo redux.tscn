@@ -4,49 +4,42 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_bh7xm"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_wuqje"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.329412, 0.329412, 0.329412, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.6, 0.6, 0.6, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
 [sub_resource type="Gradient" id="Gradient_bh7xm"]
 interpolation_mode = 2
 offsets = PackedFloat32Array(0.7810219, 1)
-colors = PackedColorArray(0.27591944, 0.31529826, 0.80351126, 1, 0.37449193, 0.114848755, 0.5361183, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.5229, 0.53717995, 0.63, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bh7xm"]
+gradient = SubResource("Gradient_bh7xm")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3o65"]
+texture = SubResource("GradientTexture2D_bh7xm")
+
+[sub_resource type="Gradient" id="Gradient_mjuyw"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.70864195, 0.95300263, 0.9634465)
+colors = PackedColorArray(0.16945279, 0.28621435, 0.6121171, 1, 0.6071962, 0.43785456, 0.86779964, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uh3kq"]
+gradient = SubResource("Gradient_mjuyw")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxiuw"]
+texture = SubResource("GradientTexture2D_uh3kq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lthnx"]
+texture = SubResource("GradientTexture2D_uh3kq")
+
+[sub_resource type="Gradient" id="Gradient_6ouw5"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.7810219, 1)
+colors = PackedColorArray(0.16945279, 0.28621435, 0.6121171, 1, 0.6071962, 0.43785456, 0.86779964, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_neh84"]
-gradient = SubResource("Gradient_bh7xm")
+gradient = SubResource("Gradient_6ouw5")
 fill = 2
 fill_from = Vector2(0.5, 0.5)
 
@@ -55,12 +48,13 @@ texture = SubResource("GradientTexture2D_neh84")
 
 [sub_resource type="Gradient" id="Gradient_jemns"]
 interpolation_mode = 2
-offsets = PackedFloat32Array(0.4379562, 0.76642334, 1)
-colors = PackedColorArray(0.35, 0.35, 0.35, 0.5686275, 0.2598986, 0.015645213, 0.1943391, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0.8430657, 0.94160587, 1)
+colors = PackedColorArray(0.08, 0.08, 0.08, 0.8117647, 0.2598986, 0.015645213, 0.1943391, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jemns"]
 gradient = SubResource("Gradient_jemns")
-fill_from = Vector2(0, 0.18376069)
+fill = 2
+fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_neh84"]
@@ -68,17 +62,18 @@ texture = SubResource("GradientTexture2D_jemns")
 texture_margin_left = 20.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+region_rect = Rect2(7, 0, 51, 53.5)
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
-Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
-Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
-Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
+Button/styles/disabled = SubResource("StyleBoxTexture_l3o65")
+Button/styles/focus = SubResource("StyleBoxTexture_bxiuw")
+Button/styles/hover = SubResource("StyleBoxTexture_lthnx")
 Button/styles/normal = SubResource("StyleBoxTexture_wuqje")
-MarginContainer/constants/margin_bottom = 2
-MarginContainer/constants/margin_left = 0
-MarginContainer/constants/margin_right = 0
-MarginContainer/constants/margin_top = 20
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 160
+MarginContainer/constants/margin_right = 160
+MarginContainer/constants/margin_top = 30
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_neh84")
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
@@ -127,6 +122,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
@@ -190,20 +187,13 @@ autoplay = &"progress"
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=457082132 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -590.0
-offset_top = 130.0
-offset_right = -9.0
-offset_bottom = 200.0
-grow_horizontal = 0
-grow_vertical = 2
+layout_mode = 0
+offset_left = 825.0
+offset_top = 475.0
+offset_right = 1175.0
+offset_bottom = 545.0
 size_flags_vertical = 8
-theme_override_constants/separation = 2
+theme_override_constants/separation = 5
 alignment = 1
 script = ExtResource("3_wuqje")
 response_template = NodePath("ResponseExample")
@@ -211,6 +201,7 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=124623905]
 layout_mode = 2
 text = "Response example"
+autowrap_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=855775658]
 unique_name_in_owner = true
