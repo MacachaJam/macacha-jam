@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyym6g8lu2swd"
-path="res://.godot/imported/GuardiasSFX_001.wav-3b7bdaede70e00c3b129b510f55ef218.sample"
+path="res://.godot/imported/GuardiasSFX_001.wav-977a0045c09dd70415a5180b34e018d1.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/PJVoices/GuardiasSFX_001.wav"
-dest_files=["res://.godot/imported/GuardiasSFX_001.wav-3b7bdaede70e00c3b129b510f55ef218.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/PJVoices/GuardiasSFX_001.wav"
+dest_files=["res://.godot/imported/GuardiasSFX_001.wav-977a0045c09dd70415a5180b34e018d1.sample"]
 
 [params]
 

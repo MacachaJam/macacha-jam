@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcxm10ssui5ob"
-path="res://.godot/imported/maso menos.wav-4fb51dbd63ddc52063cf316f70de90ab.sample"
+path="res://.godot/imported/maso menos.wav-4eaa294ef13170eb817820e19b094096.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/Puzzles/maso menos.wav"
-dest_files=["res://.godot/imported/maso menos.wav-4fb51dbd63ddc52063cf316f70de90ab.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/Puzzles/maso menos.wav"
+dest_files=["res://.godot/imported/maso menos.wav-4eaa294ef13170eb817820e19b094096.sample"]
 
 [params]
 

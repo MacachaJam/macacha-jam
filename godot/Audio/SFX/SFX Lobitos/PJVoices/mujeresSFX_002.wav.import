@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d16eep0wp8l3g"
-path="res://.godot/imported/mujeresSFX_002.wav-b78488f28a6768931114b7cacf8b66f6.sample"
+path="res://.godot/imported/mujeresSFX_002.wav-198bcd98dbb39cb8115e02912b533024.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/PJVoices/mujeresSFX_002.wav"
-dest_files=["res://.godot/imported/mujeresSFX_002.wav-b78488f28a6768931114b7cacf8b66f6.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/PJVoices/mujeresSFX_002.wav"
+dest_files=["res://.godot/imported/mujeresSFX_002.wav-198bcd98dbb39cb8115e02912b533024.sample"]
 
 [params]
 

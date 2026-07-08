@@ -2,11 +2,14 @@ extends Node2D
 
 @export var game_scene:PackedScene
 @export var settings_scene:PackedScene
+@onready var UISFX : AudioStreamPlayer = $UISFX
 
 @onready var continue_button := %ContinueButton
 @onready var new_game_button := %NewGameButton
 @onready var settings_button := %SettingsButton
 @onready var exit_button := %ExitButton
+
+
 
 func _ready() -> void:
 	new_game_button.disabled = game_scene == null
@@ -25,8 +28,10 @@ func _ready() -> void:
 		continue_button.grab_focus()
 	else:
 		new_game_button.grab_focus()
+	
 
 func _on_settings_button_pressed() -> void:
+	UISFX.play()
 	SceneSwitcher.change_to_packed_with_transition(
 		settings_scene,
 		"",
@@ -42,8 +47,9 @@ func _on_play_button_pressed() -> void:
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,
 	)
-	
+
 func _on_continue_button_pressed() -> void:
+	UISFX.play()
 	SceneSwitcher.change_to_file_with_transition(
 		GameState.scene.path,
 		GameState.scene.spawn_point,
@@ -52,5 +58,6 @@ func _on_continue_button_pressed() -> void:
 	)
 
 func _on_exit_button_pressed() -> void:
+	UISFX.play()
 	await Transitions.do_out_transition()
 	get_tree().quit.call_deferred()

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b761xskcis1sl"
-path="res://.godot/imported/varonesSFX_003.wav-312198bcd015e79dabd7a08fd37edc0e.sample"
+path="res://.godot/imported/varonesSFX_003.wav-b16bc4e0e1a0c7c867dd93012bad1868.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/PJVoices/varonesSFX_003.wav"
-dest_files=["res://.godot/imported/varonesSFX_003.wav-312198bcd015e79dabd7a08fd37edc0e.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/PJVoices/varonesSFX_003.wav"
+dest_files=["res://.godot/imported/varonesSFX_003.wav-b16bc4e0e1a0c7c867dd93012bad1868.sample"]
 
 [params]
 

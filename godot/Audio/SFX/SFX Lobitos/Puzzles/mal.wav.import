@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://my0xunb6qpfh"
-path="res://.godot/imported/mal.wav-55f8621e9388bb7f4ffcb61846ccac83.sample"
+path="res://.godot/imported/mal.wav-af3763d9dca680c46baa5a798d8bbad3.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/Puzzles/mal.wav"
-dest_files=["res://.godot/imported/mal.wav-55f8621e9388bb7f4ffcb61846ccac83.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/Puzzles/mal.wav"
+dest_files=["res://.godot/imported/mal.wav-af3763d9dca680c46baa5a798d8bbad3.sample"]
 
 [params]
 

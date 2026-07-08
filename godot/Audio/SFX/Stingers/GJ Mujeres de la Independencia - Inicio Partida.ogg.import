@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f3xsxf7yelnq"
+path="res://.godot/imported/GJ Mujeres de la Independencia - Inicio Partida.ogg-51f836a47bd27d7cd475446f42ec85d4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Inicio Partida.ogg"
+dest_files=["res://.godot/imported/GJ Mujeres de la Independencia - Inicio Partida.ogg-51f836a47bd27d7cd475446f42ec85d4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

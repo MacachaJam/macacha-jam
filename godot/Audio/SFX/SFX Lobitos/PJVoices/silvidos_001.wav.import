@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://hfvd3xwylusb"
-path="res://.godot/imported/silvidos_001.wav-8a03c52402e82a8349253af7949e01a6.sample"
+path="res://.godot/imported/silvidos_001.wav-f3a1d37f9e638d4526ef90c001643bec.sample"
 
 [deps]
 
-source_file="res://Audio/SFX Lobitos/PJVoices/silvidos_001.wav"
-dest_files=["res://.godot/imported/silvidos_001.wav-8a03c52402e82a8349253af7949e01a6.sample"]
+source_file="res://Audio/SFX/SFX Lobitos/PJVoices/silvidos_001.wav"
+dest_files=["res://.godot/imported/silvidos_001.wav-f3a1d37f9e638d4526ef90c001643bec.sample"]
 
 [params]
 
