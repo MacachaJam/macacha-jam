@@ -44,3 +44,4 @@ parameters/looping = true
 
 [node name="UISFX" type="AudioStreamPlayer" parent="." unique_id=1980344568]
 stream = ExtResource("5_lhypd")
+bus = &"Sound"

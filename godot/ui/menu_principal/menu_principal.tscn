@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://ui/menu_opciones/menu_opciones.tscn" id="3_ruly6"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_i6a53"]
 [ext_resource type="AudioStream" uid="uid://dp635stohhqdo" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Boton Menu.ogg" id="5_h4w4h"]
-[ext_resource type="AudioStream" uid="uid://f3xsxf7yelnq" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Inicio Partida.ogg" id="5_ruly6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
 font_size = 8
@@ -15,7 +14,6 @@ font_color = Color(1, 1, 1, 0.486275)
 script = ExtResource("1_87bjv")
 game_scene = ExtResource("2_h4w4h")
 settings_scene = ExtResource("3_ruly6")
-new_game_stinger = ExtResource("5_ruly6")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=4311548]
 

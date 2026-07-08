@@ -3,7 +3,6 @@ extends Node2D
 @export var game_scene:PackedScene
 @export var settings_scene:PackedScene
 @onready var UISFX : AudioStreamPlayer = $UISFX
-@export var new_game_stinger: AudioStream
 
 @onready var continue_button := %ContinueButton
 @onready var new_game_button := %NewGameButton
@@ -42,17 +41,15 @@ func _on_settings_button_pressed() -> void:
 	
 func _on_play_button_pressed() -> void:
 	GameState.clear()
-	AudioManager.play_stinger(new_game_stinger)
 	SceneSwitcher.change_to_packed_with_transition(
 		game_scene,
 		"",
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,
 	)
-	
+
 func _on_continue_button_pressed() -> void:
 	UISFX.play()
-	AudioManager.play_stinger(new_game_stinger)
 	SceneSwitcher.change_to_file_with_transition(
 		GameState.scene.path,
 		GameState.scene.spawn_point,

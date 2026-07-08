@@ -32,11 +32,6 @@ var _players: Array[AudioStreamPlayer] = []
 var _target_volume_db: Array[float] = []
 var _tweens: Array[Tween] = []
 
-const NUM_STINGER_PLAYERS := 4  # cuántos stingers pueden sonar superpuestos a la vez
-
-var _stinger_players: Array[AudioStreamPlayer] = []
-var _next_stinger_player: int = 0
-
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -51,14 +46,6 @@ func _ready() -> void:
 		_players.append(player)
 		_target_volume_db.append(0.0)
 		_tweens.append(null)
-
-	for i in NUM_STINGER_PLAYERS:
-		var stinger_player := AudioStreamPlayer.new()
-		stinger_player.name = "Stinger%d" % i
-		stinger_player.process_mode = Node.PROCESS_MODE_ALWAYS
-		stinger_player.bus = "SFX"  # o el bus que uses para SFX/UI
-		add_child(stinger_player)
-		_stinger_players.append(stinger_player)
 
 
 func _valid_layer(layer: int) -> bool:
@@ -233,11 +220,3 @@ func solo_layers(layers: Array, fade_time: float = DEFAULT_FADE) -> void:
 func unsolo_all(fade_time: float = DEFAULT_FADE) -> void:
 	for i in NUM_LAYERS:
 		unmute_layer(i, fade_time)
-
-func play_stinger(stream: AudioStream, volume_db: float = 0.0) -> void:
-	var player := _stinger_players[_next_stinger_player]
-	_next_stinger_player = (_next_stinger_player + 1) % NUM_STINGER_PLAYERS
-
-	player.stream = stream
-	player.volume_db = volume_db
-	player.play()

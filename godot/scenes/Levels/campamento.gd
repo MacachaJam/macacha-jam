@@ -8,6 +8,7 @@ extends Node3D
 @onready var desde_el_centro: SpawnPoint = %DesdeElCentro
 @onready var overlay_dia: Control = %OverlayDia
 @onready var label_dia: Label = $UI/OverlayDia/CenterContainer/LabelDia
+@onready var new_game_stinger: AudioStreamPlayer = %NewGameStinger
 
 
 func _ready() -> void:
@@ -19,6 +20,7 @@ func _ready() -> void:
 
 
 func mostrar_overlay_día() -> void:
+		new_game_stinger.play()
 		label_dia.text = "DÍA %d" % GameState.global.dia_actual
 		overlay_dia.show()
 		await get_tree().create_timer(duración_overlay).timeout
