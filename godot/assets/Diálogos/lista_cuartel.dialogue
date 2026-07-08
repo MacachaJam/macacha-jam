@@ -1,7 +1,10 @@
 ~ start
-De La Serna: ¡Soldado! Procedo a pasar lista. [next=auto]
-Soldado realista: ¡General! ¡Sí, mi general! [next=auto]
+De La Serna: ¡Soldado! Procedo a pasar lista.
+Soldado realista: ¡General! ¡Sí, mi general!
+María: Esto es importante. Me voy a poner a contar...
+=> al_minijuego
 
+~ pasando_lista
 De La Serna: Alonso del Campo, Miguel. [next=auto]
 Soldado realista: ¡Presente mi general! [next=auto]
 
@@ -32,6 +35,23 @@ Soldado realista: ¡Ausente, mi general! [next=auto]
 De La Serna: Zuñiguez Pérez, José. [next=auto]
 Soldado realista: ¡Presente, mi general! [next=auto]
 => END
+
+~ al_minijuego
+do minijuego_maiz.iniciar()
+=> END
+
+~ reintenta_1
+De La Serna: ¡Soldado! Vuelvo a pasar lista.
+Soldado realista: ¡General! ¡Sí, mi general!
+María: A ver si esta vez cuento bien...
+=> al_minijuego
+
+~ reintenta_2
+De La Serna: ¡Soldado! ¡Paso lista por última vez!
+Soldado realista: ¡General! ¡Sí, mi general!
+María: A ver si esta vez cuento bien...
+=> al_minijuego
+
 ~ prueba
 María: Vamos a contar...
 - Ganaste => exito
