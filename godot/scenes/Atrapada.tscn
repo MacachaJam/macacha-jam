@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bsxlktc7pdmcl"]
+
+[ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="1_ww51b"]
+[ext_resource type="Texture2D" uid="uid://cct2iwteh7m1j" path="res://assets/Props/CarcelLoreto.png" id="2_mrfcp"]
+
+[sub_resource type="Gradient" id="Gradient_e7omi"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.121839084, 0.83908045)
+colors = PackedColorArray(0.09239709, 0.09239706, 0.09239703, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8mre2"]
+gradient = SubResource("Gradient_e7omi")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Node2D" unique_id=2051003704]
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=124727507]
+position = Vector2(631, 363)
+scale = Vector2(20.316677, 20.316677)
+texture = SubResource("GradientTexture2D_8mre2")
+
+[node name="Loreto" type="Sprite2D" parent="." unique_id=1532214337]
+position = Vector2(635, 401)
+scale = Vector2(1.972198, 1.972198)
+texture = ExtResource("1_ww51b")
+
+[node name="Carcel" type="Sprite2D" parent="." unique_id=592140644]
+position = Vector2(641, 345)
+scale = Vector2(3.3516896, 3.3516896)
+texture = ExtResource("2_mrfcp")
+
+[node name="Label" type="Label" parent="." unique_id=1665159831]
+offset_left = 459.0
+offset_top = 116.0
+offset_right = 791.0
+offset_bottom = 212.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(2.6034334, 2.6034334, 2.6034334, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 70
+text = "Atrapada!"

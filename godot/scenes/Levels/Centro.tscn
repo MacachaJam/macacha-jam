@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bxv7kkbsojpnm" path="res://assets/Props/arbusto_alto.tscn" id="15_2fjbg"]
 [ext_resource type="PackedScene" uid="uid://mpn6esgi1iem" path="res://assets/Props/pasto_1.tscn" id="16_1mqds"]
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="17_itb5f"]
+[ext_resource type="Texture2D" uid="uid://dscdh7cvprp1e" path="res://assets/Props/EscudoRealista.png" id="17_lfsp6"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="18_2fjbg"]
 [ext_resource type="Script" uid="uid://dtmxsc3jfr2ka" path="res://scenes/area_muestra_diálogo/area_muestra_diálogo.gd" id="21_wklx2"]
 [ext_resource type="PackedScene" uid="uid://cbvnhshei73hb" path="res://assets/Props/Puesto de Venta.tscn" id="22_kikkf"]
@@ -565,6 +566,27 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("12_puopg")
+
+[node name="Sprite3D" type="Sprite3D" parent="Edificios" unique_id=26637997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4741955, 2.9219842, -0.98166084)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_lfsp6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Edificios" unique_id=1758473150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4741955, 2.9219842, -1.0078312)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_lfsp6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Edificios" unique_id=1030148833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4741955, 2.9219842, -1.0330834)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("17_lfsp6")
 
 [node name="Prop" type="Node3D" parent="." unique_id=1482536358]
 
