@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dol0y4yw6m8tn" path="res://assets/Terrenos/Barracas Floor.png" id="2_i0cyr"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_ppftp"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_arn0i"]
+[ext_resource type="PackedScene" uid="uid://epi6ox0uuwhc" path="res://scenes/minijuego_maiz/interfaz_maiz.tscn" id="4_i4wot"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_c602l"]
 [ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="5_i4wot"]
-[ext_resource type="Script" uid="uid://cw44n1eja8gl5" path="res://scenes/minijuego_maiz/interfaz_maiz.gd" id="5_q6yt5"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_ytbsj"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_ppftp"]
 [ext_resource type="Texture2D" uid="uid://b17l2mijcp4p" path="res://assets/Edificios/Regimiento.png" id="8_c2heg"]
@@ -225,8 +225,8 @@ shape = SubResource("WorldBoundaryShape3D_ybm7l")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=229540725]
 
-[node name="InterfazMaiz" type="Node2D" parent="UI" unique_id=242316288]
-script = ExtResource("5_q6yt5")
+[node name="InterfazMaiz" parent="UI" unique_id=1613952477 instance=ExtResource("4_i4wot")]
+visible = false
 
 [node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("5_i4wot")]
 

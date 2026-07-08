@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://epi6ox0uuwhc"]
+
+[ext_resource type="Script" uid="uid://cw44n1eja8gl5" path="res://scenes/minijuego_maiz/interfaz_maiz.gd" id="1_w3imm"]
+
+[node name="InterfazMaiz" type="Node2D" unique_id=1613952477]
+script = ExtResource("1_w3imm")
