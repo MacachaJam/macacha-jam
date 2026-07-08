@@ -76,10 +76,13 @@ texture = SubResource("AtlasTexture_fhnvg")
 stream = SubResource("AudioStreamOggVorbis_cxd1r")
 volume_db = -5.958
 pitch_scale = 0.61
+bus = &"Sound"
 
 [node name="CambiarVestidoSFX" type="AudioStreamPlayer" parent="." unique_id=420527521]
 stream = ExtResource("5_2vwfl")
 volume_db = 5.958
+bus = &"Sound"
 
 [node name="AtrapadaSFX" type="AudioStreamPlayer" parent="." unique_id=1687942430]
 stream = ExtResource("6_2bqtb")
+bus = &"Sound"
