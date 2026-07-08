@@ -1,6 +1,83 @@
 [gd_scene format=3 uid="uid://epi6ox0uuwhc"]
 
 [ext_resource type="Script" uid="uid://cw44n1eja8gl5" path="res://scenes/minijuego_maiz/interfaz_maiz.gd" id="1_w3imm"]
+[ext_resource type="Texture2D" uid="uid://x0hym8j1lxlu" path="res://assets/Props/Manta Granos Barraca.png" id="2_gom7c"]
+[ext_resource type="Texture2D" uid="uid://b8w5rv8pxkt51" path="res://assets/Props/Saco Granos Barraca.png" id="3_0medu"]
+[ext_resource type="Texture2D" uid="uid://domdyyrneo5uo" path="res://assets/Props/SacoObjetivoMinigame3.png" id="4_k5h8r"]
+[ext_resource type="Texture2D" uid="uid://c7f44qs1uvyrp" path="res://assets/Props/ArrowKeyMinigame.png" id="5_yd2rs"]
+[ext_resource type="Texture2D" uid="uid://dvmgxwm1hqmb7" path="res://assets/Props/LoretoBrazoMinigame3.png" id="6_usu1e"]
+[ext_resource type="Texture2D" uid="uid://wkc75i06p52i" path="res://assets/Props/Grano Ausente.png" id="7_nu45m"]
+[ext_resource type="Texture2D" uid="uid://uuxoe37hyki0" path="res://assets/Props/Grano Presente.png" id="8_sujk5"]
+[ext_resource type="AnimationLibrary" uid="uid://dle2oajigwypj" path="res://assets/Animaciones/Minigames.res" id="9_mko50"]
 
 [node name="InterfazMaiz" type="Node2D" unique_id=1613952477]
 script = ExtResource("1_w3imm")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1037576443]
+modulate = Color(1, 1, 1, 0.43529412)
+position = Vector2(685, 392)
+scale = Vector2(15.911769, 15.911765)
+texture = ExtResource("2_gom7c")
+
+[node name="Saco Izq" type="Sprite2D" parent="." unique_id=955459831]
+position = Vector2(261, 565)
+scale = Vector2(9.479167, 9.479167)
+texture = ExtResource("3_0medu")
+
+[node name="Saco Der" type="Sprite2D" parent="." unique_id=2104506142]
+position = Vector2(1018, 565)
+scale = Vector2(9.479167, 9.479167)
+texture = ExtResource("3_0medu")
+
+[node name="Saco Goal" type="Sprite2D" parent="." unique_id=322303999]
+position = Vector2(650, 586)
+scale = Vector2(8.375, 8.375)
+texture = ExtResource("4_k5h8r")
+
+[node name="Flecha Izq" type="Sprite2D" parent="." unique_id=2026646518]
+position = Vector2(258, 618)
+scale = Vector2(3.474359, 3.474359)
+texture = ExtResource("5_yd2rs")
+
+[node name="Flecha Der" type="Sprite2D" parent="." unique_id=473789802]
+position = Vector2(1020, 618)
+scale = Vector2(3.474359, 3.474359)
+texture = ExtResource("5_yd2rs")
+flip_h = true
+
+[node name="Brazo" type="Sprite2D" parent="." unique_id=998573994]
+position = Vector2(652.99994, -60)
+scale = Vector2(8.633333, 8.633333)
+texture = ExtResource("6_usu1e")
+offset = Vector2(0, 20)
+
+[node name="Grano Ausente" type="Sprite2D" parent="Brazo" unique_id=407324676]
+visible = false
+position = Vector2(-0.11582947, 38.10811)
+scale = Vector2(0.9266409, 0.9266409)
+texture = ExtResource("7_nu45m")
+
+[node name="Grano Presente" type="Sprite2D" parent="Brazo" unique_id=1494359352]
+visible = false
+position = Vector2(-0.11582947, 38.10811)
+scale = Vector2(0.9266409, 0.9266409)
+texture = ExtResource("8_sujk5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=366214102]
+libraries/ = ExtResource("9_mko50")
+
+[node name="Label" type="Label" parent="." unique_id=1520655014]
+offset_left = 139.0
+offset_top = 462.0
+offset_right = 377.0
+offset_bottom = 545.0
+theme_override_font_sizes/font_size = 60
+text = "Ausente"
+
+[node name="Label2" type="Label" parent="." unique_id=1132499739]
+offset_left = 891.0
+offset_top = 462.0
+offset_right = 1149.0
+offset_bottom = 545.0
+theme_override_font_sizes/font_size = 60
+text = "Presente"
