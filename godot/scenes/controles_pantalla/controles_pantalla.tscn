@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bsiydaujniild"]
+
+[ext_resource type="Texture2D" uid="uid://c78xfohu7cdne" path="res://assets/UI/kenney_input-prompts-pixel-1-bit/tilemap_white.png" id="1_3wg3c"]
+[ext_resource type="Script" uid="uid://bqdtr6nhpj0k6" path="res://scenes/controles_pantalla/controles_pantalla.gd" id="1_14pxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhnvg"]
+atlas = ExtResource("1_3wg3c")
+region = Rect2(442, 289, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3njmf"]
+
+[node name="ControlesPantalla" type="Control" unique_id=822788453 groups=["controles_pantalla"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_14pxp")
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=1760175082]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+joystick_mode = 1
+action_left = &"move_left"
+action_right = &"move_right"
+action_up = &"move_up"
+action_down = &"move_down"
+visibility_mode = 1
+
+[node name="BotonTouchInteractuar" type="TouchScreenButton" parent="." unique_id=216387120]
+unique_name_in_owner = true
+position = Vector2(1223, 675)
+rotation = 3.1415925
+scale = Vector2(10, 10)
+texture_normal = SubResource("AtlasTexture_fhnvg")
+texture_pressed = SubResource("AtlasTexture_fhnvg")
+shape = SubResource("CircleShape2D_3njmf")
+action = "interact"
+visibility_mode = 1
+
+[node name="BotonTouchDerecha" type="TouchScreenButton" parent="." unique_id=1837378899]
+unique_name_in_owner = true
+position = Vector2(1222, 48.000046)
+rotation = 1.5707964
+scale = Vector2(10, 10)
+texture_normal = SubResource("AtlasTexture_fhnvg")
+texture_pressed = SubResource("AtlasTexture_fhnvg")
+shape = SubResource("CircleShape2D_3njmf")
+action = "move_right"
+
+[node name="BotonTouchIzquierda" type="TouchScreenButton" parent="." unique_id=1358874322]
+unique_name_in_owner = true
+position = Vector2(64.000046, 208.00002)
+rotation = -1.5707964
+scale = Vector2(10, 10)
+texture_normal = SubResource("AtlasTexture_fhnvg")
+texture_pressed = SubResource("AtlasTexture_fhnvg")
+shape = SubResource("CircleShape2D_3njmf")
+action = "move_left"

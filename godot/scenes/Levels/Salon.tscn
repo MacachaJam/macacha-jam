@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://0r58i6t38fpl" path="res://assets/Personajes/Evil Twink/Serna.png" id="11_3njmf"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
 [ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
+[ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="14_7dnsd"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
 
@@ -293,22 +294,15 @@ texture = ExtResource("12_7dnsd")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=116716274]
 
+[node name="InterfazSilabeador" parent="UI" unique_id=1773905554 instance=ExtResource("11_kubcc")]
+visible = false
+position = Vector2(916.00006, 334)
+
+[node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("14_7dnsd")]
+
 [node name="PauseOverlay" parent="UI" unique_id=427700071 instance=ExtResource("4_j8ckk")]
 unique_name_in_owner = true
 visible = false
-
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=295023138]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-joystick_mode = 1
-action_left = &"move_left"
-action_right = &"move_right"
-action_up = &"move_up"
-action_down = &"move_down"
-visibility_mode = 1
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=1495047479]
 
@@ -359,7 +353,7 @@ silabeos = Dictionary[int, String]({
 2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hm-mmmm-hm-mm-mmhh"
 })
 "diálogo" = NodePath("../DiálogoSilabeador")
-interfaz = NodePath("../CanvasLayer/InterfazSilabeador")
+interfaz = NodePath("../UI/InterfazSilabeador")
 
 [node name="PuzzlePararLaOreja2" type="Node" parent="." unique_id=1182041325 node_paths=PackedStringArray("diálogo", "interfaz")]
 unique_name_in_owner = true
@@ -371,16 +365,10 @@ silabeos = Dictionary[int, String]({
 2: "hm-mmm-hm-mmm-hm-mmm-hhmm-hmmm-hm-mm-hmm-mmmm-hm-hm"
 })
 "diálogo" = NodePath("../DiálogoSilabeador")
-interfaz = NodePath("../CanvasLayer/InterfazSilabeador")
+interfaz = NodePath("../UI/InterfazSilabeador")
 
 [node name="DiálogoSilabeador" type="Node" parent="." unique_id=414779755]
 script = ExtResource("10_77mci")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1428729698]
-
-[node name="InterfazSilabeador" parent="CanvasLayer" unique_id=1773905554 instance=ExtResource("11_kubcc")]
-visible = false
-position = Vector2(916.00006, 334)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=937243148]
 navigation_mesh = SubResource("NavigationMesh_cy4hc")

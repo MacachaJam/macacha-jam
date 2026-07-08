@@ -1,39 +1,39 @@
 ~ start
-De La Serna: ¡Soldado! Procedo a pasar lista.
+De La Serna: ¡Soldado! Procedo a [b] pasar lista[/b] .
 Soldado realista: ¡General! ¡Sí, mi general!
 María: Esto es importante. Me voy a poner a contar...
 => al_minijuego
 
 ~ pasando_lista
 De La Serna: Alonso del Campo, Miguel. [next=auto]
-Soldado realista: ¡Presente mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 
 De La Serna: Calero Rodríguez, Juan. [next=auto]
-Soldado realista: ¡Ausente, mi general! [next=auto]
+Soldado realista: ¡[b]Ausente[/b], mi general! [next=auto]
 
 De La Serna: Díaz Herrero, Joaquín. [next=auto]
-Soldado realista: ¡Ausente, mi general! [next=auto]
+Soldado realista: ¡[b]Ausente[/b], mi general! [next=auto]
 
 De La Serna: Escudero Pérez, Manuel, [next=auto]
-Soldado realista: ¡Presente, mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 
 De La Serna: Gutiérrez Lozoya, Santiago. [next=auto]
-Soldado realista: ¡Presente, mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 
 De La Serna: Navarro Valdéz, Mariano.  [next=auto]
-Soldado realista: ¡Ausente, mi general! [next=auto]
+Soldado realista: ¡[b]Ausente[/b], mi general! [next=auto]
 
 De La Serna: Plasencia Moreno, Lorenzo. [next=auto]
-Soldado realista: ¡Presente, mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 
 De La Serna: Palacios Ovejero, Francisco. [next=auto]
-Soldado realista: ¡Presente, mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 
 De La Serna: Ruiz Mansilla, Antonio. [next=auto]
-Soldado realista: ¡Ausente, mi general! [next=auto]
+Soldado realista: ¡[b]Ausente[/b], mi general! [next=auto]
 
 De La Serna: Zuñiguez Pérez, José. [next=auto]
-Soldado realista: ¡Presente, mi general! [next=auto]
+Soldado realista: ¡[b]Presente[/b], mi general! [next=auto]
 => END
 
 ~ al_minijuego
@@ -41,13 +41,13 @@ do minijuego_maiz.iniciar()
 => END
 
 ~ reintenta_1
-De La Serna: ¡Soldado! Vuelvo a pasar lista.
+De La Serna: ¡Soldado! Vuelvo a [b]pasar lista[/b].
 Soldado realista: ¡General! ¡Sí, mi general!
 María: A ver si esta vez cuento bien...
 => al_minijuego
 
 ~ reintenta_2
-De La Serna: ¡Soldado! ¡Paso lista por última vez!
+De La Serna: ¡Soldado! ¡Paso lista [b]por última vez[/b]!
 Soldado realista: ¡General! ¡Sí, mi general!
 María: A ver si esta vez cuento bien...
 => al_minijuego
@@ -57,11 +57,11 @@ María: Vamos a contar...
 - Ganaste => exito
 - Perdiste => fracaso
 ~ exito
-María: Listo. Esto es la información que debo depositar en el árbol.
+María: [b]Listo.[/b] Esto es la información que debo depositar en el árbol.
 set GameState.global.hechos_del_dia.conseguiste_la_info = true
 => END
 ~ fracaso
-María: ¡Debo volver al campamento!
+María: ¡Debo volver al [b]campamento[/b]!
 do GameState.scene.jugadora_descubierta.emit()
 set GameState.global.hechos_del_dia.te_descubrieron = true
 => END

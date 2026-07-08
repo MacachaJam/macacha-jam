@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dmnnnpmwioqff" path="res://assets/Terrenos/Centro Floor.png" id="2_agf16"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_agf16"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_adkwo"]
+[ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="5_4m3qn"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_vmbll"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_44d2x"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_agf16"]
@@ -28,7 +29,7 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="27_kikkf"]
 [ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_68u2b"]
-[ext_resource type="AudioStream" uid="uid://s2gxwiw5yhwn" path="res://Audio/SFX Lobitos/Ambiente/Ambiente dia.ogg" id="28_a7fpr"]
+[ext_resource type="AudioStream" uid="uid://s2gxwiw5yhwn" path="res://Audio/SFX/SFX Lobitos/Ambiente/Ambiente dia.ogg" id="28_a7fpr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -325,22 +326,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.205658, -0.051190257, 0.59
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=880815437]
 
+[node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("5_4m3qn")]
+
 [node name="PauseOverlay" parent="UI" unique_id=427700071 instance=ExtResource("4_adkwo")]
 unique_name_in_owner = true
 visible = false
-
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1477376661]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-joystick_mode = 1
-action_left = &"move_left"
-action_right = &"move_right"
-action_up = &"move_up"
-action_down = &"move_down"
-visibility_mode = 1
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=2100041961]
 

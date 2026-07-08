@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="5_no5a7"]
 [ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="6_y3w0a"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="7_280yi"]
+[ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="8_tiu62"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcdhy"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -101,3 +102,5 @@ script = ExtResource("6_y3w0a")
 [node name="InterfazSilabeador" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=1773905554 instance=ExtResource("7_280yi")]
 visible = false
 position = Vector2(330, 382)
+
+[node name="ControlesPantalla" parent="PuzzlePararLaOreja/CanvasLayer" unique_id=822788453 instance=ExtResource("8_tiu62")]

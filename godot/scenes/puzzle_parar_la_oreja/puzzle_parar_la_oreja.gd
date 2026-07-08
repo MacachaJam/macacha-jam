@@ -49,6 +49,9 @@ func _ready() -> void:
 func iniciar() -> void:
 	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
 	interfaz.visible = true
+	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
+	if controles:
+		controles.cambiar_izq_der(true)
 	if not diálogo.is_node_ready():
 		diálogo.ready.connect(_on_diálogo_ready, CONNECT_ONE_SHOT)
 	else:
@@ -81,4 +84,7 @@ func _on_interfaz_llegó(índice_sílaba: int, precisión: Precisiones) -> void:
 func _terminar(éxito: bool) -> void:
 	interfaz.visible = false
 	interfaz.llegó.disconnect(_on_interfaz_llegó)
+	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
+	if controles:
+		controles.cambiar_izq_der(false)
 	fin_del_puzzle.emit(éxito)
