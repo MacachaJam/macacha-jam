@@ -52,6 +52,7 @@ texture_normal = SubResource("AtlasTexture_fhnvg")
 texture_pressed = SubResource("AtlasTexture_fhnvg")
 shape = SubResource("CircleShape2D_3njmf")
 action = "move_right"
+visibility_mode = 1
 
 [node name="BotonTouchIzquierda" type="TouchScreenButton" parent="." unique_id=1358874322]
 unique_name_in_owner = true
@@ -62,3 +63,4 @@ texture_normal = SubResource("AtlasTexture_fhnvg")
 texture_pressed = SubResource("AtlasTexture_fhnvg")
 shape = SubResource("CircleShape2D_3njmf")
 action = "move_left"
+visibility_mode = 1
