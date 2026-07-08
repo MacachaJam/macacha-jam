@@ -51,6 +51,8 @@ func _physics_process(delta: float) -> void:
 	queue_redraw()
 
 func iniciar(colores: Dictionary[PuzzlePararLaOreja.Precisiones, Color]) -> void:
+	visible = true
+	process_mode = Node.PROCESS_MODE_INHERIT
 	_colores = colores
 	sprite_2d.modulate = _colores[PuzzlePararLaOreja.Precisiones.BIEN]
 	queue_redraw()
@@ -110,6 +112,11 @@ func _ready() -> void:
 	if autocentrar:
 		center_in_viewport()
 		get_tree().root.size_changed.connect(center_in_viewport)
+	desactivar()
+
+func desactivar() -> void:
+	visible = false
+	process_mode = Node.PROCESS_MODE_DISABLED
 
 func center_in_viewport() -> void:
 	global_position = get_viewport_rect().size / 2
