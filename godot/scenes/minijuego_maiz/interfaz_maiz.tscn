@@ -64,6 +64,7 @@ scale = Vector2(0.9266409, 0.9266409)
 texture = ExtResource("8_sujk5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=366214102]
+unique_name_in_owner = true
 libraries/ = ExtResource("9_mko50")
 
 [node name="Label" type="Label" parent="." unique_id=1520655014]

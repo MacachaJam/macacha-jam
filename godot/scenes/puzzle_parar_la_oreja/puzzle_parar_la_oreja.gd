@@ -48,7 +48,6 @@ func _ready() -> void:
 
 func iniciar() -> void:
 	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
-	interfaz.visible = true
 	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
 	if controles:
 		controles.cambiar_izq_der(true)
@@ -82,8 +81,8 @@ func _on_interfaz_llegó(índice_sílaba: int, precisión: Precisiones) -> void:
 			_terminar(false)
 
 func _terminar(éxito: bool) -> void:
-	interfaz.visible = false
 	interfaz.llegó.disconnect(_on_interfaz_llegó)
+	interfaz.desactivar()
 	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
 	if controles:
 		controles.cambiar_izq_der(false)
