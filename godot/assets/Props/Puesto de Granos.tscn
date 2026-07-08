@@ -21,35 +21,35 @@ texture_filter = 2
 texture = ExtResource("1_7a8tf")
 
 [node name="Sprite3D9" type="Sprite3D" parent="." unique_id=80176200]
-transform = Transform3D(0.8494356, 0.20743872, -9.067435e-09, 0, -3.8221145e-08, -0.8743979, -0.20743872, 0.8494356, -3.7130008e-08, 0.11787898, 0.14036988, -0.3547778)
+transform = Transform3D(0.8494356, 0.20743872, -9.067435e-09, 0, -3.8221145e-08, -0.8743979, -0.20743872, 0.8494356, -3.7130008e-08, 0.26250428, 0.14036988, -0.3547778)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("2_n66al")
 
 [node name="Sprite3D10" type="Sprite3D" parent="." unique_id=872340421]
-transform = Transform3D(0.8494356, 0, 0.20743872, 0, 0.8743979, 0, -0.20743872, 0, 0.8494356, 0.10467507, 0.07503134, -0.40884614)
+transform = Transform3D(0.8494356, 0, 0.20743872, 0, 0.8743979, 0, -0.20743872, 0, 0.8494356, 0.24930038, 0.07503134, -0.40884614)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_csuax")
 
 [node name="Sprite3D11" type="Sprite3D" parent="." unique_id=301355262]
-transform = Transform3D(0.8494356, 0, 0.20743872, 0, 0.8743979, 0, -0.20743872, 0, 0.8494356, 0.13297628, 0.07503134, -0.29295623)
+transform = Transform3D(0.8494356, 0, 0.20743872, 0, 0.8743979, 0, -0.20743872, 0, 0.8494356, 0.2776016, 0.07503134, -0.29295623)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_csuax")
 
 [node name="Sprite3D12" type="Sprite3D" parent="." unique_id=524302449]
-transform = Transform3D(-0.20743877, 0, 0.8494356, 0, 0.8743979, 0, -0.8494356, 0, -0.20743877, 0.051698737, 0.07503134, -0.33689275)
+transform = Transform3D(-0.20743877, 0, 0.8494356, 0, 0.8743979, 0, -0.8494356, 0, -0.20743877, 0.19632405, 0.07503134, -0.33689275)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("3_csuax")
 
 [node name="Sprite3D13" type="Sprite3D" parent="." unique_id=387635907]
-transform = Transform3D(-0.20743877, 0, 0.8494356, 0, 0.8743979, 0, -0.8494356, 0, -0.20743877, 0.1829301, 0.07503134, -0.36894047)
+transform = Transform3D(-0.20743877, 0, 0.8494356, 0, 0.8743979, 0, -0.8494356, 0, -0.20743877, 0.32755542, 0.07503134, -0.36894047)
 shaded = true
 alpha_cut = 1
 texture_filter = 2
@@ -64,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4185227, 0.13693231, 0.3338
 shape = SubResource("BoxShape3D_wdupl")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=649211192]
-transform = Transform3D(0.96709514, -0.0013233926, 0.25441173, 0.0013561102, 0.9999991, 4.678787e-05, -0.25441155, 0.0002997594, 0.96709603, 0.11102898, 0.090927064, -0.35361445)
+transform = Transform3D(0.96709514, -0.0013233926, 0.25441173, 0.0013561102, 0.9999991, 4.678787e-05, -0.25441155, 0.0002997594, 0.96709603, 0.28469816, 0.090927064, -0.34327805)
 shape = SubResource("BoxShape3D_rlsfu")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=952936450]
