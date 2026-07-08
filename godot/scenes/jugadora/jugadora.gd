@@ -10,10 +10,10 @@ enum Atuendos { VESTIDO, VENDEDORA, CRIADA }
 @export var atuendo: Atuendos:
 	set = _set_atuendo
 
-@onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
-@onready var pasos_sfx: AudioStreamPlayer = $PasosSFX
-@onready var cambioVestido_sfx: AudioStreamPlayer = $CambiarVestidoSFX
-@onready var AtrapadaSFX: AudioStreamPlayer = $AtrapadaSFX
+@onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
+@onready var pasos_sfx: AudioStreamPlayer = %PasosSFX
+@onready var cambiar_vestido_sfx: AudioStreamPlayer = %CambiarVestidoSFX
+@onready var atrapada_sfx: AudioStreamPlayer = %AtrapadaSFX
 
 var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
 	Atuendos.VESTIDO: preload("uid://b4e0qc27oqlte"),
@@ -21,7 +21,6 @@ var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
 	Atuendos.CRIADA: preload("uid://5qddwg2qyvb3"),
 }
 var _detenida: bool
-var _reproduciendo_pasos: bool = false
 
 func _set_atuendo(nuevo_atuendo: Atuendos) -> void:
 	atuendo = nuevo_atuendo
@@ -40,14 +39,14 @@ func _ready() -> void:
 
 func _on_gamestate_cambió_atuendo() -> void:
 	atuendo = GameState.global.atuendo_actual
-	cambioVestido_sfx.play()
+	cambiar_vestido_sfx.play()
 
 func _on_transition_started() -> void:
 	cambiar_detenida(true)
 
 func _on_gamestate_atrapada() -> void:
 	cambiar_detenida(true)
-	AtrapadaSFX.play()
+	atrapada_sfx.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -62,8 +61,11 @@ func _physics_process(delta: float) -> void:
 
 	if velocity.is_zero_approx():
 		animated_sprite_3d.play("parada")
+		pasos_sfx.stop()
 	else:
 		animated_sprite_3d.play("caminando")
+		if not pasos_sfx.playing:
+			pasos_sfx.play()
 
 	if not is_zero_approx(velocity.x):
 		animated_sprite_3d.flip_h = velocity.x > 0
@@ -84,13 +86,3 @@ func _moverse_con_input(_delta: float) -> void:
 
 func cambiar_detenida(detenida: bool) -> void:
 	_detenida = detenida
-	
-	
-func _process(_delta: float) -> void:
-	var caminando := animated_sprite_3d.animation == "caminando"
-	if caminando and not _reproduciendo_pasos:
-		pasos_sfx.play()
-		_reproduciendo_pasos = true
-	elif not caminando and _reproduciendo_pasos:
-		pasos_sfx.stop()
-		_reproduciendo_pasos = false

@@ -39,6 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022007346, 1.0634553, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
+unique_name_in_owner = true
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0.7111909, 0)
 offset = Vector2(0, 20)
 billboard = 1
@@ -73,16 +74,19 @@ texture_filter = 2
 texture = SubResource("AtlasTexture_fhnvg")
 
 [node name="PasosSFX" type="AudioStreamPlayer" parent="." unique_id=961770666]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamOggVorbis_cxd1r")
 volume_db = -5.958
 pitch_scale = 0.61
 bus = &"Sound"
 
 [node name="CambiarVestidoSFX" type="AudioStreamPlayer" parent="." unique_id=420527521]
+unique_name_in_owner = true
 stream = ExtResource("5_2vwfl")
 volume_db = 5.958
 bus = &"Sound"
 
 [node name="AtrapadaSFX" type="AudioStreamPlayer" parent="." unique_id=1687942430]
+unique_name_in_owner = true
 stream = ExtResource("6_2bqtb")
 bus = &"Sound"
