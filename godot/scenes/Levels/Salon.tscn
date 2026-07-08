@@ -14,11 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_dqdth"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="9_77mci"]
 [ext_resource type="Script" uid="uid://dt6s5rifmufyj" path="res://scenes/puzzle_parar_la_oreja/puzzle_parar_la_oreja.gd" id="9_suvrd"]
+[ext_resource type="Texture2D" uid="uid://devp2vfu2mct0" path="res://assets/Personajes/Civiles/NPCSalón1.png" id="9_ycy4w"]
 [ext_resource type="Script" uid="uid://b74ub2n164i07" path="res://scenes/puzzle_parar_la_oreja/diálogo_silabeador.gd" id="10_77mci"]
-[ext_resource type="Texture2D" uid="uid://0r58i6t38fpl" path="res://assets/Personajes/Evil Twink/Serna.png" id="11_3njmf"]
+[ext_resource type="Texture2D" uid="uid://bm2iev7o3xujf" path="res://assets/Personajes/Civiles/NPCSalón4.png" id="10_eilhc"]
+[ext_resource type="Texture2D" uid="uid://ba18kj7ltdbe8" path="res://assets/Personajes/Civiles/NPCSalón3.png" id="11_ei7uq"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
-[ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
+[ext_resource type="Texture2D" uid="uid://dr4pmbaj55wl5" path="res://assets/Personajes/Civiles/NPCSalón2.png" id="12_as32m"]
 [ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="14_7dnsd"]
+[ext_resource type="Texture2D" uid="uid://bj0yvurdjo2mg" path="res://assets/Personajes/Moro/Moro Hablando Resized.png" id="14_25q58"]
+[ext_resource type="Texture2D" uid="uid://dbaa234eyyplc" path="res://assets/Personajes/Evil Twink/Serna Hablando Resized.png" id="15_vifo7"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
 
@@ -76,6 +80,134 @@ size = Vector3(12.408691, 1, 0.6767731)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikkf"]
 size = Vector3(1.5361328, 1, 2.1044922)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u48uo"]
+atlas = ExtResource("14_25q58")
+region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssb4r"]
+atlas = ExtResource("14_25q58")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byyfc"]
+atlas = ExtResource("14_25q58")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53mk3"]
+atlas = ExtResource("14_25q58")
+region = Rect2(333, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cela"]
+atlas = ExtResource("14_25q58")
+region = Rect2(444, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkekg"]
+atlas = ExtResource("14_25q58")
+region = Rect2(555, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxqee"]
+atlas = ExtResource("14_25q58")
+region = Rect2(666, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7x2a"]
+atlas = ExtResource("14_25q58")
+region = Rect2(777, 0, 111, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdupl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u48uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssb4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byyfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53mk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cela")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkekg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxqee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7x2a")
+}],
+"loop": 1,
+"name": &"Hablando",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2fy5"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nonv2"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reqoj"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gof67"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(333, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klpo0"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(444, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njmcy"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(555, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ord00"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(666, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae8nm"]
+atlas = ExtResource("15_vifo7")
+region = Rect2(777, 0, 111, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8mre2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2fy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nonv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reqoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gof67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klpo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njmcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ord00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae8nm")
+}],
+"loop": 1,
+"name": &"Hablando",
+"speed": 5.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_bma5i"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
@@ -178,7 +310,7 @@ shape = SubResource("BoxShape3D_vfiry")
 transform = Transform3D(2.9922917, 0, -0.21492045, 0, 3, 0, 0.21492045, 0, 2.9922917, -1.3643129, 0, -2.7002118)
 
 [node name="Silla2" parent="Props" unique_id=949565289 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-2.9922917, 0, 0.21492076, 0, 3, 0, -0.21492076, 0, -2.9922917, -2.8333225, 0, -2.6393423)
+transform = Transform3D(-2.9922917, 0, 0.21492076, 0, 3, 0, -0.21492076, 0, -2.9922917, -3.0691698, 0, -2.6393423)
 
 [node name="Silla18" parent="Props" unique_id=1026672942 instance=ExtResource("6_xitv8")]
 transform = Transform3D(3.4995766, 0, 0.05447422, 0, 3.5000005, 0, -0.05447422, 0, 3.4995766, -4.9394813, -0.18538266, -2.2834494)
@@ -190,7 +322,7 @@ transform = Transform3D(-3.4995766, 0, -0.05447392, 0, 3.5000005, 0, 0.05447392,
 transform = Transform3D(2.9296494, 0, -0.645875, 0, 3, 0, 0.645875, 0, 2.9296494, -5.0308156, 4.7683716e-07, 0.68079245)
 
 [node name="Silla6" parent="Props" unique_id=2053447205 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-2.9895191, 0, 0.25055516, 0, 3.0000005, 0, -0.25055516, 0, -2.9895191, -6.222069, 4.7683716e-07, 0.70959973)
+transform = Transform3D(-2.9895191, 0, 0.25055516, 0, 3.0000005, 0, -0.25055516, 0, -2.9895191, -6.459829, 4.7683716e-07, 0.70959973)
 
 [node name="Silla7" parent="Props" unique_id=521998782 instance=ExtResource("6_xitv8")]
 transform = Transform3D(0.2614674, 0, -2.988584, 0, 3, 0, 2.988584, 0, 0.2614674, 7.1724696, 0, 2.1566308)
@@ -213,6 +345,9 @@ transform = Transform3D(1.6700982, 0, 2.4921417, 0, 3, 0, -2.4921417, 0, 1.67009
 [node name="Silla16" parent="Props" unique_id=1843389107 instance=ExtResource("6_xitv8")]
 transform = Transform3D(-2.9875548, 0, 0.27298266, 0, 3, 0, -0.27298266, 0, -2.9875548, -2.4716287, 2.3841858e-07, 0.20314705)
 
+[node name="Silla20" parent="Props" unique_id=1250062745 instance=ExtResource("6_xitv8")]
+transform = Transform3D(-2.9875548, 0, 0.27298266, 0, 3, 0, -0.27298266, 0, -2.9875548, -2.4716287, 2.3841858e-07, 0.20314705)
+
 [node name="Silla14" parent="Props" unique_id=663457712 instance=ExtResource("6_xitv8")]
 transform = Transform3D(2.9994454, 0, -0.05768229, 0, 3, 0, 0.05768229, 0, 2.9994454, 1.9177794, 2.3841858e-07, 1.6560521)
 
@@ -223,7 +358,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.1097264, 0.0062208176, -0.5
 transform = Transform3D(-2.9586248, 0, -0.49652737, 0, 3, 0, 0.49652737, 0, -2.9586248, 1.1310209, 0.0062217712, -2.5366535)
 
 [node name="Silla4" parent="Props" unique_id=231896117 instance=ExtResource("6_xitv8")]
-transform = Transform3D(-2.93, 0, 0.64428204, 0, 3, 0, -0.64428204, 0, -2.93, 3.648852, 0.0062208176, -0.5593333)
+transform = Transform3D(-2.93, 0, 0.64428204, 0, 3, 0, -0.64428204, 0, -2.93, 3.3615835, 0.0062208176, -0.5593333)
 
 [node name="Barra" parent="Props" unique_id=1493162876 instance=ExtResource("6_s6fd5")]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 5.733318, 0, -2.1)
@@ -270,27 +405,68 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.8311329, -0.1793915, -2.630
 [node name="Mesa4" parent="Props" unique_id=1174039047 instance=ExtResource("6_cy4hc")]
 transform = Transform3D(2.271626, 0, -0.36016083, 0, 2.3000002, 0, 0.36016083, 0, 2.271626, -1.7680686, -0.17939174, 0.14395487)
 
+[node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=796443873]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -1.7095273, 0.71134263, -0.29437923)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("9_ycy4w")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props" unique_id=1174741482]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 3.4960542, 1.0837786, -0.56338024)
+flip_h = true
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("10_eilhc")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props" unique_id=700737636]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -2.3327713, 0.84917384, 0.28987694)
+flip_h = true
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("11_ei7uq")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props" unique_id=1058204910]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -6.2818484, 0.93640774, 0.7317257)
+flip_h = true
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("12_as32m")
+
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_dqdth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0703311, 0)
 
 [node name="NPCS" type="Node3D" parent="." unique_id=1166018190]
 unique_name_in_owner = true
 
-[node name="Sprite3D" type="Sprite3D" parent="NPCS" unique_id=499335895]
-transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -7.5058694, 0.90000004, -2.454454)
+[node name="Moro" type="AnimatedSprite3D" parent="NPCS" unique_id=1455209657]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -5.990803, 0.95583767, -2.3017762)
 billboard = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 2
-texture = ExtResource("11_3njmf")
+sprite_frames = SubResource("SpriteFrames_wdupl")
+animation = &"Hablando"
+autoplay = "Hablando"
+frame_progress = 0.34936783
 
-[node name="Sprite3D2" type="Sprite3D" parent="NPCS" unique_id=545291289]
-transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -5.3975654, 0.8493745, -2.5193496)
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPCS" unique_id=2092193155]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -6.9638076, 0.94150347, -2.1968381)
 billboard = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 2
-texture = ExtResource("12_7dnsd")
+sprite_frames = SubResource("SpriteFrames_8mre2")
+animation = &"Hablando"
+autoplay = "Hablando"
+frame_progress = 0.6575414
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=116716274]
 
