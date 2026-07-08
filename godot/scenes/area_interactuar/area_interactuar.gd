@@ -34,8 +34,11 @@ func _on_area_exited(area: Area3D) -> void:
 		_area = null
 	flechita.visible = false
 
-func _on_fin_interactuar() -> void:
-	flechita.visible = true
+func _on_fin_interactuar(desactivada: bool) -> void:
 	var jugadora: Jugadora = get_tree().get_first_node_in_group("player") as Jugadora
 	if jugadora:
 		jugadora.cambiar_detenida(false)
+	if desactivada:
+		_area = null
+	else:
+		flechita.visible = true

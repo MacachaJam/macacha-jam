@@ -43,5 +43,4 @@ func retornar_del_minijuego() -> void:
 	var player: Node3D = get_tree().get_first_node_in_group("player")
 	player.visible = true
 	player_minigame.visible = false
-	_desactivar_area()
-	area_interactiva.terminar_interacción()
+	area_interactiva.terminar_interacción(true)
