@@ -1,6 +1,9 @@
 class_name InterfazMaiz
 extends Node2D
 
+signal ausente
+signal presente
+
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 func _ready() -> void:
@@ -15,8 +18,10 @@ func _physics_process(_delta: float) -> void:
 		return
 	if Input.is_action_pressed("move_left"):
 		animation_player.play("Ausente")
+		ausente.emit()
 	elif Input.is_action_pressed("move_right"):
 		animation_player.play("Presente")
+		presente.emit()
 
 func iniciar() -> void:
 	visible = true
