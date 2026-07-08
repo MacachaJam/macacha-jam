@@ -12,7 +12,6 @@ signal fin_del_minijuego(éxito: bool)
 
 @export var interfaz: InterfazMaiz
 
-var _puntaje: float
 var _ausentes: int
 var _presentes: int
 
@@ -20,7 +19,6 @@ func iniciar() -> void:
 	interfaz.ausente.connect(_on_ausente)
 	interfaz.presente.connect(_on_presente)
 	interfaz.iniciar()
-	_puntaje = 0
 
 	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
 	if controles:
@@ -47,5 +45,4 @@ func terminar() -> void:
 	if controles:
 		controles.cambiar_izq_der(false)
 
-	prints(_presentes, _ausentes, _ausentes == ausentes_posta and _presentes == presentes_posta)
 	fin_del_minijuego.emit(_ausentes == ausentes_posta and _presentes == presentes_posta)
