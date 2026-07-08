@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bkwstavnhjn7y" path="res://assets/Personajes/Realistas/SignoPregunta.png" id="7_ihves"]
 [ext_resource type="Script" uid="uid://06bxcex22svo" path="res://scenes/realista/realista_yendo.gd" id="7_v50q3"]
 [ext_resource type="Script" uid="uid://c3uvh4xn2i0iw" path="res://scenes/realista/realista_buscando.gd" id="8_61h3s"]
+[ext_resource type="AudioStream" uid="uid://bwhtkj5ans424" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Disimular.ogg" id="11_yevyn"]
+[ext_resource type="AudioStream" uid="uid://taxkpbcu270x" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Detectada (Inicia Persecucion).ogg" id="12_ow3em"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.4453125
@@ -269,7 +271,7 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_blxll")
-animation = &"alert"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="FrameRandom" type="Node3D" parent="AnimatedSprite3D" unique_id=820722459 node_paths=PackedStringArray("sprite")]
@@ -279,8 +281,8 @@ sprite = NodePath("..")
 metadata/_custom_type_script = "uid://buuefw3a22rjy"
 
 [node name="Signo Alerta" type="GPUParticles3D" parent="AnimatedSprite3D" unique_id=724470074]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038939744, 0.4495017, 0.021570405)
-visible = false
 emitting = false
 amount = 1
 one_shot = true
@@ -288,8 +290,9 @@ process_material = SubResource("ParticleProcessMaterial_wdupl")
 draw_pass_1 = SubResource("QuadMesh_8mre2")
 
 [node name="Signo Buscando" type="GPUParticles3D" parent="AnimatedSprite3D" unique_id=1618817041]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3623174, 0.066553734)
-visible = false
+emitting = false
 amount = 3
 lifetime = 1.3
 process_material = SubResource("ParticleProcessMaterial_8mre2")
@@ -332,6 +335,18 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AtrapaJugadora" unique_id=792321023]
 shape = SubResource("CylinderShape3D_g4syu")
 debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="LosperdisteSFX" type="AudioStreamPlayer" parent="." unique_id=1782738830]
+stream = ExtResource("11_yevyn")
+volume_db = 7.583
+pitch_scale = 1.79
+bus = &"Sound"
+
+[node name="TeDetectaronSFX" type="AudioStreamPlayer" parent="." unique_id=2020645308]
+stream = ExtResource("12_ow3em")
+volume_db = -10.292
+pitch_scale = 1.02
+bus = &"Sound"
 
 [connection signal="body_entered" from="DetectaJugadora" to="." method="_on_detecta_jugadora_body_entered"]
 [connection signal="body_entered" from="AtrapaJugadora" to="." method="_on_atrapa_jugadora_body_entered"]

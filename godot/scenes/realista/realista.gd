@@ -3,6 +3,7 @@ class_name Realista
 extends CharacterBody3D
 
 enum Modos { DORMIDO, YENDO, BUSCANDO }
+@onready var signo_alerta: GPUParticles3D = %"Signo Alerta"
 
 @onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
 @onready var atrapa_jugadora: Area3D = %AtrapaJugadora
@@ -12,6 +13,9 @@ enum Modos { DORMIDO, YENDO, BUSCANDO }
 @onready var realista_buscando: Node = %RealistaBuscando
 
 @onready var _comportamientos: Array[Node] = [realista_dormido, realista_yendo, realista_buscando]
+
+@onready var TedetectaronSFX: AudioStreamPlayer = $TeDetectaronSFX
+@onready var LosperdisteSFX: AudioStreamPlayer = $LosperdisteSFX
 
 @export var flip_sprite: bool:
 	set = _set_flip_sprite
@@ -58,9 +62,11 @@ func _set_modo(nuevo_modo: Modos) -> void:
 			_desactivar_todos_los_comportamientos()
 			await _animar_alert()
 			_activar_comportamiento(realista_yendo)
+			TedetectaronSFX.play()
 		Modos.BUSCANDO:
 			_desactivar_todos_los_comportamientos()
 			await _animar_alert()
+			LosperdisteSFX.play()
 			_activar_comportamiento(realista_buscando)
 
 func _ready() -> void:

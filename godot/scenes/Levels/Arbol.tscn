@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="11_2an85"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="12_n8lmo"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="15_awpir"]
+[ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="16_63gek"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xfpo"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -562,3 +563,9 @@ shape = SubResource("BoxShape3D_63gek")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1330508437]
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=150847439]
+stream = ExtResource("16_63gek")
+volume_db = -6.435
+autoplay = true
+bus = &"Sound"

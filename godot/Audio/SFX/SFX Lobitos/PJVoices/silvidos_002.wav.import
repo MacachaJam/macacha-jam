@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wc5w8ql5m061"
+path="res://.godot/imported/silvidos_002.wav-79f5a3f3ada2023c2a4ed6a547a01003.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/SFX Lobitos/PJVoices/silvidos_002.wav"
+dest_files=["res://.godot/imported/silvidos_002.wav-79f5a3f3ada2023c2a4ed6a547a01003.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

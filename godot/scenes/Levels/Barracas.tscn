@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_ppftp"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_arn0i"]
 [ext_resource type="Script" uid="uid://cw1aiuggkncl1" path="res://scenes/controla_posición_suave/controla_posición_suave.gd" id="5_c602l"]
+[ext_resource type="Script" uid="uid://cw44n1eja8gl5" path="res://scenes/minijuego_maiz/interfaz_maiz.gd" id="5_q6yt5"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="6_ytbsj"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="7_ppftp"]
 [ext_resource type="Texture2D" uid="uid://b17l2mijcp4p" path="res://assets/Edificios/Regimiento.png" id="8_c2heg"]
@@ -21,7 +22,9 @@
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="19_dhd7o"]
 [ext_resource type="PackedScene" uid="uid://csccjfi3qf7lb" path="res://assets/Props/Puesto de Granos.tscn" id="19_p8cny"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="20_kkabb"]
+[ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="21_p8cny"]
 [ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
+[ext_resource type="Script" uid="uid://dr0wpyie3fj3v" path="res://scenes/minijuego_maiz/minijuego_maiz.gd" id="24_8purw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -237,6 +240,9 @@ action_right = &"move_right"
 action_up = &"move_up"
 action_down = &"move_down"
 visibility_mode = 1
+
+[node name="InterfazMaiz" type="Node2D" parent="UI" unique_id=242316288]
+script = ExtResource("5_q6yt5")
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=417908704]
 
@@ -1314,6 +1320,9 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_wdupl")
+autoplay = "default"
+frame = 5
+frame_progress = 0.7328171
 
 [node name="AreaInteractiva" type="Area3D" parent="." unique_id=948301766]
 unique_name_in_owner = true
@@ -1327,5 +1336,17 @@ metadata/_custom_type_script = "uid://cuufbwxgjxwjd"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_p8cny")
 debug_color = Color(0, 1, 0.34509805, 0.41960785)
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=1223368899]
+stream = ExtResource("21_p8cny")
+volume_db = -6.435
+autoplay = true
+bus = &"Sound"
+
+[node name="MinijuegoMaiz" type="Node" parent="." unique_id=1652663128 node_paths=PackedStringArray("interfaz")]
+unique_name_in_owner = true
+script = ExtResource("24_8purw")
+interfaz = NodePath("../UI/InterfazMaiz")
+metadata/_custom_type_script = "uid://dr0wpyie3fj3v"
 
 [connection signal="inicio_interactuar" from="AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]

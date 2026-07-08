@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcxm10ssui5ob"
+path="res://.godot/imported/maso menos.wav-4eaa294ef13170eb817820e19b094096.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/SFX Lobitos/Puzzles/maso menos.wav"
+dest_files=["res://.godot/imported/maso menos.wav-4eaa294ef13170eb817820e19b094096.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

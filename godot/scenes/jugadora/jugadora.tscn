@@ -4,6 +4,9 @@
 [ext_resource type="SpriteFrames" uid="uid://b4e0qc27oqlte" path="res://scenes/jugadora/vestido_sprite_frames.tres" id="2_7spe5"]
 [ext_resource type="Texture2D" uid="uid://c78xfohu7cdne" path="res://assets/UI/kenney_input-prompts-pixel-1-bit/tilemap_white.png" id="4_cxd1r"]
 [ext_resource type="Script" uid="uid://drgn2ghjbomwu" path="res://scenes/area_interactuar/area_interactuar.gd" id="4_hxyug"]
+[ext_resource type="AudioStream" uid="uid://dnsh1y3iahdwk" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Cambio ropa.ogg" id="5_2vwfl"]
+[ext_resource type="AudioStream" uid="uid://c2785r84pvb4x" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Pasos.ogg" id="5_v3rbw"]
+[ext_resource type="AudioStream" uid="uid://b5156jlijj3ho" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Te atraparon (Perdiste).ogg" id="6_2bqtb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0px63"]
 radius = 0.4453125
@@ -25,6 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022007346, 1.0634553, 0)
 shape = SubResource("CapsuleShape3D_0px63")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=491484714]
+unique_name_in_owner = true
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0.7111909, 0)
 offset = Vector2(0, 20)
 billboard = 1
@@ -57,3 +61,21 @@ no_depth_test = true
 alpha_cut = 1
 texture_filter = 2
 texture = SubResource("AtlasTexture_fhnvg")
+
+[node name="PasosSFX" type="AudioStreamPlayer" parent="." unique_id=961770666]
+unique_name_in_owner = true
+stream = ExtResource("5_v3rbw")
+volume_db = -5.958
+pitch_scale = 0.61
+bus = &"Sound"
+
+[node name="CambiarVestidoSFX" type="AudioStreamPlayer" parent="." unique_id=420527521]
+unique_name_in_owner = true
+stream = ExtResource("5_2vwfl")
+volume_db = 5.958
+bus = &"Sound"
+
+[node name="AtrapadaSFX" type="AudioStreamPlayer" parent="." unique_id=1687942430]
+unique_name_in_owner = true
+stream = ExtResource("6_2bqtb")
+bus = &"Sound"

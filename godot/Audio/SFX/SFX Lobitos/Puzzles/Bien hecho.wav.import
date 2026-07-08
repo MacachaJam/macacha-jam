@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chu2g7yh2otc0"
+path="res://.godot/imported/Bien hecho.wav-952d35b88409abe614a4cb1c780d16c6.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/SFX Lobitos/Puzzles/Bien hecho.wav"
+dest_files=["res://.godot/imported/Bien hecho.wav-952d35b88409abe614a4cb1c780d16c6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

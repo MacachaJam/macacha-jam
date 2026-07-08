@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="1_271gi"]
 [ext_resource type="Texture2D" uid="uid://dm5bq2wqd4nux" path="res://assets/Props/Oreja Minigame.png" id="2_54b4n"]
 [ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="2_u8xp1"]
+[ext_resource type="AudioStream" uid="uid://bgug0sil0gjau" path="res://Audio/SFX/Bien hecho.wav" id="4_r71da"]
+[ext_resource type="AudioStream" uid="uid://cx8a23qh72p2q" path="res://Audio/SFX/maso menos.wav" id="5_u7l8s"]
+[ext_resource type="AudioStream" uid="uid://b3ei345ki73vs" path="res://Audio/SFX/mal.wav" id="6_7a3la"]
 
 [sub_resource type="Curve" id="Curve_pp12e"]
 _data = [Vector2(0, 0.5024154), 0.0, 0.03930939, 0, 0, Vector2(0.1, 0.5), 0.0, 0.0, 0, 0, Vector2(0.3686636, 1), 0.0, 0.0, 0, 0, Vector2(0.6, 0), 0.0, 0.0, 0, 0, Vector2(0.7949309, 0.8011364), 0.0, 0.0, 0, 0, Vector2(0.9147465, 0.25), 0.0, 0.0, 0, 0, Vector2(1, 0.8295455), 6.79791, 0.0, 1, 0]
@@ -60,6 +63,24 @@ unique_name_in_owner = true
 position = Vector2(0, -50)
 scale = Vector2(1, 5)
 texture = ExtResource("2_u8xp1")
+
+[node name="PuzzleSFX" type="Node" parent="." unique_id=1938732631]
+
+[node name="BienSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=939882231]
+unique_name_in_owner = true
+stream = ExtResource("4_r71da")
+volume_db = -3.792
+bus = &"Sound"
+
+[node name="MasoSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=1077025529]
+unique_name_in_owner = true
+stream = ExtResource("5_u7l8s")
+bus = &"Sound"
+
+[node name="MalSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=545205916]
+unique_name_in_owner = true
+stream = ExtResource("6_7a3la")
+bus = &"Sound"
 
 [connection signal="timeout" from="Spawneador" to="." method="_on_spawneador_timeout"]
 [connection signal="body_entered" from="Centro" to="." method="_on_centro_body_entered"]

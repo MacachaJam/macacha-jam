@@ -27,7 +27,8 @@
 [ext_resource type="Resource" uid="uid://dhd3siofjcoer" path="res://assets/Diálogos/condición_cuartel.dialogue" id="23_ctv0l"]
 [ext_resource type="Script" uid="uid://b25qgly63dwd1" path="res://scenes/area_interactiva/area_interactiva.gd" id="26_foxfy"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="27_kikkf"]
-[ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_a7fpr"]
+[ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_68u2b"]
+[ext_resource type="AudioStream" uid="uid://s2gxwiw5yhwn" path="res://Audio/SFX Lobitos/Ambiente/Ambiente dia.ogg" id="28_a7fpr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -126,6 +127,9 @@ size = Vector3(1.5439159, 1.3223877, 11.647782)
 [sub_resource type="BoxShape3D" id="BoxShape3D_04hrh"]
 size = Vector3(1.2694724, 1.3223877, 4.029496)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dsqt8"]
+size = Vector3(1.6384363, 1.3223877, 2.848793)
+
 [sub_resource type="Gradient" id="Gradient_1mqds"]
 colors = PackedColorArray(0.20784314, 0.10980392, 0.25490198, 1, 0.11372549, 0.12941177, 0.19215687, 1)
 
@@ -173,50 +177,50 @@ geometry_source_geometry_mode = 1
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a7fpr"]
 radius = 1.637207
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ga4i"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m3qn"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(0, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8purw"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfsp6"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(111, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q6yt5"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggm70"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(222, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4wot"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu0mt"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(333, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hn302"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8go"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(444, 0, 111, 111)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f4kh2"]
-atlas = ExtResource("28_a7fpr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bia62"]
+atlas = ExtResource("28_68u2b")
 region = Rect2(555, 0, 111, 111)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_68u2b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ga4i")
+"texture": SubResource("AtlasTexture_4m3qn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8purw")
+"texture": SubResource("AtlasTexture_lfsp6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q6yt5")
+"texture": SubResource("AtlasTexture_ggm70")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4wot")
+"texture": SubResource("AtlasTexture_iu0mt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hn302")
+"texture": SubResource("AtlasTexture_de8go")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f4kh2")
+"texture": SubResource("AtlasTexture_bia62")
 }],
 "loop": 1,
 "name": &"default",
@@ -303,6 +307,18 @@ shape = SubResource("BoxShape3D_5bg3d")
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="Terreno" unique_id=541922690]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.669985, 0.16119242, -15.170584)
 shape = SubResource("BoxShape3D_04hrh")
+
+[node name="CollisionShapeSalida" type="CollisionShape3D" parent="Terreno" unique_id=643895643]
+transform = Transform3D(0.9932603, 0, 0.11590499, 0, 1, 0, -0.11590499, 0, 0.9932603, -10.626996, 0.16119242, 1.6874827)
+shape = SubResource("BoxShape3D_dsqt8")
+debug_color = Color(0.91279703, 9.414375e-05, 0.7237386, 0.41960785)
+
+[node name="ActivarPorAtuendo" type="Node" parent="Terreno/CollisionShapeSalida" unique_id=1520941426 node_paths=PackedStringArray("nodo")]
+script = ExtResource("8_xt0tm")
+nodo = NodePath("..")
+atuendo = 2
+negado = true
+metadata/_custom_type_script = "uid://bpo7vonn8vwui"
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_agf16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.205658, -0.051190257, 0.59228516)
@@ -392,9 +408,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0901036, 0, -0.3431797)
 shape = SubResource("BoxShape3D_adkwo")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
-[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlSalón" unique_id=819870917 node_paths=PackedStringArray("area")]
+[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlSalón" unique_id=819870917 node_paths=PackedStringArray("nodo")]
 script = ExtResource("8_xt0tm")
-area = NodePath("..")
+nodo = NodePath("..")
 
 [node name="AlLasBarracas" parent="Teleporters" unique_id=1990847618 instance=ExtResource("7_agf16")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.536836, 1, 1.4467077)
@@ -408,9 +424,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.64012814)
 shape = SubResource("BoxShape3D_agf16")
 debug_color = Color(0.9186083, 0.9224512, 0, 0.41960785)
 
-[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlLasBarracas" unique_id=1294453245 node_paths=PackedStringArray("area")]
+[node name="ActivarPorAtuendo" type="Node" parent="Teleporters/AlLasBarracas" unique_id=1294453245 node_paths=PackedStringArray("nodo")]
 script = ExtResource("8_xt0tm")
-area = NodePath("..")
+nodo = NodePath("..")
 atuendo = 2
 
 [node name="AlÁrbol" parent="Teleporters" unique_id=1557741059 instance=ExtResource("7_agf16")]
@@ -1741,6 +1757,7 @@ shape = SubResource("CylinderShape3D_wklx2")
 debug_color = Color(0.9482296, 0.91041815, 0, 0.41960785)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=806886328]
+visible = false
 navigation_mesh = SubResource("NavigationMesh_2eim1")
 
 [node name="AreaInteractiva" type="Area3D" parent="." unique_id=1221809695]
@@ -1797,5 +1814,14 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_68u2b")
+autoplay = "default"
+frame = 2
+frame_progress = 0.13444059
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=495006768]
+stream = ExtResource("28_a7fpr")
+volume_db = -3.38
+autoplay = true
+bus = &"Sound"
 
 [connection signal="inicio_interactuar" from="AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]

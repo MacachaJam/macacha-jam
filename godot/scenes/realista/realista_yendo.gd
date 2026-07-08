@@ -4,6 +4,7 @@ extends Node
 @onready var agent: NavigationAgent3D = %NavigationAgent3D
 @onready var detecta_jugadora: Area3D = %DetectaJugadora
 @onready var atrapa_jugadora: Area3D = %AtrapaJugadora
+@onready var signo_alerta: GPUParticles3D = %"Signo Alerta"
 
 
 func _notification(what: int) -> void:
@@ -15,10 +16,13 @@ func _notification(what: int) -> void:
 			detecta_jugadora.set_deferred("monitorable", true)
 			agent.target_reached.connect(_on_target_reached)
 			agent.navigation_finished.connect(_on_navigation_finished)
+			signo_alerta.emitting = true
 			_actualizar_target()
 		NOTIFICATION_DISABLED:
-			agent.target_reached.disconnect(_on_target_reached)
-			agent.navigation_finished.disconnect(_on_navigation_finished)
+			if agent.target_reached.is_connected(_on_target_reached):
+				agent.target_reached.disconnect(_on_target_reached)
+			if agent.navigation_finished.is_connected(_on_navigation_finished):
+				agent.navigation_finished.disconnect(_on_navigation_finished)
 
 
 func _actualizar_target() -> void:

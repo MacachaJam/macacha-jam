@@ -35,7 +35,6 @@ var cantidad_de_sílabas: int
 
 var _puntaje: float
 
-
 func _ready() -> void:
 	lista_sílabas = {
 		Precisiones.BIEN: Array(silabeos[Precisiones.BIEN].split("-")),
@@ -46,7 +45,6 @@ func _ready() -> void:
 	# prints(cantidad_de_sílabas, lista_sílabas[Precisiones.MASO].size(), lista_sílabas[Precisiones.MAAL].size())
 	assert(lista_sílabas[Precisiones.MASO].size() == cantidad_de_sílabas)
 	assert(lista_sílabas[Precisiones.MAAL].size() == cantidad_de_sílabas)
-
 
 func iniciar() -> void:
 	interfaz.cantidad_de_sílabas = cantidad_de_sílabas
