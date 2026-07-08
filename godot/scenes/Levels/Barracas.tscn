@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dscdh7cvprp1e" path="res://assets/Props/EscudoRealista.png" id="22_hn302"]
 [ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
 [ext_resource type="Script" uid="uid://dr0wpyie3fj3v" path="res://scenes/minijuego_maiz/minijuego_maiz.gd" id="24_8purw"]
+[ext_resource type="Resource" uid="uid://dfrwgissysnsy" path="res://assets/Diálogos/lista_cuartel.dialogue" id="27_hn302"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -227,7 +228,8 @@ shape = SubResource("WorldBoundaryShape3D_ybm7l")
 [node name="UI" type="CanvasLayer" parent="." unique_id=229540725]
 
 [node name="InterfazMaiz" parent="UI" unique_id=1613952477 instance=ExtResource("4_i4wot")]
-visible = false
+position = Vector2(842, 189.00002)
+scale = Vector2(0.21660285, 0.21660285)
 
 [node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("5_i4wot")]
 
@@ -1358,6 +1360,7 @@ bus = &"Sound"
 [node name="MinijuegoMaiz" type="Node" parent="." unique_id=1652663128 node_paths=PackedStringArray("interfaz")]
 unique_name_in_owner = true
 script = ExtResource("24_8purw")
+"diálogo" = ExtResource("27_hn302")
 interfaz = NodePath("../UI/InterfazMaiz")
 metadata/_custom_type_script = "uid://dr0wpyie3fj3v"
 
