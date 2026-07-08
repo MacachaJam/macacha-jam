@@ -18,8 +18,10 @@ func _notification(what: int) -> void:
 			signo_buscando.emitting = true
 			_actualizar_target()
 		NOTIFICATION_DISABLED:
-			agent.target_reached.disconnect(_on_target_reached)
-			agent.navigation_finished.disconnect(_on_navigation_finished)
+			if agent.target_reached.is_connected(_on_target_reached):
+				agent.target_reached.disconnect(_on_target_reached)
+			if agent.navigation_finished.is_connected(_on_navigation_finished):
+				agent.navigation_finished.disconnect(_on_navigation_finished)
 			signo_buscando.emitting = false
 
 func _actualizar_target() -> void:

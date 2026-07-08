@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
 [ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
-[ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
+[ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
 sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
@@ -273,6 +273,7 @@ transform = Transform3D(2.271626, 0, -0.36016083, 0, 2.3000002, 0, 0.36016083, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0703311, 0)
 
 [node name="NPCS" type="Node3D" parent="." unique_id=1166018190]
+unique_name_in_owner = true
 
 [node name="Sprite3D" type="Sprite3D" parent="NPCS" unique_id=499335895]
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -7.5058694, 0.90000004, -2.454454)

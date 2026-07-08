@@ -1,0 +1,2 @@
+class_name InterfazMaiz
+extends Node2D

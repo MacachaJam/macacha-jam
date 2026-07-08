@@ -26,5 +26,4 @@ func _on_area_interactiva_inicio_interactuar() -> void:
 		await DialogueManager.dialogue_ended
 		player.visible = true
 		player_minigame.visible = false
-		_desactivar_area()
-		area_interactiva.terminar_interacción()
+		area_interactiva.terminar_interacción(true)
