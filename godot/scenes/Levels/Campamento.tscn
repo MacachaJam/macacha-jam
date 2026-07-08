@@ -1067,7 +1067,7 @@ metadata/_custom_type_script = "uid://cw1aiuggkncl1"
 [node name="Luces" type="Node3D" parent="." unique_id=1526814065]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Luces" unique_id=983237895]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9049034, 3.6676774, -9.4075575)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9049034, 2.7442923, -8.270092)
 light_color = Color(1, 0.62900007, 0.47000003, 1)
 light_volumetric_fog_energy = 0.3
 shadow_enabled = true
