@@ -980,8 +980,6 @@ transform = Transform3D(1.1064657, 0, 0, 0, 1.1064657, 0, 0, 0, 1.1064657, -6.48
 [node name="Pasto 210" parent="Props/Pasto" unique_id=711100713 instance=ExtResource("9_ne5nm")]
 transform = Transform3D(1.3064784, 0, 0, 0, 1.3064784, 0, 0, 0, 1.3064784, -8.358608, 0, -5.2535095)
 
-[node name="ControlesPantalla" parent="." unique_id=855677802 instance=ExtResource("15_dkyj2")]
-
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
 [node name="OverlayDia" type="Control" parent="UI" unique_id=1582452952]
@@ -1007,6 +1005,8 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 251
 text = "DÍA X"
+
+[node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("15_dkyj2")]
 
 [node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("6_l7aih")]
 unique_name_in_owner = true

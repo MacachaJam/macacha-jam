@@ -1,5 +1,5 @@
 class_name ControlesPantalla
-extends CanvasLayer
+extends Node2D
 
 @onready var boton_touch_izquierda: TouchScreenButton = %BotonTouchIzquierda
 @onready var boton_touch_derecha: TouchScreenButton = %BotonTouchDerecha
