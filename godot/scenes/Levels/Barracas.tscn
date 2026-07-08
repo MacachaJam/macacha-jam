@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://csccjfi3qf7lb" path="res://assets/Props/Puesto de Granos.tscn" id="19_p8cny"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="20_kkabb"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="21_p8cny"]
+[ext_resource type="Texture2D" uid="uid://dscdh7cvprp1e" path="res://assets/Props/EscudoRealista.png" id="22_hn302"]
 [ext_resource type="Texture2D" uid="uid://cdn2dyfnre7na" path="res://assets/Personajes/Loreto/Loreto Criada Sentada Resized.png" id="22_u40b5"]
 [ext_resource type="Script" uid="uid://dr0wpyie3fj3v" path="res://scenes/minijuego_maiz/minijuego_maiz.gd" id="24_8purw"]
 
@@ -1242,6 +1243,27 @@ shape = SubResource("BoxShape3D_p8cny")
 
 [node name="Puesto de Granos" parent="Props" unique_id=586239224 instance=ExtResource("19_p8cny")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.2769957, -9.536743e-07, 7.0569563)
+
+[node name="Sprite3D" type="Sprite3D" parent="Props" unique_id=1659249418]
+transform = Transform3D(1.4931633, 0, 0, 0, 1.4931633, 0, 0, 0, 1, -4.964313, 3.2777991, -8.402927)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("22_hn302")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props" unique_id=505859642]
+transform = Transform3D(1.4931633, 0, 0, 0, 1.4931633, 0, 0, 0, 1, -4.964313, 3.2777991, -8.429096)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("22_hn302")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props" unique_id=825013802]
+transform = Transform3D(1.4931633, 0, 0, 0, 1.4931633, 0, 0, 0, 1, -4.964313, 3.2777991, -8.4543495)
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("22_hn302")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=399837207]
 navigation_mesh = SubResource("NavigationMesh_dhd7o")
