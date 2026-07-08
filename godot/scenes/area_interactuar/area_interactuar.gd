@@ -18,6 +18,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			jugadora.cambiar_detenida(true)
 		_area.connect("fin_interactuar", _on_fin_interactuar, CONNECT_ONE_SHOT)
 	flechita.visible = false
+	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
+	if controles:
+		controles.cambiar_interactuar(false)
 	_area.call("interactuar")
 
 func _on_area_entered(area: Area3D) -> void:
@@ -25,6 +28,9 @@ func _on_area_entered(area: Area3D) -> void:
 		return
 	flechita.visible = true
 	flechita.global_position = area.global_position
+	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
+	if controles:
+		controles.cambiar_interactuar(true)
 	_area = area
 
 func _on_area_exited(area: Area3D) -> void:
@@ -33,6 +39,9 @@ func _on_area_exited(area: Area3D) -> void:
 	if area == _area:
 		_area = null
 	flechita.visible = false
+	var controles: ControlesPantalla = get_tree().get_first_node_in_group("controles_pantalla") as ControlesPantalla
+	if controles:
+		controles.cambiar_interactuar(false)
 
 func _on_fin_interactuar(desactivada: bool) -> void:
 	var jugadora: Jugadora = get_tree().get_first_node_in_group("player") as Jugadora

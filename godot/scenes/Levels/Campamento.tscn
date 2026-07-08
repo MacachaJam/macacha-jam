@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://cf37hqituw4s6" path="res://assets/Diálogos/macacha.dialogue" id="14_bma5i"]
 [ext_resource type="PackedScene" uid="uid://dqw1xctn1tsax" path="res://assets/Props/Fuego/Fuego.tscn" id="14_ne5nm"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="15_30kc6"]
+[ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="15_dkyj2"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="20_caf8k"]
 [ext_resource type="AudioStream" uid="uid://f3xsxf7yelnq" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Inicio Partida.ogg" id="22_mfsv1"]
@@ -981,23 +982,6 @@ transform = Transform3D(1.3064784, 0, 0, 0, 1.3064784, 0, 0, 0, 1.3064784, -8.35
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1146420719]
 
-[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("6_l7aih")]
-unique_name_in_owner = true
-visible = false
-
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1966906144]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-joystick_mode = 1
-action_left = &"move_left"
-action_right = &"move_right"
-action_up = &"move_up"
-action_down = &"move_down"
-visibility_mode = 1
-
 [node name="OverlayDia" type="Control" parent="UI" unique_id=1582452952]
 unique_name_in_owner = true
 visible = false
@@ -1007,6 +991,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="UI/OverlayDia" unique_id=1281757262]
 layout_mode = 1
@@ -1020,6 +1005,12 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 251
 text = "DÍA X"
+
+[node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("15_dkyj2")]
+
+[node name="PauseOverlay" parent="UI" unique_id=668292712 instance=ExtResource("6_l7aih")]
+unique_name_in_owner = true
+visible = false
 
 [node name="Macacha" type="CharacterBody3D" parent="." unique_id=174433718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, -0.023894668, -0.38966608)
