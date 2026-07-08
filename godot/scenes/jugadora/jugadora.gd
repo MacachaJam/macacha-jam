@@ -31,7 +31,7 @@ func _set_atuendo(nuevo_atuendo: Atuendos) -> void:
 
 func _ready() -> void:
 	if atuendo != GameState.global.atuendo_actual:
-		_on_gamestate_cambió_atuendo()
+		atuendo = GameState.global.atuendo_actual
 	GameState.global.cambió_atuendo.connect(_on_gamestate_cambió_atuendo)
 	Transitions.started.connect(_on_transition_started)
 	GameState.atrapada.connect(_on_gamestate_atrapada)
