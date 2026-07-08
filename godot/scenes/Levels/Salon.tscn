@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://0r58i6t38fpl" path="res://assets/Personajes/Evil Twink/Serna.png" id="11_3njmf"]
 [ext_resource type="PackedScene" uid="uid://bgubfgpurh6sh" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.tscn" id="11_kubcc"]
 [ext_resource type="Texture2D" uid="uid://ctexppo35u7ts" path="res://assets/Personajes/Moro/Moro.png" id="12_7dnsd"]
+[ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="14_7dnsd"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
 
@@ -297,22 +298,11 @@ texture = ExtResource("12_7dnsd")
 visible = false
 position = Vector2(916.00006, 334)
 
+[node name="ControlesPantalla" parent="UI" unique_id=855677802 instance=ExtResource("14_7dnsd")]
+
 [node name="PauseOverlay" parent="UI" unique_id=427700071 instance=ExtResource("4_j8ckk")]
 unique_name_in_owner = true
 visible = false
-
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=295023138]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-joystick_mode = 1
-action_left = &"move_left"
-action_right = &"move_right"
-action_up = &"move_up"
-action_down = &"move_down"
-visibility_mode = 1
 
 [node name="TrípodeCámara" type="Node3D" parent="." unique_id=1495047479]
 
