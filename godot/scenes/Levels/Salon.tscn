@@ -273,6 +273,7 @@ transform = Transform3D(2.271626, 0, -0.36016083, 0, 2.3000002, 0, 0.36016083, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0703311, 0)
 
 [node name="NPCS" type="Node3D" parent="." unique_id=1166018190]
+unique_name_in_owner = true
 
 [node name="Sprite3D" type="Sprite3D" parent="NPCS" unique_id=499335895]
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -7.5058694, 0.90000004, -2.454454)

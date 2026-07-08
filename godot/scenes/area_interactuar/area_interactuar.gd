@@ -40,5 +40,3 @@ func _on_fin_interactuar(desactivada: bool) -> void:
 		jugadora.cambiar_detenida(false)
 	if desactivada:
 		_area = null
-	else:
-		flechita.visible = true
