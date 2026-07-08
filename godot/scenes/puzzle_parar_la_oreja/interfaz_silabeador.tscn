@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bv7oj4ljf046m" path="res://scenes/puzzle_parar_la_oreja/interfaz_silabeador.gd" id="1_271gi"]
 [ext_resource type="Texture2D" uid="uid://dm5bq2wqd4nux" path="res://assets/Props/Oreja Minigame.png" id="2_54b4n"]
 [ext_resource type="Texture2D" uid="uid://1y4mu5j1bvu5" path="res://assets/puntito.png" id="2_u8xp1"]
+[ext_resource type="Texture2D" uid="uid://c7f44qs1uvyrp" path="res://assets/Props/ArrowKeyMinigame.png" id="3_u7l8s"]
 [ext_resource type="AudioStream" uid="uid://bgug0sil0gjau" path="res://Audio/SFX/Bien hecho.wav" id="4_r71da"]
 [ext_resource type="AudioStream" uid="uid://cx8a23qh72p2q" path="res://Audio/SFX/maso menos.wav" id="5_u7l8s"]
 [ext_resource type="AudioStream" uid="uid://b3ei345ki73vs" path="res://Audio/SFX/mal.wav" id="6_7a3la"]
@@ -54,6 +55,17 @@ modulate = Color(1, 1, 1, 0.7411765)
 position = Vector2(20, -49.000004)
 scale = Vector2(2.6009676, 2.6009676)
 texture = ExtResource("2_54b4n")
+
+[node name="Flecha Izq" type="Sprite2D" parent="Centro" unique_id=230143780]
+position = Vector2(-151, -46)
+scale = Vector2(2.0249677, 2.0249677)
+texture = ExtResource("3_u7l8s")
+
+[node name="Flecha Der" type="Sprite2D" parent="Centro" unique_id=202313016]
+position = Vector2(192, -46)
+scale = Vector2(2.0249677, 2.0249677)
+texture = ExtResource("3_u7l8s")
+flip_h = true
 
 [node name="Aguja" type="Node2D" parent="." unique_id=1815908184]
 unique_name_in_owner = true

@@ -32,7 +32,7 @@ MusicController="*uid://cy3s5hw7s4qxm"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://ui/globo/globo.tscn"
+runtime/balloon_path="uid://dbb3d80g0s5cl"
 
 [display]
 
