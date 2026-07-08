@@ -1,25 +1,25 @@
 ~ start
 María: Ahora, a esperar a los clientes.
 
-Comprador 1: Buenos días. Un tamal de cerdo, por favor.
+Comprador 1: Buenos días. Un [b]tamal de cerdo[/b], por favor.
 - María: Claro. Aquí tiene.
 	Comprador 1: Muchas gracias.
 - María:'¿Le puedo ofrecer mejor humita en chala?
 	Comprador 1: ¿Pero qué dices, mujer?
 
-Comprador 2: Buenos días. Les pido unas empanadas de carne.
+Comprador 2: Buenos días. Les pido unas [b]empanadas de carne[/b].
 - María: Sírvase.
 	Comprador 2: Muchas gracias.
 - María: 'Le puedo ofrecer empanadas de humita?
 	Comprador 2: ¡Pero qué descaro!
 
-Comprador 3: Buenas. ¿Tiene tamales de carne?
+Comprador 3: Buenas. ¿Tiene [b]tamales de carne[/b]?
 - María: Sí tengo. Suyo.
 	Comprador 3: Muchas gracias.
 - María: No me quedó. '¿No quiere mejor humita en chala? 
 	Comprador 3:¡Soy alérgico al maíz!
 
-Comprador 4: Buen día. ¿Tendría usted tamales con charqui?
+Comprador 4: Buen día. ¿Tendría usted [b]tamales con charqui[/b]?
 - María: No tengo. ¿Le puedo ofrecer unas empanadas de humita?
 	Comprador 4: No hace falta. Aquí tiene la información que pidió Macacha.
     => exito
