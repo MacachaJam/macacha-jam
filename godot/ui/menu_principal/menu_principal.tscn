@@ -18,6 +18,7 @@ shadow_color = Color(0, 0, 0, 0.5529412)
 shadow_offset = Vector2(0, 4)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ruly6"]
+line_spacing = -22.485
 font_size = 78
 font_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
 outline_size = 4
@@ -84,7 +85,7 @@ theme_override_constants/margin_top = 10
 [node name="Label" type="Label" parent="UI/CenterContainer/VBoxContainer/Credits" unique_id=2145750913]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
-text = "Manu Quiñones: Game Design y Programación.
+text = "ManuQ: Game Design y Programación.
 
 Marica Mutante: Game Design, Level Design 
 y Arte 2D.
@@ -99,13 +100,15 @@ label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="UI" unique_id=1697407067]
-offset_left = 312.0
-offset_top = 85.0
+offset_left = 312.00003
+offset_top = 39.999996
 offset_right = 962.0
-offset_bottom = 192.0
+offset_bottom = 232.0
 rotation = -0.03683083
-text = "Sombras de Salta"
+text = "Loreto y las
+Sombras de Salta"
 label_settings = SubResource("LabelSettings_ruly6")
+horizontal_alignment = 1
 
 [node name="AudioManager" type="AudioStreamPlayer" parent="." unique_id=1612587210]
 stream = ExtResource("4_i6a53")
