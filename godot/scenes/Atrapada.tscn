@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bsxlktc7pdmcl"]
 
+[ext_resource type="Script" uid="uid://dyyak4vymiqqf" path="res://scenes/atrapada.gd" id="1_mrfcp"]
 [ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="1_ww51b"]
 [ext_resource type="Texture2D" uid="uid://cct2iwteh7m1j" path="res://assets/Props/CarcelLoreto.png" id="2_mrfcp"]
 
@@ -13,7 +14,46 @@ gradient = SubResource("Gradient_e7omi")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Node2D" type="Node2D" unique_id=2051003704]
+[sub_resource type="Animation" id="Animation_e7omi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mrfcp"]
+resource_name = "atrapada"
+length = 4.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e7omi"]
+_data = {
+&"RESET": SubResource("Animation_e7omi"),
+&"atrapada": SubResource("Animation_mrfcp")
+}
+
+[node name="Atrapada" type="Node2D" unique_id=2051003704]
+script = ExtResource("1_mrfcp")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=124727507]
 position = Vector2(631, 363)
@@ -35,8 +75,16 @@ offset_left = 459.0
 offset_top = 116.0
 offset_right = 791.0
 offset_bottom = 212.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(2.6034334, 2.6034334, 2.6034334, 1)
 theme_override_constants/outline_size = 9
 theme_override_font_sizes/font_size = 70
-text = "Atrapada!"
+text = "¡Atrapada!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1553375939]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_e7omi")
+autoplay = &"atrapada"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
