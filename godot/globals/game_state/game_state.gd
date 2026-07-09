@@ -95,5 +95,6 @@ func save() -> void:
 func te_atraparon() -> void:
 	if not scene.ya_te_atraparon:
 		scene.ya_te_atraparon = true
+		global.hechos_del_dia.te_capturaron = true
 		atrapada.emit()
 		SceneSwitcher.change_to_file_with_transition("uid://bsxlktc7pdmcl", "", Transition.Effect.FADE, Transition.Effect.FADE)

@@ -16,7 +16,9 @@ func _ready() -> void:
 	overlay_dia.hide()
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
-	if GameState.global.hechos_del_dia.get("te_descubrieron"):
+	if GameState.global.hechos_del_dia.get("te_capturaron"):
+		DialogueManager.show_dialogue_balloon(diálogo, "te_capturaron")
+	elif GameState.global.hechos_del_dia.get("te_descubrieron"):
 		DialogueManager.show_dialogue_balloon(diálogo, "mision_incompleta")
 	elif not jugadora.global_position.is_equal_approx(desde_el_centro.global_position):
 		mostrar_overlay_día()

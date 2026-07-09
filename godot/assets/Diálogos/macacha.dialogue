@@ -66,13 +66,14 @@ Macacha: Infíltrate en el cuartel. Una vez adentro emplearás los granos de ma�
 % Macacha: ¡Vuelve! No tenemos todo el día. [next=auto]
 % Macacha: ¿Crees que estás aquí para tomar mates al sol? ¡Tenemos una misión! [next=auto]
 set GameState.global.hechos_del_dia.te_descubrieron = false
-
+=> END
 ~ te_capturaron
 %2 ¿Cómo pudiste dejarte capturar por los maturrangos? [next=auto]
 % Macacha: Casi nos decubren por tu descuido. [next=auto]
 % Macacha: Deja de tontear, casi te pudres en ese calabozo. [next=auto]
 % Macacha: Tenemos que conseguir esa información, no puedes fallar. [next=auto]
 % Macacha: ¿Pero cómo te van a meter presa? ¡Que no vuelva a pasar! ¿Eh?. [next=auto]
-set GameState.global.hechos_del_dia.te_capturaron= true
+set GameState.global.hechos_del_dia.te_descubrieron = false
+set GameState.global.hechos_del_dia.te_capturaron = false
 => END
 
