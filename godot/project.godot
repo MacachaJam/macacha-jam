@@ -158,6 +158,8 @@ locale/fallback="es"
 3d_physics/layer_2="jugadora"
 3d_physics/layer_3="interactiva"
 3d_physics/layer_4="realista"
+3d_physics/layer_5="civiles"
+2d_physics/layer_9="puntito"
 
 [rendering]
 
