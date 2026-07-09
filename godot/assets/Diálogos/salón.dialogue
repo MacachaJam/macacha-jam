@@ -37,6 +37,7 @@ set GameState.global.hechos_del_dia.conseguiste_la_info = true
 => END
 
 ~ al_puzzle
+do habla_jose()
 if ronda == 1:
 	do puzzle_parar_la_oreja.iniciar()
 else:
