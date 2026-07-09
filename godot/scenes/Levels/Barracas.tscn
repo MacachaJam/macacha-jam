@@ -1335,7 +1335,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0353317, 2.3841858e-07, 4.1
 
 [node name="PlayerMinigame" type="AnimatedSprite3D" parent="." unique_id=2133079974]
 unique_name_in_owner = true
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.345733, 1.0696589, 5.963195)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.8357997, 1.0696589, 5.963195)
 visible = false
 billboard = 1
 shaded = true
