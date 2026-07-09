@@ -16,6 +16,8 @@ var _ausentes: int
 var _presentes: int
 
 func iniciar() -> void:
+	_ausentes = 0
+	_presentes = 0
 	interfaz.ausente.connect(_on_ausente)
 	interfaz.presente.connect(_on_presente)
 	interfaz.iniciar()

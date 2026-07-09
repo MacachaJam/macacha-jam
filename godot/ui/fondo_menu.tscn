@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ce12gn4fwtpf0"]
+
+[ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="1_slt4o"]
+
+[node name="FondoMenu" type="Node2D" unique_id=1836011090]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1600783013]
+modulate = Color(0.34407577, 0.34407574, 0.34407574, 1)
+self_modulate = Color(1, 1, 1, 0.6509804)
+position = Vector2(703, 372)
+texture = ExtResource("1_slt4o")

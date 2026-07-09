@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bo4k0aec7e628" path="res://scenes/Levels/Campamento.tscn" id="2_h4w4h"]
 [ext_resource type="PackedScene" uid="uid://g4qhvbvdm62w" path="res://ui/menu_opciones/menu_opciones.tscn" id="3_ruly6"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_i6a53"]
+[ext_resource type="PackedScene" uid="uid://ce12gn4fwtpf0" path="res://ui/fondo_menu.tscn" id="4_ruly6"]
 [ext_resource type="AudioStream" uid="uid://dp635stohhqdo" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Boton Menu.ogg" id="5_h4w4h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
@@ -16,6 +17,8 @@ game_scene = ExtResource("2_h4w4h")
 settings_scene = ExtResource("3_ruly6")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=4311548]
+
+[node name="FondoMenu" parent="UI" unique_id=1836011090 instance=ExtResource("4_ruly6")]
 
 [node name="CenterContainer" type="CenterContainer" parent="UI" unique_id=733162777]
 anchors_preset = 15
