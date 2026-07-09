@@ -10,16 +10,17 @@ enum Atuendos { VESTIDO, VENDEDORA, CRIADA }
 @export var atuendo: Atuendos:
 	set = _set_atuendo
 
+@export var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
+	Atuendos.VESTIDO: preload("uid://b4e0qc27oqlte"),
+	Atuendos.VENDEDORA: preload("uid://dl6i2sypsjbev"),
+	Atuendos.CRIADA: preload("uid://5qddwg2qyvb3"),
+}
+
 @onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
 @onready var pasos_sfx: AudioStreamPlayer = %PasosSFX
 @onready var cambiar_vestido_sfx: AudioStreamPlayer = %CambiarVestidoSFX
 @onready var atrapada_sfx: AudioStreamPlayer = %AtrapadaSFX
 
-var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
-	Atuendos.VESTIDO: preload("uid://b4e0qc27oqlte"),
-	Atuendos.VENDEDORA: preload("uid://dl6i2sypsjbev"),
-	Atuendos.CRIADA: preload("uid://5qddwg2qyvb3"),
-}
 var _detenida: bool
 var _abanicar: bool
 
