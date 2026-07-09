@@ -46,6 +46,8 @@ func _on_play_button_pressed() -> void:
 		"",
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,
+		2,
+		2,
 	)
 
 func _on_continue_button_pressed() -> void:
@@ -55,6 +57,8 @@ func _on_continue_button_pressed() -> void:
 		GameState.scene.spawn_point,
 		Transition.Effect.FADE,
 		Transition.Effect.FADE,
+		2,
+		2,
 	)
 
 func _on_exit_button_pressed() -> void:
