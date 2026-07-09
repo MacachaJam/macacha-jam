@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dll81paqdiih7"
+path="res://.godot/imported/GJ Mujeres de la Independencia - Victoria por nivel (arbol).ogg-a28dd4f91acd0be2c817f3a267a05bca.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Victoria por nivel (arbol).ogg"
+dest_files=["res://.godot/imported/GJ Mujeres de la Independencia - Victoria por nivel (arbol).ogg-a28dd4f91acd0be2c817f3a267a05bca.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
