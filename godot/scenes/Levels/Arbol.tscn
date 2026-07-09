@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpvcqbs0qhesu" path="res://scenes/Levels/arbol.gd" id="1_4ub2o"]
 [ext_resource type="Texture2D" uid="uid://7hvhq1onopw" path="res://assets/Terrenos/Arbol Floor.png" id="2_2r1cw"]
+[ext_resource type="Texture2D" uid="uid://cdy1n5tpt46j2" path="res://assets/Props/TeleportDecal.png" id="3_3s8a1"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_xasd7"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_4xfpo"]
 [ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="4_bpmym"]
@@ -159,6 +160,13 @@ shape = SubResource("BoxShape3D_wdupl")
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="Terreno" unique_id=1708432662]
 transform = Transform3D(0.99951327, 0, -0.031200558, 0, 1, 0, 0.031200558, 0, 0.99951327, 5.970173, 0.9146271, -4.37273)
 shape = SubResource("BoxShape3D_bpmym")
+
+[node name="Teleport Decal3" type="Sprite3D" parent="Terreno/CollisionShape3D6" unique_id=1376650924]
+transform = Transform3D(2.828428, 2.8284283, -1.2363446e-07, 0, -1.7484555e-07, -4, -2.8284283, 2.828428, -1.2363446e-07, -14.303894, -0.90745044, -0.90863895)
+modulate = Color(1, 0.98866665, 0.32, 0.6039216)
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("3_3s8a1")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Terreno" unique_id=914657766]
 transform = Transform3D(0.32470366, 0, -0.94581586, 0, 1, 0, 0.94581586, 0, 0.32470366, -7.7893033, 0.9146271, 0.93971074)
