@@ -10,6 +10,7 @@ var hechos_inicial: Dictionary[String, Variant] = {
 	"hablaste_con_macacha": false,
 	"conseguiste_la_info": false,
 	"te_descubrieron": false,
+	"te_capturaron": false,
 }
 
 
