@@ -111,12 +111,14 @@ func do_transition(
 	in_between: Callable,
 	out_transition: Transition.Effect = Transition.Effect.FADE,
 	in_transition: Transition.Effect = Transition.Effect.FADE,
+	out_duration: float = 1.0,
+	in_duration: float = 1.0,
 ) -> void:
 	visible = true
 	started.emit()
-	await _leave_scene(out_transition)
+	await _leave_scene(out_transition, out_duration)
 	await in_between.call()
-	await _introduce_scene(in_transition)
+	await _introduce_scene(in_transition, in_duration)
 	visible = false
 	finished.emit()
 

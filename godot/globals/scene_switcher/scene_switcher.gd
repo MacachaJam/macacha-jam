@@ -104,7 +104,9 @@ func change_to_file_with_transition(
 	scene_path: String,
 	spawn_point: NodePath = ^"",
 	enter_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE,
-	exit_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE
+	exit_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE,
+	enter_duration: float = 1.0,
+	exit_duration: float = 1.0,
 ) -> void:
 	assert(scene_path != "")
 
@@ -116,7 +118,9 @@ func change_to_file_with_transition(
 	Transitions.do_transition(
 		func() -> void: change_to_packed(ResourceLoader.load_threaded_get(scene_path), spawn_point),
 		enter_transition,
-		exit_transition
+		exit_transition,
+		enter_duration,
+		exit_duration,
 	)
 
 
@@ -126,12 +130,14 @@ func change_to_packed_with_transition(
 	scene: PackedScene,
 	spawn_point: NodePath = ^"",
 	enter_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE,
-	exit_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE
+	exit_transition: Transition.Effect = Transition.Effect.LEFT_TO_RIGHT_WIPE,
+	enter_duration: float = 1.0,
+	exit_duration: float = 1.0,
 ) -> void:
 	assert(scene != null)
 
 	Transitions.do_transition(
-		change_to_packed.bind(scene, spawn_point), enter_transition, exit_transition
+		change_to_packed.bind(scene, spawn_point), enter_transition, exit_transition, enter_duration, exit_duration
 	)
 
 
