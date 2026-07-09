@@ -20,9 +20,14 @@ func _desactivar_area() -> void:
 	area_interactiva.set_deferred("monitoring", false)
 	area_interactiva.set_deferred("monitorable", false)
 
-func iniciar() -> void:
+func _on_area_interactiva_inicio_interactuar() -> void:
 	ronda = 1
 	intentos = 0
+
+	var jugadora: Jugadora = get_tree().get_first_node_in_group("player") as Jugadora
+	if jugadora:
+		jugadora.cambiar_abanicar(true)
+
 	DialogueManager.show_dialogue_balloon(diálogo)
 	puzzle_parar_la_oreja.fin_del_puzzle.connect(_on_puzzle_parar_la_oreja_fin_del_puzzle)
 	puzzle_parar_la_oreja_2.fin_del_puzzle.connect(_on_puzzle_parar_la_oreja_fin_del_puzzle)
@@ -38,7 +43,7 @@ func _on_puzzle_parar_la_oreja_fin_del_puzzle(éxito: bool) -> void:
 		else:
 			DialogueManager.show_dialogue_balloon(diálogo, "exito")
 			await DialogueManager.dialogue_ended
-			area_interactiva.terminar_interacción(true)
+			terminar()
 	elif intentos == 1:
 		DialogueManager.show_dialogue_balloon(diálogo, "reintenta_1")
 	elif intentos == 2:
@@ -46,8 +51,10 @@ func _on_puzzle_parar_la_oreja_fin_del_puzzle(éxito: bool) -> void:
 	else:
 		DialogueManager.show_dialogue_balloon(diálogo, "fracaso")
 		await DialogueManager.dialogue_ended
-		area_interactiva.terminar_interacción(true)
+		terminar()
 
-
-func _on_area_interactiva_inicio_interactuar() -> void:
-	iniciar()
+func terminar() -> void:
+	var jugadora: Jugadora = get_tree().get_first_node_in_group("player") as Jugadora
+	if jugadora:
+		jugadora.cambiar_abanicar(false)
+	area_interactiva.terminar_interacción(true)

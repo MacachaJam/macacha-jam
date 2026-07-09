@@ -21,6 +21,7 @@ var sprite_frames_x_atuendo: Dictionary[Atuendos, SpriteFrames] = {
 	Atuendos.CRIADA: preload("uid://5qddwg2qyvb3"),
 }
 var _detenida: bool
+var _abanicar: bool
 
 func _set_atuendo(nuevo_atuendo: Atuendos) -> void:
 	atuendo = nuevo_atuendo
@@ -60,8 +61,16 @@ func _physics_process(delta: float) -> void:
 		velocity.z = 0
 
 	if velocity.is_zero_approx():
-		animated_sprite_3d.play("parada")
-		pasos_sfx.stop()
+		# Caso especial abanicar:
+		if _abanicar and animated_sprite_3d.sprite_frames.has_animation("saca_abanico") and animated_sprite_3d.sprite_frames.has_animation("abanicándose"):
+			if animated_sprite_3d.animation not in ["saca_abanico", "abanicándose"]:
+				animated_sprite_3d.play("saca_abanico")
+				await animated_sprite_3d.animation_finished
+				animated_sprite_3d.play("abanicándose")
+		else:
+			animated_sprite_3d.play("parada")
+		if pasos_sfx.playing:
+			pasos_sfx.stop()
 	else:
 		animated_sprite_3d.play("caminando")
 		if not pasos_sfx.playing:
@@ -86,3 +95,6 @@ func _moverse_con_input(_delta: float) -> void:
 
 func cambiar_detenida(detenida: bool) -> void:
 	_detenida = detenida
+
+func cambiar_abanicar(abanicar: bool) -> void:
+	_abanicar = abanicar
