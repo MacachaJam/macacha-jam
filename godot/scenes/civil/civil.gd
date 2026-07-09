@@ -11,7 +11,7 @@ enum Personaje { VARON_1, VARON_2, MUJER_1, MUJER_2 }
 @onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
 @onready var agent: NavigationAgent3D = %NavigationAgent3D
 
-@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_caminar: float = 50.0
+@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_caminar: float = 300.0
 @export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_detenerse: float = 50.0
 
 var sprite_frames_x_personaje: Dictionary[Personaje, SpriteFrames] = {

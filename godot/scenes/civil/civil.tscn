@@ -37,4 +37,6 @@ metadata/_custom_type_script = "uid://buuefw3a22rjy"
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=938428938]
 unique_name_in_owner = true
+path_desired_distance = 2.0
+target_desired_distance = 2.0
 debug_enabled = true
