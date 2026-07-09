@@ -141,7 +141,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_f7x2a")
 }],
 "loop": 1,
-"name": &"Hablando",
+"name": &"hablando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u48uo")
+}],
+"loop": 1,
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -205,7 +213,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_ae8nm")
 }],
 "loop": 1,
-"name": &"Hablando",
+"name": &"hablando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2fy5")
+}],
+"loop": 1,
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -447,26 +463,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0703311, 0)
 unique_name_in_owner = true
 
 [node name="Moro" type="AnimatedSprite3D" parent="NPCS" unique_id=1455209657]
+unique_name_in_owner = true
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -5.990803, 0.95583767, -2.3017762)
 billboard = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_wdupl")
-animation = &"Hablando"
-autoplay = "Hablando"
-frame_progress = 0.34936783
+animation = &"idle"
+autoplay = "hablando"
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="NPCS" unique_id=2092193155]
+[node name="Serna" type="AnimatedSprite3D" parent="NPCS" unique_id=2092193155]
+unique_name_in_owner = true
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -6.9638076, 0.94150347, -2.1968381)
 billboard = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_8mre2")
-animation = &"Hablando"
-autoplay = "Hablando"
-frame_progress = 0.6575414
+animation = &"idle"
+autoplay = "hablando"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=116716274]
 
