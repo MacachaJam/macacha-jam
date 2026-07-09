@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="27_kikkf"]
 [ext_resource type="Texture2D" uid="uid://ddw2yewf3uvg2" path="res://assets/Personajes/Loreto/Loreto Vendedora Vendiendo Resize.png" id="28_68u2b"]
 [ext_resource type="AudioStream" uid="uid://s2gxwiw5yhwn" path="res://Audio/SFX/SFX Lobitos/Ambiente/Ambiente dia.ogg" id="28_a7fpr"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="33_iu0mt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_foxfy"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -1892,6 +1893,7 @@ stream = ExtResource("28_a7fpr")
 volume_db = -3.38
 autoplay = true
 bus = &"Sound"
+script = ExtResource("33_iu0mt")
 
 [connection signal="inicio_interactuar" from="AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]
 [connection signal="timeout" from="TiempoMaxCliente" to="." method="_on_tiempo_max_cliente_timeout"]

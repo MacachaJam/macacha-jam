@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://d22mpqutkotsu" path="res://ui/theme.tres" id="3_unbh4"]
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_823xf"]
 [ext_resource type="AudioStream" uid="uid://dp635stohhqdo" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Boton Menu.ogg" id="5_lhypd"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="6_tnvk2"]
 
 [node name="GameSettingsScene" type="Node2D" unique_id=744646139]
 script = ExtResource("1_3764u")
@@ -44,6 +45,8 @@ stream = ExtResource("4_823xf")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+script = ExtResource("6_tnvk2")
+fade_in = false
 
 [node name="UISFX" type="AudioStreamPlayer" parent="." unique_id=1980344568]
 stream = ExtResource("5_lhypd")

@@ -30,6 +30,7 @@
 [ext_resource type="Script" uid="uid://dr0wpyie3fj3v" path="res://scenes/minijuego_maiz/minijuego_maiz.gd" id="24_8purw"]
 [ext_resource type="Texture2D" uid="uid://bjh7lu8fx6u1s" path="res://assets/Personajes/Evil Twink/Serna Idle Resized.png" id="24_mplte"]
 [ext_resource type="Resource" uid="uid://dfrwgissysnsy" path="res://assets/Diálogos/lista_cuartel.dialogue" id="27_hn302"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="29_n53d7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kkabb"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -1425,6 +1426,7 @@ stream = ExtResource("21_p8cny")
 volume_db = -6.435
 autoplay = true
 bus = &"Sound"
+script = ExtResource("29_n53d7")
 
 [node name="MinijuegoMaiz" type="Node" parent="." unique_id=1652663128 node_paths=PackedStringArray("interfaz")]
 unique_name_in_owner = true

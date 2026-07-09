@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://2s4gn3mvnj7u" path="res://assets/Músicas/Menu.ogg" id="4_i6a53"]
 [ext_resource type="PackedScene" uid="uid://ce12gn4fwtpf0" path="res://ui/fondo_menu.tscn" id="4_ruly6"]
 [ext_resource type="AudioStream" uid="uid://dp635stohhqdo" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Boton Menu.ogg" id="5_h4w4h"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="6_i6a53"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
 line_spacing = -5.0
@@ -114,6 +115,8 @@ horizontal_alignment = 1
 stream = ExtResource("4_i6a53")
 volume_db = -12.458
 autoplay = true
+script = ExtResource("6_i6a53")
+fade_in = false
 
 [node name="UISFX" type="AudioStreamPlayer" parent="." unique_id=80431535]
 stream = ExtResource("5_h4w4h")
