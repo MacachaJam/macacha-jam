@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="20_caf8k"]
 [ext_resource type="AudioStream" uid="uid://f3xsxf7yelnq" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Inicio Partida.ogg" id="22_mfsv1"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="24_plm1n"]
 [ext_resource type="Texture2D" uid="uid://cdy1n5tpt46j2" path="res://assets/Props/TeleportDecal.png" id="25_my4af"]
 
 [sub_resource type="Sky" id="Sky_s0xiu"]
@@ -1173,6 +1174,7 @@ stream = ExtResource("20_caf8k")
 volume_db = -6.435
 autoplay = true
 bus = &"Sound"
+script = ExtResource("24_plm1n")
 
 [node name="NewGameStinger" type="AudioStreamPlayer" parent="." unique_id=21847328]
 unique_name_in_owner = true

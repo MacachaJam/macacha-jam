@@ -57,6 +57,7 @@ func _cargar_escena(scene_root: Node) -> void:
 	if not CONFIGS.has(path):
 		return # esta escena no tiene musica configurada
 
+	# TODO tira error
 	var nueva_config: MusicSceneConfig = load(CONFIGS[path])
 
 	# Si es la MISMA config que ya estaba sonando (volviste a la misma

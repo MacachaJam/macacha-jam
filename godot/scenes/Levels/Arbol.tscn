@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="15_awpir"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="16_63gek"]
 [ext_resource type="AudioStream" uid="uid://dll81paqdiih7" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Victoria por nivel (arbol).ogg" id="18_iuonk"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="20_bgaww"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xfpo"]
 sky_top_color = Color(0.69, 0.71683335, 0.92, 1)
@@ -570,6 +571,7 @@ stream = ExtResource("16_63gek")
 volume_db = -6.435
 autoplay = true
 bus = &"Sound"
+script = ExtResource("20_bgaww")
 
 [node name="Victoria" type="AudioStreamPlayer" parent="." unique_id=1400103432]
 unique_name_in_owner = true

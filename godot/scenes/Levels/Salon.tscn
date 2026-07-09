@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dbaa234eyyplc" path="res://assets/Personajes/Evil Twink/Serna Hablando Resized.png" id="15_vifo7"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
+[ext_resource type="Script" uid="uid://ds60s7morxjuq" path="res://scenes/ambiente/ambiente.gd" id="26_ei7uq"]
 [ext_resource type="Texture2D" uid="uid://cdy1n5tpt46j2" path="res://assets/Props/TeleportDecal.png" id="26_eilhc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
@@ -576,6 +577,7 @@ flip_sprite = true
 stream = ExtResource("20_3njmf")
 volume_db = -4.875
 autoplay = true
+script = ExtResource("26_ei7uq")
 
 [node name="Teleport Decal" type="Sprite3D" parent="." unique_id=1549981561]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 4.7840447, 0.01, 2.6674643)

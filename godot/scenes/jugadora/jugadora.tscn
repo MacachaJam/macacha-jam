@@ -65,7 +65,7 @@ texture = SubResource("AtlasTexture_fhnvg")
 [node name="PasosSFX" type="AudioStreamPlayer" parent="." unique_id=961770666]
 unique_name_in_owner = true
 stream = ExtResource("5_v3rbw")
-volume_db = -5.958
+volume_db = -24.0
 pitch_scale = 0.61
 bus = &"Sound"
 
