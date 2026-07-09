@@ -96,4 +96,4 @@ func te_atraparon() -> void:
 	if not scene.ya_te_atraparon:
 		scene.ya_te_atraparon = true
 		atrapada.emit()
-		SceneSwitcher.change_to_file_with_transition("uid://bo4k0aec7e628", "", Transition.Effect.FADE, Transition.Effect.FADE)
+		SceneSwitcher.change_to_file_with_transition("uid://bsxlktc7pdmcl", "", Transition.Effect.FADE, Transition.Effect.FADE)
