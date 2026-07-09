@@ -1,11 +1,128 @@
 [gd_scene format=3 uid="uid://ce12gn4fwtpf0"]
 
 [ext_resource type="Texture2D" uid="uid://cemksc46l2i84" path="res://assets/Terrenos/Camp Floor.png" id="1_slt4o"]
+[ext_resource type="Texture2D" uid="uid://b54dep70kb25r" path="res://assets/Personajes/Loreto/Loreto Idle Resize.png" id="2_5p5bu"]
+[ext_resource type="Texture2D" uid="uid://bqafhafi2j3jr" path="res://assets/Personajes/Macacha/Macacha Idle Resized.png" id="3_nwabd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atkk3"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5u8i"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ka6"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbovb"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(333, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm4xm"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(444, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq102"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(555, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afkj5"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(666, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkvjx"]
+atlas = ExtResource("2_5p5bu")
+region = Rect2(777, 0, 111, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdupl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atkk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5u8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ka6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbovb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm4xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq102")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afkj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkvjx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huiud"]
+atlas = ExtResource("3_nwabd")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc81e"]
+atlas = ExtResource("3_nwabd")
+region = Rect2(120, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lhw8"]
+atlas = ExtResource("3_nwabd")
+region = Rect2(240, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63elv"]
+atlas = ExtResource("3_nwabd")
+region = Rect2(360, 0, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fbwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huiud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc81e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lhw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63elv")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="FondoMenu" type="Node2D" unique_id=1836011090]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1600783013]
-modulate = Color(0.34407577, 0.34407574, 0.34407574, 1)
+modulate = Color(0.5055334, 0.24493012, 0.36770654, 1)
 self_modulate = Color(1, 1, 1, 0.6509804)
-position = Vector2(703, 372)
+position = Vector2(1844, 90.00003)
+scale = Vector2(2.5342522, 2.5342522)
 texture = ExtResource("1_slt4o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1010081426]
+position = Vector2(227, 686)
+scale = Vector2(8.131871, 8.131871)
+sprite_frames = SubResource("SpriteFrames_wdupl")
+autoplay = "default"
+flip_h = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=406617598]
+position = Vector2(1065, 686)
+scale = Vector2(8.131871, 8.131871)
+sprite_frames = SubResource("SpriteFrames_7fbwq")
+animation = &"new_animation"
+autoplay = "new_animation"

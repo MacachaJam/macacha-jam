@@ -8,8 +8,23 @@
 [ext_resource type="AudioStream" uid="uid://dp635stohhqdo" path="res://Audio/SFX/SFX Manu/GJ Mujeres de la Independencia - Boton Menu.ogg" id="5_h4w4h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ikbh"]
-font_size = 8
-font_color = Color(1, 1, 1, 0.486275)
+line_spacing = -5.0
+font_size = 20
+font_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+outline_size = 4
+outline_color = Color(0.16917056, 0.26084274, 0.6267312, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.5529412)
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ruly6"]
+font_size = 78
+font_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+outline_size = 4
+outline_color = Color(0.16917056, 0.26084274, 0.6267312, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.5529412)
+shadow_offset = Vector2(0, 4)
 
 [node name="MainMenuScene" type="Node2D" unique_id=1571547011]
 script = ExtResource("1_87bjv")
@@ -24,6 +39,8 @@ settings_scene = ExtResource("3_ruly6")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 91.0
+offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -33,7 +50,9 @@ theme_override_constants/separation = 5
 
 [node name="ContinueButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1359838581]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "continue"
 
 [node name="NewGameButton" type="Button" parent="UI/CenterContainer/VBoxContainer" unique_id=1264548474]
@@ -64,9 +83,29 @@ theme_override_constants/margin_top = 10
 
 [node name="Label" type="Label" parent="UI/CenterContainer/VBoxContainer/Credits" unique_id=2145750913]
 layout_mode = 2
-text = "credits"
+theme_override_font_sizes/font_size = 16
+text = "Manu Quiñones: Game Design y Programación.
+
+Marica Mutante: Game Design, Level Design 
+y Arte 2D.
+
+Lobitos: Audio.
+
+Manu Elle: Audio.
+
+Cecilia Verino: Game Design, Narrativa 
+y Asesoramiento Histórico."
 label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="UI" unique_id=1697407067]
+offset_left = 312.0
+offset_top = 85.0
+offset_right = 962.0
+offset_bottom = 192.0
+rotation = -0.03683083
+text = "Sombras de Salta"
+label_settings = SubResource("LabelSettings_ruly6")
 
 [node name="AudioManager" type="AudioStreamPlayer" parent="." unique_id=1612587210]
 stream = ExtResource("4_i6a53")
