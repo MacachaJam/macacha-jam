@@ -49,7 +49,7 @@ Macacha: Bien hecho, María. Gracias a la información que tú y Juana han conse
 Macacha: Ahora solo resta pasar lista a las tropas para ver quiénes estarán presentes ese día. 
 María: Debo ver la manera de entrar al cuartel. 
 Macacha: Nuestras criadas te dejaron ropas y utensilios de trabajo.
-María: ¿Y un vez adentro del cuartel?
+María: ¿Y una vez adentro del cuartel?
 Macacha: Una vez adentro emplearás los granos de maíz para [b]contar los presentes y ausentes[/b]
 Macacha: Entiendo, me pondré en marcha ahora mismo. 
 Macacha: Perfecto. Con ese conteo, mi hermano sabrá cuánto gauchaje traer consigo para asediar Salta.
@@ -60,7 +60,7 @@ Macacha: Infíltrate en el cuartel. Una vez adentro emplearás los granos de ma�
 => END
 ~ mision_incompleta
 %2 Macacha: ¿Pero qué haces aquí? ¡Necesitamos esa información! [next=auto]
-% Macacha: ¿Otra vez acá? ¿Aca no quieres ver a Salta libre de nuevo? [next=auto]
+% Macacha: ¿Otra vez acá? ¿Acaso no quieres ver a Salta libre de nuevo? [next=auto]
 % Macacha: Ni los maturrangos corrieron tan rápido con los Infernales como tú. [next=auto]
 % Macacha: María, necesitamos saber eso. Es esencial para nuestra libertad. [next=auto]
 % Macacha: ¡Vuelve! No tenemos todo el día. [next=auto]
