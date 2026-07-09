@@ -14,12 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://nv5htlworha8" path="res://assets/Props/arbusto_bajo.tscn" id="9_hllly"]
 [ext_resource type="PackedScene" uid="uid://blyvok0pm0140" path="res://assets/Props/pasto_2.tscn" id="9_ne5nm"]
 [ext_resource type="PackedScene" uid="uid://s5gmgxm6y7a1" path="res://assets/Props/pasto_3.tscn" id="10_30kc6"]
-[ext_resource type="Texture2D" uid="uid://bxm4le461vut1" path="res://assets/Personajes/Macacha/Macacha.png" id="12_s0xiu"]
 [ext_resource type="Script" uid="uid://cuufbwxgjxwjd" path="res://scenes/area_interactiva_diálogo/area_interactiva_diálogo.gd" id="13_bma5i"]
 [ext_resource type="Resource" uid="uid://cf37hqituw4s6" path="res://assets/Diálogos/macacha.dialogue" id="14_bma5i"]
 [ext_resource type="PackedScene" uid="uid://dqw1xctn1tsax" path="res://assets/Props/Fuego/Fuego.tscn" id="14_ne5nm"]
 [ext_resource type="Script" uid="uid://db5cfg6do7bnk" path="res://scenes/spawn_point/spawn_point.gd" id="15_30kc6"]
 [ext_resource type="PackedScene" uid="uid://bsiydaujniild" path="res://scenes/controles_pantalla/controles_pantalla.tscn" id="15_dkyj2"]
+[ext_resource type="Texture2D" uid="uid://bqafhafi2j3jr" path="res://assets/Personajes/Macacha/Macacha Idle Resized.png" id="16_dkyj2"]
+[ext_resource type="Texture2D" uid="uid://dxoj8gyendstm" path="res://assets/Personajes/Macacha/Macacha Hablando Resized.png" id="16_ot1rn"]
 [ext_resource type="PackedScene" uid="uid://cnnlshf7do2sl" path="res://scenes/teleporter/teleporter.tscn" id="16_s0xiu"]
 [ext_resource type="AudioStream" uid="uid://0gixa88vmbtf" path="res://Audio/SFX/SFX Lobitos/Ambiente/ambiente oscuro.ogg" id="20_caf8k"]
 [ext_resource type="AudioStream" uid="uid://f3xsxf7yelnq" path="res://Audio/SFX/Stingers/GJ Mujeres de la Independencia - Inicio Partida.ogg" id="22_mfsv1"]
@@ -98,6 +99,54 @@ radius = 1.637207
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nh2m4"]
 height = 2.0092773
 radius = 0.53027344
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1goe2"]
+atlas = ExtResource("16_ot1rn")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1xvl"]
+atlas = ExtResource("16_ot1rn")
+region = Rect2(120, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dodb6"]
+atlas = ExtResource("16_ot1rn")
+region = Rect2(240, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jwpy"]
+atlas = ExtResource("16_ot1rn")
+region = Rect2(360, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkyj2"]
+atlas = ExtResource("16_dkyj2")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhnvg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1goe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1xvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dodb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jwpy")
+}],
+"loop": 1,
+"name": &"hablando",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkyj2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_caf8k"]
 radius = 2.3510742
@@ -1019,13 +1068,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1481085, -0.023894668, -0.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_nh2m4")
 
-[node name="Sprite3D" type="Sprite3D" parent="Macacha" unique_id=698664376]
+[node name="MacachaSprite" type="AnimatedSprite3D" parent="Macacha" unique_id=1922475882]
+unique_name_in_owner = true
 transform = Transform3D(2.5299644, 0, 0, 0, 2.5299644, 0, 0, 0, 2.5299644, 0, 0.9798124, 0)
 billboard = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 2
-texture = ExtResource("12_s0xiu")
+sprite_frames = SubResource("SpriteFrames_fhnvg")
+animation = &"hablando"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.28314462
 
 [node name="AreaInteractiva" type="Area3D" parent="Macacha" unique_id=50376492]
 collision_layer = 4
