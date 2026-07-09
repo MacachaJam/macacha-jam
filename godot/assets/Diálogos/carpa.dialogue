@@ -1,4 +1,9 @@
 ~ start
+if GameState.global.hechos_del_dia.hablaste_con_macacha
+	=> a_cambiarse
+María: Aún no, Macacha quiere decirme algo importante...
+=> END
+~ a_cambiarse
 María: Me voy a cambiar de atuendo...
 - Ropas criada [if GameState.global.atuendo_actual != Jugadora.Atuendos.CRIADA]
 	do GameState.global.atuendo_actual = Jugadora.Atuendos.CRIADA

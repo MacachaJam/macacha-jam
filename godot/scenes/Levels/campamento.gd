@@ -15,6 +15,7 @@ extends Node3D
 func _ready() -> void:
 	overlay_dia.hide()
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	if GameState.global.hechos_del_dia.get("te_descubrieron"):
 		DialogueManager.show_dialogue_balloon(diálogo, "mision_incompleta")
 	elif not jugadora.global_position.is_equal_approx(desde_el_centro.global_position):
@@ -25,6 +26,11 @@ func _on_got_dialogue(line: DialogueLine) -> void:
 		macacha_sprite.play("hablando")
 	elif macacha_sprite.animation == "hablando":
 		macacha_sprite.play("idle")
+
+func _on_dialogue_ended(_resource: DialogueResource) -> void:
+	if macacha_sprite.animation == "hablando":
+		macacha_sprite.play("idle")
+
 
 func mostrar_overlay_día() -> void:
 		new_game_stinger.play()
