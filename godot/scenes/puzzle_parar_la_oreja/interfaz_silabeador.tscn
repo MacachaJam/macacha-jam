@@ -27,6 +27,21 @@ fill = 1
 fill_from = Vector2(0.50427353, 0.52136755)
 fill_to = Vector2(1, 1)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_x01ue"]
+random_pitch = 1.1892071
+streams_count = 1
+stream_0/stream = ExtResource("4_r71da")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u7l8s"]
+random_pitch = 1.1892071
+streams_count = 1
+stream_0/stream = ExtResource("5_u7l8s")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7a3la"]
+random_pitch = 1.1892071
+streams_count = 1
+stream_0/stream = ExtResource("6_7a3la")
+
 [node name="InterfazSilabeador" type="Node2D" unique_id=1773905554]
 script = ExtResource("1_271gi")
 curva_spawn = SubResource("Curve_pp12e")
@@ -80,18 +95,18 @@ texture = ExtResource("2_u8xp1")
 
 [node name="BienSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=939882231]
 unique_name_in_owner = true
-stream = ExtResource("4_r71da")
+stream = SubResource("AudioStreamRandomizer_x01ue")
 volume_db = -3.792
 bus = &"Sound"
 
 [node name="MasoSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=1077025529]
 unique_name_in_owner = true
-stream = ExtResource("5_u7l8s")
+stream = SubResource("AudioStreamRandomizer_u7l8s")
 bus = &"Sound"
 
 [node name="MalSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=545205916]
 unique_name_in_owner = true
-stream = ExtResource("6_7a3la")
+stream = SubResource("AudioStreamRandomizer_7a3la")
 bus = &"Sound"
 
 [connection signal="timeout" from="Spawneador" to="." method="_on_spawneador_timeout"]
