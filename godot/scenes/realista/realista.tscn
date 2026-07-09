@@ -300,7 +300,6 @@ draw_pass_1 = SubResource("QuadMesh_k102h")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=938428938]
 unique_name_in_owner = true
-debug_enabled = true
 
 [node name="RealistaDormido" type="Node" parent="." unique_id=1774180944]
 unique_name_in_owner = true
