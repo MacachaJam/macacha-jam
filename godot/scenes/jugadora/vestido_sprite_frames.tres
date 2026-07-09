@@ -1,12 +1,41 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b4e0qc27oqlte"]
 
-[ext_resource type="Texture2D" uid="uid://dijhu6fpt1x1v" path="res://assets/Personajes/Loreto/Loreto test.png" id="1_0q1lv"]
 [ext_resource type="Texture2D" uid="uid://bqe2i5e2qr008" path="res://assets/Personajes/Loreto/Loreto Walk Cyle Resized.png" id="1_8wlr8"]
+[ext_resource type="Texture2D" uid="uid://caj8gbt7de4i3" path="res://assets/Personajes/Loreto/Loreto Abanico Loop Resized.png" id="1_hijef"]
 [ext_resource type="Texture2D" uid="uid://b54dep70kb25r" path="res://assets/Personajes/Loreto/Loreto Idle Resize.png" id="2_0q1lv"]
+[ext_resource type="Texture2D" uid="uid://btukhxg1odrj" path="res://assets/Personajes/Loreto/Loreto Abanico Start Resized.png" id="4_hijef"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hijef"]
-atlas = ExtResource("1_0q1lv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdups"]
+atlas = ExtResource("1_hijef")
 region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxou8"]
+atlas = ExtResource("1_hijef")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoygv"]
+atlas = ExtResource("1_hijef")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w65o1"]
+atlas = ExtResource("1_hijef")
+region = Rect2(333, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_558us"]
+atlas = ExtResource("1_hijef")
+region = Rect2(444, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak78g"]
+atlas = ExtResource("1_hijef")
+region = Rect2(555, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kceoq"]
+atlas = ExtResource("1_hijef")
+region = Rect2(666, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdwd8"]
+atlas = ExtResource("1_hijef")
+region = Rect2(777, 0, 111, 111)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0xd6j"]
 atlas = ExtResource("1_8wlr8")
@@ -68,18 +97,52 @@ region = Rect2(0, 0, 111, 111)
 atlas = ExtResource("2_0q1lv")
 region = Rect2(111, 0, 111, 111)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1nth"]
+atlas = ExtResource("4_hijef")
+region = Rect2(0, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkqrs"]
+atlas = ExtResource("4_hijef")
+region = Rect2(111, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qr6k"]
+atlas = ExtResource("4_hijef")
+region = Rect2(222, 0, 111, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f74be"]
+atlas = ExtResource("4_hijef")
+region = Rect2(333, 0, 111, 111)
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hijef")
+"texture": SubResource("AtlasTexture_xdups")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0xd6j")
+"texture": SubResource("AtlasTexture_mxou8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoygv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w65o1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_558us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak78g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kceoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdwd8")
 }],
 "loop": 1,
 "name": &"abanicándose",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -138,30 +201,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hijef")
+"texture": SubResource("AtlasTexture_t1nth")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0xd6j")
+"texture": SubResource("AtlasTexture_xkqrs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unckj")
+"texture": SubResource("AtlasTexture_4qr6k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6p4cf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6tuj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_slkco")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ikby3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5h4ft")
+"texture": SubResource("AtlasTexture_f74be")
 }],
 "loop": 0,
 "name": &"saca_abanico",
-"speed": 10.0
+"speed": 5.0
 }]

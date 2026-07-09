@@ -8,18 +8,18 @@ enum Personaje { VARON_1, VARON_2, MUJER_1, MUJER_2 }
 @export var personaje: Personaje:
 	set = _set_personaje
 
-@onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
-@onready var agent: NavigationAgent3D = %NavigationAgent3D
-
-@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_caminar: float = 300.0
-@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_detenerse: float = 50.0
-
-var sprite_frames_x_personaje: Dictionary[Personaje, SpriteFrames] = {
+@export var sprite_frames_x_personaje: Dictionary[Personaje, SpriteFrames] = {
 	Personaje.VARON_1: preload("uid://cdyv603u07qoe"),
 	Personaje.VARON_2: preload("uid://cyichd4hnvarg"),
 	Personaje.MUJER_1: preload("uid://dkx6x7h4q1knw"),
 	Personaje.MUJER_2: preload("uid://djylhux8ibnwt"),
 }
+
+@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_caminar: float = 300.0
+@export_range(10, 1000, 10, "or_greater", "suffix:m/s") var velocidad_detenerse: float = 50.0
+
+@onready var animated_sprite_3d: AnimatedSprite3D = %AnimatedSprite3D
+@onready var agent: NavigationAgent3D = %NavigationAgent3D
 
 func _set_personaje(nuevo_personaje: Personaje) -> void:
 	personaje = nuevo_personaje
