@@ -1830,6 +1830,15 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.13444059
 
+[node name="SpawnClientes" type="Node3D" parent="." unique_id=197519612]
+unique_name_in_owner = true
+
+[node name="Marker3D" type="Marker3D" parent="SpawnClientes" unique_id=175874174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8426006, 0, -10.546795)
+
+[node name="Clientes" type="Node3D" parent="." unique_id=235507950]
+unique_name_in_owner = true
+
 [node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=495006768]
 stream = ExtResource("28_a7fpr")
 volume_db = -3.38
