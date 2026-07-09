@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dbaa234eyyplc" path="res://assets/Personajes/Evil Twink/Serna Hablando Resized.png" id="15_vifo7"]
 [ext_resource type="PackedScene" uid="uid://iwge0rbnyqhc" path="res://scenes/realista/realista.tscn" id="19_xitv8"]
 [ext_resource type="AudioStream" uid="uid://rt1jikenjr0s" path="res://Audio/SFX/SFX Lobitos/Ambiente/Charla salon.ogg" id="20_3njmf"]
+[ext_resource type="Texture2D" uid="uid://cdy1n5tpt46j2" path="res://assets/Props/TeleportDecal.png" id="26_eilhc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xitv8"]
 sky_horizon_color = Color(0.72941595, 0.29170525, 0, 1)
@@ -575,5 +576,26 @@ flip_sprite = true
 stream = ExtResource("20_3njmf")
 volume_db = -4.875
 autoplay = true
+
+[node name="Teleport Decal" type="Sprite3D" parent="." unique_id=1549981561]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, -4, 0, 4, -1.7484555e-07, 4.7840447, 0.01, 2.6674643)
+modulate = Color(1, 0.98866665, 0.32, 0.6039216)
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("26_eilhc")
+
+[node name="Teleport Decal2" type="Sprite3D" parent="." unique_id=1500579798]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0.029819608, 0.010000477, -3.0075974)
+modulate = Color(0.5239999, 1, 0.32, 0.38039216)
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("26_eilhc")
+
+[node name="Teleport Decal3" type="Sprite3D" parent="." unique_id=1492290757]
+transform = Transform3D(-1.3113416e-07, 3, -1.3113416e-07, 0, -1.3113416e-07, -3, -3, -1.3113416e-07, 5.7320566e-15, -7.684342, 0.010000477, 0.9599805)
+modulate = Color(0.35400003, 1, 0.32, 0.32941177)
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("26_eilhc")
 
 [connection signal="inicio_interactuar" from="Props/Mesa Moro/AreaInteractiva" to="." method="_on_area_interactiva_inicio_interactuar"]

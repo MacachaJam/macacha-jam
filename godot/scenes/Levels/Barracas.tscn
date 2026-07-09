@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1iaorswblo7d" path="res://scenes/Levels/barracas.gd" id="1_kkabb"]
 [ext_resource type="Texture2D" uid="uid://dol0y4yw6m8tn" path="res://assets/Terrenos/Barracas Floor.png" id="2_i0cyr"]
+[ext_resource type="Texture2D" uid="uid://cdy1n5tpt46j2" path="res://assets/Props/TeleportDecal.png" id="3_maq12"]
 [ext_resource type="PackedScene" uid="uid://5wlgv8sq4yiq" path="res://scenes/jugadora/jugadora.tscn" id="3_ppftp"]
 [ext_resource type="PackedScene" uid="uid://jyv4g54adkmo" path="res://ui/overlays/pause_overlay.tscn" id="4_arn0i"]
 [ext_resource type="PackedScene" uid="uid://epi6ox0uuwhc" path="res://scenes/minijuego_maiz/interfaz_maiz.tscn" id="4_i4wot"]
@@ -222,6 +223,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_c2heg")
 
 [node name="Floor Col" type="CollisionShape3D" parent="Terreno" unique_id=183415472]
 shape = SubResource("WorldBoundaryShape3D_ybm7l")
+
+[node name="Teleport Decal" type="Sprite3D" parent="Terreno" unique_id=1214894155]
+transform = Transform3D(-1.7484555e-07, 4, -1.7484555e-07, 0, -1.7484555e-07, -4, -4, -1.7484555e-07, 7.642742e-15, 12.411629, 0, -5.762135)
+modulate = Color(1, 0.98866665, 0.32, 0.6039216)
+alpha_cut = 2
+texture_filter = 2
+texture = ExtResource("3_maq12")
 
 [node name="Jugadora" parent="." unique_id=1548245680 instance=ExtResource("3_ppftp")]
 
