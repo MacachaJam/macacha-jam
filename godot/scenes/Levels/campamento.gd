@@ -23,7 +23,7 @@ func _ready() -> void:
 func _on_got_dialogue(line: DialogueLine) -> void:
 	if line.character == "Macacha":
 		macacha_sprite.play("hablando")
-	else:
+	elif macacha_sprite.animation == "hablando":
 		macacha_sprite.play("idle")
 
 func mostrar_overlay_día() -> void:

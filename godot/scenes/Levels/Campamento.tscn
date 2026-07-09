@@ -137,7 +137,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"hablando",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
