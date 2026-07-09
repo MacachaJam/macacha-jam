@@ -9,15 +9,22 @@ extends Node3D
 @onready var overlay_dia: Control = %OverlayDia
 @onready var label_dia: Label = $UI/OverlayDia/CenterContainer/LabelDia
 @onready var new_game_stinger: AudioStreamPlayer = %NewGameStinger
+@onready var macacha_sprite: AnimatedSprite3D = %MacachaSprite
 
 
 func _ready() -> void:
 	overlay_dia.hide()
+	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	if GameState.global.hechos_del_dia.get("te_descubrieron"):
 		DialogueManager.show_dialogue_balloon(diálogo, "mision_incompleta")
 	elif not jugadora.global_position.is_equal_approx(desde_el_centro.global_position):
 		mostrar_overlay_día()
 
+func _on_got_dialogue(line: DialogueLine) -> void:
+	if line.character == "Macacha":
+		macacha_sprite.play("hablando")
+	else:
+		macacha_sprite.play("idle")
 
 func mostrar_overlay_día() -> void:
 		new_game_stinger.play()
