@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Loreto y las Sombras de Salta"
+config/name="Sombras de Salta"
 run/main_scene="res://scenes/boot/godot/godot_bootsplash_scene.tscn"
 config/features=PackedStringArray("4.7")
 config/icon="uid://deqp7f0to4vuq"

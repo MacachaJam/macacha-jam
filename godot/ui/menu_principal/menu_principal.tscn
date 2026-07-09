@@ -101,13 +101,12 @@ label_settings = SubResource("LabelSettings_2ikbh")
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="UI" unique_id=1697407067]
-offset_left = 312.00003
-offset_top = 39.999996
+offset_left = 312.0
+offset_top = 93.99999
 offset_right = 962.0
-offset_bottom = 232.0
+offset_bottom = 286.0
 rotation = -0.03683083
-text = "Loreto y las
-Sombras de Salta"
+text = "Sombras de Salta"
 label_settings = SubResource("LabelSettings_ruly6")
 horizontal_alignment = 1
 
