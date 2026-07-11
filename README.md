@@ -1,11 +1,16 @@
 # MacachaJam
 
-Juego para la gamejam Mujeres de la independencia
+Juego para la gamejam [Mujeres de la independencia](https://itch.io/jam/mujeres-de-la-independencia-gamejam)
 
 ## Jugar
 
+[En Itch.io](https://itch.io/jam/mujeres-de-la-independencia-gamejam/rate/4744902) se pueden descargar los binarios, para Windows y Linux.
+
+En web:
 - [A lo último de lo último](https://macachajam.github.io/macacha-jam/)
 - [A las ramas en desarrollo](https://macachajam.github.io/macacha-jam/branches/)
+
+Nota: los links para jugar en web son sólo para desarrollo. Los fog volumétricos no funcionan en modo compatibilidad, ¡así que en web se ve muy mal!
 
 ## Cositas
 
