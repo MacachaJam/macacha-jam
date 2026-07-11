@@ -1,0 +1,35 @@
+~ start
+De La Serna: ¡Soldado! Procedo a [b] pasar lista[/b].
+Soldado realista: ¡General! ¡Sí, mi general!
+María: Esto es importante. Me voy a poner a contar...
+=> al_minijuego
+
+~ al_minijuego
+do minijuego_maiz.iniciar()
+=> END
+
+~ reintenta_1
+De La Serna: ¡Soldado! Vuelvo a [b]pasar lista[/b].
+Soldado realista: ¡General! ¡Sí, mi general!
+María: A ver si esta vez cuento bien...
+=> al_minijuego
+
+~ reintenta_2
+De La Serna: ¡Soldado! ¡Paso lista [b]por última vez[/b]!
+Soldado realista: ¡General! ¡Sí, mi general!
+María: A ver si esta vez cuento bien...
+=> al_minijuego
+
+~ prueba
+María: Vamos a contar...
+- Ganaste => exito
+- Perdiste => fracaso
+~ exito
+María: [b]Listo.[/b] Esto es la información que debo depositar en el árbol.
+set GameState.global.hechos_del_dia.conseguiste_la_info = true
+=> END
+~ fracaso
+María: ¡Debo volver al [b]campamento[/b]!
+do GameState.scene.jugadora_descubierta.emit()
+set GameState.global.hechos_del_dia.te_descubrieron = true
+=> END
