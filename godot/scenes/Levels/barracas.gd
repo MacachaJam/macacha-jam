@@ -1,6 +1,6 @@
 extends Node3D
 
-const diálogo = preload("uid://dfrwgissysnsy")
+const diálogo = preload("uid://bhjmxptm1dky6")
 
 @onready var minijuego_maiz: MinijuegoMaiz = %MinijuegoMaiz
 @onready var area_interactiva: AreaInteractiva = %AreaInteractiva

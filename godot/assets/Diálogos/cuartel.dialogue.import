@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bhjmxptm1dky6"
+path="res://.godot/imported/cuartel.dialogue-088de3fa84e59fe0bb20ca96197747fc.tres"
+
+[deps]
+
+source_file="res://assets/Diálogos/cuartel.dialogue"
+dest_files=["res://.godot/imported/cuartel.dialogue-088de3fa84e59fe0bb20ca96197747fc.tres"]
+
+[params]
+
+defaults=true

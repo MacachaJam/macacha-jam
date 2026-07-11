@@ -26,10 +26,14 @@ func iniciar() -> void:
 	if controles:
 		controles.cambiar_izq_der(true)
 
-	DialogueManager.show_dialogue_balloon(diálogo, "pasando_lista")
-	await DialogueManager.dialogue_ended
-	await get_tree().create_timer(2).timeout
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.show_dialogue_balloon(diálogo)
 
+func _on_dialogue_ended(resource: DialogueResource) -> void:
+	if resource != diálogo:
+		# Terminó otro diálogo, no el de pasar lista.
+		return
+	await get_tree().create_timer(2).timeout
 	terminar()
 
 func _on_ausente() -> void:
@@ -51,4 +55,5 @@ func terminar() -> void:
 		prints("contaste %d ausentes pero son %d" % [_ausentes, ausentes_posta])
 	if _presentes != presentes_posta:
 		prints("contaste %d presentes pero son %d" % [_presentes, presentes_posta])
+	DialogueManager.dialogue_ended.disconnect(_on_dialogue_ended)
 	fin_del_minijuego.emit(_ausentes == ausentes_posta and _presentes == presentes_posta)
