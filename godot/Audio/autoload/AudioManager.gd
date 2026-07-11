@@ -216,6 +216,14 @@ func solo_layers(layers: Array, fade_time: float = DEFAULT_FADE) -> void:
 			mute_layer(i, fade_time)
 
 
+## Silencia las capas de la lista indicada y deja sonando el resto.
+func unsolo_layers(layers: Array, fade_time: float = DEFAULT_FADE) -> void:
+	for i in NUM_LAYERS:
+		if i in layers:
+			mute_layer(i, fade_time)
+		else:
+			unmute_layer(i, fade_time)
+
 ## Vuelve a traer todas las capas de golpe (deshace solo_layer/mute_layer).
 func unsolo_all(fade_time: float = DEFAULT_FADE) -> void:
 	for i in NUM_LAYERS:

@@ -202,6 +202,7 @@ texture = ExtResource("1_ncrvd")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=999671235]
 stream = SubResource("AudioStreamRandomizer_6ferh")
 volume_db = -15.0
+bus = &"Sound"
 
 [connection signal="body_entered" from="Area3D" to="EfectoTodo" method="squash_stretch" unbinds=1]
 [connection signal="body_entered" from="Area3D" to="EfectoHojas" method="squash_stretch" unbinds=1]

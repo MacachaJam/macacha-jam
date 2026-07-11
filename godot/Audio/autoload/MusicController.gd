@@ -17,48 +17,52 @@ const CAPA_TENSION := 1
 const CAPA_BOMBO := 2
 const CAPA_ACOMPANAMIENTO := 3
 
+const ARBOL = preload("uid://c0ld57hm5waqf")
+const CAMPAMENTO = preload("uid://cvt8cc4a7fhmu")
+const CENTRO = preload("uid://cejg3h3qhba75")
+const SALON = preload("uid://17qwjd6y140s")
+const BARRACAS = preload("uid://pv2qijv8mdi6")
+
+
 ## Mapeo: ruta de la escena (.tscn) -> ruta del recurso de configuracion (.tres)
 const CONFIGS := {
-	"res://scenes/Levels/Arbol.tscn": "res://Audio/Scripts/arbol.tres",
-	"res://scenes/Levels/Campamento.tscn": "res://Audio/Scripts/campamento.tres",
-	"res://scenes/Levels/Centro.tscn": "res://Audio/Scripts/centro.tres",
-	"res://scenes/Levels/Salon.tscn": "res://Audio/Scripts/Salon.tres",
-	"res://scenes/Levels/Barracas.tscn": "res://Audio/Scripts/barracas.tres",
-	
+	"res://scenes/Levels/Arbol.tscn": ARBOL,
+	"res://scenes/Levels/Campamento.tscn": CAMPAMENTO,
+	"res://scenes/Levels/Centro.tscn": CENTRO,
+	"res://scenes/Levels/Salon.tscn": SALON,
+	"res://scenes/Levels/Barracas.tscn": BARRACAS,
 }
 
 var config: MusicSceneConfig
 var _intensidad_actual := -1
 
+## Used to resolve the current scene. Override if your game manages the current scene itself.
+var get_current_scene: Callable = func():
+	var current_scene: Node = Engine.get_main_loop().current_scene
+	if current_scene == null:
+		current_scene = Engine.get_main_loop().root.get_child(Engine.get_main_loop().root.get_child_count() - 1)
+	return current_scene
 
 func _ready() -> void:
-	get_tree().node_added.connect(_on_node_added)
+	get_tree().scene_changed.connect(_on_scene_changed)
+	_on_scene_changed()
 
-
-func _on_node_added(node: Node) -> void:
-	# Solo nos interesan nodos agregados directo a la raiz del arbol
-	# (asi es como se agregan las escenas nuevas con change_scene_to_file).
-	if node.get_parent() != get_tree().root:
-		return
-	# call_deferred: current_scene todavia puede no estar actualizado
-	# en el mismo frame en que se dispara node_added. Esperamos un
-	# frame y recien ahi comparamos, para no perdernos el cambio.
-	call_deferred("_check_scene_change", node)
-
-
-func _check_scene_change(node: Node) -> void:
-	if node == get_tree().current_scene:
-		_cargar_escena(node)
-
+func _on_scene_changed() -> void:
+	var node: Node = get_current_scene.call()
+	_cargar_escena(node)
 
 func _cargar_escena(scene_root: Node) -> void:
 	var path := scene_root.scene_file_path
 
 	if not CONFIGS.has(path):
+		AudioManager.solo_layers([])
 		return # esta escena no tiene musica configurada
 
-	# TODO tira error
-	var nueva_config: MusicSceneConfig = load(CONFIGS[path])
+	if not GameState.global.hechos_del_dia.get("te_descubrieron"):
+		AudioManager.unsolo_layers([CAPA_TENSION])
+	else:
+		AudioManager.unsolo_all()
+	var nueva_config: MusicSceneConfig = CONFIGS[path]
 
 	# Si es la MISMA config que ya estaba sonando (volviste a la misma
 	# escena), no tocamos nada, la musica sigue viva tal cual.
@@ -133,14 +137,5 @@ func desactivar_tension() -> void:
 	AudioManager.mute_layer(CAPA_TENSION, 0.3)
 
 
-## Busca nodos por GRUPO y se conecta a sus señales si existen.
 func _conectar_triggers() -> void:
-	for detector in get_tree().get_nodes_in_group("detector_jugador"):
-		if detector.has_signal("jugador_detectado") and not detector.jugador_detectado.is_connected(activar_tension):
-			detector.jugador_detectado.connect(activar_tension)
-		if detector.has_signal("jugador_perdido") and not detector.jugador_perdido.is_connected(desactivar_tension):
-			detector.jugador_perdido.connect(desactivar_tension)
-
-	for zona in get_tree().get_nodes_in_group("zona_intensidad"):
-		if zona.has_signal("intensidad_cambiada") and not zona.intensidad_cambiada.is_connected(cambiar_intensidad):
-			zona.intensidad_cambiada.connect(cambiar_intensidad)
+	GameState.scene.jugadora_descubierta.connect(activar_tension)

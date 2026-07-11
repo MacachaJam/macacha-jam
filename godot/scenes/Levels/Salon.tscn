@@ -577,6 +577,7 @@ flip_sprite = true
 stream = ExtResource("20_3njmf")
 volume_db = -4.875
 autoplay = true
+bus = &"Sound"
 script = ExtResource("26_ei7uq")
 
 [node name="Teleport Decal" type="Sprite3D" parent="." unique_id=1549981561]

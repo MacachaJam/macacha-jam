@@ -1,12 +1,11 @@
 class_name DiálogoSilabeador
 extends Node
 
-const GLOBO = preload("uid://d3ek7b2j51084")
-
 var globo: Globo
 
 func iniciar() -> void:
-	globo = GLOBO.instantiate()
+	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, "uid://d3ek7b2j51084")
+	globo = load(balloon_path).instantiate()
 	get_parent().add_child.call_deferred(globo)
 	if not globo.is_node_ready():
 		await globo.ready

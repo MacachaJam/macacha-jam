@@ -5,10 +5,12 @@ const diálogo = preload("uid://bhjmxptm1dky6")
 @onready var minijuego_maiz: MinijuegoMaiz = %MinijuegoMaiz
 @onready var area_interactiva: AreaInteractiva = %AreaInteractiva
 @onready var player_minigame: AnimatedSprite3D = %PlayerMinigame
+@onready var serna: AnimatedSprite3D = %Serna
 
 var intentos: int
 
 func _ready() -> void:
+	serna.visible = GameState.global.dia_actual == 3
 	if GameState.global.dia_actual != 3 or GameState.global.hechos_del_dia.get("conseguiste_la_info"):
 		_desactivar_area()
 
