@@ -2,8 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cmnq3m6afgnpm" path="res://assets/Props/Bush.png" id="1_ncrvd"]
 [ext_resource type="Script" uid="uid://bivv2q8nbt1r5" path="res://scenes/efecto_squash_stretch/efecto_squash_stretch.gd" id="2_a1150"]
+[ext_resource type="AudioStream" uid="uid://c4cwr21ybawoy" path="res://Audio/SFX/pasos_arbusto.ogg" id="3_6ferh"]
+[ext_resource type="AudioStream" uid="uid://de5eeeil26g75" path="res://Audio/SFX/pasos_arbusto_2.ogg" id="4_douul"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fhnvg"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6ferh"]
+random_pitch = 1.1892071
+random_volume_offset_db = 5.0
+streams_count = 2
+stream_0/stream = ExtResource("3_6ferh")
+stream_1/stream = ExtResource("4_douul")
 
 [node name="Arbusto Alto" type="Node3D" unique_id=2055832729]
 
@@ -190,5 +199,10 @@ alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("1_ncrvd")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=999671235]
+stream = SubResource("AudioStreamRandomizer_6ferh")
+volume_db = -15.0
+
 [connection signal="body_entered" from="Area3D" to="EfectoTodo" method="squash_stretch" unbinds=1]
 [connection signal="body_entered" from="Area3D" to="EfectoHojas" method="squash_stretch" unbinds=1]
+[connection signal="body_entered" from="Area3D" to="AudioStreamPlayer3D" method="set_playing" unbinds=1 binds= [true]]
