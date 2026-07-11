@@ -96,17 +96,19 @@ texture = ExtResource("2_u8xp1")
 [node name="BienSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=939882231]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_x01ue")
-volume_db = -3.792
+volume_db = -10.0
 bus = &"Sound"
 
 [node name="MasoSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=1077025529]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_u7l8s")
+volume_db = -10.0
 bus = &"Sound"
 
 [node name="MalSFX" type="AudioStreamPlayer" parent="PuzzleSFX" unique_id=545205916]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_7a3la")
+volume_db = -10.0
 bus = &"Sound"
 
 [connection signal="timeout" from="Spawneador" to="." method="_on_spawneador_timeout"]
