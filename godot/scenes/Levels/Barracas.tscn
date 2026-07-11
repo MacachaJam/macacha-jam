@@ -1328,6 +1328,7 @@ texture_filter = 2
 texture = ExtResource("22_hn302")
 
 [node name="Serna" type="AnimatedSprite3D" parent="Props" unique_id=1690879918]
+unique_name_in_owner = true
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 1.25, -2.483487, 0.9001332, 3.0157394)
 billboard = 1
 shaded = true
